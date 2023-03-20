@@ -1,0 +1,40 @@
+{
+  "name": "@wrappid/sc-web",
+  "version": "0.0.1",
+  "description": "This repository is combined packages of all the Styled Components for react web project.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo testing not yet implemented",
+    "build": "npx babel package --out-dir dist --copy-files",
+    "publish": "npm publish ./dist --registry=https://npm.pkg.github.com --scope=@wrappid"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://techoneel: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@github.com/wrappid/styles.git"
+  },
+  "keywords": [
+    "css-in-js",
+    "react",
+    "react-native"
+  ],
+  "author": "wrappid",
+  "bugs": {
+    "url": "https://github.com/wrappid/sc-web/issues"
+  },
+  "homepage": "https://github.com/wrappid/sc-web#readme",
+  "babel": {
+    "presets": [
+      "@babel/preset-react"
+    ]
+  },
+  "dependencies": {
+    "@mui/material": "^5.10.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.21.0",
+    "@babel/core": "^7.21.0",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/preset-react": "^7.18.6"
+  }
+}
