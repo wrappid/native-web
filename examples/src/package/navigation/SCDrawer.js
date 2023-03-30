@@ -1,9 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 import MuiDrawer from "@mui/material/Drawer";
-import config from "../../../config/config";
 import { getEffectiveStyle, CoreClasses } from "@wrappid/styles";
-import { theme } from "../../styles/theme/theme";
+import { theme } from "../theme/theme";
+/**
+ * @todo config from core to be used
+ */
+import config from "../config";
 
 const defaultStyleClasses = [CoreClasses.SC.NAVIGATION.DRAWER];
 

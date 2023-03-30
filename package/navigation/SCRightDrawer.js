@@ -1,8 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 import MuiDrawer from "@mui/material/Drawer";
-import config from "../../../config/config";
 import { getEffectiveStyle, CoreClasses } from "@wrappid/styles";
+/**
+ * @todo config from core to be used
+ */
+import config from "../config";
 
 export const SCRightDrawer = styled(
   MuiDrawer,

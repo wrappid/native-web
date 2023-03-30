@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import { Backdrop } from "@mui/material";
 import { getEffectiveStyle, CoreClasses } from "@wrappid/styles";
-import { theme } from "../../styles/theme/theme";
 
 const defaultStyleClasses = [CoreClasses.SC.FEEDBACK.BACKDROP];
 

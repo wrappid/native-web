@@ -1,5 +1,5 @@
 import React from "react";
-import { SCTypography } from "./package/dataDisplay/SCTypography";
+import { SCTypography } from "./package/index";
 
 function App() {
   const clickFun = () => {
