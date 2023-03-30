@@ -28,7 +28,8 @@
     ]
   },
   "dependencies": {
-    "@mui/material": "^5.10.2"
+    "@mui/material": "^5.10.2",
+    "styled-components": "^5.3.9"
   },
   "devDependencies": {
     "@babel/cli": "^7.21.0",
