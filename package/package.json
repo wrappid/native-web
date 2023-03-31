@@ -25,6 +25,7 @@
   "homepage": "https://github.com/wrappid/sc-web#readme",
   "peerDependencies": {
     "@mui/material": "^5.10.2",
-    "@wrappid/styles": "^0.0.1"
+    "@wrappid/styles": "^0.0.1",
+    "styled-components": "^5.3.9"
   }
 }
