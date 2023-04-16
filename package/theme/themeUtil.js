@@ -1,18 +1,21 @@
 import { createTheme } from "@mui/material";
-import { theme as coreTheme } from "../theme";
+import { theme as coreTheme } from "../theme/theme";
 
 const WEB_PLATFORM = "web";
 const APP_PLATFORM = "web";
 
 function createWebTheme(customThemme) {
+  console.log("Getting web theme");
   return createTheme({ ...coreTheme, ...customThemme });
 }
 
 function createNativeTheme(customThemme) {
+  console.log("Getting app theme");
   return { ...coreTheme, ...customThemme };
 }
 
 export function detectPlatform(document, navigator) {
+  console.log("platform detection", document, navigator);
   if (typeof document !== "undefined") {
     // I'm on the web!
     return WEB_PLATFORM;
@@ -42,7 +45,8 @@ export function getCoreTheme(customThemme) {
 let theme = null;
 
 try {
-  let config = require(__dirname + "../../../" + "config.json");
+  let p = "../../../../src/config.json";
+  let config = require(p);
   if (config?.theme) {
     theme = getCoreTheme(config?.theme);
   } else {
@@ -54,6 +58,6 @@ try {
   theme = getCoreTheme({});
 }
 
-console.log("THEME", theme);
+console.log("THEME in sc web", theme);
 
 export default theme;
