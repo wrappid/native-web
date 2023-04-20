@@ -73,6 +73,7 @@ import { SCToolbar } from "./surfaces/SCToolbar";
 import { SCFade } from "./utils/SCFade";
 import { SCModal } from "./utils/SCModal";
 import { SCPopover } from "./utils/SCPopover";
+import NativeNavigation from "./nativeComponents/navigation/NativeNavigation";
 
 // import NativeModal from "./nativeComponents/utils/NativeModal";
 // import NativePopover from "./nativeComponents/utils/NativePopover";
@@ -301,6 +302,7 @@ export {
   SCFade,
   SCModal,
   SCPopover,
+  NativeNavigation,
   // NativeModal,
   // NativePopover,
   // NativeFade,
