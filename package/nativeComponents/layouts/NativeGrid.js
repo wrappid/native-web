@@ -1,9 +1,9 @@
 import React from "react";
 import { Children } from "react";
-import { getGridSizeProps } from "../../utils/componentUtil";
+import { getGridSizeProps } from "../../helper/componentUtil";
 import { SCGrid } from "../../layouts/SCGrid";
 // import { DEFAULT_SPACING } from "../../styles/default/DefaultNativeStyles";
-import { getUUID } from "../../utils/appUtils";
+import { getUUID } from "../../helper/appUtils";
 
 export default function NativeGrid(props) {
   let _uuid = getUUID();

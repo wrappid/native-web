@@ -1,6 +1,5 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { toggleModalState } from "../../store/action/modalAction";
 import { SCModal } from "../../utils/SCModal";
 import { CoreClasses } from "@wrappid/styles";
 import NativeIcon from "../utils/NativeIcon";
@@ -15,7 +14,7 @@ export default function NativeModal(props) {
   const modalStyle = useSelector((state) => state.modal.modalStyle);
   const modalClose = useSelector((state) => state.modal.modalClose);
   const HandleModalClose = () => {
-    dispatch(toggleModalState(null));
+    dispatch(props.toggleModalState(null));
   };
 
   return (

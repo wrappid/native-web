@@ -1,6 +1,6 @@
 import React from "react";
 import { CoreClasses } from "@wrappid/styles";
-import NativeH5 from "../layouts/heading/NativeH5";
+import NativeH5 from "../dataDisplay/heading/NativeH5";
 import NativeCard from "../surfaces/NativeCard";
 import NativeCardContent from "../surfaces/NativeCardContent";
 import NativeCardHeader from "../surfaces/NativeCardHeader";
