@@ -4,7 +4,6 @@ import { LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterMoment } from "@mui/x-date-pickers/AdapterMoment";
 import NativeTextField from "./NativeTextField";
 import NativeFormHelperText from "./NativeFormHelperText";
-import { CoreClasses } from "@wrappid/styles";
 import NativeFormErrorText from "./NativeFormErrorText";
 
 export default function NativeDatePicker(props) {
