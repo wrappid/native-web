@@ -73,8 +73,8 @@ import { SCToolbar } from "./surfaces/SCToolbar";
 import { SCFade } from "./utils/SCFade";
 import { SCModal } from "./utils/SCModal";
 import { SCPopover } from "./utils/SCPopover";
-import NativeNavigation from "./nativeComponents/navigation/NativeNavigation";
 
+import NativeNavigation from "./nativeComponents/navigation/NativeNavigation";
 import NativeModal from "./nativeComponents/utils/NativeModal";
 import NativePopover from "./nativeComponents/utils/NativePopover";
 import NativeFade from "./nativeComponents/utils/NativeFade";
@@ -142,8 +142,6 @@ import NativeH4 from "./nativeComponents/dataDisplay/heading/NativeH4";
 import NativeH2 from "./nativeComponents/dataDisplay/heading/NativeH2";
 import NativeH5 from "./nativeComponents/dataDisplay/heading/NativeH5";
 import NativeH6 from "./nativeComponents/dataDisplay/heading/NativeH6";
-// import UserChip from "./nativeComponents/dataDisplay/custom/UserChip";
-// import StatusText from "./nativeComponents/dataDisplay/custom/StatusText";
 import NativeChip from "./nativeComponents/dataDisplay/NativeChip";
 import NativeTypography from "./nativeComponents/dataDisplay/NativeTypography";
 import NativeTableHead from "./nativeComponents/dataDisplay/NativeTableHead";
@@ -371,8 +369,6 @@ export {
   NativeH2,
   NativeH5,
   NativeH6,
-  // UserChip,
-  // StatusText,
   NativeChip,
   NativeTypography,
   NativeDivider,
