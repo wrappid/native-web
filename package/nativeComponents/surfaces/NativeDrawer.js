@@ -3,9 +3,8 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import NativeMenu from "../inputs/NativeMenu";
-import { SCDrawer } from "../../surfaces/SCDrawer";
+import { SCDrawer } from "../../navigation/SCDrawer";
 import { CoreClasses, getEffectiveStyle } from "@wrappid/styles";
-import { toggleMenuItemState } from "../../store/action/menuAction";
 
 export default function NativeDrawer(props) {
   const dispatch = useDispatch();
@@ -19,7 +18,7 @@ export default function NativeDrawer(props) {
 
   const OnMenuClick = (item) => {
     if (item.Children && item.Children.length > 0) {
-      dispatch(toggleMenuItemState(item));
+      dispatch(props.toggleMenuItemState(item));
     } else {
       // navigate(item.link);
     }

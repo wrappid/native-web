@@ -1,39 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
-import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
-import { urls } from "../../config/constants";
-import NativeIcon from "../surfaces/NativeIcon";
-import NativeImage from "../surfaces/NativeImage";
+import NativeIcon from "../dataDisplay/NativeIcon";
+import NativeImage from "../dataDisplay/NativeImage";
 import NativeIconButton from "../inputs/NativeIconButton";
 import NativeStack from "../layouts/NativeStack";
 import NativeToolbar from "../surfaces/NativeToolbar";
 import { CoreClasses } from "@wrappid/styles";
-import { getSettingMeta } from "../../store/action/mdmAction";
 import { SCAppBar } from "../../surfaces/SCAppBar";
 
 export default function NativeAppBar(props) {
   const navigate = useNavigate();
-  const dispatch = useDispatch();
-  const auth = useSelector((state) => state.auth);
-  const mdm = useSelector((state) => state.mdm);
-  const [getSettingMetaFlag, setGetSettingMetaFlag] = useState(false);
-  const { handleDrawer } = props;
-
-  useEffect(() => {
-    if (getSettingMetaFlag) {
-      if (mdm.getSettingMetaSuccess) {
-        setGetSettingMetaFlag(false);
-      }
-      dispatch(getSettingMeta(null, auth.accessToken));
-    }
-  }, [
-    getSettingMetaFlag,
-    mdm.getSettingMetaSuccess,
-    dispatch,
-    auth.accessToken,
-  ]);
+  const { handleDrawer, navigateString, rightAppbarMenu, auth } = props;
 
   return (
     <>
@@ -56,13 +35,13 @@ export default function NativeAppBar(props) {
               src="/images/logo.png"
               alt="Rxefy Logo"
               onClick={() => {
-                navigate(`/${urls.DASHBOARD}`);
+                navigate(navigateString);
               }}
               styleClasses={[CoreClasses.Native_APP_BAR.APP_BAR_LOGO]}
             />
           </NativeStack>
 
-          {props.rightAppbarMenu}
+          {rightAppbarMenu}
         </NativeToolbar>
       </SCAppBar>
     </>
