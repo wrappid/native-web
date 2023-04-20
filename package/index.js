@@ -213,6 +213,7 @@ import NativeDataTableFooter from "./nativeComponents/dataTable/NativeDataTableF
 import NativeDataTable from "./nativeComponents/dataTable/NativeDataTable";
 import NativeTableSkeleton from "./nativeComponents/dataTable/NativeTableSkeleton";
 import NativeFormContainer from "./nativeComponents/forms/NativeFormContainer";
+import getMenuItem from "./helper/menuUtil";
 
 export {
   SCAvatar,
@@ -429,4 +430,5 @@ export {
   NativeDataTableFooter,
   NativeDataTable,
   NativeTableSkeleton,
+  getMenuItem,
 };
