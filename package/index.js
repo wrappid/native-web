@@ -222,6 +222,7 @@ import NativeTypographySubtitle1 from "./nativeComponents/dataDisplay/paragraph/
 // import NativeDataTableFooter from "./nativeComponents/dataTable/NativeDataTableFooter";
 // import NativeDataTable from "./nativeComponents/dataTable/NativeDataTable";
 // import NativeTableSkeleton from "./nativeComponents/dataTable/NativeTableSkeleton";
+import NativeFormContainer from "./nativeComponents/forms/NativeFormContainer";
 
 export {
   SCAvatar,
@@ -423,6 +424,7 @@ export {
   // NativeFormErrorText,
   // NativeDatepicker,
   // NativeFormControl,
+  NativeFormContainer,
   // NativeButton,
   // NativeCheckbox,
   // DevNativeDataTable,
