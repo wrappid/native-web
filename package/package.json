@@ -1,5 +1,5 @@
 {
-  "name": "@wrappid/sc-web",
+  "name": "@wrappid/styled-components",
   "version": "0.0.4",
   "description": "This repository is combined packages of all the Styled Components for react web project.",
   "main": "index.js",

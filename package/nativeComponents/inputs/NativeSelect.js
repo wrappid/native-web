@@ -1,5 +1,5 @@
 import React from "react";
-import { getUUID } from "../../utils/appUtils";
+import { getUUID } from "../../helper/appUtils";
 import { SCSelect } from "../../inputs/SCSelect";
 import NativeFormControl from "./NativeFormControl";
 import NativeInputLabel from "./NativeInputLabel";

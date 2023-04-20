@@ -10,7 +10,7 @@ import {
   userSettingsConstants,
   __TableDensity,
 } from "../../config/constants";
-import { getUUID } from "../../utils/appUtils";
+import { getUUID } from "../../helper/appUtils";
 import {
   getTableDensityPaddingValue,
   getTableDensityValue,

@@ -1,6 +1,6 @@
 import React from "react";
 import { CoreClasses } from "@wrappid/styles";
-import NativeTableCell from "./NativeTableCell/NativeTableCell";
+import NativeTableCell from "./NativeTableCell";
 
 export default function NativeTableHeadCell(props) {
   return (

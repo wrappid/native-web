@@ -1,5 +1,5 @@
 import React from "react";
-import NativeTableCell from "./NativeTableCell/NativeTableCell";
+import NativeTableCell from "./NativeTableCell";
 
 /**
  * @todo

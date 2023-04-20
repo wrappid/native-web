@@ -1,5 +1,5 @@
 import React from "react";
-import { getUUID } from "../../utils/appUtils";
+import { getUUID } from "../../helper/appUtils";
 import { SCPopover } from "../../utils/SCPopover";
 
 export default function NativePopover(props) {

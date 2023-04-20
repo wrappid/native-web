@@ -1,5 +1,5 @@
 import React from "react";
-import { getUUID } from "../../../../utils/appUtils";
+import { getUUID } from "../../../../helper/appUtils";
 import { CoreClasses } from "@wrappid/styles";
 import NativeIcon from "../../dataDisplay/NativeIcon";
 import NativeIconButton from "../../inputs/NativeIconButton";
