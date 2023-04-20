@@ -3,7 +3,7 @@ import { getLabel } from "../../../../utils/stringUtils";
 import { CoreClasses } from "@wrappid/styles";
 import NativeDivider from "../../dataDisplay/NativeDivider";
 import NativeIcon from "../../dataDisplay/NativeIcon";
-import NativeFormControlLabel from "../../forms/NativeFormGroupLabel";
+import NativeFormControlLabel from "../../inputs/NativeFormControlLabel";
 import NativeCheckbox from "../../inputs/NativeCheckbox";
 import NativeIconButton from "../../inputs/NativeIconButton";
 import NativeInputAdornment from "../../inputs/NativeInputAdornment";

@@ -1,7 +1,7 @@
 import React from "react";
 import { SCCheckbox } from "../../inputs/SCCheckbox";
 import { CoreClasses } from "@wrappid/styles";
-import NativeFormControlLabel from "../forms/NativeFormGroupLabel";
+import NativeFormControlLabel from "./NativeFormControlLabel";
 
 export default function NativeCheckbox(props) {
   const {
