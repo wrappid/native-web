@@ -1,10 +1,11 @@
+import { MuiOtpInput } from "mui-one-time-password-input";
 import styled from "styled-components";
 import { getEffectiveStyle, CoreClasses } from "@wrappid/styles";
 
-const defaultStyleClasses = [CoreClasses.SC.DATA_DISPLAY.IMAGE];
+const defaultStyleClasses = [CoreClasses.SC.INPUTS.INPUT];
 
-export const SCImage = styled(
-  "img",
+export const SCOtpInput = styled(
+  MuiOtpInput,
   {}
 )((props) => ({
   ...getEffectiveStyle([

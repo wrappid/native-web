@@ -29,10 +29,12 @@
   },
   "dependencies": {
     "@mui/material": "^5.10.2",
-    "@wrappid/styles": "^0.0.2",
-    "styled-components": "^5.3.9",
     "@mui/x-date-pickers": "^5.0.8",
-    "jodit-react": "^1.3.39"
+    "@wrappid/styles": "^0.0.2",
+    "jodit-react": "^1.3.39",
+    "jsoneditor": "^9.10.0",
+    "mui-one-time-password-input": "^1.1.0",
+    "styled-components": "^5.3.9"
   },
   "devDependencies": {
     "@babel/cli": "^7.21.0",

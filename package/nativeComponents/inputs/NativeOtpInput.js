@@ -1,48 +1,64 @@
-import React from "react";
-import OtpInput from "react-otp-input";
-import config from "../../config/config";
-import { CoreClasses } from "@wrappid/styles";
-import NativeBox from "../layouts/NativeBox";
 import NativeFormErrorText from "./NativeFormErrorText";
 import NativeFormHelperText from "./NativeFormHelperText";
+import { CoreClasses } from "@wrappid/styles";
+import NativeBox from "../layouts/NativeBox";
+import { SCOtpInput } from "../../inputs/SCOtpInput";
+import React from "react";
 
-export default function NativeOtpInput(props) {
-  console.log("ADSDASDA");
+export const NativeOtpInput = (props) => {
+  const {
+    id,
+    value,
+    onChange,
+    length = 6,
+    gap = 0,
+    formik,
+    ...restProps
+  } = props;
+
+  const handleChange = (otpvalue) => {
+    formik?.setFieldValue(id, otpvalue);
+    if (onchange) {
+      onChange(otpvalue);
+    }
+  };
+
+  const matchIsNumeric = (text) => {
+    const isString = typeof text === "string";
+
+    let isNumeric = true;
+
+    let isnan = isNaN(Number(text));
+
+    if (isString && text !== "" && isnan) {
+      isNumeric = false;
+    }
+
+    return isNumeric;
+  };
+
+  const validateChar = (value) => {
+    return matchIsNumeric(value);
+  };
+
   return (
     <NativeBox styleClasses={[CoreClasses.MARGIN.MB2]}>
-      <OtpInput
-        containerStyle={{
-          // width: "100%"
-          display: "flex",
-          marginLeft: -10,
-          marginRight: -10,
-          marginTop: -14,
-        }}
-        inputStyle={{
-          width: "100%",
-          margin: 10,
-          color: config.color.primaryTextColor,
-          border: "none",
-          outline: "none",
-          borderBottomStyle: "solid",
-          borderBottomWidth: "none",
-          borderBottomColor: config.color.contrastBackgroundColor,
-          fontSize: "2rem",
-        }}
-        id={props.id}
-        name={props.id}
-        value={props.value}
-        onChange={(v) => {
-          props.formik.setFieldValue(props.id, v);
-        }}
-        numInputs={6}
-        separator={<span></span>}
-        shouldAutoFocus={props.autoFocus ? true : false}
+      <SCOtpInput
+        {...restProps}
+        id={id}
+        value={value}
+        length={length}
+        display="flex"
+        gap={gap}
+        onChange={(otpvalue) => handleChange(otpvalue)}
+        validateChar={validateChar}
       />
+
       {props.error && <NativeFormErrorText>{props.error}</NativeFormErrorText>}
+
       <NativeFormHelperText styleClasses={[CoreClasses.LAYOUT.NO_MARGIN_P]}>
         {props.helperText}
       </NativeFormHelperText>
     </NativeBox>
   );
-}
+};
