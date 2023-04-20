@@ -97,10 +97,6 @@ import NativeSkeleton from "./nativeComponents/feedback/NativeSkeleton";
 import NativeAccordion from "./nativeComponents/surfaces/NativeAccordion";
 import NativeAccordionDetail from "./nativeComponents/surfaces/NativeAccordionDetail";
 import NativeAccordionSummary from "./nativeComponents/surfaces/NativeAccordionSummary";
-import HelpAndSupportPopOver from "./nativeComponents/surfaces/utils/HelpAndSupportPopOver";
-import QuickAddPopOver from "./nativeComponents/surfaces/utils/QuickAddPopOver";
-import NotificationPopOver from "./nativeComponents/surfaces/utils/NotificationPopOver";
-import RxProfilePopOver from "./nativeComponents/surfaces/utils/RxProfilePopOver";
 import NativeAppBar from "./nativeComponents/surfaces/NativeAppBar";
 import NativeDrawer from "./nativeComponents/surfaces/NativeDrawer";
 import NativeCard from "./nativeComponents/surfaces/NativeCard";
@@ -317,10 +313,6 @@ export {
   NativeAccordion,
   NativeAccordionSummary,
   NativeAccordionDetail,
-  HelpAndSupportPopOver,
-  QuickAddPopOver,
-  NotificationPopOver,
-  RxProfilePopOver,
   NativeAppBar,
   NativeDrawer,
   NativeCard,
