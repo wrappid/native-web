@@ -117,7 +117,6 @@ import NativeMenuItem from "./nativeComponents/navigation/NativeMenuItem";
 import NativeTab from "./nativeComponents/navigation/NativeTab";
 import NativeMenuList from "./nativeComponents/navigation/NativeMenuList";
 import NativeTabs from "./nativeComponents/navigation/NativeTabs";
-import NativeCustomTabs from "./nativeComponents/navigation/custom/NativeCustomTabs";
 import NativeTabPanel from "./nativeComponents/navigation/NativeTabPanel";
 import NativeScrollTop from "./nativeComponents/navigation/NativeScrollTop";
 import NativeLink from "./nativeComponents/navigation/NativeLink";
@@ -182,8 +181,6 @@ import NativeAutocomplete from "./nativeComponents/inputs/NativeAutocomplete";
 import NativeImagePicker from "./nativeComponents/inputs/NativeImagePicker";
 import NativeIconButton from "./nativeComponents/inputs/NativeIconButton";
 import NativeDateRangepicker from "./nativeComponents/inputs/NativeDateRangepicker";
-import ParentChildMap from "./nativeComponents/inputs/custom/ParentChildMap";
-import NativeFormLabelCheckbox from "./nativeComponents/inputs/custom/NativeFormLabelCheckbox";
 import ChildMap from "./nativeComponents/inputs/custom/ChildMap";
 import NativeResponsiveButton from "./nativeComponents/inputs/custom/NativeResponsiveButton";
 import NativeRichTextEditor from "./nativeComponents/inputs/custom/NativeRichTextEditor";
@@ -342,7 +339,6 @@ export {
   NativeTab,
   NativeMenuList,
   NativeTabs,
-  NativeCustomTabs,
   NativeTabPanel,
   NativeScrollTop,
   NativeLink,
@@ -407,11 +403,6 @@ export {
   NativeImagePicker,
   NativeIconButton,
   NativeDateRangepicker,
-  ParentChildMap,
-  NativeFormLabelCheckbox,
-  ChildMap,
-  NativeResponsiveButton,
-  NativeRichTextEditor,
   NativeOutlinedButton,
   NativeTextButton,
   NativeMenu,
