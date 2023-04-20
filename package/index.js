@@ -181,9 +181,7 @@ import NativeAutocomplete from "./nativeComponents/inputs/NativeAutocomplete";
 import NativeImagePicker from "./nativeComponents/inputs/NativeImagePicker";
 import NativeIconButton from "./nativeComponents/inputs/NativeIconButton";
 import NativeDateRangepicker from "./nativeComponents/inputs/NativeDateRangepicker";
-import ChildMap from "./nativeComponents/inputs/custom/ChildMap";
-import NativeResponsiveButton from "./nativeComponents/inputs/custom/NativeResponsiveButton";
-import NativeRichTextEditor from "./nativeComponents/inputs/custom/NativeRichTextEditor";
+import NativeRichTextEditor from "./nativeComponents/inputs/custom/NativeRichTextEditor.js";
 import NativeOutlinedButton from "./nativeComponents/inputs/NativeOutlinedButton";
 import NativeTextButton from "./nativeComponents/inputs/NativeTextButton";
 import NativeMenu from "./nativeComponents/inputs/NativeMenu";
@@ -396,6 +394,7 @@ export {
   NativeInputAdornment,
   ListItemButton,
   NativeFormHelperText,
+  NativeRichTextEditor,
   NativeDateTimePicker,
   NativeOtpInput,
   NativeMultiTimeRangePicker,
