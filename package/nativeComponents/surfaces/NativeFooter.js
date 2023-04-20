@@ -1,12 +1,10 @@
 import React from "react";
-
-import NativeDivider from "../surfaces/NativeDivider";
-import NativeTypographyBody1 from "../surfaces/paragraph/NativeTypographyBody1";
 import NativeBox from "../layouts/NativeBox";
 import NativeGrid from "../layouts/NativeGrid";
-import { CoreClasses } from "@wrappid/styles";
+import NativeDivider from "../dataDisplay/NativeDivider";
+import NativeTypographyBody1 from "../dataDisplay/paragraph/NativeTypographyBody1";
 // import AppVersion from "../../module/app/AppVersion";
-import config from "../../config/config";
+import { CoreClasses } from "@wrappid/styles";
 
 export default function NativeFooter(props) {
   return (
@@ -15,7 +13,7 @@ export default function NativeFooter(props) {
 
       <NativeGrid styleClasses={[CoreClasses.PADDING.PT3]}>
         <NativeTypographyBody1>
-          {config?.footerText || "Wrappid Default Footer @ 2023 "}
+          {props?.footerText || "Wrappid Default Footer @ 2023 "}
         </NativeTypographyBody1>
 
         <NativeTypographyBody1>{/* <AppVersion /> */}</NativeTypographyBody1>
