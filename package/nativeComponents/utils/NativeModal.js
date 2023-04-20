@@ -2,8 +2,8 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { SCModal } from "../../utils/SCModal";
 import { CoreClasses } from "@wrappid/styles";
-import NativeIcon from "../utils/NativeIcon";
-import NativeH6 from "../utils/heading/NativeH6";
+import NativeIcon from "../dataDisplay/NativeIcon";
+import NativeH6 from "../dataDisplay/heading/NativeH6";
 import NativeIconButton from "../inputs/NativeIconButton";
 import NativeBox from "../layouts/NativeBox";
 
