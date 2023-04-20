@@ -6,7 +6,7 @@ import NativeFormHelperText from "./NativeFormHelperText";
 import { CoreClasses } from "@wrappid/styles";
 import { SCTimePicker } from "../../inputs/SCTimePicker";
 import NativeBox from "../layouts/NativeBox";
-import NativeLabel from "../inputs/paragraph/NativeLabel";
+import NativeLabel from "../dataDisplay/paragraph/NativeLabel";
 import NativeGrid from "../layouts/NativeGrid";
 import moment from "moment";
 

@@ -2,11 +2,11 @@ import React from "react";
 import NativeFormHelperText from "./NativeFormHelperText";
 import { CoreClasses } from "@wrappid/styles";
 import NativeBox from "../layouts/NativeBox";
-import NativeLabel from "../inputs/paragraph/NativeLabel";
+import NativeLabel from "../dataDisplay/paragraph/NativeLabel";
 import NativeGrid from "../layouts/NativeGrid";
 import moment from "moment";
 import NativeIconButton from "./NativeIconButton";
-import NativeIcon from "../inputs/NativeIcon";
+import NativeIcon from "../dataDisplay/NativeIcon";
 import NativeTimePicker from "./NativeTimePicker";
 
 export default function NativeMultiTimeRangePicker(props) {
