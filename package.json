@@ -28,6 +28,7 @@
     ]
   },
   "dependencies": {
+    "@mui/icons-material": "^5.11.16",
     "@mui/material": "^5.10.2",
     "@mui/x-date-pickers": "^5.0.8",
     "@wrappid/styles": "^0.0.2",

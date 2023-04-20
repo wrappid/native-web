@@ -1,6 +1,6 @@
 import React from "react";
 import { SCIconButton } from "../../inputs/SCIconButton";
-import NativeTooltip from "../inputs/NativeTooltip";
+import NativeTooltip from "../dataDisplay/NativeTooltip";
 
 export default function NativeIconButton(props) {
   const {
