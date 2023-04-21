@@ -8,7 +8,7 @@ export default function NativeDrawer(props) {
       {...props}
       PaperProps={{
         sx: {
-          ...getEffectiveStyle([CoreClasses.APP.APP_DRAWER_PAPER_HEIGHT]),
+          ...getEffectiveStyle([CoreClasses.CORE_DRAWER.PAPER_HEIGHT]),
         },
       }}
     >

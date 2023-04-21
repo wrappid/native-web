@@ -37,7 +37,7 @@ export default function NativeAppBar(props) {
               onClick={() => {
                 navigate(navigateString);
               }}
-              styleClasses={[CoreClasses.Native_APP_BAR.APP_BAR_LOGO]}
+              styleClasses={[CoreClasses.CORE_APP_BAR.APP_BAR_LOGO]}
             />
           </NativeStack>
 
