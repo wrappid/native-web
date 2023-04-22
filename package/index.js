@@ -191,6 +191,11 @@ import NativeCheckbox from "./nativeComponents/inputs/NativeCheckbox";
 import DevNativeDataTable from "./nativeComponents/dataTable/DevNativeDataTable";
 import NativeFormContainer from "./nativeComponents/forms/NativeFormContainer";
 import getMenuItem from "./helper/menuUtil";
+import {
+  NativeDomRoutes,
+  NativeDomRoute,
+  NativeDomNavigate,
+} from "./nativeComponents/helper/routerHelper";
 
 export {
   SCAvatar,
@@ -385,4 +390,7 @@ export {
   NativeCheckbox,
   DevNativeDataTable,
   getMenuItem,
+  NativeDomRoutes,
+  NativeDomRoute,
+  NativeDomNavigate,
 };
