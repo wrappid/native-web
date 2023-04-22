@@ -195,7 +195,10 @@ import {
   NativeDomRoutes,
   NativeDomRoute,
   NativeDomNavigate,
+  nativeUseNavigate,
+  nativeUseLocation,
 } from "./nativeComponents/helper/routerHelper";
+import { nativeFilterOptions } from "./helper/helper";
 
 export {
   SCAvatar,
@@ -393,4 +396,7 @@ export {
   NativeDomRoutes,
   NativeDomRoute,
   NativeDomNavigate,
+  nativeUseNavigate,
+  nativeUseLocation,
+  nativeFilterOptions,
 };

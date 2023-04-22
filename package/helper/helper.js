@@ -1,4 +1,6 @@
-export function getFullName(data) {
+import { createFilterOptions as nativeFilterOptions } from "@mui/material/Autocomplete";
+
+function getFullName(data) {
   var n = "";
   if (data?.firstName) {
     n += data?.firstName;
@@ -12,7 +14,7 @@ export function getFullName(data) {
   return n && n.length > 0 ? n : "Unnamed";
 }
 
-export function queryBuilder(url, query) {
+function queryBuilder(url, query) {
   var newUrl = url;
   if (
     query &&
@@ -43,7 +45,7 @@ export function queryBuilder(url, query) {
   return newUrl;
 }
 
-export function createFormData(files, body) {
+function createFormData(files, body) {
   //console.log(file, field, body);
   const data = new FormData();
   //console.log("IN form data", file, body);
@@ -60,7 +62,7 @@ export function createFormData(files, body) {
   return data;
 }
 
-export function clearValidatePhoneEmail(text) {
+function clearValidatePhoneEmail(text) {
   var t = text;
   if (!text || (text && text.length === 0)) return false;
   if (t[0] === "'") {
@@ -83,3 +85,11 @@ export function clearValidatePhoneEmail(text) {
 
   return f;
 }
+
+export {
+  getFullName,
+  queryBuilder,
+  createFormData,
+  clearValidatePhoneEmail,
+  nativeFilterOptions,
+};
