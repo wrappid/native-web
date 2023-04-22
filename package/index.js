@@ -199,6 +199,13 @@ import {
   nativeUseLocation,
 } from "./nativeComponents/helper/routerHelper";
 import { nativeFilterOptions } from "./helper/helper";
+import { nativeUseScrollTrigger } from "./helper/componentUtil";
+import {
+  nativeCreateTheme,
+  NativeThemeProvider,
+  NativeCssBaseline,
+} from "./theme/themeUtil";
+import NativeCollapse from "./nativeComponents/surfaces/NativeCollapse";
 
 export {
   SCAvatar,
@@ -399,4 +406,9 @@ export {
   nativeUseNavigate,
   nativeUseLocation,
   nativeFilterOptions,
+  nativeUseScrollTrigger,
+  nativeCreateTheme,
+  NativeThemeProvider,
+  NativeCssBaseline,
+  NativeCollapse,
 };

@@ -5,6 +5,7 @@ import {
   FORM_XL_DEFAULT_GRID_SIZE,
   FORM_XS_DEFAULT_GRID_SIZE,
 } from "../form/nativeFormConstants";
+import useScrollTrigger from "@mui/material/useScrollTrigger";
 
 const XS_DEFAULT_GRID_SIZE = 12;
 const SM_DEFAULT_GRID_SIZE = 12;
@@ -72,3 +73,5 @@ export function getGridSizeProps(gridSize, formFlag) {
 
   return finalProps;
 }
+
+export { useScrollTrigger as nativeUseScrollTrigger };
