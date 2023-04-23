@@ -283,6 +283,10 @@ export {
   SCFade,
   SCModal,
   SCPopover,
+
+  /**
+   * NATIVE EXPORTS
+   */
   NativeNavigation,
   NativeModal,
   NativePopover,

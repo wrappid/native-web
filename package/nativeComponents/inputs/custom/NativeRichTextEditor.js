@@ -1,6 +1,6 @@
 import React from "react";
 import { useRef } from "react";
-import { SCRichTextEditor } from "../../../dataDisplay/SCRichTextEditor";
+import { SCRichTextEditor } from "../../../inputs/custom/SCRichTextEditor";
 import NativeInputLabel from "../NativeInputLabel";
 
 export default function NativeRichTextEditor(props) {
