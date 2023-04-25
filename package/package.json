@@ -35,6 +35,5 @@
     "styled-components": "^5.3.9"
   },
   "peerDependencies": {
-    "@wrappid/styles": "^0.0.3"
   }
 }
