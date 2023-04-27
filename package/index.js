@@ -206,6 +206,7 @@ import {
   NativeCssBaseline,
 } from "./theme/themeUtil";
 import NativeCollapse from "./nativeComponents/surfaces/NativeCollapse";
+import { nativeStorage } from "./nativeComponents/helper/storeHelper";
 
 export {
   SCAvatar,
@@ -415,4 +416,5 @@ export {
   NativeThemeProvider,
   NativeCssBaseline,
   NativeCollapse,
+  nativeStorage,
 };
