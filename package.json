@@ -1,12 +1,11 @@
 {
   "name": "@wrappid/sc-web",
-  "version": "0.0.7-alpha.0",
+  "version": "0.0.10",
   "description": "This repository is combined packages of all the Styled Components for react web project.",
   "main": "index.js",
   "scripts": {
     "test": "echo testing not yet implemented",
     "build": "npx babel package --out-dir dist --copy-files",
-    "publish-old": "npm publish ./package --registry=https://npm.pkg.github.com --scope=@wrappid",
     "publish": "npm publish ./dist --registry=https://npm.pkg.github.com --scope=@wrappid"
   },
   "repository": {
