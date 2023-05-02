@@ -1,5 +1,5 @@
 import React from "react";
-import { SCDrawer } from "../../navigation/SCDrawer";
+import { SCDrawer } from "../../styledComponents/navigation/SCDrawer";
 import { CoreClasses, getEffectiveStyle } from "@wrappid/styles";
 
 export default function NativeDrawer(props) {
