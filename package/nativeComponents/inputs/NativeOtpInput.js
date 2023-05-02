@@ -5,7 +5,7 @@ import NativeBox from "../layouts/NativeBox";
 import { SCOtpInput } from "../../styledComponents/inputs/SCOtpInput";
 import React from "react";
 
-export default NativeOtpInput = (props) => {
+const NativeOtpInput = (props) => {
   const {
     id,
     value,
@@ -62,3 +62,5 @@ export default NativeOtpInput = (props) => {
     </NativeBox>
   );
 };
+
+export default NativeOtpInput;
