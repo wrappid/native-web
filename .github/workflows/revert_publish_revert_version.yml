@@ -30,7 +30,7 @@ jobs:
         with: 
           owner: 'wrappid'
           package-version-ids: '${{steps.package-details.outputs.package_id}}'
-          package-name: 'sc-web'
+          package-name: 'native-web'
           package-type: 'npm'
           token: ${{ secrets.GITHUB_TOKEN }}
           #min-versions-to-keep: 10

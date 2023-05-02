@@ -5,7 +5,7 @@ TOKEN=$1
 # Set variables
 ORG="wrappid"
 PACKAGE_TYPE="npm"
-PACKAGE_NAME="sc-web"
+PACKAGE_NAME="native-web"
 OUTPUT_FILE="package_details.json"
 
 # Set API endpoint

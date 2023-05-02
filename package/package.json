@@ -1,6 +1,6 @@
 {
-  "name": "@wrappid/sc-web",
-  "version": "0.0.10",
+  "name": "@wrappid/native-web",
+  "version": "0.0.1",
   "description": "This repository is combined packages of all the Styled Components for react web project.",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://techoneel: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@github.com/wrappid/sc-web.git"
+    "url": "git+https://techoneel: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@github.com/wrappid/native-web.git"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
@@ -20,9 +20,9 @@
   ],
   "author": "wrappid",
   "bugs": {
-    "url": "https://github.com/wrappid/sc-web/issues"
+    "url": "https://github.com/wrappid/native-web/issues"
   },
-  "homepage": "https://github.com/wrappid/sc-web#readme",
+  "homepage": "https://github.com/wrappid/native-web#readme",
   "dependencies": {
     "@mui/material": "^5.10.2",
     "@mui/icons-material": "^5.11.16",
