@@ -1,6 +1,6 @@
 import React from "react";
 
-import { SCTextField } from "../../inputs/SCTextField";
+import { SCTextField } from "../../styledComponents/inputs/SCTextField";
 
 export default function NativeConfirmPasswordField(props) {
   return (

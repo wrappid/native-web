@@ -1,6 +1,6 @@
 import React from "react";
 import { getUUID } from "../../helper/appUtils";
-import { SCSelect } from "../../inputs/SCSelect";
+import { SCSelect } from "../../styledComponents/inputs/SCSelect";
 import NativeFormControl from "./NativeFormControl";
 import NativeInputLabel from "./NativeInputLabel";
 import NativeMenuItem from "./NativeMenuItem";

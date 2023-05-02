@@ -8,7 +8,7 @@ import NativeIconButton from "../inputs/NativeIconButton";
 import NativeStack from "../layouts/NativeStack";
 import NativeToolbar from "../surfaces/NativeToolbar";
 import { CoreClasses } from "@wrappid/styles";
-import { SCAppBar } from "../../surfaces/SCAppBar";
+import { SCAppBar } from "../../styledComponents/surfaces/SCAppBar";
 
 export default function NativeAppBar(props) {
   const navigate = useNavigate();

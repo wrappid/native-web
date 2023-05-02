@@ -1,5 +1,5 @@
 import React from "react";
-import { SCCheckbox } from "../../inputs/SCCheckbox";
+import { SCCheckbox } from "../../styledComponents/inputs/SCCheckbox";
 import { CoreClasses } from "@wrappid/styles";
 import NativeFormControlLabel from "./NativeFormControlLabel";
 

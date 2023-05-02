@@ -4,7 +4,7 @@ import { AdapterMoment } from "@mui/x-date-pickers/AdapterMoment";
 import NativeTextField from "./NativeTextField";
 import NativeFormHelperText from "./NativeFormHelperText";
 import { CoreClasses } from "@wrappid/styles";
-import { SCTimePicker } from "../../inputs/SCTimePicker";
+import { SCTimePicker } from "../../styledComponents/inputs/SCTimePicker";
 import moment from "moment";
 
 export default function NativeTimePicker(props) {

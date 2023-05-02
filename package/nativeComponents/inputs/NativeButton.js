@@ -1,5 +1,5 @@
 import React from "react";
-import { SCButton } from "../../inputs/SCButton";
+import { SCButton } from "../../styledComponents/inputs/SCButton";
 
 export default function NativeButton(props) {
   const {

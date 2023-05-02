@@ -1,4 +1,4 @@
-import { SCFormControlLabel } from "../../inputs/SCFormControlLabel";
+import { SCFormControlLabel } from "../../styledComponents/inputs/SCFormControlLabel";
 
 export default function NativeFormControlLabel(props) {
   return <SCFormControlLabel {...props}>{props.children}</SCFormControlLabel>;

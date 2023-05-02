@@ -1,5 +1,5 @@
 import React from "react";
-import { SCTableCell } from "../../dataDisplay/SCTableCell";
+import { SCTableCell } from "../../styledComponents/dataDisplay/SCTableCell";
 
 export default function NativeTableCell(props) {
   const { children, ...restProps } = props;

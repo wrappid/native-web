@@ -1,5 +1,5 @@
 import React from "react";
-import { SCTypography } from "../../dataDisplay/SCTypography";
+import { SCTypography } from "../../styledComponents/dataDisplay/SCTypography";
 
 export default function NativeTypography(props) {
   //Do not use this directly use NativeParagraph

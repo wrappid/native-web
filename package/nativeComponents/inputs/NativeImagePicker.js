@@ -1,6 +1,6 @@
 import React from "react";
 import { useRef } from "react";
-import { SCInput } from "../../inputs/SCInput";
+import { SCInput } from "../../styledComponents/inputs/SCInput";
 import { CoreClasses } from "@wrappid/styles";
 import NativeAvatar from "../dataDisplay/NativeAvatar";
 import NativeBadge from "../dataDisplay/NativeBadge";

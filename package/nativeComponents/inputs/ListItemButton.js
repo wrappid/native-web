@@ -1,5 +1,5 @@
 import React from "react";
-import { SCListItemButton } from "../../inputs/SCListItemButton";
+import { SCListItemButton } from "../../styledComponents/inputs/SCListItemButton";
 
 export default function NativeListItemButton(props) {
   return <SCListItemButton {...props} />;

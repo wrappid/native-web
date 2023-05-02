@@ -1,6 +1,6 @@
 import React from "react";
 
-import { SCMenuItem } from "../../navigation/SCMenuItem";
+import { SCMenuItem } from "../../styledComponents/navigation/SCMenuItem";
 
 export default function NativeMenuItem(props) {
   return (

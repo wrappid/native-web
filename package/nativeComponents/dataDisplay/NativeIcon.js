@@ -1,5 +1,5 @@
 import React from "react";
-import { SCIcon } from "../../dataDisplay/SCIcon";
+import { SCIcon } from "../../styledComponents/dataDisplay/SCIcon";
 
 export const __IconTypes = {
   MATERIAL_ICON: "MATERIAL_ICON", // Default support of MUI

@@ -1,7 +1,7 @@
 import React from "react";
 
 import { useRef } from "react";
-import { SCInput } from "../../inputs/SCInput";
+import { SCInput } from "../../styledComponents/inputs/SCInput";
 import { CoreClasses } from "@wrappid/styles";
 import NativeIcon from "../dataDisplay/NativeIcon";
 import NativeTypographyBody1 from "../dataDisplay/paragraph/NativeTypographyBody1";

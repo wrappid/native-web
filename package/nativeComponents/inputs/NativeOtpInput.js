@@ -2,10 +2,10 @@ import NativeFormErrorText from "./NativeFormErrorText";
 import NativeFormHelperText from "./NativeFormHelperText";
 import { CoreClasses } from "@wrappid/styles";
 import NativeBox from "../layouts/NativeBox";
-import { SCOtpInput } from "../../inputs/SCOtpInput";
+import { SCOtpInput } from "../../styledComponents/inputs/SCOtpInput";
 import React from "react";
 
-export const NativeOtpInput = (props) => {
+export default NativeOtpInput = (props) => {
   const {
     id,
     value,

@@ -1,6 +1,6 @@
 import React from "react";
 import { getUUID } from "../../helper/appUtils";
-import { SCInput } from "../../inputs/SCInput";
+import { SCInput } from "../../styledComponents/inputs/SCInput";
 import NativeFormControl from "./NativeFormControl";
 import NativeFormErrorText from "./NativeFormErrorText";
 import NativeFormHelperText from "./NativeFormHelperText";

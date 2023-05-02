@@ -1,6 +1,6 @@
 import React from "react";
 
-import { SCLink } from "../../navigation/SCLink";
+import { SCLink } from "../../styledComponents/navigation/SCLink";
 import NativeTooltip from "../dataDisplay/NativeTooltip";
 
 export default function NativeLink(props) {

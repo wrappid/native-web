@@ -1,6 +1,6 @@
 import React from "react";
 import { getUUID } from "../../helper/appUtils";
-import { SCTable } from "../../dataDisplay/SCTable";
+import { SCTable } from "../../styledComponents/dataDisplay/SCTable";
 
 export default function NativeTable(props) {
   let _uuid = getUUID();
