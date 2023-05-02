@@ -5,7 +5,7 @@ import { getEffectiveStyle, CoreClasses } from "@wrappid/styles";
 /**
  * @todo config from core to be used
  */
-import config from "../config";
+import config from "../../config";
 
 export const SCRightDrawer = styled(
   MuiDrawer,

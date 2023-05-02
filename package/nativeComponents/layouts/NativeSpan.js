@@ -1,6 +1,6 @@
 import React from "react";
 
-import { SCBox } from "../../../styledComponents/layouts/SCBox";
+import { SCBox } from "../../styledComponents/layouts/SCBox";
 
 export default function NativeSpan(props) {
   return (
