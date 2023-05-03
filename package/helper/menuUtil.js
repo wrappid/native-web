@@ -9,7 +9,7 @@ import NativeIcon from "../nativeComponents/dataDisplay/NativeIcon";
 import NativeListItemText from "../nativeComponents/dataDisplay/NativeListItemText";
 import NativeIconButton from "../nativeComponents/inputs/NativeIconButton";
 
-export default function getMenuItem(
+export default function getNativeMenuItem(
   menuItem,
   level,
   OnMenuClick,

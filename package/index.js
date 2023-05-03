@@ -112,7 +112,7 @@ import NativeButton from "./nativeComponents/inputs/NativeButton";
 import NativeCheckbox from "./nativeComponents/inputs/NativeCheckbox";
 import DevNativeDataTable from "./nativeComponents/dataTable/DevNativeDataTable";
 import NativeFormContainer from "./nativeComponents/forms/NativeFormContainer";
-import getMenuItem from "./helper/menuUtil";
+import getNativeMenuItem from "./helper/menuUtil";
 import {
   NativeDomRoutes,
   NativeDomRoute,
@@ -250,7 +250,7 @@ export {
   NativeButton,
   NativeCheckbox,
   DevNativeDataTable,
-  getMenuItem,
+  getNativeMenuItem,
   NativeDomRoutes,
   NativeDomRoute,
   NativeDomNavigate,
