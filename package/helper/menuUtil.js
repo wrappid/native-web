@@ -25,12 +25,12 @@ export default function getNativeMenuItem(
   /**
    * @todo review required for using core menu item instead of core List Item
    */
-  return menuItem.type === MENU_SEPERATOR ? (
+  return menuItem.type === allTypes?.MENU_SEPERATOR ? (
     <NativeDivider />
   ) : open ? (
     <NativeLink
       href={
-        menuItem?.type === MENU_ITEM && menuItem?.link
+        menuItem?.type === allTypes?.MENU_ITEM && menuItem?.link
           ? menuItem?.link
           : "javascript:void(0)"
       }
@@ -40,7 +40,7 @@ export default function getNativeMenuItem(
           height: "34px",
           paddingLeft: `calc(13px + ${level * 8}px)`,
           backgroundColor:
-            menuItem?.type === MENU_ITEM &&
+            menuItem?.type === allTypes?.MENU_ITEM &&
             locationPathname === menuItem?.link &&
             theme.palette.secondary.light,
         }}
@@ -57,11 +57,19 @@ export default function getNativeMenuItem(
             miniDrawer
               ? [
                   CoreClasses.MENU.MINI_DRAWER_LIST_ITEM_ICON,
-                  ...getTypeWiseStyle(menuItem, MENU_ITEM_ICON, allTypes),
+                  ...getTypeWiseStyle(
+                    menuItem,
+                    allTypes?.MENU_ITEM_ICON,
+                    allTypes
+                  ),
                 ]
               : [
                   CoreClasses.MENU.LIST_ITEM_ICON,
-                  ...getTypeWiseStyle(menuItem, MENU_ITEM_ICON, allTypes),
+                  ...getTypeWiseStyle(
+                    menuItem,
+                    allTypes?.MENU_ITEM_ICON,
+                    allTypes
+                  ),
                 ]
           }
         >
@@ -75,7 +83,7 @@ export default function getNativeMenuItem(
             }
             sx={{
               color: `${
-                menuItem?.type === MENU_ITEM &&
+                menuItem?.type === allTypes?.MENU_ITEM &&
                 locationPathname === menuItem?.link
                   ? theme.palette.primary.light
                   : theme.palette.secondary.dark
@@ -87,12 +95,12 @@ export default function getNativeMenuItem(
           disableTypography
           styleClasses={[
             CoreClasses.NAVIGATION.APP_DRAWER_TEXT,
-            ...getTypeWiseStyle(menuItem, MENU_ITEM_TEXT, allTypes),
+            ...getTypeWiseStyle(menuItem, allTypes?.MENU_ITEM_TEXT, allTypes),
           ]}
           primary={menuItem.label}
           sx={{
             color: `${
-              menuItem?.type === MENU_ITEM &&
+              menuItem?.type === allTypes?.MENU_ITEM &&
               locationPathname === menuItem?.link
                 ? theme.palette.primary.light
                 : theme.palette.secondary.dark
@@ -104,7 +112,7 @@ export default function getNativeMenuItem(
   ) : (
     <NativeLink
       href={
-        menuItem?.type === MENU_ITEM && menuItem?.link
+        menuItem?.type === allTypes?.MENU_ITEM && menuItem?.link
           ? menuItem?.link
           : "javascript:void(0)"
       }
@@ -125,7 +133,7 @@ export default function getNativeMenuItem(
           }
           sx={{
             color: `${
-              menuItem?.type === MENU_ITEM &&
+              menuItem?.type === allTypes?.MENU_ITEM &&
               locationPathname === menuItem?.link
                 ? theme.palette.primary.light
                 : theme.palette.secondary.dark
