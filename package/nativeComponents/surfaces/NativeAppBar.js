@@ -31,7 +31,7 @@ export default function NativeAppBar(props) {
               <NativeIcon>menu</NativeIcon>
             </NativeIconButton>
 
-            <NativeImage4
+            <NativeImage
               src="/images/logo.png"
               alt="Rxefy Logo"
               onClick={() => {
