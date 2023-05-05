@@ -122,11 +122,8 @@ import {
 } from "./nativeComponents/helper/routerHelper";
 import { nativeFilterOptions } from "./helper/helper";
 import { nativeUseScrollTrigger } from "./helper/componentUtil";
-import {
-  nativeCreateTheme,
-  NativeThemeProvider,
-  NativeCssBaseline,
-} from "./theme/themeUtil";
+import { nativeCreateTheme, NativeCssBaseline } from "./theme/themeUtil";
+import NativeThemeProvider from "./theme/NativeThemeProvider";
 import NativeCollapse from "./nativeComponents/surfaces/NativeCollapse";
 import { nativeStorage } from "./nativeComponents/helper/storeHelper";
 

@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import MuiDrawer from "@mui/material/Drawer";
 import { getEffectiveStyle, CoreClasses } from "@wrappid/styles";
-import theme from "../../theme/themeUtil";
 /**
  * @todo config from core to be used
  */
@@ -33,7 +32,7 @@ const closedMixin = (theme) => ({
 
 export const SCDrawer = styled(MuiDrawer, {
   shouldForwardProp: (prop) => prop !== "open",
-})(({ open }) => ({
+})(({ open, theme }) => ({
   /**
    * @todo
    * Must support external styleClasses through props
