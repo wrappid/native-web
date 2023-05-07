@@ -8,7 +8,7 @@ import { CoreClasses } from "@wrappid/styles";
 
 export default function NativeFooter(props) {
   return (
-    <NativeBox styleClasses={[CoreClasses.APP.FOOTER]}>
+    <NativeBox styleClasses={[/*CoreClasses.APP.FOOTER*/]}>
       <NativeDivider />
 
       <NativeGrid styleClasses={[CoreClasses.PADDING.PT3]}>

@@ -15,18 +15,8 @@ export default function NativePopover(props) {
   return (
     <SCPopover
       id={id}
-      // PaperProps={{
-      //   sx: { minWidth: "300px" },
-      // }}
       {...restProps}
     >
-      {/* <NativeBox styleClasses={[CoreClasses.POPOVER.HEADER]}>
-        {headerComponent}
-      </NativeBox>
-      <NativeBox styleClasses={[CoreClasses.POPOVER.CONTENT]}></NativeBox>
-      <NativeBox styleClasses={[CoreClasses.POPOVER.FOOTER]}>
-        {footerComponent}
-      </NativeBox> */}
       {children}
     </SCPopover>
   );
