@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import { List } from "@mui/material";
-import { getEffectiveStyle, CoreClasses } from "@wrappid/styles";
+import { getEffectiveStyle, StyledComponentsClasses } from "@wrappid/styles";
 
-const defaultStyleClasses = [CoreClasses.SC.LAYOUTS.LIST];
+const defaultStyleClasses = [StyledComponentsClasses.LAYOUTS.LIST];
 
 export const SCList = styled(
   List,

@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { SCModal } from "../../styledComponents/utils/SCModal";
-import { CoreClasses } from "@wrappid/styles";
+import { UtilityClasses, StyledComponentsClasses } from "@wrappid/styles";
 import NativeIcon from "../dataDisplay/NativeIcon";
 import NativeH6 from "../dataDisplay/heading/NativeH6";
 import NativeIconButton from "../inputs/NativeIconButton";
@@ -29,21 +29,21 @@ export default function NativeModal(props) {
         sx={{ bgcolor: "background.paper" }}
         styleClasses={
           props.containerStyle
-            ? [CoreClasses.MODAL.MODAL_CONTAINER, ...modalStyle.containerStyle]
-            : [CoreClasses.MODAL.MODAL_CONTAINER]
+            ? [StyledComponentsClasses .MODAL.MODAL_CONTAINER, ...modalStyle.containerStyle]
+            : [StyledComponentsClasses.MODAL.MODAL_CONTAINER]
         }
       >
         <NativeBox
           styleClasses={
             props.headerStyle
               ? [
-                  CoreClasses.MODAL.MODAL_HEADER,
-                  CoreClasses.ALIGNMENT.JUSTIFY_CONTENT_SPACE_BETWEEN,
+                StyledComponentsClasses.MODAL.MODAL_HEADER,
+                  UtilityClasses.ALIGNMENT.JUSTIFY_CONTENT_SPACE_BETWEEN,
                   ...modalStyle?.headerStyle,
                 ]
               : [
-                  CoreClasses.MODAL.MODAL_HEADER,
-                  CoreClasses.ALIGNMENT.JUSTIFY_CONTENT_SPACE_BETWEEN,
+                StyledComponentsClasses.MODAL.MODAL_HEADER,
+                  UtilityClasses.ALIGNMENT.JUSTIFY_CONTENT_SPACE_BETWEEN,
                 ]
           }
           id="modal-modal-title"
@@ -58,8 +58,8 @@ export default function NativeModal(props) {
         <NativeBox
           styleClasses={
             props.bodyStyle
-              ? [CoreClasses.MODAL.MODAL_BODY, ...modalStyle?.bodyStyle]
-              : [CoreClasses.MODAL.MODAL_BODY]
+              ? [StyledComponentsClasses.MODAL.MODAL_BODY, ...modalStyle?.bodyStyle]
+              : [StyledComponentsClasses.MODAL.MODAL_BODY]
           }
           id="modal-modal-description"
         >

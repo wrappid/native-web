@@ -1,5 +1,5 @@
 import React from "react";
-import { CoreClasses } from "@wrappid/styles";
+import { UtilityClasses } from "@wrappid/styles";
 import { isJson } from "./stringUtils";
 import NativeDivider from "../nativeComponents/dataDisplay/NativeDivider";
 import NativeLink from "../nativeComponents/navigation/NativeLink";
@@ -56,7 +56,7 @@ export default function getNativeMenuItem(
           styleClasses={
             miniDrawer
               ? [
-                  CoreClasses.MENU.MINI_DRAWER_LIST_ITEM_ICON,
+                  UtilityClasses.MENU.MINI_DRAWER_LIST_ITEM_ICON,
                   ...getTypeWiseStyle(
                     menuItem,
                     allTypes?.MENU_ITEM_ICON,
@@ -64,7 +64,7 @@ export default function getNativeMenuItem(
                   ),
                 ]
               : [
-                  CoreClasses.MENU.LIST_ITEM_ICON,
+                  UtilityClasses.MENU.LIST_ITEM_ICON,
                   ...getTypeWiseStyle(
                     menuItem,
                     allTypes?.MENU_ITEM_ICON,
@@ -94,7 +94,7 @@ export default function getNativeMenuItem(
         <NativeListItemText
           disableTypography
           styleClasses={[
-            CoreClasses.NAVIGATION.APP_DRAWER_TEXT,
+            UtilityClasses.NAVIGATION.APP_DRAWER_TEXT,
             ...getTypeWiseStyle(menuItem, allTypes?.MENU_ITEM_TEXT, allTypes),
           ]}
           primary={menuItem.label}
@@ -160,59 +160,59 @@ function getTypeWiseStyle(item, elemType, allTypes) {
   switch (item.type) {
     case MENU_PARENT_ITEM:
       if (elemType === MENU_ITEM_WRAPPER) {
-        styles.push(CoreClasses.MENU.PARENT_ITEM);
+        styles.push(UtilityClasses.MENU.PARENT_ITEM);
       }
       if (elemType === MENU_ITEM_BUTTON) {
-        styles.push(CoreClasses.MENU.PARENT_BUTTON_ITEM);
+        styles.push(UtilityClasses.MENU.PARENT_BUTTON_ITEM);
       }
       if (elemType === MENU_ITEM_ICON) {
-        styles.push(CoreClasses.MENU.PARENT_ICON_ITEM);
+        styles.push(UtilityClasses.MENU.PARENT_ICON_ITEM);
       }
       if (elemType === MENU_ITEM_TEXT) {
-        styles.push(CoreClasses.MENU.PARENT_TEXT_ITEM);
+        styles.push(UtilityClasses.MENU.PARENT_TEXT_ITEM);
       }
       break;
     case MENU_HEADER_ITEM:
       if (elemType === MENU_ITEM_WRAPPER) {
-        styles.push(CoreClasses.MENU.HEADER_ITEM);
+        styles.push(UtilityClasses.MENU.HEADER_ITEM);
       }
       if (elemType === MENU_ITEM_BUTTON) {
-        styles.push(CoreClasses.MENU.HEADER_BUTTON_ITEM);
+        styles.push(UtilityClasses.MENU.HEADER_BUTTON_ITEM);
       }
       if (elemType === MENU_ITEM_ICON) {
-        styles.push(CoreClasses.MENU.HEADER_ICON_ITEM);
+        styles.push(UtilityClasses.MENU.HEADER_ICON_ITEM);
       }
       if (elemType === MENU_ITEM_TEXT) {
-        styles.push(CoreClasses.MENU.HEADER_TEXT_ITEM);
+        styles.push(UtilityClasses.MENU.HEADER_TEXT_ITEM);
       }
       break;
     case MENU_SEPERATOR:
       if (elemType === MENU_ITEM_WRAPPER) {
-        styles.push(CoreClasses.MENU.SEPERATOR_ITEM);
+        styles.push(UtilityClasses.MENU.SEPERATOR_ITEM);
       }
       if (elemType === MENU_ITEM_BUTTON) {
-        styles.push(CoreClasses.MENU.SEPERATOR_BUTTON_ITEM);
+        styles.push(UtilityClasses.MENU.SEPERATOR_BUTTON_ITEM);
       }
       if (elemType === MENU_ITEM_ICON) {
-        styles.push(CoreClasses.MENU.SEPERATOR_ICON_ITEM);
+        styles.push(UtilityClasses.MENU.SEPERATOR_ICON_ITEM);
       }
       if (elemType === MENU_ITEM_TEXT) {
-        styles.push(CoreClasses.MENU.SEPERATOR_TEXT_ITEM);
+        styles.push(UtilityClasses.MENU.SEPERATOR_TEXT_ITEM);
       }
       break;
     case MENU_ITEM:
     default:
       if (elemType === MENU_ITEM_WRAPPER) {
-        styles.push(CoreClasses.MENU.MENU_ITEM);
+        styles.push(UtilityClasses.MENU.MENU_ITEM);
       }
       if (elemType === MENU_ITEM_BUTTON) {
-        styles.push(CoreClasses.MENU.MENU_ITEM_BUTTON_ITEM);
+        styles.push(UtilityClasses.MENU.MENU_ITEM_BUTTON_ITEM);
       }
       if (elemType === MENU_ITEM_ICON) {
-        styles.push(CoreClasses.MENU.MENU_ITEM_ICON_ITEM);
+        styles.push(UtilityClasses.MENU.MENU_ITEM_ICON_ITEM);
       }
       if (elemType === MENU_ITEM_TEXT) {
-        styles.push(CoreClasses.MENU.MENU_ITEM_TEXT_ITEM);
+        styles.push(UtilityClasses.MENU.MENU_ITEM_TEXT_ITEM);
       }
       break;
   }

@@ -24,7 +24,6 @@ import {
   FORM_XS_DEFAULT_GRID_SIZE,
 } from "../components/forms/coreFormConstants";
 import config from "../config/config";
-import { CoreClasses } from "@wrappid/styles";
 import { FORM_VALIDATION_MAP } from "./fromValidationMap";
 import { ASYNC_SELECT_FUNCTION_MAP } from "./asyncSelectFunctionMap";
 // import { store } from "../store/CoreProvider";
@@ -357,7 +356,7 @@ export function createFormActionProps(element) {
   ) {
     ob["styleClasses"] = element.actionContainerStyle;
   } else {
-    ob["styleClasses"] = [CoreClasses.LAYOUT.RIGHT_ALIGN];
+    ob["styleClasses"] = []// [CoreClasses.LAYOUT.RIGHT_ALIGN];
   }
 
   // console.log("FORM ACTION PROPS BUILDRE", ob, element);

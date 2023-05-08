@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import { MenuList } from "@mui/material";
-import { getEffectiveStyle, CoreClasses } from "@wrappid/styles";
+import { getEffectiveStyle, StyledComponentsClasses } from "@wrappid/styles";
 
-const defaultStyleClasses = [CoreClasses.SC.NAVIGATION.MENU_LIST];
+const defaultStyleClasses = [StyledComponentsClasses.NAVIGATION.MENU_LIST];
 
 export const SCMenuList = styled(
   MenuList,

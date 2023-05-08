@@ -1,6 +1,6 @@
 import NativeFormErrorText from "./NativeFormErrorText";
 import NativeFormHelperText from "./NativeFormHelperText";
-import { CoreClasses } from "@wrappid/styles";
+import { UtilityClasses } from "@wrappid/styles";
 import NativeBox from "../layouts/NativeBox";
 import { SCOtpInput } from "../../styledComponents/inputs/SCOtpInput";
 import React from "react";
@@ -42,7 +42,7 @@ const NativeOtpInput = (props) => {
   };
 
   return (
-    <NativeBox styleClasses={[CoreClasses.MARGIN.MB2]}>
+    <NativeBox styleClasses={[UtilityClasses.MARGIN.MB2]}>
       <SCOtpInput
         {...restProps}
         id={id}
@@ -56,7 +56,7 @@ const NativeOtpInput = (props) => {
 
       {props.error && <NativeFormErrorText>{props.error}</NativeFormErrorText>}
 
-      <NativeFormHelperText styleClasses={[CoreClasses.LAYOUT.NO_MARGIN_P]}>
+      <NativeFormHelperText styleClasses={[UtilityClasses.LAYOUT.NO_MARGIN_P]}>
         {props.helperText}
       </NativeFormHelperText>
     </NativeBox>

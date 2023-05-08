@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { CoreClasses } from "@wrappid/styles";
+import { UtilityClasses } from "@wrappid/styles";
 import NativeSpan from "../../layouts/NativeSpan";
 import NativeLink from "../../navigation/NativeLink";
 import NativeTypography from "../NativeTypography";
@@ -24,7 +24,7 @@ export default function NativeTypographyCaption(props) {
       </NativeSpan>
       {!hideSeeMore && limitChars < props?.children?.length && (
         <NativeLink
-          styleClasses={[CoreClasses.MARGIN.ML1]}
+          styleClasses={[UtilityClasses.MARGIN.ML1]}
           onClick={toggleSeeMore}
         >
           {seeMore ? "See more" : "See less"}

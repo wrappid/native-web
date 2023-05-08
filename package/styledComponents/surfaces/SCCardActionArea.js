@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import { CardActionArea } from "@mui/material";
-import { getEffectiveStyle, CoreClasses } from "@wrappid/styles";
+import { getEffectiveStyle, StyledComponentsClasses } from "@wrappid/styles";
 
-const defaultStyleClasses = [CoreClasses.SC.SURFACES.CARD_ACTION_AREA];
+const defaultStyleClasses = [StyledComponentsClasses.SURFACES.CARD_ACTION_AREA];
 
 export const SCCardActionArea = styled(
   CardActionArea,

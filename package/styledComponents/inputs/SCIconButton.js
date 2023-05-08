@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import { IconButton } from "@mui/material";
-import { getEffectiveStyle, CoreClasses } from "@wrappid/styles";
+import { getEffectiveStyle, StyledComponentsClasses } from "@wrappid/styles";
 
-const defaultStyleClasses = [CoreClasses.SC.INPUTS.ICON_BUTTON];
+const defaultStyleClasses = [StyledComponentsClasses.INPUTS.ICON_BUTTON];
 
 export const SCIconButton = styled(
   IconButton,

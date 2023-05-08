@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import { Snackbar } from "@mui/material";
-import { getEffectiveStyle, CoreClasses } from "@wrappid/styles";
+import { getEffectiveStyle, StyledComponentsClasses } from "@wrappid/styles";
 
-const defaultStyleClasses = [CoreClasses.SC.FEEDBACK.SNACKBAR];
+const defaultStyleClasses = [StyledComponentsClasses.FEEDBACK.SNACKBAR];
 
 export const SCSnackbar = styled(
   Snackbar,

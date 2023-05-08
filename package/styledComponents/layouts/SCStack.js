@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import { Stack } from "@mui/material";
-import { getEffectiveStyle, CoreClasses } from "@wrappid/styles";
+import { getEffectiveStyle, StyledComponentsClasses } from "@wrappid/styles";
 
-const defaultStyleClasses = [CoreClasses.SC.LAYOUTS.STACK];
+const defaultStyleClasses = [StyledComponentsClasses.LAYOUTS.STACK];
 
 export const SCStack = styled(
   Stack,

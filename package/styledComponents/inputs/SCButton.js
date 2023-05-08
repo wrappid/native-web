@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import { Button } from "@mui/material";
-import { getEffectiveStyle, CoreClasses } from "@wrappid/styles";
+import { getEffectiveStyle, StyledComponentsClasses } from "@wrappid/styles";
 
-const defaultStyleClasses = [CoreClasses.SC.INPUTS.BUTTON];
+const defaultStyleClasses = [StyledComponentsClasses.INPUTS.BUTTON];
 
 export const SCButton = styled(
   Button,

@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import { Box } from "@mui/material";
-import { getEffectiveStyle, CoreClasses } from "@wrappid/styles";
+import { getEffectiveStyle, StyledComponentsClasses } from "@wrappid/styles";
 
-const defaultStyleClasses = [CoreClasses.SC.LAYOUTS.BOX];
+const defaultStyleClasses = [StyledComponentsClasses.LAYOUTS.BOX];
 
 export const SCBox = styled(
   Box,

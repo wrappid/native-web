@@ -1,5 +1,5 @@
 import React from "react";
-import { CoreClasses } from "@wrappid/styles";
+import { UtilityClasses } from "@wrappid/styles";
 import NativeH5 from "../dataDisplay/heading/NativeH5";
 import NativeCard from "../surfaces/NativeCard";
 import NativeCardContent from "../surfaces/NativeCardContent";
@@ -10,13 +10,13 @@ export default function NativeSection(props) {
   return (
     <NativeCard
       styleClasses={[
-        CoreClasses.MARGIN.MB2,
-        CoreClasses.PADDING.P0,
+        UtilityClasses.MARGIN.MB2,
+        UtilityClasses.PADDING.P0,
         ...styleClasses,
       ]}
     >
       <NativeCardHeader
-        styleClasses={[CoreClasses.PADDING.P1]}
+        styleClasses={[UtilityClasses.PADDING.P1]}
         title={props?.heading && <NativeH5>{props?.heading}</NativeH5>}
       />
       <NativeCardContent styleClasses={[]}>{props?.children}</NativeCardContent>

@@ -1,6 +1,6 @@
 import React from "react";
 import NativeFormHelperText from "./NativeFormHelperText";
-import { CoreClasses } from "@wrappid/styles";
+import { UtilityClasses } from "@wrappid/styles";
 import NativeBox from "../layouts/NativeBox";
 import NativeLabel from "../dataDisplay/paragraph/NativeLabel";
 import NativeGrid from "../layouts/NativeGrid";
@@ -108,7 +108,7 @@ export default function NativeMultiTimeRangePicker(props) {
           )}
         </NativeGrid>
       ))}
-      <NativeFormHelperText styleClasses={[CoreClasses.LAYOUT.NO_MARGIN_P]}>
+      <NativeFormHelperText styleClasses={[UtilityClasses.LAYOUT.NO_MARGIN_P]}>
         {props.helperText}
       </NativeFormHelperText>
     </NativeBox>

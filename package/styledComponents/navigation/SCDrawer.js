@@ -1,16 +1,16 @@
 import React from "react";
 import styled from "styled-components";
 import MuiDrawer from "@mui/material/Drawer";
-import { getEffectiveStyle, CoreClasses } from "@wrappid/styles";
+import { getEffectiveStyle, StyledComponentsClasses } from "@wrappid/styles";
 /**
  * @todo config from core to be used
  */
 import config from "../../config";
 
-const defaultStyleClasses = [CoreClasses.SC.NAVIGATION.DRAWER];
+const defaultStyleClasses = [StyledComponentsClasses.NAVIGATION.DRAWER];
 
 const openedMixin = (theme) => ({
-  /* ...getEffectiveStyle(CoreClasses.SC.APPBAR_HEIGHT), */
+  /* ...getEffectiveStyle(StyledComponentsClasses.APPBAR_HEIGHT), */
   width: config.drawerWidth,
   transition: theme.transitions.create("width", {
     easing: theme.transitions.easing.sharp,
@@ -19,7 +19,7 @@ const openedMixin = (theme) => ({
 });
 
 const closedMixin = (theme) => ({
-  /* ...getEffectiveStyle(CoreClasses.SC.APPBAR_HEIGHT), */
+  /* ...getEffectiveStyle(StyledComponentsClasses.APPBAR_HEIGHT), */
   width: 0,
   transition: theme.transitions.create("width", {
     easing: theme.transitions.easing.sharp,

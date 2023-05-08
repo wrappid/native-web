@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import { Typography } from "@mui/material";
-import { getEffectiveStyle, CoreClasses } from "@wrappid/styles";
+import { getEffectiveStyle, StyledComponentsClasses } from "@wrappid/styles";
 
-const defaultStyleClasses = [CoreClasses.SC.DATA_DISPLAY.TYPOGRAPHY];
+const defaultStyleClasses = [StyledComponentsClasses.DATA_DISPLAY.TYPOGRAPHY];
 
 export const SCTypography = styled(
   Typography,

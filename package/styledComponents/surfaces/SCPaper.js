@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import { Paper } from "@mui/material";
-import { getEffectiveStyle, CoreClasses } from "@wrappid/styles";
+import { getEffectiveStyle, StyledComponentsClasses } from "@wrappid/styles";
 
-const defaultStyleClasses = [CoreClasses.SC.SURFACES.PAPER];
+const defaultStyleClasses = [StyledComponentsClasses.SURFACES.PAPER];
 
 export const SCPaper = styled(
   Paper,

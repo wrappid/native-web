@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import { Fade } from "@mui/material";
-import { getEffectiveStyle, CoreClasses } from "@wrappid/styles";
+import { getEffectiveStyle, StyledComponentsClasses } from "@wrappid/styles";
 
-const defaultStyleClasses = [CoreClasses.SC.UTILS.FADE];
+const defaultStyleClasses = [StyledComponentsClasses.UTILS.FADE];
 
 export const SCFade = styled(
   Fade,

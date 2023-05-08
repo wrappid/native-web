@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import { Tabs } from "@mui/material";
-import { getEffectiveStyle, CoreClasses } from "@wrappid/styles";
+import { getEffectiveStyle, StyledComponentsClasses } from "@wrappid/styles";
 
-const defaultStyleClasses = [CoreClasses.NAVIGATION.TABS];
+const defaultStyleClasses = [StyledComponentsClasses.NAVIGATION.TABS];
 
 export const SCTabs = styled(
   Tabs,

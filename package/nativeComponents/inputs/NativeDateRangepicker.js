@@ -4,7 +4,7 @@ import { LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterMoment } from "@mui/x-date-pickers/AdapterMoment";
 import NativeTextField from "./NativeTextField";
 import NativeFormHelperText from "./NativeFormHelperText";
-import { CoreClasses } from "@wrappid/styles";
+import { UtilityClasses } from "@wrappid/styles";
 import moment from "moment";
 
 export default function NativeDateRangepicker(props) {
@@ -76,7 +76,7 @@ export default function NativeDateRangepicker(props) {
           />
         )}
       />
-      <NativeFormHelperText styleClasses={[CoreClasses.LAYOUT.NO_MARGIN_P]}>
+      <NativeFormHelperText styleClasses={[UtilityClasses.LAYOUT.NO_MARGIN_P]}>
         {props.helperText}
       </NativeFormHelperText>
     </LocalizationProvider>

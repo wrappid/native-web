@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import { Skeleton } from "@mui/material";
-import { getEffectiveStyle, CoreClasses } from "@wrappid/styles";
+import { getEffectiveStyle, StyledComponentsClasses } from "@wrappid/styles";
 
-const defaultStyleClasses = [CoreClasses.SC.FEEDBACK.SKELETON];
+const defaultStyleClasses = [StyledComponentsClasses.FEEDBACK.SKELETON];
 
 export const SCSkeleton = styled(
   Skeleton,

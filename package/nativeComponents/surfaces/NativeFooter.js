@@ -4,14 +4,14 @@ import NativeGrid from "../layouts/NativeGrid";
 import NativeDivider from "../dataDisplay/NativeDivider";
 import NativeTypographyBody1 from "../dataDisplay/paragraph/NativeTypographyBody1";
 // import AppVersion from "../../module/app/AppVersion";
-import { CoreClasses } from "@wrappid/styles";
+import { UtilityClasses } from "@wrappid/styles";
 
 export default function NativeFooter(props) {
   return (
     <NativeBox styleClasses={[/*CoreClasses.APP.FOOTER*/]}>
       <NativeDivider />
 
-      <NativeGrid styleClasses={[CoreClasses.PADDING.PT3]}>
+      <NativeGrid styleClasses={[UtilityClasses.PADDING.PT3]}>
         <NativeTypographyBody1>
           {props?.footerText || "Wrappid Default Footer @ 2023 "}
         </NativeTypographyBody1>

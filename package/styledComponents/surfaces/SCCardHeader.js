@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import { CardHeader } from "@mui/material";
-import { getEffectiveStyle, CoreClasses } from "@wrappid/styles";
+import { getEffectiveStyle, StyledComponentsClasses } from "@wrappid/styles";
 
-const defaultStyleClasses = [CoreClasses.SC.SURFACES.CARD_HEADER];
+const defaultStyleClasses = [StyledComponentsClasses.SURFACES.CARD_HEADER];
 
 export const SCCardHeader = styled(
   CardHeader,

@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import { TableRow } from "@mui/material";
-import { getEffectiveStyle, CoreClasses } from "@wrappid/styles";
+import { getEffectiveStyle, StyledComponentsClasses } from "@wrappid/styles";
 
-const defaultStyleClasses = [CoreClasses.SC.DATA_DISPLAY.TABLE_ROW];
+const defaultStyleClasses = [StyledComponentsClasses.DATA_DISPLAY.TABLE_ROW];
 
 export const SCTableRow = styled(
   TableRow,

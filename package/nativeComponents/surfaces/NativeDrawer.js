@@ -1,6 +1,6 @@
 import React from "react";
 import { SCDrawer } from "../../styledComponents/navigation/SCDrawer";
-import { CoreClasses, getEffectiveStyle } from "@wrappid/styles";
+import { StyledComponentClasses, getEffectiveStyle } from "@wrappid/styles";
 
 export default function NativeDrawer(props) {
   return (
@@ -8,7 +8,7 @@ export default function NativeDrawer(props) {
       {...props}
       PaperProps={{
         sx: {
-          ...getEffectiveStyle([CoreClasses.CORE_DRAWER.PAPER_HEIGHT]),
+          ...getEffectiveStyle([StyledComponentClasses.DRAWER.PAPER_HEIGHT]),
         },
       }}
     >

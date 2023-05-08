@@ -3,7 +3,7 @@ import { LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterMoment } from "@mui/x-date-pickers/AdapterMoment";
 import NativeTextField from "./NativeTextField";
 import NativeFormHelperText from "./NativeFormHelperText";
-import { CoreClasses } from "@wrappid/styles";
+import { UtilityClasses } from "@wrappid/styles";
 import { SCTimePicker } from "../../styledComponents/inputs/SCTimePicker";
 import NativeBox from "../layouts/NativeBox";
 import NativeLabel from "../dataDisplay/paragraph/NativeLabel";
@@ -106,7 +106,7 @@ export default function NativeTimeRangePicker(props) {
             )}
           />
         </NativeGrid>
-        <NativeFormHelperText styleClasses={[CoreClasses.LAYOUT.NO_MARGIN_P]}>
+        <NativeFormHelperText styleClasses={[UtilityClasses.LAYOUT.NO_MARGIN_P]}>
           {props.helperText}
         </NativeFormHelperText>
       </LocalizationProvider>

@@ -1,8 +1,8 @@
 import { MuiOtpInput } from "mui-one-time-password-input";
 import styled from "styled-components";
-import { getEffectiveStyle, CoreClasses } from "@wrappid/styles";
+import { getEffectiveStyle, StyledComponentsClasses } from "@wrappid/styles";
 
-const defaultStyleClasses = [CoreClasses.SC.INPUTS.INPUT];
+const defaultStyleClasses = [StyledComponentsClasses.INPUTS.INPUT];
 
 export const SCOtpInput = styled(
   MuiOtpInput,

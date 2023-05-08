@@ -1,7 +1,7 @@
 import React from "react";
 import { useRef } from "react";
 import { SCInput } from "../../styledComponents/inputs/SCInput";
-import { CoreClasses } from "@wrappid/styles";
+// import { CoreClasses } from "@wrappid/styles";
 import NativeAvatar from "../dataDisplay/NativeAvatar";
 import NativeBadge from "../dataDisplay/NativeBadge";
 import NativeIcon from "../dataDisplay/NativeIcon";
@@ -50,8 +50,8 @@ export default function NativeImagePicker(props) {
       {!props.readOnly ? (
         <NativeBox
           styleClasses={[
-            CoreClasses.NAVIGATION.LINK_STYLE,
-            CoreClasses.ALIGNMENT.JUSTIFY_CONTENT_CENTER,
+            // CoreClasses.NAVIGATION.LINK_STYLE,
+            // CoreClasses.ALIGNMENT.JUSTIFY_CONTENT_CENTER,
           ]}
           aria-label="toggle password visibility"
           type="file"

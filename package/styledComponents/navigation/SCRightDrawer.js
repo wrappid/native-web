@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import MuiDrawer from "@mui/material/Drawer";
-import { getEffectiveStyle, CoreClasses } from "@wrappid/styles";
+import { getEffectiveStyle, StyledComponentsClasses } from "@wrappid/styles";
 /**
  * @todo config from core to be used
  */
@@ -14,7 +14,7 @@ export const SCRightDrawer = styled(
   width: props.open ? config.drawerWidth : 0,
   "& .MuiDrawer-paper": { width: config.drawerWidth },
   ...getEffectiveStyle([
-    /* CoreClasses.APP.APPBAR_HEIGHT, */
+    StyledComponentsClasses.APP.APPBAR_HEIGHT,
     ...(props?.styleClasses || []),
   ]),
 }));

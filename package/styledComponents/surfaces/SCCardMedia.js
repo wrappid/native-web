@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import { CardMedia } from "@mui/material";
-import { getEffectiveStyle, CoreClasses } from "@wrappid/styles";
+import { getEffectiveStyle, StyledComponentsClasses } from "@wrappid/styles";
 
-const defaultStyleClasses = [CoreClasses.SC.SURFACES.CARD_MEDIA];
+const defaultStyleClasses = [StyledComponentsClasses.SURFACES.CARD_MEDIA];
 
 export const SCCardMedia = styled(
   CardMedia,

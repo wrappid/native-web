@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import { Divider } from "@mui/material";
-import { getEffectiveStyle, CoreClasses } from "@wrappid/styles";
+import { getEffectiveStyle, StyledComponentsClasses } from "@wrappid/styles";
 
-const defaultStyleClasses = [CoreClasses.SC.DATA_DISPLAY.DIVIDER];
+const defaultStyleClasses = [StyledComponentsClasses.DATA_DISPLAY.DIVIDER];
 
 export const SCDivider = styled(
   Divider,

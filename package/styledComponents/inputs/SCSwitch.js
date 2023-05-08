@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import { Switch } from "@mui/material";
-import { getEffectiveStyle, CoreClasses } from "@wrappid/styles";
+import { getEffectiveStyle, StyledComponentsClasses } from "@wrappid/styles";
 
-const defaultStyleClasses = [CoreClasses.SC.INPUTS.SWITCH];
+const defaultStyleClasses = [StyledComponentsClasses.INPUTS.SWITCH];
 
 export const SCSwitch = styled(
   Switch,

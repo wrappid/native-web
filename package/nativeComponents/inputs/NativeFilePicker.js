@@ -2,7 +2,7 @@ import React from "react";
 
 import { useRef } from "react";
 import { SCInput } from "../../styledComponents/inputs/SCInput";
-import { CoreClasses } from "@wrappid/styles";
+import { UtilityClasses } from "@wrappid/styles";
 import NativeIcon from "../dataDisplay/NativeIcon";
 import NativeTypographyBody1 from "../dataDisplay/paragraph/NativeTypographyBody1";
 import NativeLabel from "../dataDisplay/paragraph/NativeLabel";
@@ -59,7 +59,7 @@ export default function NativeFilePicker(props) {
           onClick={handleFileOpen}
           // onMouseDown={handleFileOpen}
           edge="end"
-          styleClasses={[CoreClasses.LAYOUT.BORDER_BOTTOM_WIDTH]}
+          styleClasses={[UtilityClasses.LAYOUT.BORDER_BOTTOM_WIDTH]}
         >
           <NativeGrid>
             <NativeTypographyBody1 gridSize={10}>
@@ -67,7 +67,7 @@ export default function NativeFilePicker(props) {
             </NativeTypographyBody1>
             <NativeTypographyBody1
               gridSize={2}
-              styleClasses={[CoreClasses.LAYOUT.RIGHT_ALIGN]}
+              styleClasses={[UtilityClasses.LAYOUT.RIGHT_ALIGN]}
             >
               <NativeIcon type="file">upload</NativeIcon>
             </NativeTypographyBody1>

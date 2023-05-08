@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import { FormHelperText } from "@mui/material";
-import { getEffectiveStyle, CoreClasses } from "@wrappid/styles";
+import { getEffectiveStyle, StyledComponentsClasses } from "@wrappid/styles";
 
-const defaultStyleClasses = [CoreClasses.SC.INPUTS.FORM_HELPER_TEXT];
+const defaultStyleClasses = [StyledComponentsClasses.INPUTS.FORM_HELPER_TEXT];
 
 export const SCFormHelperText = styled(
   FormHelperText,

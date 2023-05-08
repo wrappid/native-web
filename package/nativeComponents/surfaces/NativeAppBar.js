@@ -7,7 +7,7 @@ import NativeImage from "../dataDisplay/NativeImage";
 import NativeIconButton from "../inputs/NativeIconButton";
 import NativeStack from "../layouts/NativeStack";
 import NativeToolbar from "../surfaces/NativeToolbar";
-import { CoreClasses } from "@wrappid/styles";
+import { UtilityClasses, StyledComponentClasses } from "@wrappid/styles";
 import { SCAppBar } from "../../styledComponents/surfaces/SCAppBar";
 
 export default function NativeAppBar(props) {
@@ -18,7 +18,7 @@ export default function NativeAppBar(props) {
     <>
       <SCAppBar auth={auth} position="fixed">
         <NativeToolbar
-          styleClasses={[CoreClasses.ALIGNMENT.JUSTIFY_CONTENT_SPACE_BETWEEN]}
+          styleClasses={[UtilityClasses.ALIGNMENT.JUSTIFY_CONTENT_SPACE_BETWEEN]}
         >
           <NativeStack direction="row">
             <NativeIconButton
@@ -37,7 +37,7 @@ export default function NativeAppBar(props) {
               onClick={() => {
                 navigate(navigateString);
               }}
-              styleClasses={[CoreClasses.CORE_APP_BAR.APP_BAR_LOGO]}
+              styleClasses={[StyledComponentClasses.CORE_APP_BAR.APP_BAR_LOGO]}
             />
           </NativeStack>
 

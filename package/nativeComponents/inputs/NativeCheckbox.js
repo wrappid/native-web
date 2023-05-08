@@ -1,6 +1,6 @@
 import React from "react";
 import { SCCheckbox } from "../../styledComponents/inputs/SCCheckbox";
-import { CoreClasses } from "@wrappid/styles";
+import { UtilityClasses } from "@wrappid/styles";
 import NativeFormControlLabel from "./NativeFormControlLabel";
 
 export default function NativeCheckbox(props) {
@@ -18,7 +18,7 @@ export default function NativeCheckbox(props) {
       {label ? (
         <NativeFormControlLabel
           label={label}
-          styleClasses={[CoreClasses.MARGIN.MR0]}
+          styleClasses={[UtilityClasses.MARGIN.MR0]}
           control={
             <SCCheckbox
               id={id}

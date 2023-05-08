@@ -1,4 +1,4 @@
-import { CoreClasses } from "@wrappid/styles";
+import { UtilityClasses } from "@wrappid/styles";
 import { __EntityStatus, __TableDensity } from "../config/constants";
 import { DATA_TABLE_CONST } from "../config/dataTableConstants";
 import { getLabel, isJson } from "./stringUtils";
@@ -275,15 +275,15 @@ export const getStatusTextColorClass = (status) => {
 
   switch (status) {
     case __EntityStatus.NEW:
-      return CoreClasses.COLOR.TEXT_INFO;
+      return UtilityClasses.COLOR.TEXT_INFO;
     case __EntityStatus.ACTIVE:
-      return CoreClasses.COLOR.TEXT_SUCCESS;
+      return UtilityClasses.COLOR.TEXT_SUCCESS;
     case __EntityStatus.INACTIVE:
-      return CoreClasses.COLOR.TEXT_WARNING;
+      return UtilityClasses.COLOR.TEXT_WARNING;
     case __EntityStatus.DELETED:
-      return CoreClasses.COLOR.TEXT_ERROR;
+      return UtilityClasses.COLOR.TEXT_ERROR;
     default:
-      return CoreClasses.COLOR.TEXT_SECONDARY;
+      return UtilityClasses.COLOR.TEXT_SECONDARY;
   }
 };
 

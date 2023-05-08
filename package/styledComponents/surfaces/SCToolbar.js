@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import { Toolbar } from "@mui/material";
-import { getEffectiveStyle, CoreClasses } from "@wrappid/styles";
+import { getEffectiveStyle, StyledComponentsClasses } from "@wrappid/styles";
 
-const defaultStyleClasses = [CoreClasses.SC.SURFACES.TOOLBAR];
+const defaultStyleClasses = [StyledComponentsClasses.SURFACES.TOOLBAR];
 
 export const SCToolbar = styled(
   Toolbar,
