@@ -14,7 +14,7 @@ export const SCRightDrawer = styled(
   width: props.open ? config.drawerWidth : 0,
   "& .MuiDrawer-paper": { width: config.drawerWidth },
   ...getEffectiveStyle([
-    StyledComponentsClasses.APP.APPBAR_HEIGHT,
+    StyledComponentsClasses.APPBAR_HEIGHT,
     ...(props?.styleClasses || []),
   ]),
 }));
