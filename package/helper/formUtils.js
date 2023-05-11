@@ -23,7 +23,7 @@ import {
   FORM_XL_DEFAULT_GRID_SIZE,
   FORM_XS_DEFAULT_GRID_SIZE,
 } from "../components/forms/coreFormConstants";
-import config from "../config/config";
+// import config from "../config/config";
 import { FORM_VALIDATION_MAP } from "./fromValidationMap";
 import { ASYNC_SELECT_FUNCTION_MAP } from "./asyncSelectFunctionMap";
 // import { store } from "../store/CoreProvider";
@@ -74,8 +74,8 @@ function getComponentArray(formJson) {
       comp: x.hidden
         ? null
         : componentMap[x.type]
-        ? componentMap[x.type]?.comp
-        : CoreInput,
+          ? componentMap[x.type]?.comp
+          : CoreInput,
       viewComp: componentMap[x.viewComp]
         ? componentMap[x.viewComp].comp
         : CoreTypographyBody1,
@@ -369,12 +369,12 @@ export function createFormButtonProps(element, formikprops, handleButtonCLick) {
     OnClick: element.onClick
       ? typeof element.onClick === "object"
         ? () => {
-            handleButtonCLick(element.onClick);
-          }
+          handleButtonCLick(element.onClick);
+        }
         : element.onClick
       : () => {
-          alert("error in button action");
-        },
+        alert("error in button action");
+      },
     type: element.actionType === "submit" ? "submit" : "button",
     alignment: element.actionContainerStyle ? null : "end",
   };
@@ -554,11 +554,11 @@ export function createTableFormJson(
 export function viewString(text, type) {
   if (text) {
     return text;
-  } else if (config.environment === ENV_DEV_MODE) {
+  } /* else if (config.env === ENV_DEV_MODE) {
     if (type) {
       return "No " + type + " found";
     } else return "NA";
-  } else return "";
+  } */ else return "";
 }
 
 export function forReloadCheck(
@@ -624,7 +624,7 @@ export async function getForm(formId, auth = true, formReducer) {
       var url = auth ? GET_FORM_API_AUTHENTICATED : GET_FORM_API;
       var formRes = await axiosInterceptor({
         method: HTTP_GET,
-        url: config.backendUrl + url + formId,
+        url: config.wrappid.backendUrl + url + formId,
         headers: await authHeader(auth, false),
       });
       if (formRes.status === 200) {
