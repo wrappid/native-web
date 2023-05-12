@@ -10,7 +10,7 @@ import config from "../../config";
 const defaultStyleClasses = [StyledComponentsClasses.NAVIGATION.DRAWER];
 
 const openedMixin = (theme) => ({
-  /* ...getEffectiveStyle(StyledComponentsClasses.APPBAR_HEIGHT), */
+  ...getEffectiveStyle(StyledComponentsClasses.APP_BAR.HEIGHT),
   width: config.drawerWidth,
   transition: theme.transitions.create("width", {
     easing: theme.transitions.easing.sharp,
@@ -19,7 +19,7 @@ const openedMixin = (theme) => ({
 });
 
 const closedMixin = (theme) => ({
-  /* ...getEffectiveStyle(StyledComponentsClasses.APPBAR_HEIGHT), */
+  ...getEffectiveStyle(StyledComponentsClasses.APP_BAR.HEIGHT),
   width: 0,
   transition: theme.transitions.create("width", {
     easing: theme.transitions.easing.sharp,
