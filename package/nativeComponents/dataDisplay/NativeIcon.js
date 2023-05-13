@@ -11,7 +11,17 @@ import { SCIcon } from "../../styledComponents/dataDisplay/SCIcon";
 export default function NativeIcon(props) {
   const { type, name, styleClasses, sx, size } = props;
 
-  return (
+  return props.childrenFlag ? (
+    <SCIcon
+      baseClasssName={type}
+      className={name}
+      size={size || "small"}
+      sx={sx}
+      styleClasses={styleClasses || []}
+    >
+      {props.children}
+    </SCIcon>
+  ) : (
     <SCIcon
       baseClasssName={type}
       className={name}
