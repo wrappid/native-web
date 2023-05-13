@@ -89,6 +89,15 @@ export default function getNativeMenuItem(
                 ? JSON.parse(menuItem?.icon)?.type
                 : "material-icon"
             }
+            childrenFlag={
+              typeof menuItem?.icon === "object"
+                ? menuItem?.icon?.type == "material-icon" ||
+                  menuItem?.icon?.type == "material-outlined-icon"
+                : typeof menuItem?.icon === "string" && isJson(menuItem?.icon)
+                ? JSON.parse(menuItem?.icon)?.type == "material-icon" ||
+                  JSON.parse(menuItem?.icon)?.type == "material-outlined-icon"
+                : true
+            }
             sx={{
               color: `${
                 menuItem?.type === allTypes?.MENU_ITEM &&
@@ -134,10 +143,28 @@ export default function getNativeMenuItem(
         }}
       >
         <NativeIcon
-          options={
-            isJson(menuItem?.icon)
-              ? JSON.parse(menuItem?.icon)
-              : { icon: menuItem?.icon }
+          name={
+            typeof menuItem?.icon === "object"
+              ? menuItem?.icon?.name
+              : typeof menuItem?.icon === "string" && isJson(menuItem?.icon)
+              ? JSON.parse(menuItem?.icon)?.name
+              : menuItem?.icon
+          }
+          type={
+            typeof menuItem?.icon === "object"
+              ? menuItem?.icon?.type || "material-icon"
+              : typeof menuItem?.icon === "string" && isJson(menuItem?.icon)
+              ? JSON.parse(menuItem?.icon)?.type
+              : "material-icon"
+          }
+          childrenFlag={
+            typeof menuItem?.icon === "object"
+              ? menuItem?.icon?.type == "material-icon" ||
+                menuItem?.icon?.type == "material-outlined-icon"
+              : typeof menuItem?.icon === "string" && isJson(menuItem?.icon)
+              ? JSON.parse(menuItem?.icon)?.type == "material-icon" ||
+                JSON.parse(menuItem?.icon)?.type == "material-outlined-icon"
+              : true
           }
           sx={{
             color: `${
