@@ -19,7 +19,7 @@ export default function NativeIcon(props) {
       sx={sx}
       styleClasses={styleClasses || []}
     >
-      {props.children}
+      {name}
     </SCIcon>
   ) : (
     <SCIcon
