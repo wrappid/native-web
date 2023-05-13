@@ -73,13 +73,21 @@ export default function getNativeMenuItem(
                 ]
           }
         >
+          {/* @todo may have to correct this */}
           <NativeIcon
-            options={
+            name={
               typeof menuItem?.icon === "object"
-                ? menuItem?.icon
+                ? menuItem?.icon?.name
                 : typeof menuItem?.icon === "string" && isJson(menuItem?.icon)
-                ? JSON.parse(menuItem?.icon)
+                ? JSON.parse(menuItem?.icon)?.name
                 : { icon: menuItem?.icon }
+            }
+            type={
+              typeof menuItem?.icon === "object"
+                ? menuItem?.icon?.type || "material-icon"
+                : typeof menuItem?.icon === "string" && isJson(menuItem?.icon)
+                ? JSON.parse(menuItem?.icon)?.type
+                : "material-icon"
             }
             sx={{
               color: `${
