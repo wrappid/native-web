@@ -80,7 +80,7 @@ export default function getNativeMenuItem(
                 ? menuItem?.icon?.name
                 : typeof menuItem?.icon === "string" && isJson(menuItem?.icon)
                 ? JSON.parse(menuItem?.icon)?.name
-                : { icon: menuItem?.icon }
+                : menuItem?.icon
             }
             type={
               typeof menuItem?.icon === "object"
