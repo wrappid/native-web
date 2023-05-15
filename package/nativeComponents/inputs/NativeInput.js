@@ -43,6 +43,7 @@ export default function NativeInput(props) {
         rows={props.rows}
         maxRows={props.maxRows}
         minRows={props.minRows}
+        fullWidth={true}
         onFocus={
           props.onFormFocus && props.editId && props.readOnly
             ? () => {
