@@ -4,7 +4,7 @@ import { SCFormControl } from "../../styledComponents/inputs/SCFormControl";
 
 export default function NativeFormControl(props) {
   return (
-    <SCFormControl {...props} variant="standard">
+    <SCFormControl fullWidth={true} {...props} variant="standard">
       {props.children}
     </SCFormControl>
   );
