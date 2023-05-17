@@ -1,5 +1,5 @@
 import { MuiOtpInput } from "mui-one-time-password-input";
-import styled from "styled-components";
+import styled from "@mui/material/styles";
 import { getEffectiveStyle, StyledComponentsClasses } from "@wrappid/styles";
 
 const defaultStyleClasses = [StyledComponentsClasses.INPUTS.INPUT];

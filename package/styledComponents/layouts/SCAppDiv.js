@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled from "@mui/material/styles";
 import { getEffectiveStyle, StyledComponentsClasses } from "@wrappid/styles";
 
 const defaultStyleClasses = [StyledComponentsClasses.LAYOUTS.APP_DIV];
