@@ -1,5 +1,5 @@
 import React from "react";
-import { styled } from "@mui/material/styles";
+import styled from "styled-components";
 import MuiDrawer from "@mui/material/Drawer";
 import { getEffectiveStyle, StyledComponentsClasses } from "@wrappid/styles";
 /**

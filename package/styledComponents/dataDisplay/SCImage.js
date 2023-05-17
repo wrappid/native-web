@@ -1,4 +1,4 @@
-import { styled } from "@mui/material/styles";
+import styled from "styled-components";
 import { getEffectiveStyle, StyledComponentsClasses } from "@wrappid/styles";
 
 const defaultStyleClasses = [StyledComponentsClasses.DATA_DISPLAY.IMAGE];
