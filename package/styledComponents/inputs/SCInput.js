@@ -7,9 +7,9 @@ const defaultStyleClasses = [StyledComponentsClasses.INPUTS.INPUT];
 export const SCInput = styled(
   Input,
   {}
-)((props) => ({
-  ...getEffectiveStyle([
-    ...defaultStyleClasses,
-    ...(props?.styleClasses || []),
-  ]),
+)(() => ({
+  // ...getEffectiveStyle([
+  //   ...defaultStyleClasses,
+  //   ...(props?.styleClasses || []),
+  // ]),
 }));
