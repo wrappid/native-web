@@ -1,6 +1,6 @@
 // import { styled } from "@mui/material";
 import React from "react";
-import styled from "@mui/material/styles";
+import { styled } from "@mui/material/styles";
 import MuiAppBar from "@mui/material/AppBar";
 import { getEffectiveStyle, StyledComponentsClasses } from "@wrappid/styles";
 

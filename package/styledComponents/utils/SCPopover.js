@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "@mui/material/styles";
+import { styled } from "@mui/material/styles";
 import { Popover } from "@mui/material";
 import { getEffectiveStyle, StyledComponentsClasses } from "@wrappid/styles";
 
