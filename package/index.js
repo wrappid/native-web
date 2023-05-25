@@ -48,6 +48,7 @@ import NativeTableFooter from "./nativeComponents/dataDisplay/NativeTableFooter"
 import NativeBadge from "./nativeComponents/dataDisplay/NativeBadge";
 import NativeTableBodyCell from "./nativeComponents/dataDisplay/NativeTableBodyCell";
 import NativeTableHeadCell from "./nativeComponents/dataDisplay/NativeTableHeadCell";
+import NativeTableHeadRow from "./nativeComponents/dataDisplay/NativeTableHeadRow";
 import NativeTableContainer from "./nativeComponents/dataDisplay/NativeTableContainer";
 import NativeTableCell from "./nativeComponents/dataDisplay/NativeTableCell";
 import NativeImage from "./nativeComponents/dataDisplay/NativeImage";
@@ -183,6 +184,7 @@ export {
   NativeBadge,
   NativeTableBodyCell,
   NativeTableHeadCell,
+  NativeTableHeadRow,
   NativeTableContainer,
   NativeTableCell,
   NativeTableHead,
