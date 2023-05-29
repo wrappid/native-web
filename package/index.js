@@ -114,6 +114,8 @@ import NativeCheckbox from "./nativeComponents/inputs/NativeCheckbox";
 import DevNativeDataTable from "./nativeComponents/dataTable/DevNativeDataTable";
 import NativeFormContainer from "./nativeComponents/forms/NativeFormContainer";
 import getNativeMenuItem from "./helper/menuUtil";
+import NativeGoogleButton from "./nativeComponents/inputs/custom/NativeGoogleButton";
+import NativeDialog from "./nativeComponents/feedback/NativeDialog";
 import {
   NativeDomRoutes,
   NativeDomRoute,
@@ -134,6 +136,8 @@ export {
   /**
    * NATIVE EXPORTS
    */
+  NativeGoogleButton,
+  NativeDialog,
   NativeNavigation,
   NativeModal,
   NativePopover,
