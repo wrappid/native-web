@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useContext} from "react";
 import { SCDialog } from "../../styledComponents/feedback/SCDialog";
 import { SCDialogTitle } from "../../styledComponents/feedback/SCDialogTitle";
 import { SCDialogContent } from "../../styledComponents/feedback/SCDialogContent";
