@@ -50,7 +50,7 @@ export default function NativeTimePicker(props) {
           />
         )}
       />
-      <NativeFormHelperText styleClasses={[UtilityClasses.LAYOUT.NO_MARGIN_P]}>
+      <NativeFormHelperText styleClasses={[UtilityClasses.MARGIN.MT_N2]}>
         {props.helperText}
       </NativeFormHelperText>
     </LocalizationProvider>
