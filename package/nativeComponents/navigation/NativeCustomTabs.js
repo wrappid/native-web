@@ -11,7 +11,7 @@ export default function NativeCustomTabs(props) {
   // return <CoreCustomTabs tabsContent={tabsContent} />;   -->this is used in Manageappointment.js exporting the props i.e tabsContent.
 
   const { tabsContent, preHandleChangeHook, postHandleChangeHook } = props;
-  const [tabValue, setTabValue] = React.useState(tabsContent[0]?.id || 0);
+  const [tabValue, setTabValue] = React.useState(tabsContent && tabsContent.length > 0 ? tabsContent[0]?.id : 0);
 
   React.useEffect(() => {
     if (
