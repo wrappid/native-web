@@ -131,7 +131,7 @@ import NativeCollapse from "./nativeComponents/surfaces/NativeCollapse";
 import { nativeStorage } from "./nativeComponents/helper/storeHelper";
 import NativeFlatList from "./nativeComponents/dataDisplay/NativeFlatList";
 import NativeDataTableDetailsPaneContainer from "./nativeComponents/dataTable/NativeDataTableDetailsPaneContainer";
-
+import NativeCustomTabs from "./nativeComponents/navigation/NativeCustomTabs";
 export {
   /**
    * NATIVE EXPORTS
@@ -146,6 +146,7 @@ export {
   // NativeGridItem,
   NativeSpan,
   NativeBox,
+  NativeCustomTabs,
   // NativeContainer,
   NativeSection,
   NativeAppDiv,
