@@ -4,6 +4,7 @@ import {
   Navigate as NativeDomNavigate,
   useNavigate as nativeUseNavigate,
   useLocation as nativeUseLocation,
+  useParams as nativeUseParams,
 } from "react-router-dom";
 
 export {
@@ -12,4 +13,5 @@ export {
   NativeDomNavigate,
   nativeUseNavigate,
   nativeUseLocation,
+  nativeUseParams,
 };
