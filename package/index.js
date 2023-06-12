@@ -100,6 +100,7 @@ import NativeImagePicker from "./nativeComponents/inputs/NativeImagePicker";
 import NativeIconButton from "./nativeComponents/inputs/NativeIconButton";
 import NativeDateRangepicker from "./nativeComponents/inputs/NativeDateRangepicker";
 import NativeRichTextEditor from "./nativeComponents/inputs/custom/NativeRichTextEditor.js";
+import NativeMedicineSelector from "./nativeComponents/inputs/custom/NativeMedicineSelector";
 import NativeOutlinedButton from "./nativeComponents/inputs/NativeOutlinedButton";
 import NativeTextButton from "./nativeComponents/inputs/NativeTextButton";
 import NativeConfirmPassword from "./nativeComponents/inputs/NativeConfirmPassword";
@@ -272,5 +273,6 @@ export {
   NativeCollapse,
   nativeStorage,
   NativeFlatList,
-  NativeDataTableDetailsPaneContainer
+  NativeDataTableDetailsPaneContainer,
+  NativeMedicineSelector
 };
