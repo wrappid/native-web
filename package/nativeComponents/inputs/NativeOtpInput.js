@@ -56,7 +56,7 @@ const NativeOtpInput = (props) => {
 
       {props.error && <NativeFormErrorText>{props.error}</NativeFormErrorText>}
 
-      <NativeFormHelperText styleClasses={[UtilityClasses.LAYOUT.NO_MARGIN_P]}>
+      <NativeFormHelperText styleClasses={[UtilityClasses.MARGIN.MT_N2]}>
         {props.helperText}
       </NativeFormHelperText>
     </NativeBox>
