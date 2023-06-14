@@ -116,6 +116,7 @@ import DevNativeDataTable from "./nativeComponents/dataTable/DevNativeDataTable"
 import NativeFormContainer from "./nativeComponents/forms/NativeFormContainer";
 import getNativeMenuItem from "./helper/menuUtil";
 import NativeGoogleButton from "./nativeComponents/inputs/custom/NativeGoogleButton";
+import NativeReactSelectInput from "./nativeComponents/inputs/custom/NativeReactSelectInput";
 import NativeDialog from "./nativeComponents/feedback/NativeDialog";
 import {
   NativeDomRoutes,
@@ -127,7 +128,7 @@ import {
 } from "./nativeComponents/helper/routerHelper";
 import { nativeFilterOptions } from "./helper/helper";
 import { nativeUseScrollTrigger } from "./helper/componentUtil";
-import { nativeCreateTheme, NativeCssBaseline } from "./theme/themeUtil";
+import { nativeCreateTheme, NativeCssBaseline, nativeUseTheme } from "./theme/themeUtil";
 import NativeThemeProvider from "./theme/NativeThemeProvider";
 import NativeCollapse from "./nativeComponents/surfaces/NativeCollapse";
 import { nativeStorage } from "./nativeComponents/helper/storeHelper";
@@ -274,5 +275,7 @@ export {
   nativeStorage,
   NativeFlatList,
   NativeDataTableDetailsPaneContainer,
-  NativeMedicineSelector
+  NativeMedicineSelector,
+  NativeReactSelectInput,
+  nativeUseTheme
 };
