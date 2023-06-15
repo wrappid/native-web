@@ -59,7 +59,7 @@ export default function NativeFilePicker(props) {
           onClick={handleFileOpen}
           // onMouseDown={handleFileOpen}
           edge="end"
-          styleClasses={[UtilityClasses.LAYOUT.BORDER_BOTTOM_WIDTH]}
+          styleClasses={[UtilityClasses.BORDER.BORDER_BOTTOM_WIDTH]}
         >
           <NativeGrid>
             <NativeTypographyBody1 gridSize={10}>
