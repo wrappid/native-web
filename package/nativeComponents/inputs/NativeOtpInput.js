@@ -2,7 +2,7 @@ import NativeFormErrorText from "./NativeFormErrorText";
 import NativeFormHelperText from "./NativeFormHelperText";
 import { UtilityClasses } from "@wrappid/styles";
 import NativeBox from "../layouts/NativeBox";
-import { SCOtpInput } from "../../styledComponents/inputs/SCOtpInput";
+import { MuiOtpInput } from "mui-one-time-password-input";
 import React from "react";
 
 const NativeOtpInput = (props) => {
@@ -43,7 +43,7 @@ const NativeOtpInput = (props) => {
 
   return (
     <NativeBox styleClasses={[UtilityClasses.MARGIN.MB2]}>
-      <SCOtpInput
+      <MuiOtpInput
         {...restProps}
         id={id}
         value={value}
