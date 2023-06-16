@@ -16,6 +16,8 @@ const NativeOtpInput = (props) => {
     ...restProps
   } = props;
 
+  const otpInputRef = React.useRef(null);
+
   const handleChange = (otpvalue) => {
     formik?.setFieldValue(id, otpvalue);
     if (onchange) {
@@ -44,6 +46,7 @@ const NativeOtpInput = (props) => {
   return (
     <NativeBox styleClasses={[UtilityClasses.MARGIN.MB2]}>
       <MuiOtpInput
+        ref={otpInputRef}
         {...restProps}
         id={id}
         value={value}
