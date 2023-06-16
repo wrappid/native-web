@@ -1,6 +1,6 @@
 {
   "name": "@wrappid/native-web",
-  "version": "0.0.61",
+  "version": "0.0.62",
   "description": "This repository is combined packages of all the Styled Components for react web project.",
   "main": "index.js",
   "scripts": {
