@@ -55,8 +55,6 @@ export default function NativeInput(props) {
               }
         }
       />
-      <NativeFormErrorText>{props.touched && props.error}</NativeFormErrorText>
-      <NativeFormHelperText>{props.helperText}</NativeFormHelperText>
     </NativeFormControl>
   );
 }
