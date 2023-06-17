@@ -4,7 +4,7 @@ import { UtilityClasses } from "@wrappid/styles";
 import NativeBox from "../layouts/NativeBox";
 import { SCOtpInput } from "../../styledComponents/inputs/SCOtpInput";
 import { CoreClasses } from "@wrappid/core";
-import React from "react";
+import React, {useState} from "react";
 import Box from '@mui/material/Box';
 import { MuiOtpInput } from "mui-one-time-password-input";
 
