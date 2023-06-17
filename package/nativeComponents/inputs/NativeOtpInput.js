@@ -2,10 +2,19 @@ import NativeFormErrorText from "./NativeFormErrorText";
 import NativeFormHelperText from "./NativeFormHelperText";
 import { UtilityClasses } from "@wrappid/styles";
 import NativeBox from "../layouts/NativeBox";
-import { MuiOtpInput } from "mui-one-time-password-input";
+import { SCOtpInput } from "../../styledComponents/inputs/SCOtpInput";
+import { CoreClasses } from "@wrappid/core";
 import React from "react";
+import Box from '@mui/material/Box';
 
 const NativeOtpInput = (props) => {
+
+  const [otp, setOtp] = useState('');
+
+  const handleChange = (newValue) => {
+    setOtp(newValue)
+  };
+
   const {
     id,
     value,
@@ -16,14 +25,12 @@ const NativeOtpInput = (props) => {
     ...restProps
   } = props;
 
-  const otpInputRef = React.useRef(null);
-
-  const handleChange = (otpvalue) => {
-    formik?.setFieldValue(id, otpvalue);
-    if (onchange) {
-      onChange(otpvalue);
-    }
-  };
+  // const handleChange = (otpvalue) => {
+  //   formik?.setFieldValue(id, otpvalue);
+  //   if (onchange) {
+  //     onChange(otpvalue);
+  //   }
+  // };
 
   const matchIsNumeric = (text) => {
     const isString = typeof text === "string";
@@ -44,9 +51,24 @@ const NativeOtpInput = (props) => {
   };
 
   return (
-    <NativeBox styleClasses={[UtilityClasses.MARGIN.MB2]}>
-      <MuiOtpInput
-        ref={otpInputRef}
+    <Box
+      sx={{
+        backgroundColor: "lightblue",
+        width: "100vw",
+        height: "100vh",
+      }}
+    >
+      <MuiOtpInput value={otp} onChange={handleChange} length={6} gap={"10px"}  />
+    </Box>
+  );
+};
+
+export default NativeOtpInput;
+
+
+{/*
+<NativeBox styleClasses={[UtilityClasses.MARGIN.MB2]}>
+      <SCOtpInput
         {...restProps}
         id={id}
         value={value}
@@ -56,14 +78,5 @@ const NativeOtpInput = (props) => {
         onChange={(otpvalue) => handleChange(otpvalue)}
         validateChar={validateChar}
       />
-
-      {props.error && <NativeFormErrorText>{props.error}</NativeFormErrorText>}
-
-      <NativeFormHelperText styleClasses={[UtilityClasses.MARGIN.MT_N2]}>
-        {props.helperText}
-      </NativeFormHelperText>
     </NativeBox>
-  );
-};
-
-export default NativeOtpInput;
+*/}
