@@ -8,8 +8,8 @@ import React, {useState} from "react";
 import Box from '@mui/material/Box';
 import { MuiOtpInput } from "mui-one-time-password-input";
 
-const NativeOtpInput = (props) => {
 
+export default function NativeOtpInput() {
   const [otp, setOtp] = useState('');
 
   const handleChange = (newValue) => {
@@ -62,10 +62,7 @@ const NativeOtpInput = (props) => {
       <MuiOtpInput value={otp} onChange={handleChange} length={6} gap={"10px"}  />
     </Box>
   );
-};
-
-export default NativeOtpInput;
-
+}
 
 {/*
 <NativeBox styleClasses={[UtilityClasses.MARGIN.MB2]}>
