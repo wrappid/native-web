@@ -31,7 +31,8 @@ export default function NativeOtpInput(props) {
           props.formik.setFieldValue(props.id, v);
         }}
         numInputs={6}
-        separator={<span></span>}
+        renderInput={(props) => <input {...props} />}
+        renderSeparator={<span></span>}
         shouldAutoFocus={props.autoFocus == false ? false : true}
       />
   );
