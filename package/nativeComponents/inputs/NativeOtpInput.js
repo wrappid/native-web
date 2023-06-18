@@ -9,7 +9,7 @@ import Box from '@mui/material/Box';
 import { MuiOtpInput } from "mui-one-time-password-input";
 
 
-export default function NativeOtpInput() {
+export default function NativeOtpInput(props) {
   const [otp, setOtp] = useState('');
 
   const handleChange = (newValue) => {
