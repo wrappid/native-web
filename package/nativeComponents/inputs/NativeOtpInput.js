@@ -1,7 +1,8 @@
+import React from 'react'
 import OtpInput from "react-otp-input";
 import { useTheme } from "@mui/material";
 
-export const CoreOtpInput = (props) => {
+export default function NativeOtpInput() {
   const theme = useTheme()
   return (
       <OtpInput
