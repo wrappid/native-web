@@ -3,10 +3,13 @@ import React from "react";
 export default function NativeFlatList(props) {
   const { tableData, query, renderItem } = props;
 
-  return tableData
-    .slice(
+  return query ? tableData
+    ?.slice(
       query?.page * query?.maxRowInPage,
       query?.page * query?.maxRowInPage + query?.maxRowInPage
     )
-    .map((rowData, rowIndex) => renderItem(rowData, rowIndex));
+    ?.map((rowData, rowIndex) => renderItem(rowData, rowIndex))
+    :
+    tableData
+    ?.map((rowData, rowIndex) => renderItem(rowData, rowIndex))
 }
