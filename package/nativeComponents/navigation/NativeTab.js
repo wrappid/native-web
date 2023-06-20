@@ -1,8 +1,12 @@
 import React from "react";
 
 import { SCTab } from "../../styledComponents/navigation/SCTab";
+import { useTheme } from "@mui/material";
 
 export default function NativeTab(props) {
+  const theme = useTheme()
+  const {value, currentTab, onClick} = props
+
   return (
     <SCTab
       {...props}
