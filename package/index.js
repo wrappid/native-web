@@ -33,6 +33,7 @@ import NativeCardActionArea from "./nativeComponents/surfaces/NativeCardActionAr
 import NativeCardContent from "./nativeComponents/surfaces/NativeCardContent";
 import NativeMenuItem from "./nativeComponents/navigation/NativeMenuItem";
 import NativeTab from "./nativeComponents/navigation/NativeTab";
+import NativeTabHead from "./nativeComponents/navigation/NativeTabHead";
 import NativeMenuList from "./nativeComponents/navigation/NativeMenuList";
 import NativeTabs from "./nativeComponents/navigation/NativeTabs";
 import NativeTabPanel from "./nativeComponents/navigation/NativeTabPanel";
@@ -179,6 +180,7 @@ export {
   NativeCardContent,
   NativeMenuItem,
   NativeTab,
+  NativeTabHead,
   NativeMenuList,
   NativeTabs,
   NativeTabPanel,
