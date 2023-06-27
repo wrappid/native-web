@@ -19,8 +19,8 @@ export default function NativeAppContainer(props) {
         component="main"
         styleClasses={
           uid
-            ? [coreClasses.LAYOUT.LOGGED_OUT_CONTENT_CONTAINER]
-            : [coreClasses.LAYOUT.CONTENT_CONTAINER]
+          ? [coreClasses.LAYOUT.CONTENT_CONTAINER]
+            : [coreClasses.LAYOUT.LOGGED_OUT_CONTENT_CONTAINER]
         }
       >
         {props.children}
