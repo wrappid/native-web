@@ -22,6 +22,12 @@ export default function NativeDialog(props) {
         onClose={() => setDialog(dialogInitValue)}
         aria-labelledby="dialog-title"
         aria-describedby="dialog-description"
+        PaperProps={{
+          style: {
+            minWidth: '20%',
+            minHeight: '30%',
+          }
+        }}
       >
         {dialog?.type === "info" ? (
           <NativeBox
