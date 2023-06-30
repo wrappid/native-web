@@ -32,29 +32,32 @@ export default function NativeDialog(props) {
         {dialog?.type === "info" ? (
           <NativeBox
             styleClasses={[
+              UtilityClasses?.PADDING?.P2,
               UtilityClasses?.ALIGNMENT?.JUSTIFY_CONTENT_CENTER,
               UtilityClasses.COLOR.TEXT_WARNING,
             ]}
           >
-            <NativeIcon type="material-icons" childrenFlag={true} name="info" size="medium"/>
+            <NativeIcon type="material-icons" childrenFlag={true} name="info" size="large"/>
           </NativeBox>
         ) : dialog?.type === "error" ? (
           <NativeBox
             styleClasses={[
+              UtilityClasses?.PADDING?.P2,
               UtilityClasses?.ALIGNMENT?.JUSTIFY_CONTENT_CENTER,
               UtilityClasses.COLOR.TEXT_ERROR,
             ]}
           >
-            <NativeIcon type="material-icons" childrenFlag={true} name="cancel" size="medium"/>
+            <NativeIcon type="material-icons" childrenFlag={true} name="cancel" size="large"/>
           </NativeBox>
         ) : (
           <NativeBox
             styleClasses={[
+              UtilityClasses?.PADDING?.P2,
               UtilityClasses?.ALIGNMENT?.JUSTIFY_CONTENT_CENTER,
               UtilityClasses?.COLOR?.TEXT_SUCCESS,
             ]}
           >
-            <NativeIcon type="material-icons" childrenFlag={true} name="check_circle" size="medium"/>
+            <NativeIcon type="material-icons" childrenFlag={true} name="check_circle" size="large"/>
           </NativeBox>
         )}
         <SCDialogTitle
