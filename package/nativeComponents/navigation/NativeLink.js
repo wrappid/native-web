@@ -10,12 +10,12 @@ export default function NativeLink(props) {
       {title ? (
         <NativeTooltip title={title} arrow placement={titlePlacement}>
           <SCLink {...restProps} underline="none">
-            {restProps.children}
+            <NativeTypography>{restProps.children}</NativeTypography>
           </SCLink>
         </NativeTooltip>
       ) : (
         <SCLink {...restProps} underline="none">
-          {restProps.children}
+          <NativeTypography>{restProps.children}</NativeTypography>
         </SCLink>
       )}
     </>
