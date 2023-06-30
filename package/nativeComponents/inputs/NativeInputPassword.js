@@ -24,10 +24,7 @@ export default function NativeInputPassword(props) {
       type="password"
       showPassword={showPassword}
       endAdornment={
-        <NativeInputAdornment
-          position="end"
-          styleClasses={[UtilityClasses.PADDING.PR1]}
-        >
+        <NativeInputAdornment position="end">
           <NativeIconButton
             aria-label="toggle password visibility"
             onClick={handleClickShowPassword}
