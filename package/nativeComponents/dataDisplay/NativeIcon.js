@@ -22,7 +22,7 @@ export default function NativeIcon(props) {
 
   return props.childrenFlag ? (
     <SCIcon
-      baseClasssName={
+      baseClassName={
         Object.keys(__IconTypes).includes(type) ? __IconTypes[type] : type
       }
       className={name}
@@ -34,7 +34,7 @@ export default function NativeIcon(props) {
     </SCIcon>
   ) : (
     <SCIcon
-      baseClasssName={
+      baseClassName={
         Object.keys(__IconTypes).includes(type) ? __IconTypes[type] : type
       }
       className={name}
