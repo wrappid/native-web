@@ -5,6 +5,9 @@ import { SCDialogContent } from "../../styledComponents/feedback/SCDialogContent
 import { SCDialogActions } from "../../styledComponents/feedback/SCDialogActions";
 import { SCDialogContentText } from "../../styledComponents/feedback/SCDialogContentText";
 import { SCButton } from "../../styledComponents/inputs/SCButton";
+import NativeBox from "../layouts/NativeBox";
+import { UtilityClasses } from "@wrappid/styles";
+import NativeIcon from "../dataDisplay/NativeIcon";
 
 export default function NativeDialog(props) {
   const { dialogInitValue, DialogContext } = props;
@@ -20,15 +23,56 @@ export default function NativeDialog(props) {
         aria-labelledby="dialog-title"
         aria-describedby="dialog-description"
       >
-        {/* @TODO Need to support icon as well  */}
-        {/* <Box
-        sx={{ paddingTop: 2, display: "flex", justifyContent: "center" }}
-        id="dialog-icon"
-      >
-        {<CheckCircleOutlineIcon sx={{ fontSize: 50 }} />}
-      </Box> */}
+        {dialog?.type === "info" ? (
+          <NativeBox
+            styleClasses={[
+              UtilityClasses?.ALIGNMENT?.JUSTIFY_CONTENT_CENTER,
+              UtilityClasses.COLOR.TEXT_WARNING,
+            ]}
+          >
+            <NativeIcon
+              type="material-icons"
+              size="medium"
+              childrenFlag={true}
+            >
+              info
+            </NativeIcon>
+          </NativeBox>
+        ) : dialog?.type === "error" ? (
+          <NativeBox
+            styleClasses={[
+              UtilityClasses?.ALIGNMENT?.JUSTIFY_CONTENT_CENTER,
+              UtilityClasses.COLOR.TEXT_ERROR,
+            ]}
+          >
+            <NativeIcon
+              type="material-icons"
+              size="medium"
+              childrenFlag={true}
+            >
+              cancel
+            </NativeIcon>
+          </NativeBox>
+        ) : (
+          <NativeBox
+            styleClasses={[
+              UtilityClasses?.ALIGNMENT?.JUSTIFY_CONTENT_CENTER,
+              UtilityClasses?.COLOR?.TEXT_SUCCESS,
+            ]}
+          >
+            <NativeIcon
+              type="material-icons"
+              size="medium"
+              childrenFlag={true}
+            >
+              check-circle
+            </NativeIcon>
+          </NativeBox>
+        )}
         <SCDialogTitle
-          sx={{ display: "flex", justifyContent: "center" }}
+          styleClasses={[
+            UtilityClasses?.ALIGNMENT?.JUSTIFY_CONTENT_CENTER,
+          ]}
           id="dialog-title"
         >
           {dialog?.title || ""}
@@ -41,7 +85,12 @@ export default function NativeDialog(props) {
         <SCDialogActions>
           <SCButton
             onClick={() => {
-              dialog.cancelButton();
+              if (
+                dialog.cancelButton &&
+                typeof dialog.cancelButton === "function"
+              ) {
+                dialog.cancelButton();
+              }
               setDialog(dialogInitValue);
             }}
           >
@@ -49,7 +98,12 @@ export default function NativeDialog(props) {
           </SCButton>
           <SCButton
             onClick={() => {
-              dialog.doneButton();
+              if (
+                dialog.doneButton &&
+                typeof dialog.doneButton === "function"
+              ) {
+                dialog.doneButton();
+              }
               setDialog(dialogInitValue);
             }}
           >
