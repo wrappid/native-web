@@ -30,13 +30,7 @@ export default function NativeDialog(props) {
               UtilityClasses.COLOR.TEXT_WARNING,
             ]}
           >
-            <NativeIcon
-              type="material-icons"
-              size="medium"
-              childrenFlag={true}
-            >
-              info
-            </NativeIcon>
+            <NativeIcon type="material-icons" childrenFlag={true} name="info" size="medium"/>
           </NativeBox>
         ) : dialog?.type === "error" ? (
           <NativeBox
@@ -45,13 +39,7 @@ export default function NativeDialog(props) {
               UtilityClasses.COLOR.TEXT_ERROR,
             ]}
           >
-            <NativeIcon
-              type="material-icons"
-              size="medium"
-              childrenFlag={true}
-            >
-              cancel
-            </NativeIcon>
+            <NativeIcon type="material-icons" childrenFlag={true} name="cancel" size="medium"/>
           </NativeBox>
         ) : (
           <NativeBox
@@ -60,13 +48,7 @@ export default function NativeDialog(props) {
               UtilityClasses?.COLOR?.TEXT_SUCCESS,
             ]}
           >
-            <NativeIcon
-              type="material-icons"
-              size="medium"
-              childrenFlag={true}
-            >
-              check-circle
-            </NativeIcon>
+            <NativeIcon type="material-icons" childrenFlag={true} name="check_circle" size="medium"/>
           </NativeBox>
         )}
         <SCDialogTitle
