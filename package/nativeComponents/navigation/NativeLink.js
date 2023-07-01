@@ -2,7 +2,7 @@ import React from "react";
 
 import { SCLink } from "../../styledComponents/navigation/SCLink";
 import NativeTooltip from "../dataDisplay/NativeTooltip";
-import NativeTypographyCaption from '../dataDisplay/NativeTypographyCaption';
+import NativeTypographyCaption from '../dataDisplay/paragraph/NativeTypographyCaption';
 
 export default function NativeLink(props) {
   const { title, titlePlacement = "top", size = "small", ...restProps } = props;
