@@ -34,6 +34,7 @@ export default function NativeOtpInput(props) {
         renderInput={(props) => <input {...props} />}
         renderSeparator={<span></span>}
         shouldAutoFocus={props.autoFocus == false ? false : true}
+        inputType="tel"
       />
   );
 };
