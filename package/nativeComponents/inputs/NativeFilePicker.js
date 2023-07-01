@@ -67,7 +67,6 @@ export default function NativeFilePicker(props) {
             </NativeTypographyBody1>
             <NativeTypographyBody1
               gridSize={2}
-              styleClasses={[UtilityClasses.LAYOUT.RIGHT_ALIGN]}
             >
               <NativeIcon type="file">upload</NativeIcon>
             </NativeTypographyBody1>
