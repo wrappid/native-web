@@ -2,7 +2,7 @@ import React from "react";
 
 import { SCLink } from "../../styledComponents/navigation/SCLink";
 import NativeTooltip from "../dataDisplay/NativeTooltip";
-import NativeTypography from '../dataDisplay/NativeTypography';
+import NativeTypographyCaption from '../dataDisplay/NativeTypographyCaption';
 
 export default function NativeLink(props) {
   const { title, titlePlacement = "top", size = "small", ...restProps } = props;
@@ -11,12 +11,12 @@ export default function NativeLink(props) {
       {title ? (
         <NativeTooltip title={title} arrow placement={titlePlacement}>
           <SCLink {...restProps} underline="none">
-            <NativeTypography>{restProps.children}</NativeTypography>
+            <NativeTypographyCaption>{restProps.children}</NativeTypographyCaption>
           </SCLink>
         </NativeTooltip>
       ) : (
         <SCLink {...restProps} underline="none">
-          <NativeTypography>{restProps.children}</NativeTypography>
+          <NativeTypographyCaption>{restProps.children}</NativeTypographyCaption>
         </SCLink>
       )}
     </>
