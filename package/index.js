@@ -128,6 +128,7 @@ import {
   nativeUseNavigate,
   nativeUseLocation,
   nativeUseParams,
+  nativeUseSearchParams,
 } from "./nativeComponents/helper/routerHelper";
 import { nativeFilterOptions } from "./helper/helper";
 import { nativeUseScrollTrigger } from "./helper/componentUtil";
@@ -145,6 +146,7 @@ export {
   /**
    * NATIVE EXPORTS
    */
+  nativeUseSearchParams,
   NativeGoogleButton,
   NativeDialog,
   NativeNavigation,
