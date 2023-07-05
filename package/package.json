@@ -23,7 +23,7 @@
     "url": "https://github.com/wrappid/native-web/issues"
   },
   "homepage": "https://github.com/wrappid/native-web#readme",
-  "dependencies": {
+  "peerDependencies": {
     "@mui/material": "^5.10.2",
     "@mui/icons-material": "^5.11.16",
     "@mui/x-date-pickers": "^5.0.8",
@@ -35,6 +35,5 @@
     "react-router-dom": "^6.3.0",
     "styled-components": "^5.3.9",
     "react-select": "^5.7.3"
-  },
-  "peerDependencies": {}
+  }
 }
