@@ -13,7 +13,7 @@ export default function NativeLink(props) {
         <NativeTooltip title={title} arrow placement={titlePlacement}>
           <SCLink {...restProps} underline="none">
             <NativeTypographyCaption
-              style={{ fontSize: 0.8125 }}
+              style={{ fontSize: 13 }}
               styleClasses={[CoreClasses.TEXT.TEXT_WEIGHT_BOLD]}
             >
               {restProps.children}
@@ -23,7 +23,7 @@ export default function NativeLink(props) {
       ) : (
         <SCLink {...restProps} underline="none">
           <NativeTypographyCaption
-            style={{ fontSize: 0.8125 }}
+            style={{ fontSize: 13 }}
             styleClasses={[CoreClasses.TEXT.TEXT_WEIGHT_BOLD]}
           >
             {restProps.children}
