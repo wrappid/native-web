@@ -129,6 +129,7 @@ import {
   nativeUseLocation,
   nativeUseParams,
   nativeUseSearchParams,
+  nativeOpenUrl
 } from "./nativeComponents/helper/routerHelper";
 import { nativeFilterOptions } from "./helper/helper";
 import { nativeUseScrollTrigger } from "./helper/componentUtil";
@@ -290,5 +291,6 @@ export {
   NativeAppContainer,
   NativePageContainer,
   NativeDataTableToolbar,
-  NativeDataTableToolPopover
+  NativeDataTableToolPopover,
+  nativeOpenUrl
 };

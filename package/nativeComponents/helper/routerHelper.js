@@ -8,6 +8,10 @@ import {
   useSearchParams as nativeUseSearchParams,
 } from "react-router-dom";
 
+async function nativeOpenUrl(url){
+  window.open(url)
+}
+
 export {
   NativeDomRoutes,
   NativeDomRoute,
@@ -16,4 +20,5 @@ export {
   nativeUseLocation,
   nativeUseParams,
   nativeUseSearchParams,
+  nativeOpenUrl
 };
