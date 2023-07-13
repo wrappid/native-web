@@ -30,8 +30,6 @@ export default function NativeDatePicker(props) {
           />
         )}
       />
-      <NativeFormErrorText>{props.touched && props.error}</NativeFormErrorText>
-      <NativeFormHelperText>{props.helperText}</NativeFormHelperText>
     </LocalizationProvider>
   );
 }

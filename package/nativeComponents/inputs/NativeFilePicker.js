@@ -2,15 +2,13 @@ import React from "react";
 
 import { useRef } from "react";
 import { SCInput } from "../../styledComponents/inputs/SCInput";
-import { UtilityClasses } from "@wrappid/styles";
+import { UtilityClasses, StyledComponentsClasses } from "@wrappid/styles";
 import NativeIcon from "../dataDisplay/NativeIcon";
 import NativeTypographyBody1 from "../dataDisplay/paragraph/NativeTypographyBody1";
-import NativeLabel from "../dataDisplay/paragraph/NativeLabel";
 import NativeBox from "../layouts/NativeBox";
 import NativeGrid from "../layouts/NativeGrid";
-import NativeFormControl from "./NativeFormControl";
-import NativeFormErrorText from "./NativeFormErrorText";
-import NativeFormHelperText from "./NativeFormHelperText";
+import { __IconTypes } from "../dataDisplay/NativeIcon";
+import NativeIconButton from "./NativeIconButton";
 
 export default function NativeFilePicker(props) {
   const inputRef = useRef(null);
@@ -19,15 +17,7 @@ export default function NativeFilePicker(props) {
     inputRef.current.click();
   };
   return (
-    <NativeFormControl>
-      <NativeLabel
-        error={
-          props.touched && props.error && props.error.length > 0 ? true : false
-        }
-        htmlFor={props.id}
-      >
-        {props.label}
-      </NativeLabel>
+    <>
       <SCInput
         id={props.id}
         inputRef={inputRef}
@@ -59,17 +49,23 @@ export default function NativeFilePicker(props) {
           onClick={handleFileOpen}
           // onMouseDown={handleFileOpen}
           edge="end"
-          styleClasses={[UtilityClasses.BORDER.BORDER_BOTTOM_WIDTH]}
+          styleClasses={[StyledComponentsClasses.WEB?.FILE_PICKER]}
         >
           <NativeGrid>
-            <NativeTypographyBody1 gridSize={10}>
+            <NativeTypographyBody1 gridProps={{gridSize:10}}>
               {props.value ? props?.value?.name : "Upload file"}
             </NativeTypographyBody1>
-            <NativeTypographyBody1
-              gridSize={2}
-            >
-              <NativeIcon type="file">upload</NativeIcon>
-            </NativeTypographyBody1>
+            <NativeBox
+              styleClasses={[UtilityClasses?.ALIGNMENT?.JUSTIFY_CONTENT_FLEX_END]}
+              gridProps={{gridSize:2}}
+            >{props?.value?.name?
+              <NativeIconButton onClick={()=>{props?.formik?.setFieldValue(props.id, null);}}>
+                <NativeIcon type={__IconTypes.MATERIAL_ICON} name="cancel" childrenFlag={true}/>
+              </NativeIconButton>
+              :
+              <NativeIcon type={__IconTypes.MATERIAL_ICON} name="upload" childrenFlag={true}/>
+            }
+            </NativeBox>
           </NativeGrid>
         </NativeBox>
       )}
@@ -82,9 +78,6 @@ export default function NativeFilePicker(props) {
       >
         <NativeIcon type="file">upload</NativeIcon>
       </NativeIconButton> */}
-
-      <NativeFormErrorText>{props.touched && props.error}</NativeFormErrorText>
-      <NativeFormHelperText>{props.helperText}</NativeFormHelperText>
-    </NativeFormControl>
+    </>
   );
 }
