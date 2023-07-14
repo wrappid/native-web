@@ -2,7 +2,7 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { SCModal } from "../../styledComponents/utils/SCModal";
 import { UtilityClasses, StyledComponentsClasses } from "@wrappid/styles";
-import NativeIcon from "../dataDisplay/NativeIcon";
+import NativeIcon, { __IconTypes } from "../dataDisplay/NativeIcon";
 import NativeH6 from "../dataDisplay/heading/NativeH6";
 import NativeIconButton from "../inputs/NativeIconButton";
 import NativeBox from "../layouts/NativeBox";
@@ -29,7 +29,7 @@ export default function NativeModal(props) {
         sx={{ bgcolor: "background.paper" }}
         styleClasses={
           props.containerStyle
-            ? [StyledComponentsClasses .MODAL.MODAL_CONTAINER, ...modalStyle.containerStyle]
+            ? [StyledComponentsClasses.MODAL.MODAL_CONTAINER, ...modalStyle.containerStyle]
             : [StyledComponentsClasses.MODAL.MODAL_CONTAINER]
         }
       >
@@ -52,7 +52,7 @@ export default function NativeModal(props) {
             {<NativeH6>{modalData?.heading ? modalData.heading : ""}</NativeH6>}
           </NativeBox>
           <NativeIconButton onClick={HandleModalClose}>
-            <NativeIcon>close</NativeIcon>
+            <NativeIcon type={__IconTypes.MATERIAL_ICON} name="close" childrenFlag={true}/>
           </NativeIconButton>
         </NativeBox>
         <NativeBox
