@@ -9,7 +9,15 @@ export default function NativeTypography(props) {
       component={props.component}
       variant={props.variant}
     >
-      {props.children}
+      {props?.code ? (
+        <pre>
+          {props.children}
+        </pre>
+      ): (
+        <>
+          {props.children}  
+        </>
+      )}
     </SCTypography>
   );
 }
