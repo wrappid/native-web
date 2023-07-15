@@ -142,11 +142,13 @@ import NativeDataTableDetailsPaneContainer from "./nativeComponents/dataTable/Na
 import NativeCustomTabs from "./nativeComponents/navigation/NativeCustomTabs";
 import NativeAppContainer from "./nativeComponents/layouts/NativeAppContainer";
 import NativePageContainer from "./nativeComponents/layouts/NativePageContainer";
+import { getNativeDeviceDetails } from "./nativeComponents/utils/device.utils";
 
 export {
   /**
    * NATIVE EXPORTS
    */
+  getNativeDeviceDetails,
   nativeUseSearchParams,
   NativeGoogleButton,
   NativeDialog,
