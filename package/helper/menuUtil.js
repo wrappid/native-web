@@ -53,25 +53,14 @@ export default function getNativeMenuItem(
         }}
       >
         <NativeListItemIcon
-          styleClasses={
-            miniDrawer
-              ? [
-                  StyledComponentsClasses.MENU.MINI_DRAWER_LIST_ITEM_ICON,
-                  ...getTypeWiseStyle(
-                    menuItem,
-                    allTypes?.MENU_ITEM_ICON,
-                    allTypes
-                  ),
-                ]
-              : [
-                  StyledComponentsClasses.MENU.LIST_ITEM_ICON,
-                  ...getTypeWiseStyle(
-                    menuItem,
-                    allTypes?.MENU_ITEM_ICON,
-                    allTypes
-                  ),
-                ]
-          }
+          styleClasses={[
+            StyledComponentsClasses.MENU.LIST_ITEM_ICON,
+            ...getTypeWiseStyle(
+              menuItem,
+              allTypes?.MENU_ITEM_ICON,
+              allTypes
+            ),
+          ]}
         >
           {/* @todo may have to correct this */}
           <NativeIcon
@@ -128,6 +117,7 @@ export default function getNativeMenuItem(
     </NativeLink>
   ) : (
     <NativeLink
+      sx={{height: "34px"}}
       href={
         menuItem?.type === allTypes?.MENU_ITEM && menuItem?.link
           ? menuItem?.link
