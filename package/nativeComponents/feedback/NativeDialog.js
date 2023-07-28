@@ -74,32 +74,38 @@ export default function NativeDialog(props) {
           </SCDialogContentText>
         </SCDialogContent>
         <SCDialogActions>
-          <SCButton
-            onClick={() => {
-              if (
-                dialog.cancelButton &&
-                typeof dialog.cancelButton === "function"
-              ) {
-                dialog.cancelButton();
-              }
-              setDialog(dialogInitValue);
-            }}
-          >
-            {dialog?.cancelButtonLabel || "Cancel"}
-          </SCButton>
-          <SCButton
-            onClick={() => {
-              if (
-                dialog.doneButton &&
-                typeof dialog.doneButton === "function"
-              ) {
-                dialog.doneButton();
-              }
-              setDialog(dialogInitValue);
-            }}
-          >
-            {dialog?.doneButtonLabel || "Done"}
-          </SCButton>
+          {
+            !dialog?.noCancelButton&&
+              <SCButton
+              onClick={() => {
+                if (
+                  dialog.cancelButton &&
+                  typeof dialog.cancelButton === "function"
+                ) {
+                  dialog.cancelButton();
+                }
+                setDialog(dialogInitValue);
+              }}
+            >
+              {dialog?.cancelButtonLabel || "Cancel"}
+            </SCButton>
+          }
+          {
+            !dialog?.noDoneButton&&
+            <SCButton
+              onClick={() => {
+                if (
+                  dialog.doneButton &&
+                  typeof dialog.doneButton === "function"
+                ) {
+                  dialog.doneButton();
+                }
+                setDialog(dialogInitValue);
+              }}
+            >
+              {dialog?.doneButtonLabel || "Done"}
+            </SCButton>
+          }
         </SCDialogActions>
       </SCDialog>
     );
