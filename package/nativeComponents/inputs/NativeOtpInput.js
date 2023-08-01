@@ -23,7 +23,7 @@ export default function NativeOtpInput(props) {
           borderBottomWidth: "none",
           borderBottomColor: theme.palette.primary.main,
           fontSize: "2rem",
-          background: theme.palette.background.default
+          background: 'transparent'
         }}
         id={props.id}
         name={props.id}
