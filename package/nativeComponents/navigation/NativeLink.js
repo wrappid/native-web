@@ -14,14 +14,14 @@ export default function NativeLink(props) {
       {title ? (
         <NativeTooltip title={title} arrow placement={titlePlacement}>
           <SCLink {...restProps} underline="none" target={newTabFlag?"_blank":""} rel={newTabFlag?"noreferrer":""}>
-            <NativeTypographyCaption styleClasses={[UtilityClasses?.LINK?.MUI]}>
+            <NativeTypographyCaption styleClasses={[UtilityClasses?.LINK?.MUI, ...(props.styleClasses||[])]}>
               {restProps.children}
             </NativeTypographyCaption>
           </SCLink>
         </NativeTooltip>
       ) : (
         <SCLink {...restProps} underline="none" target={newTabFlag?"_blank":""} rel={newTabFlag?"noreferrer":""}>
-          <NativeTypographyCaption styleClasses={[UtilityClasses?.LINK?.MUI]}>
+          <NativeTypographyCaption styleClasses={[UtilityClasses?.LINK?.MUI, ...(props.styleClasses||[])]}>
             {restProps.children}
           </NativeTypographyCaption>
         </SCLink>

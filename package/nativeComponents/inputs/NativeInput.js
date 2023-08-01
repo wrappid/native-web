@@ -5,9 +5,11 @@ import NativeFormControl from "./NativeFormControl";
 import NativeFormErrorText from "./NativeFormErrorText";
 import NativeFormHelperText from "./NativeFormHelperText";
 import NativeInputLabel from "./NativeInputLabel";
+import { useTheme } from "@mui/material";
 
 export default function NativeInput(props) {
   const { NativeId = getUUID() } = props;
+  const theme = useTheme()
   return (
     <NativeFormControl NativeId={`Native-formControl-${NativeId}`}>
       <NativeInputLabel
@@ -34,7 +36,7 @@ export default function NativeInput(props) {
         min={props.min}
         readOnly={props.readOnly}
         onBlur={props?.formik?.handleBlur}
-        inputProps={props.inputProps ? props.inputProps : {}}
+        inputProps={props.inputProps ? {...props.inputProps, style:{borderBottom: '2px solid' + theme.palette.primary.main}} : {}}
         error={
           props.touched && props.error && props.error.length > 0 ? true : false
         }

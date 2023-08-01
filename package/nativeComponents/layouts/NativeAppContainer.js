@@ -19,7 +19,7 @@ export default function NativeAppContainer(props) {
       {leftDrawer()}
       <NativeBox
         component="main"
-        style={uid?{}:{backgroundColor: theme.palette.primary.main}}
+        style={uid?{}:{backgroundColor: theme.palette.primary.dark}}
         styleClasses={
           uid
           ? [coreClasses.LAYOUT.CONTENT_CONTAINER]
