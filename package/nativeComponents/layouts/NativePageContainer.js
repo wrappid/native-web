@@ -2,7 +2,7 @@ import React from "react";
 import NativeBox from "./NativeBox";
 
 export default function NativePageContainer(props) {
-  const {coreClasses, route} = props
+  const {uid, coreClasses, route} = props
   return  <>
   {/* {route?.title && (
     <DocumentTitle title={route?.title || "NO TITLE PROVIDED"} />
@@ -16,7 +16,11 @@ export default function NativePageContainer(props) {
     <DocumentMetaKeywords metaKeywords={route?.keywords || ""} />
   )} */}
   {/* ---------------------------------------------------- */}
-  <NativeBox styleClasses={[coreClasses?.LAYOUT?.PAGE_CONTAINER]}>
+    <NativeBox styleClasses={
+      uid
+        ? [coreClasses.LAYOUT.PAGE_CONTAINER]
+        : [coreClasses.LAYOUT.LOGGED_OUT_PAGE_CONTAINER]
+    }>
    {props.children}
   </NativeBox>
 </>
