@@ -144,6 +144,7 @@ import NativeCustomTabs from "./nativeComponents/navigation/NativeCustomTabs";
 import NativeAppContainer from "./nativeComponents/layouts/NativeAppContainer";
 import NativePageContainer from "./nativeComponents/layouts/NativePageContainer";
 import { getNativeDeviceDetails } from "./nativeComponents/utils/device.utils";
+import NativeMarkdownViewer from "./nativeComponents/dataDisplay/custom/NativeMarkdownViewer";
 
 export {
   /**
@@ -151,6 +152,7 @@ export {
    */
   getNativeDeviceDetails,
   nativeUseSearchParams,
+  NativeMarkdownViewer,
   NativeGoogleButton,
   NativeDialog,
   NativeNavigation,
