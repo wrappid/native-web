@@ -9,10 +9,10 @@ export default function NativeInput(props) {
   const { NativeId = getUUID() } = props;
   const theme = useTheme()
   const defStyle = {
-    borderBottom: '2px solid' + theme.palette.primary.main,
-    "&:mui-auto-fill":{
-      WebkitBoxShadow: `0 0 0 1000px ${theme.palette.primary.contrastText} inset` 
-    }
+    // borderBottom: '2px solid' + theme.palette.primary.main,
+    // "&:mui-auto-fill":{
+    //   WebkitBoxShadow: `0 0 0 1000px ${theme.palette.primary.contrastText} inset` 
+    // }
   } 
 
   return (
@@ -61,6 +61,7 @@ export default function NativeInput(props) {
                 console.log("CLICKED else");
               }
         }
+        theme={theme}
       />
     </NativeFormControl>
   );
