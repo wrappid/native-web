@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import { Children } from "react";
 import { getGridSizeProps } from "../../helper/componentUtil";
 import { SCGrid } from "../../styledComponents/layouts/SCGrid";
@@ -6,8 +6,13 @@ import { SCGrid } from "../../styledComponents/layouts/SCGrid";
 import { getUUID } from "../../helper/appUtils";
 
 export default function NativeGrid(props) {
-  let _uuid = getUUID();
-  var containerId = props?.NativeId ? "gc_" + props.NativeId : "gc_" + _uuid;
+  const [_uuid, setUuid] = useState(null)
+  const [containerId, setContainerId] = useState(null)
+
+  useEffect(()=>{
+    setUuid(getUUID());
+    setContainerId(props?.NativeId ? "gc_" + props.NativeId : "gc_" + _uuid)
+  },[])
 
   return (
     <SCGrid
