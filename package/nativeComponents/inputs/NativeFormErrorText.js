@@ -17,7 +17,7 @@ export default function NativeFormErrorText(props) {
         childrenFlag={true} 
         type={__IconTypes.MATERIAL_ICON} 
         styleClasses={[UtilityClasses.MARGIN.MR1]} 
-        name="error"
+        name="warning"
       />
       {props.children}
   </NativeFormHelperText>
