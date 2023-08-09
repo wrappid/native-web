@@ -8,6 +8,9 @@ export const SCInput = styled(
   Input,
   {}
 )((props) => ({
+  ':before': {
+    borderBottom: '2px solid white'
+  },
   ...getEffectiveStyle([
     ...defaultStyleClasses,
     ...(props?.styleClasses || []),
