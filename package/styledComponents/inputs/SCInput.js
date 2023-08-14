@@ -10,7 +10,7 @@ export const SCInput = styled(
 )((props) => ({
   '&.MuiInputBase-root':{
     ':before':{
-      borderBottomColor: props?.theme?.palette?.primary?.main,
+      borderBottomColor: props?.theme?.palette?.text?.primary,
     }
   },
   ...getEffectiveStyle([

@@ -1,14 +1,10 @@
 import React from "react";
 import { useRef } from "react";
 import { SCInput } from "../../styledComponents/inputs/SCInput";
-// import { CoreClasses } from "@wrappid/styles";
 import NativeAvatar from "../dataDisplay/NativeAvatar";
 import NativeBadge from "../dataDisplay/NativeBadge";
 import NativeIcon from "../dataDisplay/NativeIcon";
 import NativeBox from "../layouts/NativeBox";
-import NativeFormControl from "./NativeFormControl";
-import NativeFormErrorText from "./NativeFormErrorText";
-import NativeFormHelperText from "./NativeFormHelperText";
 
 export default function NativeImagePicker(props) {
   const inputRef = useRef(null);
@@ -17,7 +13,7 @@ export default function NativeImagePicker(props) {
     inputRef.current.click();
   };
   return (
-    <NativeFormControl>
+    <>
       <SCInput
         id={props.id}
         inputRef={inputRef}
@@ -90,9 +86,6 @@ export default function NativeImagePicker(props) {
           }
         />
       )}
-
-      <NativeFormErrorText>{props.touched && props.error}</NativeFormErrorText>
-      <NativeFormHelperText>{props.helperText}</NativeFormHelperText>
-    </NativeFormControl>
+    </>
   );
 }
