@@ -32,7 +32,7 @@ export default function NativeInput(props) {
         label={props.label}
         styleClasses={[...(props.styleClasses || [])]}
         variant="standard"
-        value={props.value || ""}
+        value={props.value? String(props.value) : ''}
         onChange={props.onChange}
         required={props.formik ? false : props.required}
         placeholder={props.placeholder}
