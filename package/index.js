@@ -92,7 +92,7 @@ import NativeFilePicker from "./nativeComponents/inputs/NativeFilePicker";
 import NativeFab from "./nativeComponents/inputs/NativeFab";
 import NativeDateTimeRangePicker from "./nativeComponents/inputs/NativeDateTimeRangePicker";
 import NativeInputAdornment from "./nativeComponents/inputs/NativeInputAdornment";
-import ListItemButton from "./nativeComponents/inputs/ListItemButton";
+import NativeListItemButton from "./nativeComponents/inputs/NativeListItemButton";
 import NativeFormHelperText from "./nativeComponents/inputs/NativeFormHelperText";
 import NativeDateTimePicker from "./nativeComponents/inputs/NativeDateTimePicker";
 import NativeOtpInput from "./nativeComponents/inputs/NativeOtpInput";
@@ -252,7 +252,7 @@ export {
   NativeFab,
   NativeDateTimeRangePicker,
   NativeInputAdornment,
-  ListItemButton,
+  NativeListItemButton,
   NativeFormHelperText,
   NativeRichTextEditor,
   NativeDateTimePicker,
