@@ -4,6 +4,7 @@ import { SCButton } from "../../styledComponents/inputs/SCButton";
 export default function NativeButton(props) {
   const {
     label,
+    startIcon,
     OnClick,
     variant,
     innerRef,
@@ -19,6 +20,7 @@ export default function NativeButton(props) {
   return (
     <SCButton
       type={type ? type : "button"}
+      startIcon={startIcon ? startIcon : ''}
       ref={innerRef}
       variant={variant ? variant : "contained"}
       size={size}
