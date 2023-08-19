@@ -145,6 +145,8 @@ import NativeAppContainer from "./nativeComponents/layouts/NativeAppContainer";
 import NativePageContainer from "./nativeComponents/layouts/NativePageContainer";
 import { getNativeDeviceDetails } from "./nativeComponents/utils/device.utils";
 import NativeMarkdownViewer from "./nativeComponents/dataDisplay/custom/NativeMarkdownViewer";
+import NativeListItemAvatar from "./nativeComponents/dataDisplay/NativeListItemAvatar";
+import NativeListSubheader from "./nativeComponents/dataDisplay/NativeListSubheader";
 
 export {
   /**
@@ -152,6 +154,8 @@ export {
    */
   getNativeDeviceDetails,
   nativeUseSearchParams,
+  NativeListItemAvatar,
+  NativeListSubheader,
   NativeMarkdownViewer,
   NativeGoogleButton,
   NativeDialog,
