@@ -23,6 +23,7 @@ export default function NativeDateTimePicker(props) {
             v ? v.format("YYYY-MM-DD hh:mm") : null
           );
         }}
+        fullWidth={true}
         error={
           props.touched && props.error && props.error.length > 0 ? true : false
         }
@@ -34,6 +35,8 @@ export default function NativeDateTimePicker(props) {
                 : ""
             }
             {...params}
+            InputLabelProps={{...params.InputLabelProps, shrink: true }} 
+            fullWidth={true}
           />
         )}
       />

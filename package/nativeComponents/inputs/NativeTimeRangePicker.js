@@ -61,6 +61,7 @@ export default function NativeTimeRangePicker(props) {
                 ? true
                 : false
             }
+            fullWidth={true}
             renderInput={(params) => (
               <NativeTextField
                 helperText={
@@ -69,6 +70,8 @@ export default function NativeTimeRangePicker(props) {
                     : ""
                 }
                 {...params}
+                InputLabelProps={{...params.InputLabelProps, shrink: true }} 
+                fullWidth={true}
               />
             )}
           />
@@ -93,6 +96,7 @@ export default function NativeTimeRangePicker(props) {
                 ? true
                 : false
             }
+            fullWidth={true}
             renderInput={(params) => (
               <NativeTextField
                 error={props.touched && props.error}
@@ -102,6 +106,8 @@ export default function NativeTimeRangePicker(props) {
                     : ""
                 }
                 {...params}
+                InputLabelProps={{ shrink: true }} 
+                fullWidth={true}
               />
             )}
           />

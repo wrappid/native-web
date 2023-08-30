@@ -38,6 +38,7 @@ export default function NativeDateRangepicker(props) {
             startDate: moment(v).format("YYYY-MM-DD"),
           });
         }}
+        fullWidth={true}
         error={
           props.touched && props.error && props.error.length > 0 ? true : false
         }
@@ -49,6 +50,8 @@ export default function NativeDateRangepicker(props) {
                 : ""
             }
             {...params}
+            InputLabelProps={{...params.InputLabelProps, shrink: true }} 
+            fullWidth={true}
           />
         )}
       />
@@ -73,6 +76,8 @@ export default function NativeDateRangepicker(props) {
                 : ""
             }
             {...params}
+            InputLabelProps={{ shrink: true }} 
+            fullWidth={true}
           />
         )}
       />

@@ -23,10 +23,13 @@ export default function NativeDatePicker(props) {
         error={
           props.touched && props.error && props.error.length > 0 ? true : false
         }
+        fullWidth={true}
         renderInput={(params) => (
           <NativeTextField
             // helperText={props.touched && props.error && props.error.length > 0 ? props.error : ""}
             {...params}
+            InputLabelProps={{...params.InputLabelProps, shrink: true }} 
+            fullWidth={true}
           />
         )}
       />
