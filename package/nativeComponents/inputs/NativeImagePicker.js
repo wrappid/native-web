@@ -18,6 +18,8 @@ export default function NativeImagePicker(props) {
     readOnly,
     touched,
     error,
+    required,
+    styleClasses,
     ...restProps
   } = props;
   const inputRef = useRef(null);
