@@ -1,6 +1,7 @@
 import React from "react";
 import { StyledComponentsClasses } from "@wrappid/styles";
 import { isJson } from "./stringUtils";
+import { queryBuilder } from "./helper";
 import NativeDivider from "../nativeComponents/dataDisplay/NativeDivider";
 import NativeLink from "../nativeComponents/navigation/NativeLink";
 import NativeMenuItem from "../nativeComponents/navigation/NativeMenuItem";
@@ -8,6 +9,37 @@ import NativeListItemIcon from "../nativeComponents/dataDisplay/NativeListItemIc
 import NativeIcon from "../nativeComponents/dataDisplay/NativeIcon";
 import NativeListItemText from "../nativeComponents/dataDisplay/NativeListItemText";
 import NativeIconButton from "../nativeComponents/inputs/NativeIconButton";
+
+function getLink(menuItem, allTypes, routeRegistry){
+  if(menuItem?.type === allTypes?.MENU_ITEM || !menuItem?.type){
+    if(menuItem?.route && routeRegistry){
+      if(menuItem.params){
+        if(typeof menuItem.params === "string"){
+          return routeRegistry[menuItem.route] + menuItem.params
+        }
+        else{
+          let url = queryBuilder(routeRegistry[menuItem.route], menuItem.params)
+          return url
+        }
+      }
+      else{
+        return routeRegistry[menuItem.route]
+      }
+    }
+    else{
+      if(menuItem.link){
+        return menuItem.link
+      }
+      else{
+        return ""
+      }
+    }
+  }
+  else{
+    return "javascript:void(0)"
+  }
+}
+
 
 export default function getNativeMenuItem(
   menuItem,
@@ -19,7 +51,8 @@ export default function getNativeMenuItem(
   setSelectedID,
   locationPathname,
   theme,
-  allTypes
+  allTypes,
+  routeRegistry
 ) {
   // console.log("OPEN", open);
   /**
@@ -29,11 +62,7 @@ export default function getNativeMenuItem(
     <NativeDivider />
   ) : open ? (
     <NativeLink
-      href={
-        menuItem?.type === allTypes?.MENU_ITEM && menuItem?.link
-          ? menuItem?.link
-          : "javascript:void(0)"
-      }
+      href={getLink(menuItem, allTypes, routeRegistry) }
     >
       <NativeMenuItem
         sx={{
