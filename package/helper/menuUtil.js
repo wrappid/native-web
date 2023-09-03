@@ -15,7 +15,7 @@ function getLink(menuItem, allTypes, routeRegistry){
     if(menuItem?.route && routeRegistry){
       if(menuItem.params){
         if(typeof menuItem.params === "string"){
-          return routeRegistry[menuItem.route] + menuItem.params
+          return `/${routeRegistry[menuItem.route] + menuItem.params}`
         }
         else{
           let url = queryBuilder(routeRegistry[menuItem.route], menuItem.params)
