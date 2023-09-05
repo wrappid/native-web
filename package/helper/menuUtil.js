@@ -5,39 +5,38 @@ import { queryBuilder } from "./helper";
 import NativeDivider from "../nativeComponents/dataDisplay/NativeDivider";
 import NativeLink from "../nativeComponents/navigation/NativeLink";
 import NativeMenuItem from "../nativeComponents/navigation/NativeMenuItem";
-import NativeListItemIcon from "../nativeComponents/dataDisplay/NativeListItemIcon";
 import NativeIcon from "../nativeComponents/dataDisplay/NativeIcon";
+import NativeListItemIcon from "../nativeComponents/dataDisplay/NativeListItemIcon";
 import NativeListItemText from "../nativeComponents/dataDisplay/NativeListItemText";
 import NativeIconButton from "../nativeComponents/inputs/NativeIconButton";
 
 function getLink(menuItem, allTypes, routeRegistry){
-  if(menuItem?.type === allTypes?.MENU_ITEM || !menuItem?.type){
+  let menuLink = "";
+  if (menuItem?.type === allTypes?.MENU_ITEM || !menuItem?.type) {
     if(menuItem?.route && routeRegistry){
       if(menuItem.params){
         if(typeof menuItem.params === "string"){
-          return `/${routeRegistry[menuItem.route] + menuItem.params}`
+          menuLink = `${routeRegistry[menuItem.route] + menuItem.params}`;
         }
         else{
-          let url = queryBuilder(routeRegistry[menuItem.route], menuItem.params)
-          return url
+          let url = queryBuilder(routeRegistry[menuItem.route], menuItem.params);
+          menuLink = `${url}`;
         }
+      } else {
+        menuLink = routeRegistry[menuItem.route];
       }
-      else{
-        return routeRegistry[menuItem.route]
-      }
-    }
-    else{
+      menuLink = `/${menuLink}`;
+    } else {
       if(menuItem.link){
-        return menuItem.link
-      }
-      else{
-        return ""
+        menuLink = menuItem.link
+      } else {
+        menuLink =  ""
       }
     }
+  } else {
+    menuLink = "javascript:void(0)"
   }
-  else{
-    return "javascript:void(0)"
-  }
+  return menuLink;
 }
 
 
