@@ -11,6 +11,7 @@ export default function NativeDataTableToolbar(props) {
           direction="row"
           gridProps={{ gridSize: panel?.gridSize }}
           styleClasses={[
+            UtilityClasses.WIDTH.W_100,
             UtilityClasses?.ALIGNMENT?.JUSTIFY_CONTENT_SPACE_BETWEEN,
             UtilityClasses?.ALIGNMENT?.ALIGN_ITEMS_CENTER,
           ]}
@@ -19,7 +20,7 @@ export default function NativeDataTableToolbar(props) {
             panel?.stacks?.map((stack) => (
               <NativeStack
                 direction="row"
-                styleClasses={[UtilityClasses.ALIGNMENT.ALIGN_ITEMS_CENTER]}
+                styleClasses={[UtilityClasses.WIDTH.W_100, UtilityClasses.ALIGNMENT.ALIGN_ITEMS_CENTER]}
               >
                 {stack?.map((element) =>
                   element?.comp
@@ -44,7 +45,6 @@ export default function NativeDataTableToolbar(props) {
     >
       {formPanel(row?.leftPanel)}
       {formPanel(row?.rightPanel)}
-     
     </NativeGrid>
   ));
 }
