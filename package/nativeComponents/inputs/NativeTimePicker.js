@@ -2,22 +2,40 @@ import React from "react";
 import { LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterMoment } from "@mui/x-date-pickers/AdapterMoment";
 import NativeTextField from "./NativeTextField";
-import NativeFormHelperText from "./NativeFormHelperText";
-import { UtilityClasses } from "@wrappid/styles";
 import { SCTimePicker } from "../../styledComponents/inputs/SCTimePicker";
 import moment from "moment";
 
 export default function NativeTimePicker(props) {
-  const { label, onChange, value, formik, ampm } = props;
+  const {
+    id,
+    name,
+    label,
+    onChange,
+    value,
+    formik,
+    ampm,
+    disablePast,
+    disableFuture,
+    touched,
+    error,
+    shouldDisableTime,
+    minTime,
+    maxTime,
+  } = props;
 
   return (
     <LocalizationProvider dateAdapter={AdapterMoment}>
       <SCTimePicker
-        id={props.id}
-        name={props.id}
+        id={id}
+        name={name}
         label={label}
         inputFormat={ampm ? "hh:mm" : "HH:mm"}
         ampm={ampm}
+        minTime={ typeof minTime === "string"? getValidDateTime(minTime) : minTime}
+        maxTime={ typeof maxTime === "string"? getValidDateTime(maxTime) : maxTime}
+        disablePast={disablePast}
+        disableFuture={disableFuture}
+        shouldDisableTime={shouldDisableTime}
         value={
           value
             ? typeof value === "string" && value.includes(":")
@@ -31,31 +49,26 @@ export default function NativeTimePicker(props) {
         onChange={(v) => {
           console.log("V", v);
           if (formik) {
-            formik.setFieldValue(props.id, v.format(ampm ? "hh:mm" : "HH:mm"));
+            formik.setFieldValue(id, v.format(ampm ? "hh:mm" : "HH:mm"));
           } else if (onChange) {
             onChange(v);
           }
         }}
-        error={
-          props.touched && props.error && props.error.length > 0 ? true : false
-        }
+        error={touched && error && error.length > 0 ? true : false}
         fullWidth={true}
         renderInput={(params) => (
           <NativeTextField
             helperText={
-              props.touched && props.error && props.error.length > 0
-                ? props.error
+              touched && error && error.length > 0
+                ? error
                 : ""
             }
             {...params}
-            InputLabelProps={{...params.InputLabelProps, shrink: true }} 
+            InputLabelProps={{ ...params.InputLabelProps, shrink: true }}
             fullWidth={true}
           />
         )}
       />
-      <NativeFormHelperText styleClasses={[UtilityClasses.MARGIN.MT_N2]}>
-        {props.helperText}
-      </NativeFormHelperText>
     </LocalizationProvider>
   );
 }

@@ -3,32 +3,52 @@ import { SCDatePicker } from "../../styledComponents/inputs/SCDatePicker";
 import { LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterMoment } from "@mui/x-date-pickers/AdapterMoment";
 import NativeTextField from "./NativeTextField";
-import NativeFormHelperText from "./NativeFormHelperText";
-import NativeFormErrorText from "./NativeFormErrorText";
+import { getValidDateTime } from "../../helper/helper";
 
 export default function NativeDatePicker(props) {
-  const { label, onChange, value, formik } = props;
+  const {
+    id,
+    name,
+    label,
+    onChange,
+    value,
+    disablePast,
+    disableFuture,
+    formik,
+    touched,
+    error,
+    shouldDisableDate,
+    minDate,
+    maxDate,
+  } = props;
 
   return (
     <LocalizationProvider dateAdapter={AdapterMoment}>
       <SCDatePicker
-        id={props.id}
-        name={props.id}
+        id={id}
+        name={name}
         label={label}
         inputFormat="DD/MM/YYYY"
-        value={value === "" ? null : value}
+        value={value || ""}
+        minDate={typeof minDate === "string"? getValidDateTime(minDate):  minDate }
+        maxDate={typeof maxDate === "string"? getValidDateTime(maxDate):  maxDate }
         onChange={(v) => {
-          formik.setFieldValue(props.id, v ? v?.format("YYYY-MM-DD") : null);
+          onChange && !formik
+            ? onChange(v)
+            : formik?.setFieldValue(
+                id,
+                v ? v?.format("YYYY-MM-DD") : null
+              );
         }}
-        error={
-          props.touched && props.error && props.error.length > 0 ? true : false
-        }
+        error={touched && error && error?.length > 0 ? true : false}
         fullWidth={true}
+        disablePast={disablePast}
+        disableFuture={disableFuture}
+        shouldDisableDate={shouldDisableDate}
         renderInput={(params) => (
           <NativeTextField
-            // helperText={props.touched && props.error && props.error.length > 0 ? props.error : ""}
             {...params}
-            InputLabelProps={{...params.InputLabelProps, shrink: true }} 
+            InputLabelProps={{ ...params.InputLabelProps, shrink: true }}
             fullWidth={true}
           />
         )}

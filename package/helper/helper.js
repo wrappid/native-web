@@ -1,4 +1,5 @@
 import { createFilterOptions as nativeFilterOptions } from "@mui/material/Autocomplete";
+import moment from "moment";
 
 function getFullName(data) {
   var n = "";
@@ -86,10 +87,21 @@ function clearValidatePhoneEmail(text) {
   return f;
 }
 
+
+function getValidDateTime(dateTimeString){
+  try{
+    return moment(dateTimeString)
+  }
+  catch(err){
+    return ""
+  }
+}
+
 export {
   getFullName,
   queryBuilder,
   createFormData,
   clearValidatePhoneEmail,
   nativeFilterOptions,
+  getValidDateTime
 };
