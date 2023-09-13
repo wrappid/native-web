@@ -139,7 +139,6 @@ import NativeThemeProvider from "./theme/NativeThemeProvider";
 import NativeCollapse from "./nativeComponents/surfaces/NativeCollapse";
 import { nativeStorage } from "./nativeComponents/helper/storeHelper";
 import NativeFlatList from "./nativeComponents/dataDisplay/NativeFlatList";
-import NativeDataTableDetailsPaneContainer from "./nativeComponents/dataTable/NativeDataTableDetailsPaneContainer";
 import NativeCustomTabs from "./nativeComponents/navigation/NativeCustomTabs";
 import NativeAppContainer from "./nativeComponents/layouts/NativeAppContainer";
 import NativePageContainer from "./nativeComponents/layouts/NativePageContainer";
@@ -294,7 +293,6 @@ export {
   NativeCollapse,
   nativeStorage,
   NativeFlatList,
-  NativeDataTableDetailsPaneContainer,
   NativeMedicineSelector,
   NativeReactSelectInput,
   nativeUseTheme,
