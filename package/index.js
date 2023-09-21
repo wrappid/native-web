@@ -117,6 +117,7 @@ import NativeCheckbox from "./nativeComponents/inputs/NativeCheckbox";
 import DevNativeDataTable from "./nativeComponents/dataTable/DevNativeDataTable";
 import NativeDataTableToolPopover from "./nativeComponents/dataTable/NativeDataTableToolPopover";
 import NativeDataTableToolbar from "./nativeComponents/dataTable/NativeDataTableToolbar";
+import NativeDataTableDetailsPaneContainer from "./nativeComponents/dataTable/NativeDataTableDetailsPaneContainer";
 import NativeFormContainer from "./nativeComponents/forms/NativeFormContainer";
 import getNativeMenuItem from "./helper/menuUtil";
 import NativeGoogleButton from "./nativeComponents/inputs/custom/NativeGoogleButton";
@@ -300,5 +301,6 @@ export {
   NativePageContainer,
   NativeDataTableToolbar,
   NativeDataTableToolPopover,
+  NativeDataTableDetailsPaneContainer,
   nativeOpenUrl
 };
