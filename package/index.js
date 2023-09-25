@@ -103,6 +103,7 @@ import NativeIconButton from "./nativeComponents/inputs/NativeIconButton";
 import NativeDateRangepicker from "./nativeComponents/inputs/NativeDateRangepicker";
 import NativeRichTextEditor from "./nativeComponents/inputs/custom/NativeRichTextEditor.js";
 import NativeMedicineSelector from "./nativeComponents/inputs/custom/NativeMedicineSelector";
+import NativeSpeechToText from "./nativeComponents/inputs/custom/NativeSpeechToText";
 import NativeOutlinedButton from "./nativeComponents/inputs/NativeOutlinedButton";
 import NativeTextButton from "./nativeComponents/inputs/NativeTextButton";
 import NativeConfirmPassword from "./nativeComponents/inputs/NativeConfirmPassword";
@@ -302,5 +303,6 @@ export {
   NativeDataTableToolbar,
   NativeDataTableToolPopover,
   NativeDataTableDetailsPaneContainer,
-  nativeOpenUrl
+  nativeOpenUrl,
+  NativeSpeechToText
 };
