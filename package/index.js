@@ -16,6 +16,7 @@ import NativeBackdrop from "./nativeComponents/feedback/NativeBackdrop";
 import NativeSnackbar from "./nativeComponents/feedback/NativeSnackbar";
 import NativeCircularProgress from "./nativeComponents/feedback/NativeCircularProgress";
 import NativeAlert from "./nativeComponents/feedback/NativeAlert";
+import NativeAlertTitle from "./nativeComponents/feedback/NativeAlertTitle";
 import NativeSkeleton from "./nativeComponents/feedback/NativeSkeleton";
 import NativeAccordion from "./nativeComponents/surfaces/NativeAccordion";
 import NativeAccordionDetail from "./nativeComponents/surfaces/NativeAccordionDetail";
@@ -181,6 +182,7 @@ export {
   NativeSnackbar,
   NativeCircularProgress,
   NativeAlert,
+  NativeAlertTitle,
   NativeSkeleton,
   NativeAccordion,
   NativeAccordionSummary,
