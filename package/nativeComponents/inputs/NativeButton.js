@@ -9,6 +9,7 @@ export default function NativeButton(props) {
     variant,
     innerRef,
     type,
+    children,
     size = "small",
     ...restProps
   } = props;
@@ -16,7 +17,6 @@ export default function NativeButton(props) {
   const UserActionLogging = () => {
     // alert("BUTTON CLICK");
   };
-
   return (
     <SCButton
       type={type ? type : "button"}
@@ -30,7 +30,7 @@ export default function NativeButton(props) {
       }}
       {...restProps}
     >
-      {label ? label : "LABEL NOT PROVIDED"}
+      {label ? label : (children ? children : "LABEL NOT PROVIDED")}
     </SCButton>
   );
 }
