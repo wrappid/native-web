@@ -5,7 +5,7 @@ import { getEffectiveStyle, StyledComponentsClasses } from "@wrappid/styles";
 
 const defaultStyleClasses = [StyledComponentsClasses.FEEDBACK.ALERT];
 
-export const SCAlert = styled(
+export const SCAlertTitle = styled(
   AlertTitle,
   {}
 )((props) => ({
