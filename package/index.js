@@ -68,6 +68,7 @@ import NativeTypography from "./nativeComponents/dataDisplay/NativeTypography";
 import NativeTableHead from "./nativeComponents/dataDisplay/NativeTableHead";
 import NativeDivider from "./nativeComponents/dataDisplay/NativeDivider";
 import NativeAvatar from "./nativeComponents/dataDisplay/NativeAvatar";
+import NativeAvatarGroup from "./nativeComponents/dataDisplay/NativeAvatarGroup";
 import NativeTypographyCaption from "./nativeComponents/dataDisplay/paragraph/NativeTypographyCaption";
 import NativeTypographyButton from "./nativeComponents/dataDisplay/paragraph/NativeTypographyButton";
 import NativeLabel from "./nativeComponents/dataDisplay/paragraph/NativeLabel";
@@ -235,6 +236,7 @@ export {
   NativeTypography,
   NativeDivider,
   NativeAvatar,
+  NativeAvatarGroup,
   NativeTypographyCaption,
   NativeTypographyButton,
   NativeLabel,
