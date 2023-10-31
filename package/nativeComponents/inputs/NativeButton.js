@@ -20,17 +20,19 @@ export default function NativeButton(props) {
   return (
     <SCButton
       type={type ? type : "button"}
-      startIcon={startIcon ? startIcon : ''}
+      startIcon={startIcon ? startIcon : ""}
       ref={innerRef}
       variant={variant ? variant : "contained"}
       size={size}
       onClick={(e) => {
         UserActionLogging();
-        OnClick(e);
+        if (OnClick && typeof OnClick === "function") {
+          OnClick(e);
+        }
       }}
       {...restProps}
     >
-      {label ? label : (children ? children : "LABEL NOT PROVIDED")}
+      {label ? label : children ? children : "LABEL NOT PROVIDED"}
     </SCButton>
   );
 }

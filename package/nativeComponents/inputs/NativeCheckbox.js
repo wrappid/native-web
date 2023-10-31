@@ -12,6 +12,7 @@ export default function NativeCheckbox(props) {
     onChange,
     label,
     value,
+    ...restProps
   } = props;
   return (
     <>
@@ -21,6 +22,7 @@ export default function NativeCheckbox(props) {
           styleClasses={[UtilityClasses.MARGIN.MR0]}
           control={
             <SCCheckbox
+              {...restProps}
               id={id}
               checked={formik ? value : props.checked}
               styleClasses={[...(styleClasses || [])]}
@@ -36,6 +38,7 @@ export default function NativeCheckbox(props) {
         />
       ) : (
         <SCCheckbox
+          {...restProps}
           id={id}
           checked={formik ? value : props.checked}
           styleClasses={[...(styleClasses || [])]}
