@@ -150,6 +150,7 @@ import { getNativeDeviceDetails } from "./nativeComponents/utils/device.utils";
 import NativeMarkdownViewer from "./nativeComponents/dataDisplay/custom/NativeMarkdownViewer";
 import NativeListItemAvatar from "./nativeComponents/dataDisplay/NativeListItemAvatar";
 import NativeListSubheader from "./nativeComponents/dataDisplay/NativeListSubheader";
+import NativeRating from "./nativeComponents/inputs/NativeRating.js";
 
 export {
   /**
@@ -308,5 +309,6 @@ export {
   NativeDataTableToolPopover,
   NativeDataTableDetailsPaneContainer,
   nativeOpenUrl,
-  NativeSpeechToText
+  NativeSpeechToText,
+  NativeRating
 };
