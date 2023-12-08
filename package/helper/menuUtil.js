@@ -1,6 +1,5 @@
 import React from "react";
 import { StyledComponentsClasses } from "@wrappid/styles";
-import { isJson } from "./stringUtils";
 import { queryBuilder } from "./helper";
 import NativeDivider from "../nativeComponents/dataDisplay/NativeDivider";
 import NativeLink from "../nativeComponents/navigation/NativeLink";
@@ -9,6 +8,16 @@ import NativeIcon from "../nativeComponents/dataDisplay/NativeIcon";
 import NativeListItemIcon from "../nativeComponents/dataDisplay/NativeListItemIcon";
 import NativeListItemText from "../nativeComponents/dataDisplay/NativeListItemText";
 import NativeIconButton from "../nativeComponents/inputs/NativeIconButton";
+
+function isJson(str) {
+  try {
+    JSON.parse(str);
+  } catch (error) {
+    //--console.error(error);
+    return false;
+  }
+  return isNaN(str);
+}
 
 function getLink(menuItem, allTypes, routeRegistry){
   let menuLink = "";
@@ -70,7 +79,7 @@ export default function getNativeMenuItem(
           backgroundColor:
             menuItem?.type === allTypes?.MENU_ITEM &&
             locationPathname === menuItem?.link &&
-            theme.palette.secondary.light,
+            theme?.palette?.secondary?.light,
         }}
         key={menuItem.id}
         disablePadding
@@ -119,8 +128,8 @@ export default function getNativeMenuItem(
               color: `${
                 menuItem?.type === allTypes?.MENU_ITEM &&
                 locationPathname === menuItem?.link
-                  ? theme.palette.primary.light
-                  : theme.palette.secondary.dark
+                  ? theme?.palette?.primary?.light
+                  : theme?.palette?.secondary?.dark
               }!important`,
             }}
           />
@@ -136,8 +145,8 @@ export default function getNativeMenuItem(
             color: `${
               menuItem?.type === allTypes?.MENU_ITEM &&
               locationPathname === menuItem?.link
-                ? theme.palette.primary.light
-                : theme.palette.secondary.dark
+                ? theme?.palette?.primary?.light
+                : theme?.palette?.secondary?.dark
             }!important`,
           }}
         />
@@ -188,8 +197,8 @@ export default function getNativeMenuItem(
             color: `${
               menuItem?.type === allTypes?.MENU_ITEM &&
               locationPathname === menuItem?.link
-                ? theme.palette.primary.light
-                : theme.palette.secondary.dark
+                ? theme?.palette?.primary?.light
+                : theme?.palette?.secondary?.dark
             }!important`,
           }}
         ></NativeIcon>

@@ -1,17 +1,17 @@
 import React from "react";
 import styled from "styled-components";
 import MuiDrawer from "@mui/material/Drawer";
-import { getEffectiveStyle, StyledComponentsClasses } from "@wrappid/styles";
-/**
- * @todo config from core to be used
- */
-import config from "../../config";
+import { getEffectiveStyle, StyledComponentsClasses, getConfigurationObject } from "@wrappid/styles";
 
 const defaultStyleClasses = [StyledComponentsClasses.NAVIGATION.DRAWER];
+const config = getConfigurationObject()?.wrappid
+const DEFAULT_DRAWER_WIDTH = 240
+export const DEFAULT_MINI_DRAWER_WIDTH = 56
+
 
 const openedMixin = (theme) => ({
   ...getEffectiveStyle(StyledComponentsClasses.APP_BAR.HEIGHT),
-  width: config.drawerWidth,
+  width: config.drawerWidth  || DEFAULT_DRAWER_WIDTH,
   transition: theme.transitions.create("width", {
     easing: theme.transitions.easing.sharp,
     duration: theme.transitions.duration.enteringScreen,
@@ -26,7 +26,7 @@ const closedMixin = (theme) => ({
     duration: theme.transitions.duration.leavingScreen,
   }),
   [theme.breakpoints.up("sm")]: {
-    width: config.miniDrawerWidth,
+    width: config.miniDrawerWidth || DEFAULT_MINI_DRAWER_WIDTH,
   },
 });
 

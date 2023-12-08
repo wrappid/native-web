@@ -1,12 +1,10 @@
 import React from "react";
 import NativeBox from "./NativeBox";
 import { UtilityClasses } from "@wrappid/styles";
-import { NativeCssBaseline } from "../../theme/themeUtil";
-import { useTheme } from "@mui/material";
+import NativeCssBaseline from "../../theme/NativeCssBaseline";
 
 export default function NativeAppContainer(props) {
   const { appBar, leftDrawer, footer, uid, coreClasses } = props;
-  const theme = useTheme()
   return (
     <NativeBox
       styleClasses={[

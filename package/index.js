@@ -138,7 +138,7 @@ import {
 } from "./nativeComponents/helper/routerHelper";
 import { nativeFilterOptions } from "./helper/helper";
 import { nativeUseScrollTrigger } from "./helper/componentUtil";
-import { nativeCreateTheme, NativeCssBaseline, nativeUseTheme } from "./theme/themeUtil";
+import NativeCssBaseline from "./theme/NativeCssBaseline.js";
 import NativeThemeProvider from "./theme/NativeThemeProvider";
 import NativeCollapse from "./nativeComponents/surfaces/NativeCollapse";
 import { nativeStorage } from "./nativeComponents/helper/storeHelper";
@@ -146,7 +146,7 @@ import NativeFlatList from "./nativeComponents/dataDisplay/NativeFlatList";
 import NativeCustomTabs from "./nativeComponents/navigation/NativeCustomTabs";
 import NativeAppContainer from "./nativeComponents/layouts/NativeAppContainer";
 import NativePageContainer from "./nativeComponents/layouts/NativePageContainer";
-import { getNativeDeviceDetails } from "./nativeComponents/utils/device.utils";
+import { getNativeDeviceDetails } from "./helper/helper.js";
 import NativeMarkdownViewer from "./nativeComponents/dataDisplay/custom/NativeMarkdownViewer";
 import NativeListItemAvatar from "./nativeComponents/dataDisplay/NativeListItemAvatar";
 import NativeListSubheader from "./nativeComponents/dataDisplay/NativeListSubheader";
@@ -294,7 +294,6 @@ export {
   nativeUseParams,
   nativeFilterOptions,
   nativeUseScrollTrigger,
-  nativeCreateTheme,
   NativeThemeProvider,
   NativeCssBaseline,
   NativeCollapse,
@@ -302,7 +301,6 @@ export {
   NativeFlatList,
   NativeMedicineSelector,
   NativeReactSelectInput,
-  nativeUseTheme,
   NativeAppContainer,
   NativePageContainer,
   NativeDataTableToolbar,
