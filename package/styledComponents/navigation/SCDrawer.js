@@ -11,7 +11,7 @@ export const DEFAULT_MINI_DRAWER_WIDTH = 56
 
 const openedMixin = (theme) => ({
   ...getEffectiveStyle(StyledComponentsClasses.APP_BAR.HEIGHT),
-  width: config.drawerWidth  || DEFAULT_DRAWER_WIDTH,
+  width: config?.drawerWidth  || DEFAULT_DRAWER_WIDTH,
   transition: theme.transitions.create("width", {
     easing: theme.transitions.easing.sharp,
     duration: theme.transitions.duration.enteringScreen,
@@ -26,7 +26,7 @@ const closedMixin = (theme) => ({
     duration: theme.transitions.duration.leavingScreen,
   }),
   [theme.breakpoints.up("sm")]: {
-    width: config.miniDrawerWidth || DEFAULT_MINI_DRAWER_WIDTH,
+    width: config?.miniDrawerWidth || DEFAULT_MINI_DRAWER_WIDTH,
   },
 });
 
