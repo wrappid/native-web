@@ -6,7 +6,7 @@ import NativeInputLabel from "./NativeInputLabel";
 import NativeMenuItem from "./NativeMenuItem";
 
 export default function NativeSelect(props) {
-  const { label, selectID, value, handleChange, options } = props;
+  const { label, selectID, value, handleChange, options, children } = props;
 
   return (
     <NativeFormControl fullWidth>
@@ -18,7 +18,7 @@ export default function NativeSelect(props) {
         label={label}
         onChange={handleChange}
       >
-        {options.map((option, index) => {
+        {children ? children : options.map((option, index) => {
           return (
             <NativeMenuItem
               key={option?.id || index}
@@ -28,6 +28,7 @@ export default function NativeSelect(props) {
             </NativeMenuItem>
           );
         })}
+        
       </SCSelect>
     </NativeFormControl>
   );
