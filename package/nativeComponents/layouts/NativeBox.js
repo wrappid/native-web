@@ -1,6 +1,10 @@
 import React from "react";
 import { SCBox } from "../../styledComponents/layouts/SCBox";
 
-export default function NativeBox(props) {
-  return <SCBox {...props}>{props.children}</SCBox>;
-}
+const NativeBox = React.forwardRef((props, ref) => {
+  return <SCBox {...props} ref={ref} />;
+});
+
+NativeBox.displayName = "NativeBox";
+
+export default NativeBox;

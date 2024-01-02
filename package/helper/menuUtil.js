@@ -19,16 +19,18 @@ function isJson(str) {
   return isNaN(str);
 }
 
-function getLink(menuItem, allTypes, routeRegistry){
+function getLink(menuItem, allTypes, routeRegistry) {
   let menuLink = "";
   if (menuItem?.type === allTypes?.MENU_ITEM || !menuItem?.type) {
-    if(menuItem?.route && routeRegistry){
-      if(menuItem.params){
-        if(typeof menuItem.params === "string"){
+    if (menuItem?.route && routeRegistry) {
+      if (menuItem.params) {
+        if (typeof menuItem.params === "string") {
           menuLink = `${routeRegistry[menuItem.route] + menuItem.params}`;
-        }
-        else{
-          let url = queryBuilder(routeRegistry[menuItem.route], menuItem.params);
+        } else {
+          let url = queryBuilder(
+            routeRegistry[menuItem.route],
+            menuItem.params
+          );
           menuLink = `${url}`;
         }
       } else {
@@ -36,18 +38,17 @@ function getLink(menuItem, allTypes, routeRegistry){
       }
       menuLink = `/${menuLink}`;
     } else {
-      if(menuItem.link){
-        menuLink = menuItem.link
+      if (menuItem.link) {
+        menuLink = menuItem.link;
       } else {
-        menuLink =  ""
+        menuLink = "javascript:void(0)";
       }
     }
   } else {
-    menuLink = "javascript:void(0)"
+    menuLink = "javascript:void(0)";
   }
   return menuLink;
 }
-
 
 export default function getNativeMenuItem(
   menuItem,
@@ -69,9 +70,7 @@ export default function getNativeMenuItem(
   return menuItem.type === allTypes?.MENU_SEPERATOR ? (
     <NativeDivider />
   ) : open ? (
-    <NativeLink
-      href={getLink(menuItem, allTypes, routeRegistry) }
-    >
+    <NativeLink href={getLink(menuItem, allTypes, routeRegistry)}>
       <NativeMenuItem
         sx={{
           height: "34px",
@@ -92,11 +91,7 @@ export default function getNativeMenuItem(
         <NativeListItemIcon
           styleClasses={[
             StyledComponentsClasses.MENU.LIST_ITEM_ICON,
-            ...getTypeWiseStyle(
-              menuItem,
-              allTypes?.MENU_ITEM_ICON,
-              allTypes
-            ),
+            ...getTypeWiseStyle(menuItem, allTypes?.MENU_ITEM_ICON, allTypes),
           ]}
         >
           {/* @todo may have to correct this */}
@@ -154,7 +149,7 @@ export default function getNativeMenuItem(
     </NativeLink>
   ) : (
     <NativeLink
-      sx={{height: "34px"}}
+      sx={{ height: "34px" }}
       href={
         menuItem?.type === allTypes?.MENU_ITEM && menuItem?.link
           ? menuItem?.link
