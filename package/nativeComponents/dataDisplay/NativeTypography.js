@@ -6,8 +6,7 @@ const NativeTypography = React.forwardRef((props, ref) => {
   return (
     <SCTypography
       {...props}
-      component={props.component}
-      variant={props.variant}
+      ref={ref}
     >
       {props?.code ? <pre>{props.children}</pre> : <>{props.children}</>}
     </SCTypography>
