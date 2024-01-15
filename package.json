@@ -4,9 +4,12 @@
   "description": "This repository is combined packages of all the Styled Components for react web project.",
   "main": "index.js",
   "scripts": {
+    "prepare": "husky install",
     "test": "echo testing not yet implemented",
     "build": "npx babel package --out-dir dist --copy-files",
-    "publish": "npm publish ./dist --registry=https://npm.pkg.github.com --scope=@wrappid"
+    "publish": "npm publish ./dist --registry=https://npm.pkg.github.com --scope=@wrappid",
+    "code:lint": "eslint --ignore-path .gitignore ./package.",
+    "code:format": "npm run code:lint -- --fix ."
   },
   "repository": {
     "type": "git",
@@ -38,7 +41,8 @@
     "react-otp-input": "^3.0.2",
     "react-router-dom": "^6.3.0",
     "styled-components": "^5.3.9",
-    "react-markdown": "^8.0.7"
+    "react-markdown": "^8.0.7",
+    "husky": "^8.0.3"
   },
   "devDependencies": {
     "@babel/cli": "^7.21.0",
