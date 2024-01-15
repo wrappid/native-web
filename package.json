@@ -41,14 +41,14 @@
     "react-otp-input": "^3.0.2",
     "react-router-dom": "^6.3.0",
     "styled-components": "^5.3.9",
-    "react-markdown": "^8.0.7",
-    "husky": "^8.0.3"
+    "react-markdown": "^8.0.7"
   },
   "devDependencies": {
     "@babel/cli": "^7.21.0",
     "@babel/core": "^7.21.0",
     "@babel/polyfill": "^7.12.1",
     "@babel/preset-env": "^7.20.2",
-    "@babel/preset-react": "^7.18.6"
+    "@babel/preset-react": "^7.18.6",
+    "husky": "^8.0.3"
   }
 }
