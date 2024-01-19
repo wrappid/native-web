@@ -1,4 +1,5 @@
-import { useState, useEffect, Children } from "react";
+// eslint-disable-next-line no-unused-vars, unused-imports/no-unused-imports
+import React, { useState, useEffect, Children } from "react";
 
 import { getUUID } from "../../helper/appUtils";
 import { getGridSizeProps } from "../../helper/componentUtil";

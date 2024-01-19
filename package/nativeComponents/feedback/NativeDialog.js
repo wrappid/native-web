@@ -1,4 +1,5 @@
-import { useContext } from "react";
+// eslint-disable-next-line no-unused-vars, unused-imports/no-unused-imports
+import React, { useContext } from "react";
 
 // eslint-disable-next-line import/no-unresolved
 import { UtilityClasses } from "@wrappid/styles";
