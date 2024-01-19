@@ -3,7 +3,7 @@ import {SCImageBackground} from '../../styledComponents/layouts/SCImageBackgroun
 import { UTurnLeft } from '@mui/icons-material';
 
 export default function NativeImageBackground(props) {
-  const {source, resizeMode} = props;
+  const {source, resizeMode="auto"} = props;
 
   return (
     <SCImageBackground
