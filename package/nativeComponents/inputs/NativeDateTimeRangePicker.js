@@ -1,26 +1,30 @@
+// eslint-disable-next-line no-unused-vars, unused-imports/no-unused-imports
 import React from "react";
+
 import { LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterMoment } from "@mui/x-date-pickers/AdapterMoment";
-import NativeTextField from "./NativeTextField";
-import NativeFormHelperText from "./NativeFormHelperText";
+// eslint-disable-next-line import/no-unresolved
 import { UtilityClasses } from "@wrappid/styles";
-import { SCDateTimePicker } from "../../styledComponents/inputs/SCDateTimePicker";
 import moment from "moment";
 
+import NativeFormHelperText from "./NativeFormHelperText";
+import NativeTextField from "./NativeTextField";
+import { SCDateTimePicker } from "../../styledComponents/inputs/SCDateTimePicker";
+
 export default function NativeDateTimeRangePicker(props) {
-  const { label, onChange, value, formik } = props;
-  var spValue = {
-    startDate:
-      value && value.startDate
-        ? typeof value.startDate === "string"
-          ? moment(value.startDate)
-          : value.startDate
-        : "",
+  const { label, value, formik } = props;
+  let spValue = {
     endDate:
       value && value.endDate
         ? typeof value.endDate === "string"
           ? moment(value.endDate)
           : value.endDate
+        : "",
+    startDate:
+      value && value.startDate
+        ? typeof value.startDate === "string"
+          ? moment(value.startDate)
+          : value.startDate
         : "",
   };
 
@@ -32,10 +36,10 @@ export default function NativeDateTimeRangePicker(props) {
         label={label}
         inputFormat="DD/MM/YYYY hh:mm"
         value={spValue?.startDate}
-        onChange={(v) => {
+        onChange={(val) => {
           formik.setFieldValue(props.id, {
             ...value,
-            startDate: moment(v).format("YYYY-MM-DD hh:mm"),
+            startDate: moment(val).format("YYYY-MM-DD hh:mm"),
           });
         }}
         error={
@@ -52,16 +56,17 @@ export default function NativeDateTimeRangePicker(props) {
           />
         )}
       />
+
       <SCDateTimePicker
         id={props.id}
         name={props.id}
         label={label}
         inputFormat="DD/MM/YYYY hh:mm"
         value={spValue?.endDate}
-        onChange={(v) => {
+        onChange={(val) => {
           formik.setFieldValue(props.id, {
             ...value,
-            endDate: moment(v).format("YYYY-MM-DD hh:mm"),
+            endDate: moment(val).format("YYYY-MM-DD hh:mm"),
           });
         }}
         error={
@@ -78,6 +83,7 @@ export default function NativeDateTimeRangePicker(props) {
           />
         )}
       />
+
       <NativeFormHelperText styleClasses={[UtilityClasses.LAYOUT.NO_MARGIN_P]}>
         {props.helperText}
       </NativeFormHelperText>

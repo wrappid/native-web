@@ -1,13 +1,16 @@
-import React, { useContext } from "react";
-import { SCDialog } from "../../styledComponents/feedback/SCDialog";
-import { SCDialogTitle } from "../../styledComponents/feedback/SCDialogTitle";
-import { SCDialogContent } from "../../styledComponents/feedback/SCDialogContent";
-import { SCDialogActions } from "../../styledComponents/feedback/SCDialogActions";
-import { SCDialogContentText } from "../../styledComponents/feedback/SCDialogContentText";
-import { SCButton } from "../../styledComponents/inputs/SCButton";
-import NativeBox from "../layouts/NativeBox";
+import { useContext } from "react";
+
+// eslint-disable-next-line import/no-unresolved
 import { UtilityClasses } from "@wrappid/styles";
+
+import { SCDialog } from "../../styledComponents/feedback/SCDialog";
+import { SCDialogActions } from "../../styledComponents/feedback/SCDialogActions";
+import { SCDialogContent } from "../../styledComponents/feedback/SCDialogContent";
+import { SCDialogContentText } from "../../styledComponents/feedback/SCDialogContentText";
+import { SCDialogTitle } from "../../styledComponents/feedback/SCDialogTitle";
+import { SCButton } from "../../styledComponents/inputs/SCButton";
 import NativeIcon from "../dataDisplay/NativeIcon";
+import NativeBox from "../layouts/NativeBox";
 
 export default function NativeDialog(props) {
   const { dialogInitValue, DialogContext } = props;
@@ -24,74 +27,76 @@ export default function NativeDialog(props) {
         aria-describedby="dialog-description"
         PaperProps={{
           style: {
-            minWidth: '20%',
-            minHeight: '30%',
+            minHeight: "30%",
+            minWidth : "20%",
           }
         }}
       >
         {dialog?.type === "info" ? (
           <NativeBox
-            styleClasses={[
-              UtilityClasses?.PADDING?.P2,
-              UtilityClasses?.ALIGNMENT?.JUSTIFY_CONTENT_CENTER,
-              UtilityClasses.COLOR.TEXT_WARNING,
-            ]}
+            styleClasses={[UtilityClasses?.PADDING?.P2, UtilityClasses?.ALIGNMENT?.JUSTIFY_CONTENT_CENTER, UtilityClasses.COLOR.TEXT_WARNING]}
           >
-            <NativeIcon type="material-icons" childrenFlag={true} name="info" size="large"/>
+            <NativeIcon
+              type="material-icons"
+              childrenFlag={true}
+              name="info"
+              size="large"/>
           </NativeBox>
         ) : dialog?.type === "error" ? (
           <NativeBox
-            styleClasses={[
-              UtilityClasses?.PADDING?.P2,
-              UtilityClasses?.ALIGNMENT?.JUSTIFY_CONTENT_CENTER,
-              UtilityClasses.COLOR.TEXT_ERROR,
-            ]}
+            styleClasses={[UtilityClasses?.PADDING?.P2, UtilityClasses?.ALIGNMENT?.JUSTIFY_CONTENT_CENTER, UtilityClasses.COLOR.TEXT_ERROR]}
           >
-            <NativeIcon type="material-icons" childrenFlag={true} name="cancel" size="large"/>
+            <NativeIcon
+              type="material-icons"
+              childrenFlag={true}
+              name="cancel"
+              size="large"/>
           </NativeBox>
         ) : (
           <NativeBox
-            styleClasses={[
-              UtilityClasses?.PADDING?.P2,
-              UtilityClasses?.ALIGNMENT?.JUSTIFY_CONTENT_CENTER,
-              UtilityClasses?.COLOR?.TEXT_SUCCESS,
-            ]}
+            styleClasses={[UtilityClasses?.PADDING?.P2, UtilityClasses?.ALIGNMENT?.JUSTIFY_CONTENT_CENTER, UtilityClasses?.COLOR?.TEXT_SUCCESS]}
           >
-            <NativeIcon type="material-icons" childrenFlag={true} name="check_circle" size="large"/>
+            <NativeIcon
+              type="material-icons"
+              childrenFlag={true}
+              name="check_circle"
+              size="large"/>
           </NativeBox>
         )}
+
         <SCDialogTitle
-          styleClasses={[
-            UtilityClasses?.ALIGNMENT?.JUSTIFY_CONTENT_CENTER,
-          ]}
+          styleClasses={[UtilityClasses?.ALIGNMENT?.JUSTIFY_CONTENT_CENTER]}
           id="dialog-title"
         >
           {dialog?.title || ""}
         </SCDialogTitle>
+
         <SCDialogContent>
           <SCDialogContentText id="dialog-description">
             {dialog?.subtitle || ""}
           </SCDialogContentText>
         </SCDialogContent>
+
         <SCDialogActions>
           {
-            !dialog?.noCancelButton&&
+            !dialog?.noCancelButton &&
               <SCButton
-              onClick={() => {
-                if (
-                  dialog.cancelButton &&
+                onClick={() => {
+                  if (
+                    dialog.cancelButton &&
                   typeof dialog.cancelButton === "function"
-                ) {
-                  dialog.cancelButton();
-                }
-                setDialog(dialogInitValue);
-              }}
-            >
-              {dialog?.cancelButtonLabel || "Cancel"}
-            </SCButton>
+                  ) {
+                    dialog.cancelButton();
+                  }
+                  setDialog(dialogInitValue);
+                }}
+              >
+                {dialog?.cancelButtonLabel || "Cancel"}
+              </SCButton>
           }
+
           {
-            !dialog?.noDoneButton&&
+            !dialog?.noDoneButton &&
             <SCButton
               onClick={() => {
                 if (

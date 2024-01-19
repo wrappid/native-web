@@ -1,19 +1,20 @@
+// eslint-disable-next-line no-unused-vars, unused-imports/no-unused-imports
 import React from "react";
-import { SCDrawer } from "../../styledComponents/navigation/SCDrawer";
-import { StyledComponentsClasses, getEffectiveStyle } from "@wrappid/styles";
+
 import { useTheme } from "@mui/material/styles";
+// eslint-disable-next-line import/no-unresolved
+import { StyledComponentsClasses, getEffectiveStyle } from "@wrappid/styles";
+
+import { SCDrawer } from "../../styledComponents/navigation/SCDrawer";
 
 export default function NativeDrawer(props) {
   const materialTheme = useTheme();
+
   return (
     <SCDrawer
       {...props}
       theme={materialTheme}
-      PaperProps={{
-        sx: {
-          ...getEffectiveStyle([StyledComponentsClasses.DRAWER.PAPER_HEIGHT]),
-        },
-      }}
+      PaperProps={{ sx: { ...getEffectiveStyle([StyledComponentsClasses.DRAWER.PAPER_HEIGHT]) } }}
     >
       {props.children}
     </SCDrawer>

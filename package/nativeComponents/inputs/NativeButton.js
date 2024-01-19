@@ -1,4 +1,6 @@
+// eslint-disable-next-line no-unused-vars, unused-imports/no-unused-imports
 import React from "react";
+
 import { SCButton } from "../../styledComponents/inputs/SCButton";
 
 export default function NativeButton(props) {
@@ -15,8 +17,8 @@ export default function NativeButton(props) {
   } = props;
 
   const UserActionLogging = () => {
-    // alert("BUTTON CLICK");
   };
+
   return (
     <SCButton
       type={type ? type : "button"}
@@ -24,10 +26,10 @@ export default function NativeButton(props) {
       ref={innerRef}
       variant={variant ? variant : "contained"}
       size={size}
-      onClick={(e) => {
+      onClick={(ele) => {
         UserActionLogging();
         if (OnClick && typeof OnClick === "function") {
-          OnClick(e);
+          OnClick(ele);
         }
       }}
       {...restProps}

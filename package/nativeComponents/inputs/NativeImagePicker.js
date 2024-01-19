@@ -1,5 +1,6 @@
-import React from "react";
-import { useRef } from "react";
+// eslint-disable-next-line no-unused-vars, unused-imports/no-unused-imports
+import React, { useRef } from "react";
+
 import { SCInput } from "../../styledComponents/inputs/SCInput";
 import NativeAvatar from "../dataDisplay/NativeAvatar";
 import NativeBadge from "../dataDisplay/NativeBadge";
@@ -20,13 +21,14 @@ export default function NativeImagePicker(props) {
     error,
     required,
     styleClasses,
+    // eslint-disable-next-line no-unused-vars
     ...restProps
   } = props;
   const inputRef = useRef(null);
   const handleFileOpen = () => {
-    console.log("adasd");
     inputRef.current.click();
   };
+
   return (
     <>
       <SCInput
@@ -35,12 +37,13 @@ export default function NativeImagePicker(props) {
         type="file"
         sx={{ display: "none" }}
         inputProps={{
+          accept  : "image/*",
           readOnly: true,
-          accept: "image/*",
         }}
         label={label}
         variant="standard"
         onChange={(event) => {
+          // eslint-disable-next-line no-console
           console.log("FIle Change", event.target.files[0], formik);
           formik.setFieldValue(id, event.target.files[0]);
         }}
@@ -52,26 +55,21 @@ export default function NativeImagePicker(props) {
           touched && error && error.length > 0 ? true : false
         }
       />
+
       {/* {!readOnly && ( */}
 
       {/* )} */}
       {!readOnly ? (
         <NativeBox
-          styleClasses={
-            [
-              // CoreClasses.NAVIGATION.LINK_STYLE,
-              // CoreClasses.ALIGNMENT.JUSTIFY_CONTENT_CENTER,
-            ]
-          }
+          styleClasses={[]}
           aria-label="toggle password visibility"
           type="file"
           onClick={handleFileOpen}
-          // onMouseDown={handleFileOpen}
           edge="end"
         >
           <NativeBadge
             overlap="circular"
-            anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
+            anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
             badgeContent={
               <NativeIcon childrenFlag={true} name="photo_camera" type={__IconTypes.MATERIAL_ICON} />
             }

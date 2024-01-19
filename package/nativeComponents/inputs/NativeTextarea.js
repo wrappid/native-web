@@ -1,4 +1,6 @@
+// eslint-disable-next-line no-unused-vars, unused-imports/no-unused-imports
 import React from "react";
+
 import NativeInput from "./NativeInput";
 
 export default function NativeTextarea(props) {
@@ -8,11 +10,7 @@ export default function NativeTextarea(props) {
       multiline={true}
       minRows={3}
       maxRows={6}
-      inputProps={{
-        style: {
-          resize: "vertical",
-        },
-      }}
+      inputProps={{ style: { resize: "vertical" } }}
     />
   );
 }

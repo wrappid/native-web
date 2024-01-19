@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars, unused-imports/no-unused-imports
 import React from "react";
 
 export default function NativeFlatList(props) {
@@ -11,5 +12,5 @@ export default function NativeFlatList(props) {
     ?.map((rowData, rowIndex) => renderItem(rowData, rowIndex))
     :
     tableData
-    ?.map((rowData, rowIndex) => renderItem(rowData, rowIndex))
+      ?.map((rowData, rowIndex) => renderItem(rowData, rowIndex));
 }

@@ -1,10 +1,10 @@
 // eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line no-unused-vars, unused-imports/no-unused-imports
 import React from "react";
 
 // eslint-disable-next-line no-unused-vars
-import { UTurnLeft } from '@mui/icons-material';
 
-import {SCImageBackground} from "../../styledComponents/layouts/SCImageBackground";
+import { SCImageBackground } from "../../styledComponents/layouts/SCImageBackground";
 
 export default function NativeImageBackground(props) {
   const { source, resizeMode = "cover" } = props;

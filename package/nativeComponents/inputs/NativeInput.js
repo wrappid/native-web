@@ -1,19 +1,17 @@
+// eslint-disable-next-line no-unused-vars, unused-imports/no-unused-imports
 import React from "react";
-import { getUUID } from "../../helper/appUtils";
-import { SCInput } from "../../styledComponents/inputs/SCInput";
+
+import { useTheme } from "@mui/material";
+
 import NativeFormControl from "./NativeFormControl";
 import NativeInputLabel from "./NativeInputLabel";
-import { useTheme } from "@mui/material";
+import { getUUID } from "../../helper/appUtils";
+import { SCInput } from "../../styledComponents/inputs/SCInput";
 
 export default function NativeInput(props) {
   const { NativeId = getUUID() } = props;
-  const theme = useTheme()
-  const defStyle = {
-    // borderBottom: '2px solid' + theme.palette.primary.main,
-    // "&:mui-auto-fill":{
-    //   WebkitBoxShadow: `0 0 0 1000px ${theme.palette.primary.contrastText} inset` 
-    // }
-  } 
+  const theme = useTheme();
+  const defStyle = {}; 
 
   return (
     <NativeFormControl NativeId={`Native-formControl-${NativeId}`}>
@@ -26,13 +24,14 @@ export default function NativeInput(props) {
       >
         {props.label}
       </NativeInputLabel>
+
       <SCInput
         id={props.id}
         type={props.showPassword || !props.type ? "text" : props.type}
         label={props.label}
         styleClasses={[...(props.styleClasses || [])]}
         variant="standard"
-        value={props.value? String(props.value) : ''}
+        value={props.value ? String(props.value) : ""}
         onChange={props.onChange}
         required={props.formik ? false : props.required}
         placeholder={props.placeholder}
@@ -41,7 +40,7 @@ export default function NativeInput(props) {
         min={props.min}
         readOnly={props.readOnly}
         onBlur={props?.formik?.handleBlur}
-        inputProps={props.inputProps ? {...props.inputProps, style: defStyle} : {style: defStyle}}
+        inputProps={props.inputProps ? { ...props.inputProps, style: defStyle } : { style: defStyle }}
         error={
           props.touched && props.error && props.error.length > 0 ? true : false
         }
@@ -54,12 +53,14 @@ export default function NativeInput(props) {
         onFocus={
           props.onFormFocus && props.editId && props.readOnly
             ? () => {
-                console.log("CLICKED");
-                props.onFormFocus(props.editId);
-              }
+              // eslint-disable-next-line no-console
+              console.log("CLICKED");
+              props.onFormFocus(props.editId);
+            }
             : () => {
-                console.log("CLICKED else");
-              }
+              // eslint-disable-next-line no-console
+              console.log("CLICKED else");
+            }
         }
         theme={theme}
       />

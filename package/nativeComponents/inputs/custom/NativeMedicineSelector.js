@@ -1,4 +1,5 @@
-import React, {useEffect, useState} from "react";
+import { useEffect, useState } from "react";
+
 import AsyncSelect from "react-select/async";
 
 export default function NativeMedicineSelector(props) {
@@ -16,17 +17,17 @@ export default function NativeMedicineSelector(props) {
     onInputChange,
   } = props;
 
-  const [defOptions, setDefaultOptions] = useState([])
-
+  const [defOptions, setDefaultOptions] = useState([]);
 
   useEffect(()=>{
-    setMountOptions()
-  }, [value])
+    setMountOptions();
+  }, [value]);
 
-  const setMountOptions=async ()=>{
-    let ops = await loadOptions()
-    setDefaultOptions(ops)
-  }
+  const setMountOptions = async ()=>{
+    let ops = await loadOptions();
+
+    setDefaultOptions(ops);
+  };
 
   return (
     <AsyncSelect
@@ -37,7 +38,7 @@ export default function NativeMedicineSelector(props) {
       isMulti={isMulti}
       loadOptions={loadOptions}
       onKeyDown={onKeyDown}
-      defaultOptions={defOptions&&defOptions?.length>0?defOptions: defaultOptions}
+      defaultOptions={defOptions && defOptions?.length > 0 ? defOptions : defaultOptions}
       value={value}
       inputValue={inputValue}
       onInputChange={onInputChange}

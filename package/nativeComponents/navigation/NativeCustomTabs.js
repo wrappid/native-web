@@ -1,6 +1,8 @@
+// eslint-disable-next-line no-unused-vars, unused-imports/no-unused-imports
 import React from "react";
-import NativeTabPanel from "./NativeTabPanel";
+
 import NativeTab from "./NativeTab";
+import NativeTabPanel from "./NativeTabPanel";
 import NativeTabs from "./NativeTabs";
 import { nativeUseLocation } from "../helper/routerHelper";
 
@@ -26,10 +28,10 @@ export default function NativeCustomTabs(props) {
     }
   }, [tabsContent, location]);
 
-  const handleChange = (e, value) => {
-    preHandleChangeHook && preHandleChangeHook(e, value);
+  const handleChange = (ele, value) => {
+    preHandleChangeHook && preHandleChangeHook(ele, value);
     setTabValue(value);
-    postHandleChangeHook && postHandleChangeHook(e, value);
+    postHandleChangeHook && postHandleChangeHook(ele, value);
   };
 
   return (
@@ -39,13 +41,15 @@ export default function NativeCustomTabs(props) {
         value={tabValue}
         onChange={handleChange}
       >
-        {tabsContent?.map((tabContent) => {
-          return <NativeTab value={tabContent?.id} label={tabContent?.label} />;
+        {tabsContent?.map((tabContent, index) => {
+          return <NativeTab key={index} value={tabContent?.id} label={tabContent?.label} />;
         })}
       </NativeTabs>
+
       {tabsContent?.map((tabContent, tabIndex) => {
         return (
           <NativeTabPanel
+            key = {tabIndex}
             styleClasses={props.tabPanelClasses}
             value={tabValue}
             index={tabContent?.id || tabIndex}

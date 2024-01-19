@@ -1,8 +1,9 @@
-import React from "react";
+// eslint-disable-next-line no-unused-vars, unused-imports/no-unused-imports
+import React, { useState } from "react";
+
 import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
-import { useState } from "react";
-import { UtilityClasses } from "@wrappid/styles";
+
 import NativeIconButton from "./NativeIconButton";
 import NativeInput from "./NativeInput";
 import NativeInputAdornment from "./NativeInputAdornment";

@@ -5,11 +5,11 @@ import {
   useNavigate as nativeUseNavigate,
   useLocation as nativeUseLocation,
   useParams as nativeUseParams,
-  useSearchParams as nativeUseSearchParams,
+  useSearchParams as nativeUseSearchParams
 } from "react-router-dom";
 
 async function nativeOpenUrl(url){
-  window.open(url)
+  window.open(url);
 }
 
 export {

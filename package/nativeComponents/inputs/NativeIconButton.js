@@ -1,4 +1,6 @@
+// eslint-disable-next-line no-unused-vars, unused-imports/no-unused-imports
 import React from "react";
+
 import { SCIconButton } from "../../styledComponents/inputs/SCIconButton";
 import NativeTooltip from "../dataDisplay/NativeTooltip";
 
@@ -9,6 +11,7 @@ export default function NativeIconButton(props) {
     size = "small",
     ...restProps
   } = props;
+
   return (
     <>
       {title ? (
