@@ -1,16 +1,12 @@
 // import { styled } from "@mui/material";
+// eslint-disable-next-line no-unused-vars, unused-imports/no-unused-imports
 import React from "react";
-import styled from "styled-components";
+
 import MuiAppBar from "@mui/material/AppBar";
+// eslint-disable-next-line import/no-unresolved
 import { getEffectiveStyle, StyledComponentsClasses } from "@wrappid/styles";
+import styled from "styled-components";
 
 const defaultStyleClasses = [StyledComponentsClasses.SURFACES.APP_BAR];
 
-export const SCAppBar = styled(MuiAppBar, {
-  // shouldForwardProp: (prop) => prop !== "open",
-})((props) => ({
-  ...getEffectiveStyle([
-    ...defaultStyleClasses,
-    ...(props?.styleClasses || []),
-  ]),
-}));
+export const SCAppBar = styled(MuiAppBar, {})((props) => ({ ...getEffectiveStyle([...defaultStyleClasses, ...(props?.styleClasses || [])]) }));

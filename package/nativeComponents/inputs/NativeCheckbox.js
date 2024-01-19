@@ -1,19 +1,24 @@
+// eslint-disable-next-line no-unused-vars, unused-imports/no-unused-imports
 import React from "react";
-import { SCCheckbox } from "../../styledComponents/inputs/SCCheckbox";
+
+// eslint-disable-next-line import/no-unresolved
 import { UtilityClasses } from "@wrappid/styles";
+
 import NativeFormControlLabel from "./NativeFormControlLabel";
+import { SCCheckbox } from "../../styledComponents/inputs/SCCheckbox";
 
 export default function NativeCheckbox(props) {
   const {
     id,
     styleClasses = [],
     formik,
-    children,
+    // children,
     onChange,
     label,
     value,
     ...restProps
   } = props;
+
   return (
     <>
       {label ? (
@@ -29,9 +34,9 @@ export default function NativeCheckbox(props) {
               onChange={
                 onChange && !formik
                   ? onChange
-                  : (v) => {
-                      formik?.setFieldValue(id, v.target.checked);
-                    }
+                  : (event) => {
+                    formik?.setFieldValue(id, event.target.checked);
+                  }
               }
             />
           }
@@ -45,9 +50,9 @@ export default function NativeCheckbox(props) {
           onChange={
             onChange && !formik
               ? onChange
-              : (v) => {
-                  formik?.setFieldValue(id, v.target.checked);
-                }
+              : (event) => {
+                formik?.setFieldValue(id, event.target.checked);
+              }
           }
         />
       )}

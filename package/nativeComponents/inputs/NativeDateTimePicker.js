@@ -1,13 +1,17 @@
+// eslint-disable-next-line no-unused-vars, unused-imports/no-unused-imports
 import React from "react";
+
 import { LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterMoment } from "@mui/x-date-pickers/AdapterMoment";
-import NativeTextField from "./NativeTextField";
-import NativeFormHelperText from "./NativeFormHelperText";
+// eslint-disable-next-line import/no-unresolved
 import { UtilityClasses } from "@wrappid/styles";
+
+import NativeFormHelperText from "./NativeFormHelperText";
+import NativeTextField from "./NativeTextField";
 import { SCDateTimePicker } from "../../styledComponents/inputs/SCDateTimePicker";
 
 export default function NativeDateTimePicker(props) {
-  const { label, onChange, value, formik } = props;
+  const { label, value, formik } = props;
 
   return (
     <LocalizationProvider dateAdapter={AdapterMoment}>
@@ -17,10 +21,10 @@ export default function NativeDateTimePicker(props) {
         label={label}
         inputFormat="DD/MM/YYYY hh:mm"
         value={value}
-        onChange={(v) => {
+        onChange={(val) => {
           formik.setFieldValue(
             props.id,
-            v ? v.format("YYYY-MM-DD hh:mm") : null
+            val ? val.format("YYYY-MM-DD hh:mm") : null
           );
         }}
         fullWidth={true}
@@ -35,11 +39,12 @@ export default function NativeDateTimePicker(props) {
                 : ""
             }
             {...params}
-            InputLabelProps={{...params.InputLabelProps, shrink: true }} 
+            InputLabelProps={{ ...params.InputLabelProps, shrink: true }} 
             fullWidth={true}
           />
         )}
       />
+
       <NativeFormHelperText styleClasses={[UtilityClasses.LAYOUT.NO_MARGIN_P]}>
         {props.helperText}
       </NativeFormHelperText>

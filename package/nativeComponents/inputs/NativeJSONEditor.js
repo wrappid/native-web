@@ -1,5 +1,6 @@
-import { Component } from "react";
-import React from "react";
+// eslint-disable-next-line no-unused-vars, unused-imports/no-unused-imports
+import React, { Component } from "react";
+
 import JSONEditor from "jsoneditor";
 
 import "jsoneditor/dist/jsoneditor.css";
@@ -13,9 +14,9 @@ export default class NativeJSONEditor extends Component {
       mode = "view";
     }
     const options = {
-      mode: mode,
+      mode        : mode,
       onChangeText: this.handelChange,
-      schema: this.props.schema || {},
+      schema      : this.props.schema || {},
     };
 
     this.jsoneditor = new JSONEditor(this.container, options);

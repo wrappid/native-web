@@ -1,9 +1,12 @@
+// eslint-disable-next-line no-unused-vars, unused-imports/no-unused-imports
 import React from "react";
-import { SCDatePicker } from "../../styledComponents/inputs/SCDatePicker";
+
 import { LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterMoment } from "@mui/x-date-pickers/AdapterMoment";
+
 import NativeTextField from "./NativeTextField";
 import { getValidDateTime } from "../../helper/helper";
+import { SCDatePicker } from "../../styledComponents/inputs/SCDatePicker";
 
 export default function NativeDatePicker(props) {
   const {
@@ -30,15 +33,15 @@ export default function NativeDatePicker(props) {
         label={label}
         inputFormat="DD/MM/YYYY"
         value={value || ""}
-        minDate={typeof minDate === "string"? getValidDateTime(minDate):  minDate }
-        maxDate={typeof maxDate === "string"? getValidDateTime(maxDate):  maxDate }
-        onChange={(v) => {
+        minDate={typeof minDate === "string" ? getValidDateTime(minDate) : minDate }
+        maxDate={typeof maxDate === "string" ? getValidDateTime(maxDate) : maxDate }
+        onChange={(value) => {
           onChange && !formik
-            ? onChange(v)
+            ? onChange(value)
             : formik?.setFieldValue(
-                id,
-                v ? v?.format("YYYY-MM-DD") : null
-              );
+              id,
+              value ? value?.format("YYYY-MM-DD") : null
+            );
         }}
         error={touched && error && error?.length > 0 ? true : false}
         fullWidth={true}

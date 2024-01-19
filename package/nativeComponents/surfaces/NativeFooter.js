@@ -1,14 +1,17 @@
+// eslint-disable-next-line no-unused-vars, unused-imports/no-unused-imports
 import React from "react";
-import NativeBox from "../layouts/NativeBox";
-import NativeGrid from "../layouts/NativeGrid";
+
+// eslint-disable-next-line import/no-unresolved
+import { UtilityClasses } from "@wrappid/styles";
+
 import NativeDivider from "../dataDisplay/NativeDivider";
 import NativeTypographyBody1 from "../dataDisplay/paragraph/NativeTypographyBody1";
-// import AppVersion from "../../module/app/AppVersion";
-import { UtilityClasses } from "@wrappid/styles";
+import NativeBox from "../layouts/NativeBox";
+import NativeGrid from "../layouts/NativeGrid";
 
 export default function NativeFooter(props) {
   return (
-    <NativeBox styleClasses={[/*CoreClasses.APP.FOOTER*/]}>
+    <NativeBox styleClasses={[]}>
       <NativeDivider />
 
       <NativeGrid styleClasses={[UtilityClasses.PADDING.PT3]}>
@@ -16,7 +19,8 @@ export default function NativeFooter(props) {
           {props?.footerText || "Wrappid Default Footer @ 2023 "}
         </NativeTypographyBody1>
 
-        <NativeTypographyBody1>{/* <AppVersion /> */}</NativeTypographyBody1>
+        {/* eslint-disable-next-line etc/no-commented-out-code */}
+        {/* <NativeTypographyBody1><AppVersion /></NativeTypographyBody1> */}
       </NativeGrid>
     </NativeBox>
   );

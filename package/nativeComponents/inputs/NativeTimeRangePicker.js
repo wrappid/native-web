@@ -1,59 +1,62 @@
+// eslint-disable-next-line no-unused-vars, unused-imports/no-unused-imports
 import React from "react";
+
 import { LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterMoment } from "@mui/x-date-pickers/AdapterMoment";
-import NativeTextField from "./NativeTextField";
-import NativeFormHelperText from "./NativeFormHelperText";
+// eslint-disable-next-line import/no-unresolved
 import { UtilityClasses } from "@wrappid/styles";
-import { SCTimePicker } from "../../styledComponents/inputs/SCTimePicker";
-import NativeBox from "../layouts/NativeBox";
-import NativeLabel from "../dataDisplay/paragraph/NativeLabel";
-import NativeGrid from "../layouts/NativeGrid";
 import moment from "moment";
 
+import NativeFormHelperText from "./NativeFormHelperText";
+import NativeTextField from "./NativeTextField";
+import { SCTimePicker } from "../../styledComponents/inputs/SCTimePicker";
+import NativeLabel from "../dataDisplay/paragraph/NativeLabel";
+import NativeBox from "../layouts/NativeBox";
+import NativeGrid from "../layouts/NativeGrid";
+
 export default function NativeTimeRangePicker(props) {
-  const { id, label, onChange, value, formik } = props;
-  var spValue = {
-    startTime:
-      value && value.startTime
-        ? typeof value.startTime === "string" && value.startTime.includes(":")
-          ? moment().set({
-              hour: value.startTime.split(":")[0],
-              minute: value.startTime.split(":")[1],
-            })
-          : value.startTime
-        : "",
+  const { label, value, formik } = props;
+  let spValue = {
     endTime:
       value && value.endTime
         ? typeof value.endTime === "string" && value.endTime.includes(":")
           ? moment().set({
-              hour: value.endTime.split(":")[0],
-              minute: value.endTime.split(":")[1],
-            })
+            hour  : value.endTime.split(":")[0],
+            minute: value.endTime.split(":")[1],
+          })
           : value.endTime
         : "",
+    startTime:
+      value && value.startTime
+        ? typeof value.startTime === "string" && value.startTime.includes(":")
+          ? moment().set({
+            hour  : value.startTime.split(":")[0],
+            minute: value.startTime.split(":")[1],
+          })
+          : value.startTime
+        : "",
   };
-
-  // console.log("END VALUE", id, spValue, value);
 
   return (
     <NativeBox>
       <NativeLabel>{label}</NativeLabel>
+
       <LocalizationProvider dateAdapter={AdapterMoment}>
         <NativeGrid>
           <SCTimePicker
             gridProps={{
               gridSize: {
-                xs: 12,
                 sm: 6,
+                xs: 12,
               },
             }}
             label={props.startTimeLabel ? props.startTimeLabel : "Start Time"}
             inputFormat="hh:mm"
             value={spValue?.startTime}
-            onChange={(v) => {
+            onChange={(val) => {
               formik.setFieldValue(props.id, {
                 ...value,
-                startTime: moment(v).format("hh:mm"),
+                startTime: moment(val).format("hh:mm"),
               });
             }}
             error={
@@ -70,25 +73,26 @@ export default function NativeTimeRangePicker(props) {
                     : ""
                 }
                 {...params}
-                InputLabelProps={{...params.InputLabelProps, shrink: true }} 
+                InputLabelProps={{ ...params.InputLabelProps, shrink: true }} 
                 fullWidth={true}
               />
             )}
           />
+
           <SCTimePicker
             gridProps={{
               gridSize: {
-                xs: 12,
                 sm: 6,
+                xs: 12,
               },
             }}
             label={props.endTimeLabel ? props.endTimeLabel : "End Time"}
             inputFormat="hh:mm"
             value={spValue?.endTime}
-            onChange={(v) => {
+            onChange={(val) => {
               formik.setFieldValue(props.id, {
                 ...value,
-                endTime: moment(v).format("hh:mm"),
+                endTime: moment(val).format("hh:mm"),
               });
             }}
             error={
@@ -112,6 +116,7 @@ export default function NativeTimeRangePicker(props) {
             )}
           />
         </NativeGrid>
+
         <NativeFormHelperText styleClasses={[UtilityClasses.LAYOUT.NO_MARGIN_P]}>
           {props.helperText}
         </NativeFormHelperText>

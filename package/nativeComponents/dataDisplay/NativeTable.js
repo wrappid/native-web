@@ -1,4 +1,6 @@
+// eslint-disable-next-line no-unused-vars, unused-imports/no-unused-imports
 import React from "react";
+
 import { getUUID } from "../../helper/appUtils";
 import { SCTable } from "../../styledComponents/dataDisplay/SCTable";
 

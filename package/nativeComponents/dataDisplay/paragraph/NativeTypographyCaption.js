@@ -1,6 +1,9 @@
-import React from "react";
-import { useState } from "react";
+// eslint-disable-next-line no-unused-vars, unused-imports/no-unused-imports
+import React, { useState } from "react";
+
+// eslint-disable-next-line import/no-unresolved
 import { UtilityClasses } from "@wrappid/styles";
+
 import NativeSpan from "../../layouts/NativeSpan";
 import NativeLink from "../../navigation/NativeLink";
 import NativeTypography from "../NativeTypography";
@@ -22,6 +25,7 @@ export default function NativeTypographyCaption(props) {
             : props?.children.slice(0, limitChars) + "..."
           : props?.children}
       </NativeSpan>
+
       {!hideSeeMore && limitChars < props?.children?.length && (
         <NativeLink
           styleClasses={[UtilityClasses.MARGIN.ML1]}

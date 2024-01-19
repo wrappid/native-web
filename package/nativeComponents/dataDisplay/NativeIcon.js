@@ -1,4 +1,6 @@
+// eslint-disable-next-line no-unused-vars, unused-imports/no-unused-imports
 import React from "react";
+
 import { SCIcon } from "../../styledComponents/dataDisplay/SCIcon";
 
 /**
@@ -10,15 +12,19 @@ import { SCIcon } from "../../styledComponents/dataDisplay/SCIcon";
  */
 
 export const __IconTypes = {
-  MATERIAL_ICON: "material-icons", // Default support of MUI
+  FONTAWESOME_V5_REGULAR_ICON: "far", 
+  FONTAWESOME_V5_SOLID_ICON  : "fas",
+  
+  MATERIAL_ICON         : "material-icons",
+  // Default support of MUI
   MATERIAL_OUTLINED_ICON: "material-icons-outlined",
-  FONTAWESOME_V5_SOLID_ICON: "fas",
-  FONTAWESOME_V5_REGULAR_ICON: "far",
   RXICON_V1_REGULAR_ICON: "rxi",
 };
 
 export default function NativeIcon(props) {
-  const { type, name, styleClasses, sx, size, fontSize } = props;
+  const {
+    type, name, styleClasses, sx, size, fontSize 
+  } = props;
 
   return props.childrenFlag ? (
     <SCIcon
@@ -26,7 +32,7 @@ export default function NativeIcon(props) {
         Object.keys(__IconTypes).includes(type) ? __IconTypes[type] : type
       }
       className={name}
-      fontSize={size ||fontSize|| "small"}
+      fontSize={size || fontSize || "small"}
       sx={sx}
       styleClasses={styleClasses || []}
     >
@@ -38,7 +44,7 @@ export default function NativeIcon(props) {
         Object.keys(__IconTypes).includes(type) ? __IconTypes[type] : type
       }
       className={name}
-      fontSize={size ||fontSize|| "small"}
+      fontSize={size || fontSize || "small"}
       sx={sx}
       styleClasses={styleClasses || []}
     />

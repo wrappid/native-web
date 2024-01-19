@@ -1,9 +1,13 @@
+// eslint-disable-next-line no-unused-vars, unused-imports/no-unused-imports
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { SCModal } from "../../styledComponents/utils/SCModal";
+
+// eslint-disable-next-line import/no-unresolved
 import { UtilityClasses, StyledComponentsClasses } from "@wrappid/styles";
-import NativeIcon, { __IconTypes } from "../dataDisplay/NativeIcon";
+import { useDispatch, useSelector } from "react-redux";
+
+import { SCModal } from "../../styledComponents/utils/SCModal";
 import NativeH6 from "../dataDisplay/heading/NativeH6";
+import NativeIcon, { __IconTypes } from "../dataDisplay/NativeIcon";
 import NativeIconButton from "../inputs/NativeIconButton";
 import NativeBox from "../layouts/NativeBox";
 
@@ -29,36 +33,31 @@ export default function NativeModal(props) {
         sx={{ bgcolor: "background.paper" }}
         styleClasses={
           props.containerStyle
-            ? [StyledComponentsClasses.MODAL.MODAL_CONTAINER, ...modalStyle.containerStyle]
+            ? [StyledComponentsClasses.MODAL.MODAL_CONTAINER, ...(modalStyle?.containerStyle || [])]
             : [StyledComponentsClasses.MODAL.MODAL_CONTAINER]
         }
       >
         <NativeBox
           styleClasses={
             props.headerStyle
-              ? [
-                StyledComponentsClasses.MODAL.MODAL_HEADER,
-                  UtilityClasses.ALIGNMENT.JUSTIFY_CONTENT_SPACE_BETWEEN,
-                  ...modalStyle?.headerStyle,
-                ]
-              : [
-                StyledComponentsClasses.MODAL.MODAL_HEADER,
-                  UtilityClasses.ALIGNMENT.JUSTIFY_CONTENT_SPACE_BETWEEN,
-                ]
+              ? [StyledComponentsClasses.MODAL.MODAL_HEADER, UtilityClasses.ALIGNMENT.JUSTIFY_CONTENT_SPACE_BETWEEN, ...(modalStyle?.headerStyle || [])]
+              : [StyledComponentsClasses.MODAL.MODAL_HEADER, UtilityClasses.ALIGNMENT.JUSTIFY_CONTENT_SPACE_BETWEEN]
           }
           id="modal-modal-title"
         >
           <NativeBox>
             {<NativeH6>{modalData?.heading ? modalData.heading : ""}</NativeH6>}
           </NativeBox>
+
           <NativeIconButton onClick={HandleModalClose}>
             <NativeIcon type={__IconTypes.MATERIAL_ICON} name="close" childrenFlag={true}/>
           </NativeIconButton>
         </NativeBox>
+
         <NativeBox
           styleClasses={
             props.bodyStyle
-              ? [StyledComponentsClasses.MODAL.MODAL_BODY, ...modalStyle?.bodyStyle]
+              ? [StyledComponentsClasses.MODAL.MODAL_BODY, ...(modalStyle?.bodyStyle || [])]
               : [StyledComponentsClasses.MODAL.MODAL_BODY]
           }
           id="modal-modal-description"

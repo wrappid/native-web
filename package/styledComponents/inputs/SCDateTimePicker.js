@@ -1,16 +1,14 @@
+// eslint-disable-next-line no-unused-vars, unused-imports/no-unused-imports
 import React from "react";
-import styled from "styled-components";
-import { getEffectiveStyle, StyledComponentsClasses } from "@wrappid/styles";
+
 import { DesktopDateTimePicker } from "@mui/x-date-pickers";
+// eslint-disable-next-line import/no-unresolved
+import { getEffectiveStyle, StyledComponentsClasses } from "@wrappid/styles";
+import styled from "styled-components";
 
 const defaultStyleClasses = [StyledComponentsClasses.INPUTS.DATE_TIME_PICKER];
 
 export const SCDateTimePicker = styled(
   DesktopDateTimePicker,
   {}
-)((props) => ({
-  ...getEffectiveStyle([
-    ...defaultStyleClasses,
-    ...(props?.styleClasses || []),
-  ]),
-}));
+)((props) => ({ ...getEffectiveStyle([...defaultStyleClasses, ...(props?.styleClasses || [])]) }));

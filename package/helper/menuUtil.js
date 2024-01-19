@@ -1,13 +1,17 @@
+// eslint-disable-next-line no-unused-vars, unused-imports/no-unused-imports
 import React from "react";
+
+// eslint-disable-next-line import/no-unresolved
 import { StyledComponentsClasses } from "@wrappid/styles";
+
 import { queryBuilder } from "./helper";
 import NativeDivider from "../nativeComponents/dataDisplay/NativeDivider";
-import NativeLink from "../nativeComponents/navigation/NativeLink";
-import NativeMenuItem from "../nativeComponents/navigation/NativeMenuItem";
 import NativeIcon from "../nativeComponents/dataDisplay/NativeIcon";
 import NativeListItemIcon from "../nativeComponents/dataDisplay/NativeListItemIcon";
 import NativeListItemText from "../nativeComponents/dataDisplay/NativeListItemText";
 import NativeIconButton from "../nativeComponents/inputs/NativeIconButton";
+import NativeLink from "../nativeComponents/navigation/NativeLink";
+import NativeMenuItem from "../nativeComponents/navigation/NativeMenuItem";
 
 function isJson(str) {
   try {
@@ -21,6 +25,7 @@ function isJson(str) {
 
 function getLink(menuItem, allTypes, routeRegistry) {
   let menuLink = "";
+
   if (menuItem?.type === allTypes?.MENU_ITEM || !menuItem?.type) {
     if (menuItem?.route && routeRegistry) {
       if (menuItem.params) {
@@ -31,6 +36,7 @@ function getLink(menuItem, allTypes, routeRegistry) {
             routeRegistry[menuItem.route],
             menuItem.params
           );
+
           menuLink = `${url}`;
         }
       } else {
@@ -63,7 +69,6 @@ export default function getNativeMenuItem(
   allTypes,
   routeRegistry
 ) {
-  // console.log("OPEN", open);
   /**
    * @todo review required for using core menu item instead of core List Item
    */
@@ -73,26 +78,22 @@ export default function getNativeMenuItem(
     <NativeLink href={getLink(menuItem, allTypes, routeRegistry)}>
       <NativeMenuItem
         sx={{
-          height: "34px",
-          paddingLeft: `calc(13px + ${level * 8}px)`,
           backgroundColor:
             menuItem?.type === allTypes?.MENU_ITEM &&
             locationPathname === menuItem?.link &&
             theme?.palette?.secondary?.light,
+          height     : "34px",
+          paddingLeft: `calc(13px + ${level * 8}px)`,
         }}
         key={menuItem.id}
         disablePadding
         title={menuItem.label}
-        onClick={(e) => {
-          // setSelectedID(menuItem?.name);
+        onClick={() => {
           OnMenuClick(menuItem);
         }}
       >
         <NativeListItemIcon
-          styleClasses={[
-            StyledComponentsClasses.MENU.LIST_ITEM_ICON,
-            ...getTypeWiseStyle(menuItem, allTypes?.MENU_ITEM_ICON, allTypes),
-          ]}
+          styleClasses={[StyledComponentsClasses.MENU.LIST_ITEM_ICON, ...getTypeWiseStyle(menuItem, allTypes?.MENU_ITEM_ICON, allTypes)]}
         >
           {/* @todo may have to correct this */}
           <NativeIcon
@@ -100,24 +101,24 @@ export default function getNativeMenuItem(
               typeof menuItem?.icon === "object"
                 ? menuItem?.icon?.icon
                 : typeof menuItem?.icon === "string" && isJson(menuItem?.icon)
-                ? JSON.parse(menuItem?.icon)?.icon
-                : menuItem?.icon
+                  ? JSON.parse(menuItem?.icon)?.icon
+                  : menuItem?.icon
             }
             type={
               typeof menuItem?.icon === "object"
                 ? menuItem?.icon?.type || "material-icons"
                 : typeof menuItem?.icon === "string" && isJson(menuItem?.icon)
-                ? JSON.parse(menuItem?.icon)?.type
-                : "material-icons"
+                  ? JSON.parse(menuItem?.icon)?.type
+                  : "material-icons"
             }
             childrenFlag={
               typeof menuItem?.icon === "object"
                 ? menuItem?.icon?.type == "material-icons" ||
                   menuItem?.icon?.type == "material-icons-outlined"
                 : typeof menuItem?.icon === "string" && isJson(menuItem?.icon)
-                ? JSON.parse(menuItem?.icon)?.type == "material-icons" ||
+                  ? JSON.parse(menuItem?.icon)?.type == "material-icons" ||
                   JSON.parse(menuItem?.icon)?.type == "material-icons-outlined"
-                : true
+                  : true
             }
             sx={{
               color: `${
@@ -129,12 +130,10 @@ export default function getNativeMenuItem(
             }}
           />
         </NativeListItemIcon>
+
         <NativeListItemText
           disableTypography
-          styleClasses={[
-            StyledComponentsClasses.NAVIGATION.APP_DRAWER_TEXT,
-            ...getTypeWiseStyle(menuItem, allTypes?.MENU_ITEM_TEXT, allTypes),
-          ]}
+          styleClasses={[StyledComponentsClasses.NAVIGATION.APP_DRAWER_TEXT, ...getTypeWiseStyle(menuItem, allTypes?.MENU_ITEM_TEXT, allTypes)]}
           primary={menuItem.label}
           sx={{
             color: `${
@@ -159,7 +158,7 @@ export default function getNativeMenuItem(
       <NativeIconButton
         title={menuItem?.label}
         titlePlacement={"right"}
-        onClick={(e) => {
+        onClick={() => {
           setSelectedID(menuItem?.name);
           OnMenuClick(menuItem);
         }}
@@ -169,24 +168,24 @@ export default function getNativeMenuItem(
             typeof menuItem?.icon === "object"
               ? menuItem?.icon?.icon
               : typeof menuItem?.icon === "string" && isJson(menuItem?.icon)
-              ? JSON.parse(menuItem?.icon)?.icon
-              : menuItem?.icon
+                ? JSON.parse(menuItem?.icon)?.icon
+                : menuItem?.icon
           }
           type={
             typeof menuItem?.icon === "object"
               ? menuItem?.icon?.type || "material-icons"
               : typeof menuItem?.icon === "string" && isJson(menuItem?.icon)
-              ? JSON.parse(menuItem?.icon)?.type
-              : "material-icons"
+                ? JSON.parse(menuItem?.icon)?.type
+                : "material-icons"
           }
           childrenFlag={
             typeof menuItem?.icon === "object"
               ? menuItem?.icon?.type == "material-icons" ||
                 menuItem?.icon?.type == "material-icons-outlined"
               : typeof menuItem?.icon === "string" && isJson(menuItem?.icon)
-              ? JSON.parse(menuItem?.icon)?.type == "material-icons" ||
+                ? JSON.parse(menuItem?.icon)?.type == "material-icons" ||
                 JSON.parse(menuItem?.icon)?.type == "material-icons-outlined"
-              : true
+                : true
           }
           sx={{
             color: `${
@@ -203,7 +202,7 @@ export default function getNativeMenuItem(
 }
 
 function getTypeWiseStyle(item, elemType, allTypes) {
-  var styles = [];
+  let styles = [];
   const {
     MENU_PARENT_ITEM,
     MENU_ITEM_WRAPPER,
@@ -214,6 +213,7 @@ function getTypeWiseStyle(item, elemType, allTypes) {
     MENU_SEPERATOR,
     MENU_ITEM,
   } = allTypes;
+
   switch (item.type) {
     case MENU_PARENT_ITEM:
       if (elemType === MENU_ITEM_WRAPPER) {
@@ -229,6 +229,7 @@ function getTypeWiseStyle(item, elemType, allTypes) {
         styles.push(StyledComponentsClasses.MENU.PARENT_TEXT_ITEM);
       }
       break;
+
     case MENU_HEADER_ITEM:
       if (elemType === MENU_ITEM_WRAPPER) {
         styles.push(StyledComponentsClasses.MENU.HEADER_ITEM);
@@ -243,6 +244,7 @@ function getTypeWiseStyle(item, elemType, allTypes) {
         styles.push(StyledComponentsClasses.MENU.HEADER_TEXT_ITEM);
       }
       break;
+
     case MENU_SEPERATOR:
       if (elemType === MENU_ITEM_WRAPPER) {
         styles.push(StyledComponentsClasses.MENU.SEPERATOR_ITEM);
@@ -257,7 +259,22 @@ function getTypeWiseStyle(item, elemType, allTypes) {
         styles.push(StyledComponentsClasses.MENU.SEPERATOR_TEXT_ITEM);
       }
       break;
+
     case MENU_ITEM:
+      if (elemType === MENU_ITEM_WRAPPER) {
+        styles.push(StyledComponentsClasses.MENU.MENU_ITEM);
+      }
+      if (elemType === MENU_ITEM_BUTTON) {
+        styles.push(StyledComponentsClasses.MENU.MENU_ITEM_BUTTON_ITEM);
+      }
+      if (elemType === MENU_ITEM_ICON) {
+        styles.push(StyledComponentsClasses.MENU.MENU_ITEM_ICON_ITEM);
+      }
+      if (elemType === MENU_ITEM_TEXT) {
+        styles.push(StyledComponentsClasses.MENU.MENU_ITEM_TEXT_ITEM);
+      }
+      break;
+
     default:
       if (elemType === MENU_ITEM_WRAPPER) {
         styles.push(StyledComponentsClasses.MENU.MENU_ITEM);

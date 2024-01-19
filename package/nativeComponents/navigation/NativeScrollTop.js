@@ -1,6 +1,6 @@
-import * as React from "react";
-import PropTypes from "prop-types";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
+import PropTypes from "prop-types";
+
 import NativeBox from "../layouts/NativeBox";
 import NativeFade from "../utils/NativeFade";
 
@@ -10,9 +10,9 @@ export default function NativeScrollTop(props) {
   // will default to window.
   // This is only being set here because the demo is in an iframe.
   const trigger = useScrollTrigger({
-    target: window ? window() : undefined,
     disableHysteresis: true,
-    threshold: 100,
+    target           : window ? window() : undefined,
+    threshold        : 100,
   });
 
   const handleClick = (event) => {
@@ -21,9 +21,7 @@ export default function NativeScrollTop(props) {
     );
 
     if (anchor) {
-      anchor.scrollIntoView({
-        block: "center",
-      });
+      anchor.scrollIntoView({ block: "center" });
     }
   };
 
@@ -32,7 +30,7 @@ export default function NativeScrollTop(props) {
       <NativeBox
         onClick={handleClick}
         role="presentation"
-        sx={{ position: "fixed", bottom: 16, right: 16 }}
+        sx={{ bottom: 16, position: "fixed", right: 16 }}
       >
         {children}
       </NativeBox>
@@ -46,5 +44,5 @@ NativeScrollTop.propTypes = {
    * Injected by the documentation to work in an iframe.
    * You won't need it on your project.
    */
-  window: PropTypes.func,
+  window  : PropTypes.func,
 };

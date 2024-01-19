@@ -1,4 +1,6 @@
+// eslint-disable-next-line no-unused-vars, unused-imports/no-unused-imports
 import React from "react";
+
 import NativeInput from "./NativeInput";
 
 export default function NativeJSONInput(props) {
@@ -11,11 +13,7 @@ export default function NativeJSONInput(props) {
         ? JSON.stringify(value, null, 4)
         : value
       : "{}";
-    // tmpValue = formik?.values[id]
-    //   ? typeof formik?.values[id] === "object"
-    //     ? JSON.stringify(formik?.values[id], null, 4)
-    //     : formik?.values[id]
-    //   : "{}";
+
     setJSONValue(value);
     formik?.setFieldValue(id, tmpValue);
   }, []);
@@ -24,13 +22,15 @@ export default function NativeJSONInput(props) {
     setJSONValue(value);
   }, [value]);
 
-  const handleChange = (e) => {
-    var finalValue = e.target.value;
+  const handleChange = (event) => {
+    let finalValue = event.target.value;
+
     try {
       finalValue = JSON.parse(finalValue);
       finalValue = JSON.stringify(finalValue, null, 4);
     } catch (err) {
-      console.warn("Not a valid json", err);
+      // eslint-disable-next-line no-console
+      console.error("Not a valid json", err);
     }
     if (formik) {
       formik.setFieldValue(id, finalValue);
@@ -39,7 +39,7 @@ export default function NativeJSONInput(props) {
 
     // on change as props
     if (onChange) {
-      onChange(e);
+      onChange(event);
     }
   };
 
@@ -53,11 +53,7 @@ export default function NativeJSONInput(props) {
       }
       multiline={true}
       onChange={handleChange}
-      inputProps={{
-        style: {
-          resize: "vertical",
-        },
-      }}
+      inputProps={{ style: { resize: "vertical" } }}
     />
   );
 }

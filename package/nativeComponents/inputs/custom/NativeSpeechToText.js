@@ -1,5 +1,4 @@
-import React from 'react';
 
-export default function NativeSpeechToText(props) {
+export default function NativeSpeechToText() {
   return null;
 }
