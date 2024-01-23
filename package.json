@@ -9,7 +9,7 @@
     "build": "npx babel package --out-dir dist --copy-files",
     "publish": "npm publish ./dist --registry=https://npm.pkg.github.com --scope=@wrappid",
     "code:lint": "eslint --ignore-path .gitignore ./package",
-    "code:format": "npm run code:lint -- --fix ./package"
+    "code:format": "npm run code:lint -- --fix"
   },
   "repository": {
     "type": "git",
