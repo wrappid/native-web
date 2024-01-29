@@ -25,9 +25,9 @@
   "author": {
 		"name": "Wrappid",
 		"email": "wrappid.framework@gmail.com",
-		"url": "https://github.com/wrappid/native-web"
+		"url": "https://github.com/wrappid/"
 	},
-  "homepage": "https://github.com/wrappid/",
+  "homepage": "https://github.com/wrappid/native-web",
   "bugs": {
     "url": "https://github.com/wrappid/native-web/issues"
   },
