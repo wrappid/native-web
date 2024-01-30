@@ -20,10 +20,10 @@
   ],
   "license": "MIT",
   "author": {
-		"name": "Wrappid",
-		"email": "wrappid.framework@gmail.com",
-		"url": "https://github.com/wrappid/"
-	},
+  "name": "Wrappid",
+  "email": "wrappid.framework@gmail.com",
+  "url": "https://github.com/wrappid/"
+  },
   "homepage": "https://github.com/wrappid/native-web",
   "bugs": {
     "url": "https://github.com/wrappid/native-web/issues"
