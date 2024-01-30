@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "prepare": "husky install",
+    "attributions:gen": "node ./scripts/attributions.gen.js",
     "test": "echo testing not yet implemented",
     "build": "npx babel package --out-dir dist --copy-files",
     "publish": "npm publish ./dist --registry=https://npm.pkg.github.com --scope=@wrappid",
@@ -20,11 +21,16 @@
     "react",
     "react-native"
   ],
-  "author": "wrappid",
+  "license": "MIT",
+  "author": {
+  "name": "Wrappid",
+  "email": "wrappid.framework@gmail.com",
+  "url": "https://github.com/wrappid/"
+  },
+  "homepage": "https://github.com/wrappid/native-web",
   "bugs": {
     "url": "https://github.com/wrappid/native-web/issues"
   },
-  "homepage": "https://github.com/wrappid/native-ive-ive-web#readme",
   "babel": {
     "presets": [
       "@babel/preset-react"
@@ -58,6 +64,7 @@
     "react-redux": "^8.0.2",
     "react-router-dom": "^6.3.0",
     "react-select": "^5.8.0",
-    "styled-components": "^5.3.9"
+    "styled-components": "^5.3.9",
+    "license-checker": "^25.0.1"
   }
 }
