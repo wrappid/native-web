@@ -1,6 +1,6 @@
 {
   "name": "@wrappid/native-web",
-  "version": "0.0.270",
+  "version": "0.0.272",
   "description": "This repository is combined packages of all the Styled Components for react web project.",
   "main": "index.js",
   "scripts": {
@@ -18,11 +18,16 @@
     "material-ui",
     "styled-components"
   ],
-  "author": "wrappid",
+  "license": "MIT",
+  "author": {
+  "name": "Wrappid",
+  "email": "wrappid.framework@gmail.com",
+  "url": "https://github.com/wrappid/"
+  },
+  "homepage": "https://github.com/wrappid/native-web",
   "bugs": {
     "url": "https://github.com/wrappid/native-web/issues"
   },
-  "homepage": "https://github.com/wrappid/native-web#readme",
   "peerDependencies": {
     "@mui/material": "^5.10.2",
     "@mui/icons-material": "^5.11.16",
