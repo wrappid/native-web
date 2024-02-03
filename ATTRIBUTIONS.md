@@ -4181,13 +4181,13 @@ This file lists the third-party libraries, frameworks, and other components used
   ```
   </details>
 <details>
-  <summary>@wrappid/native-web@0.0.271</summary>
+  <summary>@wrappid/native-web@0.0.272</summary>
   
   #### Basic details about the package
   >|Key|Value|
   >|:--|:--|
-  >|**Name**|@wrappid/native-web@0.0.271|
-  >|**Version**|@0.0.271|
+  >|**Name**|@wrappid/native-web@0.0.272|
+  >|**Version**|@0.0.272|
   >|**Repository**|https://github.com/wrappid/native-web|
   >|**Licenses**|MIT|
   >|**Publisher**|Wrappid|
@@ -4196,7 +4196,7 @@ This file lists the third-party libraries, frameworks, and other components used
   
   #### Use this package in your project
   ```bash
-  npm i @wrappid/native-web@0.0.271
+  npm i @wrappid/native-web@0.0.272
   ```
   </details>
 <details>
