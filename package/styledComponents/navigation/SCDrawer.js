@@ -8,7 +8,8 @@ import styled from "styled-components";
 
 const defaultStyleClasses = [StyledComponentsClasses.NAVIGATION.DRAWER];
 const config = getConfigurationObject()?.wrappid;
-const DEFAULT_DRAWER_WIDTH = 240;
+
+export const DEFAULT_DRAWER_WIDTH = 240;
 
 export const DEFAULT_MINI_DRAWER_WIDTH = 56;
 
