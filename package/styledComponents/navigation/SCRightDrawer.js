@@ -6,14 +6,14 @@ import MuiDrawer from "@mui/material/Drawer";
 import { getEffectiveStyle, StyledComponentsClasses, getConfigurationObject } from "@wrappid/styles";
 import styled from "styled-components";
 
-import { DEFAULT_MINI_DRAWER_WIDTH } from "./SCDrawer";
+import { DEFAULT_DRAWER_WIDTH } from "./SCDrawer";
 const config = getConfigurationObject()?.wrappid;
 
 export const SCRightDrawer = styled(
   MuiDrawer,
   {}
 )((props) => ({
-  "& .MuiDrawer-paper": { width: config.drawerWidth || DEFAULT_MINI_DRAWER_WIDTH },
-  width               : props.open ? config.drawerWidth || DEFAULT_MINI_DRAWER_WIDTH : 0,
+  "& .MuiDrawer-paper": { width: config?.drawerWidth || DEFAULT_DRAWER_WIDTH },
+  width               : props?.open ? config?.drawerWidth || DEFAULT_DRAWER_WIDTH : 0,
   ...getEffectiveStyle([StyledComponentsClasses.APPBAR_HEIGHT, ...(props?.styleClasses || [])]),
 }));
