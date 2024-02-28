@@ -105,3 +105,9 @@ dist
 
 # test package folder
 src/package/*
+
+# Dependency Files
+package.json
+package-lock.json
+./package/package.json
+./package/package-lock.json
