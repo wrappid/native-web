@@ -111,6 +111,7 @@ import NativeTimeRangePicker from "./nativeComponents/inputs/NativeTimeRangePick
 import NativeAppContainer from "./nativeComponents/layouts/NativeAppContainer";
 import NativeAppDiv from "./nativeComponents/layouts/NativeAppDiv";
 import NativeBox from "./nativeComponents/layouts/NativeBox";
+import NativeContainer from "./nativeComponents/layouts/NativeContainer.js";
 import NativeGrid from "./nativeComponents/layouts/NativeGrid";
 import NativeImageBackground from "./nativeComponents/layouts/NativeImageBackground";
 import NativeList from "./nativeComponents/layouts/NativeList";
@@ -171,7 +172,7 @@ export {
   NativeSpan,
   NativeBox,
   NativeCustomTabs,
-  // NativeContainer,
+  NativeContainer,
   NativeSection,
   NativeAppDiv,
   NativeList,
