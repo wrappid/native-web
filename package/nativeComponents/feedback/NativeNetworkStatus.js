@@ -27,7 +27,7 @@ function useOnlineStatus() {
   return isOnline;
 }
 
-function OnlineStatusSnackbar() {
+function NativeNetworkStatus() {
   const isOnline = useOnlineStatus();
   const [openSnackbar, setOpenSnackbar] = useState(false);
 
@@ -55,4 +55,4 @@ function OnlineStatusSnackbar() {
   );
 }
 
-export default OnlineStatusSnackbar;
+export default NativeNetworkStatus;
