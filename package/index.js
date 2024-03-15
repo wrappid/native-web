@@ -53,7 +53,7 @@ import NativeBackdrop from "./nativeComponents/feedback/NativeBackdrop";
 import NativeCircularProgress from "./nativeComponents/feedback/NativeCircularProgress";
 import NativeDialog from "./nativeComponents/feedback/NativeDialog";
 import NativeLinearProgress from "./nativeComponents/feedback/NativeLinearProgress";
-import NativeOnlineStatusSnackbar from "./nativeComponents/feedback/NativeNetworkStatus.js";
+import NativeNetworkStatus from "./nativeComponents/feedback/NativeNetworkStatus.js";
 import NativeSkeleton from "./nativeComponents/feedback/NativeSkeleton";
 import NativeSnackbar from "./nativeComponents/feedback/NativeSnackbar";
 import NativeFormContainer from "./nativeComponents/forms/NativeFormContainer";
@@ -174,7 +174,7 @@ export {
   NativeBox,
   NativeCustomTabs,
   NativeContainer,
-  NativeOnlineStatusSnackbar,
+  NativeNetworkStatus,
   NativeSection,
   NativeAppDiv,
   NativeList,
