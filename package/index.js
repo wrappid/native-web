@@ -53,7 +53,6 @@ import NativeBackdrop from "./nativeComponents/feedback/NativeBackdrop";
 import NativeCircularProgress from "./nativeComponents/feedback/NativeCircularProgress";
 import NativeDialog from "./nativeComponents/feedback/NativeDialog";
 import NativeLinearProgress from "./nativeComponents/feedback/NativeLinearProgress";
-import NativeNetworkStatus from "./nativeComponents/feedback/NativeNetworkStatus.js";
 import NativeSkeleton from "./nativeComponents/feedback/NativeSkeleton";
 import NativeSnackbar from "./nativeComponents/feedback/NativeSnackbar";
 import NativeFormContainer from "./nativeComponents/forms/NativeFormContainer";
@@ -152,6 +151,7 @@ import NativeModal from "./nativeComponents/utils/NativeModal";
 import NativePopover from "./nativeComponents/utils/NativePopover";
 import NativeCssBaseline from "./theme/NativeCssBaseline.js";
 import NativeThemeProvider from "./theme/NativeThemeProvider";
+import { useNetworkStatus } from "./utils/network.utils.js";
 
 export {
   /**
@@ -174,7 +174,6 @@ export {
   NativeBox,
   NativeCustomTabs,
   NativeContainer,
-  NativeNetworkStatus,
   NativeSection,
   NativeAppDiv,
   NativeList,
@@ -310,5 +309,7 @@ export {
   NativeDataTableDetailsPaneContainer,
   nativeOpenUrl,
   NativeSpeechToText,
-  NativeRating
+  NativeRating,
+  // Network status custom hook
+  useNetworkStatus
 };
