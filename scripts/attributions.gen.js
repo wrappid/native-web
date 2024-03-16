@@ -25,7 +25,7 @@ try {
   const attributionHeader = `
 ## ATTRIBUTIONS
 
-This file lists the third-party libraries, frameworks, and other components used in the ${packageJson.name} repository,
+This file lists the third-party libraries, frameworks, and other components used in the ${packageJson?.name} repository,
 along with their respective licenses.   
 It is important to comply with the licensing terms of these components when using the code
 \n`;
