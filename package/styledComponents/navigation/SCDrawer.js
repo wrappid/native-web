@@ -1,13 +1,12 @@
 // eslint-disable-next-line no-unused-vars, unused-imports/no-unused-imports
-import React from "react";
 
 import MuiDrawer from "@mui/material/Drawer";
 // eslint-disable-next-line import/no-unresolved
-import { getEffectiveStyle, StyledComponentsClasses, getConfigurationObject } from "@wrappid/styles";
+import { StyledComponentsClasses, WrappidData, getEffectiveStyle } from "@wrappid/styles";
 import styled from "styled-components";
 
 const defaultStyleClasses = [StyledComponentsClasses.NAVIGATION.DRAWER];
-const config = getConfigurationObject()?.wrappid;
+const { config } = WrappidData;
 
 export const DEFAULT_DRAWER_WIDTH = 240;
 
