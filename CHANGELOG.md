@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.285](https://github.com/wrappid/native-web/compare/v0.0.284...v0.0.285) (2024-04-03)
+
+
+### Bug Fixes
+
+* **core:** :zap: native card clickable func added ([679514c](https://github.com/wrappid/native-web/commit/679514ca98f56cec53759958a40722b754f852f8)), closes [#55](https://github.com/wrappid/native-web/issues/55)
+
 ### 0.0.284 (2024-03-18)
 
 ### 0.0.283 (2024-03-16)
