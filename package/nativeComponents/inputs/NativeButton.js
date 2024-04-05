@@ -7,7 +7,7 @@ export default function NativeButton(props) {
   const {
     label,
     startIcon,
-    OnClick,
+    onClick,
     variant,
     innerRef,
     type,
@@ -28,8 +28,8 @@ export default function NativeButton(props) {
       size={size}
       onClick={(ele) => {
         UserActionLogging();
-        if (OnClick && typeof OnClick === "function") {
-          OnClick(ele);
+        if (onClick && typeof onClick === "function") {
+          onClick(ele);
         }
       }}
       {...restProps}
