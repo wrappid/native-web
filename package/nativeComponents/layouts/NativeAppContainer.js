@@ -8,7 +8,7 @@ import NativeBox from "./NativeBox";
 import NativeCssBaseline from "../../theme/NativeCssBaseline";
 
 export default function NativeAppContainer(props) {
-  const { appBar, leftDrawer, footer, uid, coreClasses } = props;
+  const { appBar, leftDrawer, rightDrawer, footer, coreClasses } = props;
 
   return (
     <NativeBox
@@ -22,16 +22,14 @@ export default function NativeAppContainer(props) {
 
       <NativeBox
         component="main"
-        styleClasses={
-          uid
-            ? [coreClasses.LAYOUT.CONTENT_CONTAINER]
-            : [coreClasses.LAYOUT.LOGGED_OUT_CONTENT_CONTAINER]
-        }
+        styleClasses={coreClasses.LAYOUT.CONTENT_CONTAINER}
       >
         {props.children}
 
         {footer()}
       </NativeBox>
+
+      {rightDrawer()}
     </NativeBox>
   );
 }
