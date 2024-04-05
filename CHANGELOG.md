@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.286](https://github.com/wrappid/native-web/compare/v0.0.285...v0.0.286) (2024-04-05)
+
+
+### Bug Fixes
+
+* :bug: inside native card ButtonBase sx props added ([3222114](https://github.com/wrappid/native-web/commit/322211466c8bd4b27667f0d1dd62771a1183b923)), closes [#55](https://github.com/wrappid/native-web/issues/55)
+* **core:** :zap: app container uid removed and code cleanup ([640d64f](https://github.com/wrappid/native-web/commit/640d64fd50ab5be9f9e992bb50c9801e535e8fa3)), closes [#55](https://github.com/wrappid/native-web/issues/55)
+
 ### [0.0.285](https://github.com/wrappid/native-web/compare/v0.0.284...v0.0.285) (2024-04-03)
 
 
