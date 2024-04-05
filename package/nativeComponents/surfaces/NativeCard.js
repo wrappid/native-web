@@ -7,9 +7,11 @@ import { SCCard } from "../../styledComponents/surfaces/SCCard";
 
 export default function NativeCard(props) {
   return props?.onClick ? (
-    <SCCard {...props}>
-      <ButtonBase onClick={props?.onClick}>{props.children}</ButtonBase>
-    </SCCard>
+    <ButtonBase sx={{width:'100%'}} onClick={props?.onClick}>
+      <SCCard {...props}>
+        {props.children}
+      </SCCard>
+    </ButtonBase>
   ) : (
     <SCCard {...props }> { props.children }</SCCard >
   );
