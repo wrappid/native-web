@@ -2,17 +2,16 @@
 
 import MuiDrawer from "@mui/material/Drawer";
 // eslint-disable-next-line import/no-unresolved
-import { StyledComponentsClasses, WrappidData, getEffectiveStyle } from "@wrappid/styles";
+import { StyledComponentsClasses, getEffectiveStyle } from "@wrappid/styles";
 import styled from "styled-components";
 
 const defaultStyleClasses = [StyledComponentsClasses.NAVIGATION.DRAWER];
-const { config } = WrappidData;
 
 export const DEFAULT_DRAWER_WIDTH = 240;
 
 export const DEFAULT_MINI_DRAWER_WIDTH = 56;
 
-const openedMixin = (theme) => ({
+const openedMixin = (config, theme) => ({
   ...getEffectiveStyle(StyledComponentsClasses.APP_BAR.HEIGHT),
   transition: theme.transitions.create("width", {
     duration: theme.transitions.duration.enteringScreen,
@@ -21,7 +20,7 @@ const openedMixin = (theme) => ({
   width: config?.drawerWidth || DEFAULT_DRAWER_WIDTH,
 });
 
-const closedMixin = (theme) => ({
+const closedMixin = (config, theme) => ({
   ...getEffectiveStyle(StyledComponentsClasses.APP_BAR.HEIGHT),
   transition: theme.transitions.create("width", {
     duration: theme.transitions.duration.leavingScreen,
@@ -31,18 +30,18 @@ const closedMixin = (theme) => ({
   [theme.breakpoints.up("sm")]: { width: config?.miniDrawerWidth || DEFAULT_MINI_DRAWER_WIDTH },
 });
 
-export const SCDrawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== "open" })(({ open, theme }) => ({
+export const SCDrawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== "open" })(({ config, open, theme }) => ({
   /**
    * @todo
    * Must support external styleClasses through props
    */
   ...getEffectiveStyle([...defaultStyleClasses]),
   ...(open && {
-    ...openedMixin(theme),
-    "& .MuiDrawer-paper": openedMixin(theme),
+    ...openedMixin(config, theme),
+    "& .MuiDrawer-paper": openedMixin(config, theme),
   }),
   ...(!open && {
-    ...closedMixin(theme),
-    "& .MuiDrawer-paper": closedMixin(theme),
+    ...closedMixin(config, theme),
+    "& .MuiDrawer-paper": closedMixin(config, theme),
   }),
 }));
