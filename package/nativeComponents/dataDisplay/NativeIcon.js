@@ -33,7 +33,7 @@ export default function NativeIcon(props) {
       }
       className={name}
       fontSize={size || fontSize || "small"}
-      sx={sx}
+      sx={type === __IconTypes.MATERIAL_ICON ? sx : { ...sx, overflow: "unset" }}
       styleClasses={styleClasses || []}
       color={color}
     >
@@ -46,7 +46,7 @@ export default function NativeIcon(props) {
       }
       className={name}
       fontSize={size || fontSize || "small"}
-      sx={sx}
+      sx={type === __IconTypes.MATERIAL_ICON ? sx : { ...sx, overflow: "unset" }}
       styleClasses={styleClasses || []}
       color={color}
     />
