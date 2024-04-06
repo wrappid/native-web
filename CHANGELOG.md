@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.288](https://github.com/wrappid/native-web/compare/v0.0.287...v0.0.288) (2024-04-06)
+
+
+### Bug Fixes
+
+* **core:** :bug: correct styleClasses props ([a9d7ffe](https://github.com/wrappid/native-web/commit/a9d7ffeca8b466408e10bab7bdb4bfc60028ee4f)), closes [#55](https://github.com/wrappid/native-web/issues/55)
+
 ### [0.0.287](https://github.com/wrappid/native-web/compare/v0.0.286...v0.0.287) (2024-04-06)
 
 
