@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.287](https://github.com/wrappid/native-web/compare/v0.0.286...v0.0.287) (2024-04-06)
+
+
+### Bug Fixes
+
+* **core:** :bricks: pass config as props ([6fa9370](https://github.com/wrappid/native-web/commit/6fa9370fa2d586cae771dd143f6ff74ea9ea505f)), closes [#55](https://github.com/wrappid/native-web/issues/55)
+
 ### [0.0.286](https://github.com/wrappid/native-web/compare/v0.0.285...v0.0.286) (2024-04-05)
 
 
