@@ -22,7 +22,7 @@ export default function NativeAppContainer(props) {
 
       <NativeBox
         component="main"
-        styleClasses={coreClasses.LAYOUT.CONTENT_CONTAINER}
+        styleClasses={[coreClasses.LAYOUT.CONTENT_CONTAINER]}
       >
         {props.children}
 
