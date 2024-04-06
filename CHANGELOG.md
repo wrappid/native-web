@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.289](https://github.com/wrappid/native-web/compare/v0.0.288...v0.0.289) (2024-04-06)
+
+
+### Bug Fixes
+
+* **core:** :bug: icons spacing related bug fixed ([765f884](https://github.com/wrappid/native-web/commit/765f884ab81106c70879bd847285fe0ec5b95480)), closes [#55](https://github.com/wrappid/native-web/issues/55)
+
 ### [0.0.288](https://github.com/wrappid/native-web/compare/v0.0.287...v0.0.288) (2024-04-06)
 
 
