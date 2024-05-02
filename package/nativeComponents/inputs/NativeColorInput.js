@@ -1,9 +1,9 @@
 import React from "react";
 
-import { getUUID } from "../../helper/appUtils";
-import { SCColorInput } from "../../styledComponents/inputs/SCColorInput";
 import NativeFormControl from "./NativeFormControl";
 import NativeInputLabel from "./NativeInputLabel";
+import { getUUID } from "../../helper/appUtils";
+import { SCColorInput } from "../../styledComponents/inputs/SCColorInput";
 
 export default function NativeColorInput(props) {
   const {
