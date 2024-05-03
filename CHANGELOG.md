@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.290](https://github.com/wrappid/native-web/compare/v0.0.289...v0.0.290) (2024-05-03)
+
+
+### Features
+
+* **core:** :art: component NativeColorInput coded for web ([601487c](https://github.com/wrappid/native-web/commit/601487c987c692061977c65faf41915263d88d11)), closes [#61](https://github.com/wrappid/native-web/issues/61)
+
+
+### Bug Fixes
+
+* **core:** :zap: linting fix ([0d18696](https://github.com/wrappid/native-web/commit/0d186960eef10eaacce468d2c7c9eb8d0fdac1cd)), closes [#61](https://github.com/wrappid/native-web/issues/61)
+
 ### [0.0.289](https://github.com/wrappid/native-web/compare/v0.0.288...v0.0.289) (2024-04-06)
 
 
