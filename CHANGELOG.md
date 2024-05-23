@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.291](https://github.com/wrappid/native-web/compare/v0.0.290...v0.0.291) (2024-05-23)
+
+
+### Bug Fixes
+
+* **config:** :pushpin: pin dependencies ([255e4e0](https://github.com/wrappid/native-web/commit/255e4e092a70397ba15e786746b805e840405d20))
+
 ### [0.0.290](https://github.com/wrappid/native-web/compare/v0.0.289...v0.0.290) (2024-05-03)
 
 
