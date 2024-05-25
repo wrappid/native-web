@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.292](https://github.com/wrappid/native-web/compare/v0.0.291...v0.0.292) (2024-05-25)
+
+
+### Features
+
+* **core:** :zap: displayIcon for CoreMenu component ([3c1a30a](https://github.com/wrappid/native-web/commit/3c1a30a187fca4f936bffc5ea4de96897e61e441)), closes [#64](https://github.com/wrappid/native-web/issues/64)
+* **core:** :zap: displayIcon prop for Core Menu ([7316ccb](https://github.com/wrappid/native-web/commit/7316ccb0b275a524e75ef8e8f208901bb6902e77)), closes [#64](https://github.com/wrappid/native-web/issues/64)
+
 ### [0.0.291](https://github.com/wrappid/native-web/compare/v0.0.290...v0.0.291) (2024-05-23)
 
 
