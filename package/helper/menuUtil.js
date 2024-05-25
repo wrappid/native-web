@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 // eslint-disable-next-line no-unused-vars, unused-imports/no-unused-imports
 import React from "react";
 
@@ -67,7 +68,8 @@ export default function getNativeMenuItem(
   locationPathname,
   theme,
   allTypes,
-  routeRegistry
+  routeRegistry,
+  displayIcon
 ) {
   /**
    * @todo review required for using core menu item instead of core List Item
@@ -75,6 +77,7 @@ export default function getNativeMenuItem(
   return menuItem.type === allTypes?.MENU_SEPERATOR ? (
     <NativeDivider />
   ) : open ? (
+    
     <NativeLink href={getLink(menuItem, allTypes, routeRegistry)}>
       <NativeMenuItem
         sx={{
@@ -87,49 +90,52 @@ export default function getNativeMenuItem(
         }}
         key={menuItem.id}
         disablePadding
-        title={menuItem.label}
+        title={menuItem?.label}
         onClick={() => {
           OnMenuClick(menuItem);
         }}
       >
-        <NativeListItemIcon
-          styleClasses={[StyledComponentsClasses.MENU.LIST_ITEM_ICON, ...getTypeWiseStyle(menuItem, allTypes?.MENU_ITEM_ICON, allTypes)]}
-        >
-          {/* @todo may have to correct this */}
-          <NativeIcon
-            name={
-              typeof menuItem?.icon === "object"
-                ? menuItem?.icon?.icon
-                : typeof menuItem?.icon === "string" && isJson(menuItem?.icon)
-                  ? JSON.parse(menuItem?.icon)?.icon
-                  : menuItem?.icon
-            }
-            type={
-              typeof menuItem?.icon === "object"
-                ? menuItem?.icon?.type || "material-icons"
-                : typeof menuItem?.icon === "string" && isJson(menuItem?.icon)
-                  ? JSON.parse(menuItem?.icon)?.type
-                  : "material-icons"
-            }
-            childrenFlag={
-              typeof menuItem?.icon === "object"
-                ? menuItem?.icon?.type == "material-icons" ||
+        {displayIcon ?
+          (<NativeListItemIcon
+            styleClasses={[StyledComponentsClasses.MENU.LIST_ITEM_ICON, ...getTypeWiseStyle(menuItem, allTypes?.MENU_ITEM_ICON, allTypes)]}
+          >
+            {/* @todo may have to correct this */}
+            <NativeIcon
+              name={
+                typeof menuItem?.icon === "object"
+                  ? menuItem?.icon?.icon
+                  : typeof menuItem?.icon === "string" && isJson(menuItem?.icon)
+                    ? JSON.parse(menuItem?.icon)?.icon
+                    : menuItem?.icon
+              }
+              type={
+                typeof menuItem?.icon === "object"
+                  ? menuItem?.icon?.type || "material-icons"
+                  : typeof menuItem?.icon === "string" && isJson(menuItem?.icon)
+                    ? JSON.parse(menuItem?.icon)?.type
+                    : "material-icons"
+              }
+              childrenFlag={
+                typeof menuItem?.icon === "object"
+                  ? menuItem?.icon?.type == "material-icons" ||
                   menuItem?.icon?.type == "material-icons-outlined"
-                : typeof menuItem?.icon === "string" && isJson(menuItem?.icon)
-                  ? JSON.parse(menuItem?.icon)?.type == "material-icons" ||
+                  : typeof menuItem?.icon === "string" && isJson(menuItem?.icon)
+                    ? JSON.parse(menuItem?.icon)?.type == "material-icons" ||
                   JSON.parse(menuItem?.icon)?.type == "material-icons-outlined"
-                  : true
-            }
-            sx={{
-              color: `${
-                menuItem?.type === allTypes?.MENU_ITEM &&
+                    : true
+              }
+              sx={{
+                color: `${
+                  menuItem?.type === allTypes?.MENU_ITEM &&
                 locationPathname === menuItem?.link
-                  ? theme?.palette?.primary?.light
-                  : theme?.palette?.secondary?.dark
-              }!important`,
-            }}
-          />
-        </NativeListItemIcon>
+                    ? theme?.palette?.primary?.light
+                    : theme?.palette?.secondary?.dark
+                }!important`,
+              }}
+            />
+          </NativeListItemIcon>) :
+
+          (<></>)}
 
         <NativeListItemText
           disableTypography
@@ -155,7 +161,8 @@ export default function getNativeMenuItem(
           : "javascript:void(0)"
       }
     >
-      <NativeIconButton
+     
+        (<NativeIconButton
         title={menuItem?.label}
         titlePlacement={"right"}
         onClick={() => {
@@ -163,6 +170,7 @@ export default function getNativeMenuItem(
           OnMenuClick(menuItem);
         }}
       >
+             
         <NativeIcon
           name={
             typeof menuItem?.icon === "object"
@@ -195,13 +203,15 @@ export default function getNativeMenuItem(
                 : theme?.palette?.secondary?.dark
             }!important`,
           }}
-        ></NativeIcon>
+        ></NativeIcon> 
+        
       </NativeIconButton>
     </NativeLink>
   );
 }
 
 function getTypeWiseStyle(item, elemType, allTypes) {
+  
   let styles = [];
   const {
     MENU_PARENT_ITEM,
