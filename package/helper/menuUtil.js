@@ -76,8 +76,7 @@ export default function getNativeMenuItem(
    */
   return menuItem.type === allTypes?.MENU_SEPERATOR ? (
     <NativeDivider />
-  ) : open ? (
-    
+  ) : open ? (    
     <NativeLink href={getLink(menuItem, allTypes, routeRegistry)}>
       <NativeMenuItem
         sx={{
@@ -134,7 +133,6 @@ export default function getNativeMenuItem(
               }}
             />
           </NativeListItemIcon>) :
-
           (<></>)}
 
         <NativeListItemText
@@ -161,7 +159,6 @@ export default function getNativeMenuItem(
           : "javascript:void(0)"
       }
     >
-     
         (<NativeIconButton
         title={menuItem?.label}
         titlePlacement={"right"}
@@ -169,8 +166,7 @@ export default function getNativeMenuItem(
           setSelectedID(menuItem?.name);
           OnMenuClick(menuItem);
         }}
-      >
-             
+      >             
         <NativeIcon
           name={
             typeof menuItem?.icon === "object"
@@ -203,15 +199,13 @@ export default function getNativeMenuItem(
                 : theme?.palette?.secondary?.dark
             }!important`,
           }}
-        ></NativeIcon> 
-        
+        />        
       </NativeIconButton>
     </NativeLink>
   );
 }
 
-function getTypeWiseStyle(item, elemType, allTypes) {
-  
+function getTypeWiseStyle(item, elemType, allTypes) {  
   let styles = [];
   const {
     MENU_PARENT_ITEM,
