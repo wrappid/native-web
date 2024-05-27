@@ -6,6 +6,7 @@ import NativeAvatar from "../dataDisplay/NativeAvatar";
 import NativeBadge from "../dataDisplay/NativeBadge";
 import NativeIcon, { __IconTypes } from "../dataDisplay/NativeIcon";
 import NativeBox from "../layouts/NativeBox";
+import NativeIconButton from  "./NativeIconButton";
 
 export default function NativeImagePicker(props) {
   const {
@@ -64,14 +65,16 @@ export default function NativeImagePicker(props) {
           styleClasses={[]}
           aria-label="toggle password visibility"
           type="file"
-          onClick={handleFileOpen}
           edge="end"
         >
           <NativeBadge
             overlap="circular"
             anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
             badgeContent={
-              <NativeIcon childrenFlag={true} name="photo_camera" type={__IconTypes.MATERIAL_ICON} />
+              <NativeIconButton  onClick={handleFileOpen} title={`Change Image`}  >
+                <NativeIcon childrenFlag={true} name="photo_camera" type={__IconTypes.MATERIAL_ICON} />
+              </NativeIconButton>
+              
             }
           >
             <NativeAvatar
