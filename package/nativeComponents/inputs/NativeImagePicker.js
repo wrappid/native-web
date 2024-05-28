@@ -1,12 +1,12 @@
 // eslint-disable-next-line no-unused-vars, unused-imports/no-unused-imports
 import React, { useRef } from "react";
 
+import NativeIconButton from "./NativeIconButton";
 import { SCInput } from "../../styledComponents/inputs/SCInput";
 import NativeAvatar from "../dataDisplay/NativeAvatar";
 import NativeBadge from "../dataDisplay/NativeBadge";
 import NativeIcon, { __IconTypes } from "../dataDisplay/NativeIcon";
 import NativeBox from "../layouts/NativeBox";
-import NativeIconButton from  "./NativeIconButton";
 
 export default function NativeImagePicker(props) {
   const {
@@ -71,7 +71,7 @@ export default function NativeImagePicker(props) {
             overlap="circular"
             anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
             badgeContent={
-              <NativeIconButton  onClick={handleFileOpen} title={`Change Image`}  >
+              <NativeIconButton onClick={handleFileOpen} title={"Change Image"} >
                 <NativeIcon childrenFlag={true} name="photo_camera" type={__IconTypes.MATERIAL_ICON} />
               </NativeIconButton>
               
