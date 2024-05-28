@@ -1,6 +1,7 @@
 // eslint-disable-next-line no-unused-vars, unused-imports/no-unused-imports
 import React, { useRef } from "react";
 
+import NativeIconButton from "./NativeIconButton";
 import { SCInput } from "../../styledComponents/inputs/SCInput";
 import NativeAvatar from "../dataDisplay/NativeAvatar";
 import NativeBadge from "../dataDisplay/NativeBadge";
@@ -64,14 +65,16 @@ export default function NativeImagePicker(props) {
           styleClasses={[]}
           aria-label="toggle password visibility"
           type="file"
-          onClick={handleFileOpen}
           edge="end"
         >
           <NativeBadge
             overlap="circular"
             anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
             badgeContent={
-              <NativeIcon childrenFlag={true} name="photo_camera" type={__IconTypes.MATERIAL_ICON} />
+              <NativeIconButton onClick={handleFileOpen} title={"Change Image"} >
+                <NativeIcon childrenFlag={true} name="photo_camera" type={__IconTypes.MATERIAL_ICON} />
+              </NativeIconButton>
+              
             }
           >
             <NativeAvatar
