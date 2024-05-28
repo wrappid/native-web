@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.293](https://github.com/wrappid/native-web/compare/v0.0.292...v0.0.293) (2024-05-28)
+
+
+### Bug Fixes
+
+* :bug: fix NativeImagePicker upload ([b501477](https://github.com/wrappid/native-web/commit/b50147783002fe6b678e2fce6358b4ccbc35d710)), closes [#67](https://github.com/wrappid/native-web/issues/67)
+
 ### [0.0.292](https://github.com/wrappid/native-web/compare/v0.0.291...v0.0.292) (2024-05-25)
 
 
