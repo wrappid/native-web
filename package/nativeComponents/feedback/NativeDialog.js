@@ -23,7 +23,15 @@ export default function NativeDialog(props) {
     return (
       <SCDialog
         open={dialog?.showDialog || false}
-        onClose={() => setDialog(dialogInitValue)}
+        onClose={() => {
+          if (
+            dialog.onClose &&
+              typeof dialog.onClose === "function"
+          ) {
+            dialog.onClose();
+          }
+          setDialog(dialogInitValue);
+        }}
         aria-labelledby="dialog-title"
         aria-describedby="dialog-description"
         PaperProps={{
