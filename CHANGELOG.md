@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.295](https://github.com/wrappid/native-web/compare/v0.0.294...v0.0.295) (2024-05-30)
+
+
+### Bug Fixes
+
+* **global:** :bug: onClose fix in NativeDialog ([e0c4d7f](https://github.com/wrappid/native-web/commit/e0c4d7f0476d4d3ac32c68c58b7eaefcb110a908)), closes [#67](https://github.com/wrappid/native-web/issues/67)
+
 ### [0.0.294](https://github.com/wrappid/native-web/compare/v0.0.293...v0.0.294) (2024-05-28)
 
 ### [0.0.293](https://github.com/wrappid/native-web/compare/v0.0.292...v0.0.293) (2024-05-28)
