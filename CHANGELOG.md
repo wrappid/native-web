@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.296](https://github.com/wrappid/native-web/compare/v0.0.295...v0.0.296) (2024-05-30)
+
 ### [0.0.295](https://github.com/wrappid/native-web/compare/v0.0.294...v0.0.295) (2024-05-30)
 
 
