@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.297](https://github.com/wrappid/native-web/compare/v0.0.296...v0.0.297) (2024-06-04)
+
+
+### Features
+
+* **utils:** :lipstick: upload icon for NativeImagePicker ([5383c0e](https://github.com/wrappid/native-web/commit/5383c0eba50c167077ffcd1fb4ad3f8acd4831da)), closes [#70](https://github.com/wrappid/native-web/issues/70)
+
 ### [0.0.296](https://github.com/wrappid/native-web/compare/v0.0.295...v0.0.296) (2024-05-30)
 
 ### [0.0.295](https://github.com/wrappid/native-web/compare/v0.0.294...v0.0.295) (2024-05-30)
