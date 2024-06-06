@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.298](https://github.com/wrappid/native-web/compare/v0.0.297...v0.0.298) (2024-06-06)
+
+
+### Bug Fixes
+
+* **global:** :bug: left drawer menu is in mini-drawer state then a bracket is coming ([d816114](https://github.com/wrappid/native-web/commit/d816114efb95a9591c95ef2cd99e6774f8675530)), closes [#71](https://github.com/wrappid/native-web/issues/71)
+
 ### [0.0.297](https://github.com/wrappid/native-web/compare/v0.0.296...v0.0.297) (2024-06-04)
 
 
