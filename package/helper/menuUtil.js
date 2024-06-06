@@ -159,7 +159,7 @@ export default function getNativeMenuItem(
           : "javascript:void(0)"
       }
     >
-        (<NativeIconButton
+        <NativeIconButton
         title={menuItem?.label}
         titlePlacement={"right"}
         onClick={() => {
