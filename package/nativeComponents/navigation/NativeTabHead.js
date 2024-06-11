@@ -8,10 +8,10 @@ import NativeTab from "./NativeTab";
 import NativeTabs from "./NativeTabs";
 
 export default function NativeTabHead(props) {
-  const { tabsContent, handleChange, tabValue } = props;
+  const { tabsContent, handleChange, tabValue, styleClasses } = props;
 
   return <NativeTabs
-    styleClasses={[StyledComponentsClasses?.WEB?.TAB_HEAD]}
+    styleClasses={[...(styleClasses || []), StyledComponentsClasses?.WEB?.TAB_HEAD]}
     value={tabValue}
     onChange={handleChange}
   >
