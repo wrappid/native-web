@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.300](https://github.com/wrappid/native-web/compare/v0.0.299...v0.0.300) (2024-06-11)
+
+
+### Bug Fixes
+
+* **core:** :bug: styleComponents props handling in NativeTabHead ([5f989dc](https://github.com/wrappid/native-web/commit/5f989dc3bc4734d04e7e1ca7a40e8484266de83f)), closes [#74](https://github.com/wrappid/native-web/issues/74)
+
 ### [0.0.299](https://github.com/wrappid/native-web/compare/v0.0.298...v0.0.299) (2024-06-06)
 
 ### [0.0.298](https://github.com/wrappid/native-web/compare/v0.0.297...v0.0.298) (2024-06-06)
