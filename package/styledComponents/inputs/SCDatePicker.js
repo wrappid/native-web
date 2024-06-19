@@ -9,6 +9,9 @@ import styled from "styled-components";
 const defaultStyleClasses = [StyledComponentsClasses.INPUTS.DATE_PICKER];
 
 export const SCDatePicker = styled(
+  /**
+   * @todo review required by @sumanta-m 
+   */
   DesktopDatePicker,
   {}
 )((props) => ({ ...getEffectiveStyle([...defaultStyleClasses, ...(props?.styleClasses || [])]) }));
