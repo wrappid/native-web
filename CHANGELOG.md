@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.302](https://github.com/wrappid/native-web/compare/v0.0.301...v0.0.302) (2024-06-19)
+
+
+### Bug Fixes
+
+* **global:** :wrench: mui/x-date-pickers version change ([a7839f5](https://github.com/wrappid/native-web/commit/a7839f5bca34af18658b1be6df31c0b82e701c96)), closes [#63](https://github.com/wrappid/native-web/issues/63)
+
 ### [0.0.301](https://github.com/wrappid/native-web/compare/v0.0.300...v0.0.301) (2024-06-18)
 
 
