@@ -48,7 +48,7 @@
     "@commitlint/prompt-cli": "17.5.0",
     "@mui/icons-material": "5.15.20",
     "@mui/material": "5.15.20",
-    "@mui/x-date-pickers": "7.7.0",
+    "@mui/x-date-pickers": "5.0.8",
     "eslint": "8.40.0",
     "eslint-plugin-etc": "2.0.2",
     "eslint-plugin-import": "2.27.5",
