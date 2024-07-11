@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.303](https://github.com/wrappid/native-web/compare/v0.0.302...v0.0.303) (2024-07-11)
+
+
+### Bug Fixes
+
+* **core:** :bug: native json editor fixed ([48c3c19](https://github.com/wrappid/native-web/commit/48c3c199816b7ed240b7cca5e29d435019f6df27)), closes [#78](https://github.com/wrappid/native-web/issues/78)
+
 ### [0.0.302](https://github.com/wrappid/native-web/compare/v0.0.301...v0.0.302) (2024-06-19)
 
 
