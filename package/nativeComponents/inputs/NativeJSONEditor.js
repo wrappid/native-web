@@ -36,31 +36,39 @@ export default class NativeJSONEditor extends Component {
 
   jsonEditorValueUpdate = (value = {}) => {
     if (this.jsoneditor) {
-      let finalValue = value;
+      let finalValue = value; 
 
       try {
         if (typeof finalValue === "string") {
           finalValue = JSON.parse(finalValue);
+          this.jsoneditor.update(finalValue);
         }
-        this.jsoneditor.update(this.props.value);
       } catch (err) {
         // eslint-disable-next-line no-console
         console.warn("Not a valid json", err);
+        this.jsoneditor.update(finalValue);
       }
     }
   };
 
-  getValue = () => {
-    let value = this.props.value;
-
-    return value;
-  };
-
   handelChange = (value) => {
-    if (this.props.formik) {
-      this.props.formik.setFieldValue(this.props.id, value);
+    let finalValue = value; 
+
+    if (typeof finalValue === "string") {
+      try{
+        finalValue = JSON.parse(finalValue);
+      }
+      catch(err){
+        // eslint-disable-next-line no-console
+        console.log("JSON NOT CORRECT");
+        return;
+      }
+      if (this.props.formik) {
+        this.props.formik.setFieldValue(this.props.id, finalValue);
+      }
+      this.props.onChange(finalValue);
     }
-    this.props.onChange(JSON.parse(value));
+
   };
 
   render() {
