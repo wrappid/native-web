@@ -28,6 +28,16 @@ export default function NativeOtpInput(props) {
       } else {
         setOtp((prevOtp) => prevOtp.slice(0, index) + prevOtp.slice(index + 1));
       }
+    } else if (event.key === "Delete") {
+      event.preventDefault(); // Prevent default delete behavior
+      if (index < otp.length) {
+        // Remove character at the current index
+        setOtp((prevOtp) => prevOtp.slice(0, index) + prevOtp.slice(index + 1));
+        if (inputRefs.current[index]) {
+          inputRefs.current[index].focus();
+          inputRefs.current[index].setSelectionRange(0, 0);
+        }
+      }
     }
   };
 
