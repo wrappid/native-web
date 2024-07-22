@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.305](https://github.com/wrappid/native-web/compare/v0.0.304...v0.0.305) (2024-07-22)
+
+
+### Bug Fixes
+
+* **core:** :bug: update code in NativeOtpInput to fix the issue ([08caa62](https://github.com/wrappid/native-web/commit/08caa628ad1b62cf456034e8e281a2f1a38d0bf7)), closes [#82](https://github.com/wrappid/native-web/issues/82)
+* **core:** :bug: update code in NativeOtpInput to fix the issue ([c135513](https://github.com/wrappid/native-web/commit/c135513497de048fca096e878b058c8db411a104)), closes [#82](https://github.com/wrappid/native-web/issues/82)
+
 ### [0.0.304](https://github.com/wrappid/native-web/compare/v0.0.303...v0.0.304) (2024-07-11)
 
 ### [0.0.303](https://github.com/wrappid/native-web/compare/v0.0.302...v0.0.303) (2024-07-11)
