@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.306](https://github.com/wrappid/native-web/compare/v0.0.305...v0.0.306) (2024-07-23)
+
+
+### Bug Fixes
+
+* **core:** :bug: add required checks ([dee5335](https://github.com/wrappid/native-web/commit/dee533536834099e8b466e10a25caa48c8cead80)), closes [#84](https://github.com/wrappid/native-web/issues/84)
+
 ### [0.0.305](https://github.com/wrappid/native-web/compare/v0.0.304...v0.0.305) (2024-07-22)
 
 
