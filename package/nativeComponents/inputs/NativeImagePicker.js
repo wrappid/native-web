@@ -71,7 +71,7 @@ export default function NativeImagePicker(props) {
             overlap="circular"
             anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
             badgeContent={
-              <NativeIconButton onClick={handleFileOpen} title={"Change Image"} >
+              <NativeIconButton onClick={handleFileOpen} title={"Upload Image"} >
                 <NativeIcon childrenFlag={true} name="upload" type={__IconTypes.MATERIAL_ICON} />
               </NativeIconButton>
               
