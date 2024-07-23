@@ -13,7 +13,7 @@ export default function NativeOtpInput(props) {
     setOtp(val);
     const length = val.length;
 
-    if (inputRefs.current[length]) {
+    if (inputRefs.current?.[length]) {
       inputRefs.current[length].focus();
     }
   };
@@ -22,18 +22,18 @@ export default function NativeOtpInput(props) {
   const handleKeyDown = (event, index) => {
     if (event.key === "Backspace") {
       event.preventDefault(); // Prevent default backspace behavior
-      if (index > 0 && !otp[index]) {
+      if (index > 0 && !otp?.[index]) {
         setOtp((prevOtp) => prevOtp.slice(0, index - 1) + prevOtp.slice(index));
-        inputRefs.current[index - 1].focus();
+        inputRefs.current?.[index - 1]?.focus();
       } else {
         setOtp((prevOtp) => prevOtp.slice(0, index) + prevOtp.slice(index + 1));
       }
     } else if (event.key === "Delete") {
       event.preventDefault(); // Prevent default delete behavior
-      if (index < otp.length) {
+      if (index < otp?.length) {
         // Remove character at the current index
         setOtp((prevOtp) => prevOtp.slice(0, index) + prevOtp.slice(index + 1));
-        if (inputRefs.current[index]) {
+        if (inputRefs.current?.[index]) {
           inputRefs.current[index].focus();
           inputRefs.current[index].setSelectionRange(0, 0);
         }
@@ -52,13 +52,13 @@ export default function NativeOtpInput(props) {
     setTimeout(() => {
       const pasteLength = paste.length;
 
-      if (inputRefs.current[pasteLength]) {
+      if (inputRefs.current?.[pasteLength]) {
         inputRefs.current[pasteLength].focus();
         inputRefs.current[pasteLength].setSelectionRange(
           pasteLength,
           pasteLength
         ); // Adjust selection range
-      } else if (inputRefs.current[5]) {
+      } else if (inputRefs.current?.[5]) {
         inputRefs.current[5].focus();
         inputRefs.current[5].setSelectionRange(6, 6); // Adjust selection range
       }
@@ -66,7 +66,7 @@ export default function NativeOtpInput(props) {
   };
 
   React.useEffect(() => {
-    props.formik.setFieldValue(props.id, otp);
+    props.formik?.setFieldValue(props.id, otp);
   }, [otp]);
 
   return (
@@ -82,10 +82,10 @@ export default function NativeOtpInput(props) {
       inputStyle={{
         background       : "transparent",
         border           : "none",
-        borderBottomColor: theme.palette.primary.main,
+        borderBottomColor: theme?.palette.primary.main,
         borderBottomStyle: "solid",
         borderBottomWidth: "none",
-        color            : theme.palette.text.primary,
+        color            : theme?.palette.text.primary,
         fontSize         : "2rem",
         margin           : 10,
         outline          : "none",
