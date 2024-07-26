@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.308](https://github.com/wrappid/native-web/compare/v0.0.307...v0.0.308) (2024-07-26)
+
+
+### Bug Fixes
+
+* **core:** :bug: otp undefiend ([235ed00](https://github.com/wrappid/native-web/commit/235ed0008032d44e0f127ea54d1679ff30009f2a)), closes [#84](https://github.com/wrappid/native-web/issues/84)
+
 ### [0.0.307](https://github.com/wrappid/native-web/compare/v0.0.306...v0.0.307) (2024-07-23)
 
 ### [0.0.306](https://github.com/wrappid/native-web/compare/v0.0.305...v0.0.306) (2024-07-23)
