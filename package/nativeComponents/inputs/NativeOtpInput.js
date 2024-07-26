@@ -66,7 +66,9 @@ export default function NativeOtpInput(props) {
   };
 
   React.useEffect(() => {
-    props.formik?.setFieldValue(props.id, otp);
+    if (otp && otp !== "") {
+      props.formik?.setFieldValue(props.id, otp);
+    }
   }, [otp]);
 
   return (
