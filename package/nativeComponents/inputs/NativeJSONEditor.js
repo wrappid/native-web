@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 // eslint-disable-next-line no-unused-vars, unused-imports/no-unused-imports
 import React, { Component } from "react";
 
@@ -7,6 +8,8 @@ import "jsoneditor/dist/jsoneditor.css";
 import NativeLabel from "../dataDisplay/paragraph/NativeLabel";
 
 export default class NativeJSONEditor extends Component {
+  state = { styleSet: false };
+    
   componentDidMount() {
     let mode = "code";
 
@@ -32,6 +35,17 @@ export default class NativeJSONEditor extends Component {
 
   componentDidUpdate() {
     this.jsonEditorValueUpdate(this.props.value);
+    let elems = document.getElementsByClassName("jsoneditor-menu");
+
+    console.log("ELEMs", elems, this.props?.theme);
+
+    if(elems.length > 0 && !this.state.styleSet){
+      for (let i = 0; i < elems?.length; i++) {
+        elems[i].style.backgroundColor = this.props?.theme?.palette.primary.main;
+      }
+      this.setState({ styleSet: true });
+    }
+
   }
 
   jsonEditorValueUpdate = (value = {}) => {
@@ -69,7 +83,7 @@ export default class NativeJSONEditor extends Component {
       this.props.onChange(finalValue);
     }
 
-  };
+  };  
 
   render() {
     return (
