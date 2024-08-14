@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.310](https://github.com/wrappid/native-web/compare/v0.0.309...v0.0.310) (2024-08-14)
+
+
+### Features
+
+* **core:** :sparkles: adding listType in CoreList ([65f485c](https://github.com/wrappid/native-web/commit/65f485c04cc81ba6e3ea7f411f54179ab3db6e16)), closes [#89](https://github.com/wrappid/native-web/issues/89)
+
 ### [0.0.309](https://github.com/wrappid/native-web/compare/v0.0.308...v0.0.309) (2024-08-05)
 
 ### [0.0.308](https://github.com/wrappid/native-web/compare/v0.0.307...v0.0.308) (2024-07-26)
