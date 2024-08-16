@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.311](https://github.com/wrappid/native-web/compare/v0.0.310...v0.0.311) (2024-08-16)
+
+
+### Features
+
+* **core:** :sparkles: in corelist new varient props has been added ([d3154ef](https://github.com/wrappid/native-web/commit/d3154efdab965e794b36c76643dc6fcc499df0b1)), closes [#93](https://github.com/wrappid/native-web/issues/93)
+
 ### [0.0.310](https://github.com/wrappid/native-web/compare/v0.0.309...v0.0.310) (2024-08-14)
 
 
