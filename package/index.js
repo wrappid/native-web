@@ -121,7 +121,7 @@ import NativePageContainer from "./nativeComponents/layouts/NativePageContainer"
 import NativeSection from "./nativeComponents/layouts/NativeSection";
 import NativeSpan from "./nativeComponents/layouts/NativeSpan";
 import NativeStack from "./nativeComponents/layouts/NativeStack";
-import NativeClickAwayListner from "./nativeComponents/NativeTooltip.js";
+import NativeClickAwayListner from "./nativeComponents/NativeClickAwayListner.js";";
 import NativeCustomTabs from "./nativeComponents/navigation/NativeCustomTabs";
 import NativeLink from "./nativeComponents/navigation/NativeLink";
 import NativeMenuItem from "./nativeComponents/navigation/NativeMenuItem";
