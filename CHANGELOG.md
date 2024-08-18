@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.312](https://github.com/wrappid/native-web/compare/v0.0.311...v0.0.312) (2024-08-18)
+
+
+### Bug Fixes
+
+* **global:** :bug: props.children wrap with div ([ec7afe3](https://github.com/wrappid/native-web/commit/ec7afe3bdc445d4f81c54e19386c1e43b0550d34)), closes [#97](https://github.com/wrappid/native-web/issues/97)
+
 ### [0.0.311](https://github.com/wrappid/native-web/compare/v0.0.310...v0.0.311) (2024-08-16)
 
 
