@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.314](https://github.com/wrappid/native-web/compare/v0.0.313...v0.0.314) (2024-08-19)
+
+
+### Bug Fixes
+
+* **core:** :bug: corelistitemsecondaryaction has been implemented ([12f943e](https://github.com/wrappid/native-web/commit/12f943e9a5d5b7a9dcf29828593501b2d646a63b)), closes [#101](https://github.com/wrappid/native-web/issues/101)
+
 ### [0.0.313](https://github.com/wrappid/native-web/compare/v0.0.312...v0.0.313) (2024-08-19)
 
 
