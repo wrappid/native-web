@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.313](https://github.com/wrappid/native-web/compare/v0.0.312...v0.0.313) (2024-08-19)
+
+
+### Features
+
+* **global:** :sparkles: add NativeClickAwayListner ([dfb0d05](https://github.com/wrappid/native-web/commit/dfb0d05aca97de854d1e78a70f3f245ccc930cac)), closes [#99](https://github.com/wrappid/native-web/issues/99)
+
+
+### Bug Fixes
+
+* **global:** :bug: code lint fix ([efef5d4](https://github.com/wrappid/native-web/commit/efef5d4615e2ad88b04c4aa8ce11cf0ea1561b9f)), closes [#99](https://github.com/wrappid/native-web/issues/99)
+* **global:** :bug: ipmort path fix ([72c8e88](https://github.com/wrappid/native-web/commit/72c8e887cb05bd4ddbf39d7c3d372fb10b344ceb)), closes [#99](https://github.com/wrappid/native-web/issues/99)
+
 ### [0.0.312](https://github.com/wrappid/native-web/compare/v0.0.311...v0.0.312) (2024-08-18)
 
 
