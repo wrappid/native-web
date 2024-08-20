@@ -2,6 +2,33 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.314](https://github.com/wrappid/native-web/compare/v0.0.313...v0.0.314) (2024-08-19)
+
+
+### Bug Fixes
+
+* **core:** :bug: corelistitemsecondaryaction has been implemented ([12f943e](https://github.com/wrappid/native-web/commit/12f943e9a5d5b7a9dcf29828593501b2d646a63b)), closes [#101](https://github.com/wrappid/native-web/issues/101)
+
+### [0.0.313](https://github.com/wrappid/native-web/compare/v0.0.312...v0.0.313) (2024-08-19)
+
+
+### Features
+
+* **global:** :sparkles: add NativeClickAwayListner ([dfb0d05](https://github.com/wrappid/native-web/commit/dfb0d05aca97de854d1e78a70f3f245ccc930cac)), closes [#99](https://github.com/wrappid/native-web/issues/99)
+
+
+### Bug Fixes
+
+* **global:** :bug: code lint fix ([efef5d4](https://github.com/wrappid/native-web/commit/efef5d4615e2ad88b04c4aa8ce11cf0ea1561b9f)), closes [#99](https://github.com/wrappid/native-web/issues/99)
+* **global:** :bug: ipmort path fix ([72c8e88](https://github.com/wrappid/native-web/commit/72c8e887cb05bd4ddbf39d7c3d372fb10b344ceb)), closes [#99](https://github.com/wrappid/native-web/issues/99)
+
+### [0.0.312](https://github.com/wrappid/native-web/compare/v0.0.311...v0.0.312) (2024-08-18)
+
+
+### Bug Fixes
+
+* **global:** :bug: props.children wrap with div ([ec7afe3](https://github.com/wrappid/native-web/commit/ec7afe3bdc445d4f81c54e19386c1e43b0550d34)), closes [#97](https://github.com/wrappid/native-web/issues/97)
+
 ### [0.0.311](https://github.com/wrappid/native-web/compare/v0.0.310...v0.0.311) (2024-08-16)
 
 
