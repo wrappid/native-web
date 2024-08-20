@@ -6,9 +6,9 @@ import { UtilityClasses } from "@wrappid/styles";
 import { SCList } from "../../styledComponents/layouts/SCList";
 
 export default function NativeList(props) {
-  
+
   const { children, ...restProps } = props;
-    
+
   const listStyleClasses = () => {
     let styleClasses = [];
 
@@ -21,7 +21,7 @@ export default function NativeList(props) {
   };
   const listItemStyleClasses = (childProps) => {
     let styleClasses = [];
-  
+
     if (props.listType) {
       styleClasses.push(UtilityClasses.DISPLAY.LIST_ITEM, UtilityClasses.PADDING.P0);
     }
@@ -32,12 +32,16 @@ export default function NativeList(props) {
     styleClasses={listStyleClasses()}
     {...restProps}>{
       React.Children.map(children, child => {
-        const updatedProps = {
-          ...child.props, // Spread existing props
-          styleClasses: listItemStyleClasses(child.props)
-        };
+        if (React.isValidElement(child)) {
+          const updatedProps = {
+            ...child.props, // Spread existing props
+            styleClasses: listItemStyleClasses(child.props)
+          };
 
-        return React.cloneElement(child, updatedProps); // Pass both props
+          return React.cloneElement(child, updatedProps); // Pass both props
+        } else {
+          return child;
+        }
       })}</SCList>;
 }
 
