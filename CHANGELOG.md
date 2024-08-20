@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.315](https://github.com/wrappid/native-web/compare/v0.0.314...v0.0.315) (2024-08-20)
+
+
+### Bug Fixes
+
+* **core:** :bug: support for non react element CoreList ([679f7ae](https://github.com/wrappid/native-web/commit/679f7aeae56d1d291a1a45753a7c21f511b969f7)), closes [#95](https://github.com/wrappid/native-web/issues/95)
+
 ### [0.0.314](https://github.com/wrappid/native-web/compare/v0.0.313...v0.0.314) (2024-08-19)
 
 
