@@ -40,6 +40,7 @@ export default function NativeDialog(props) {
             minWidth : "20%",
           }
         }}
+        { ...dialog?.dialogProps}
       >
         {dialog?.type === "info" ? (
           <NativeBox
