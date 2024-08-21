@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.317](https://github.com/wrappid/native-web/compare/v0.0.316...v0.0.317) (2024-08-21)
+
+
+### Features
+
+* **global:** :sparkles: pass dialogProps in SCDialog ([eb225b6](https://github.com/wrappid/native-web/commit/eb225b6406ae1143b1456f6645cd108e6ab41d35)), closes [#105](https://github.com/wrappid/native-web/issues/105)
+
 ### [0.0.316](https://github.com/wrappid/native-web/compare/v0.0.315...v0.0.316) (2024-08-21)
 
 
