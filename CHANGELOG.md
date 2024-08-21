@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.316](https://github.com/wrappid/native-web/compare/v0.0.315...v0.0.316) (2024-08-21)
+
+
+### Features
+
+* **core:** :zap: new utility function added ([4c698e1](https://github.com/wrappid/native-web/commit/4c698e15c8845d3941ac4ddf144f97d67e0b77f6)), closes [#103](https://github.com/wrappid/native-web/issues/103)
+
 ### [0.0.315](https://github.com/wrappid/native-web/compare/v0.0.314...v0.0.315) (2024-08-20)
 
 
