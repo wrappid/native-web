@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.318](https://github.com/wrappid/native-web/compare/v0.0.317...v0.0.318) (2024-08-22)
+
+
+### Bug Fixes
+
+* **global:** :bug: export missing NativeFormControlLabel ([7f862af](https://github.com/wrappid/native-web/commit/7f862af752ed62c8b5e8d2f98d826b758aeb334f)), closes [#107](https://github.com/wrappid/native-web/issues/107)
+* **global:** :bug: import fix native_copyToClipboard ([38ce25b](https://github.com/wrappid/native-web/commit/38ce25b2aa7baf7cecba84a50f83cd19f890100e)), closes [#107](https://github.com/wrappid/native-web/issues/107)
+
 ### [0.0.317](https://github.com/wrappid/native-web/compare/v0.0.316...v0.0.317) (2024-08-21)
 
 
