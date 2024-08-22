@@ -155,6 +155,7 @@ import NativeModal from "./nativeComponents/utils/NativeModal";
 import NativePopover from "./nativeComponents/utils/NativePopover";
 import NativeCssBaseline from "./theme/NativeCssBaseline.js";
 import NativeThemeProvider from "./theme/NativeThemeProvider";
+import { native_copyToClipboard } from "./utils/app.utils.js";
 import { useNetworkStatus } from "./utils/network.utils.js";
 
 export {
@@ -162,7 +163,7 @@ export {
   /**
    * NATIVE EXPORTS
    */
-  getNativeDeviceDetails, getNativeMenuItem, NativeAccordion, NativeAccordionDetail, NativeAccordionSummary, NativeAlert,
+  native_copyToClipboard, getNativeDeviceDetails, getNativeMenuItem, NativeAccordion, NativeAccordionDetail, NativeAccordionSummary, NativeAlert,
   NativeAlertTitle, NativeAppBar, NativeAppContainer, NativeAppDiv, NativeAutocomplete, NativeAvatar,
   NativeAvatarGroup, NativeBackdrop, NativeBadge, NativeBox, NativeButton, NativeCard, NativeCardActionArea, NativeCardActions, NativeCardContent, NativeCardHeader,
   NativeCardMedia, NativeCheckbox, NativeChip, NativeCircularProgress, NativeCollapse,
