@@ -11,7 +11,13 @@ import { SCInput } from "../../styledComponents/inputs/SCInput";
 export default function NativeInput(props) {
   const { NativeId = getUUID() } = props;
   const theme = useTheme();
-  const defStyle = {}; 
+  const defStyle = {};
+
+  const [inputText, setInputText] = React.useState(props?.value || null);
+  const onChange = (event) => {
+    props?.onChange && props.onChange(event.target.value);
+    setInputText(event.target.value);
+  };
 
   return (
     <NativeFormControl NativeId={`Native-formControl-${NativeId}`}>
@@ -31,8 +37,8 @@ export default function NativeInput(props) {
         label={props.label}
         styleClasses={[...(props.styleClasses || [])]}
         variant="standard"
-        value={props.value ? String(props.value) : ""}
-        onChange={props.onChange}
+        value={props?.value ? String(props.value) : inputText}
+        onChange={onChange}
         required={props.formik ? false : props.required}
         placeholder={props.placeholder}
         disabled={props.disabled}
