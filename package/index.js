@@ -89,6 +89,7 @@ import NativeFilePicker from "./nativeComponents/inputs/NativeFilePicker";
 import NativeFormControl from "./nativeComponents/inputs/NativeFormControl";
 import NativeFormControlLabel from "./nativeComponents/inputs/NativeFormControlLabel.js";
 import NativeFormErrorText from "./nativeComponents/inputs/NativeFormErrorText";
+import NativeFormGroup from "./nativeComponents/inputs/NativeFormGroup.js";
 import NativeFormHelperText from "./nativeComponents/inputs/NativeFormHelperText";
 import NativeIconButton from "./nativeComponents/inputs/NativeIconButton";
 import NativeImagePicker from "./nativeComponents/inputs/NativeImagePicker";
@@ -157,7 +158,6 @@ import NativeCssBaseline from "./theme/NativeCssBaseline.js";
 import NativeThemeProvider from "./theme/NativeThemeProvider";
 import { native_copyToClipboard } from "./utils/app.utils.js";
 import { useNetworkStatus } from "./utils/network.utils.js";
-
 export {
   DevNativeDataTable,
   /**
@@ -176,6 +176,6 @@ export {
   NativeTabHead, NativeTable, NativeTableBody, NativeTableBodyCell, NativeTableCell, NativeTableContainer, NativeTableFooter, NativeTableHead, NativeTableHeadCell,
   NativeTableHeadRow, NativeTablePagination, NativeTableRow, NativeTableSortLabel, NativeTabPanel, NativeTabs, NativeTextarea, NativeTextButton, NativeTextField, NativeThemeProvider, NativeTimePicker, NativeTimeRangePicker, NativeToolbar, NativeTooltip, NativeTypography, NativeTypographyBody1, NativeTypographyBody2, NativeTypographyButton, NativeTypographyCaption, NativeTypographyOverline, NativeTypographySubtitle1, NativeTypographySubtitle2, nativeUseLocation, nativeUseNavigate, nativeUseParams, nativeUseScrollTrigger, nativeUseSearchParams, NativeClickAwayListner,
   // Network status custom hook
-  useNetworkStatus, NativeFormControlLabel
+  useNetworkStatus, NativeFormControlLabel, NativeFormGroup
 };
 
