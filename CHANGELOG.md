@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.320](https://github.com/wrappid/native-web/compare/v0.0.319...v0.0.320) (2024-08-27)
+
+
+### Bug Fixes
+
+* **global:** :bug: export missing NativeFormGroup ([ab3dec8](https://github.com/wrappid/native-web/commit/ab3dec80e23992c3633ef6074cefdc3f9f1773d1)), closes [#112](https://github.com/wrappid/native-web/issues/112)
+
 ### [0.0.319](https://github.com/wrappid/native-web/compare/v0.0.318...v0.0.319) (2024-08-24)
 
 
