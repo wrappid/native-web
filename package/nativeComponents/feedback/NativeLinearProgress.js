@@ -9,24 +9,23 @@ import NativeTypography from "../dataDisplay/NativeTypography";
 import NativeBox from "../layouts/NativeBox";
 
 export default function NativeLinearProgress(props) {
-  const { children, showPercentage, ...rest } = props;
-  const boxWidth = "35px";
+  const { showLabel, ...restProps } = props;
 
-  return (
-    <NativeBox styleClasses={[UtilityClasses.DISPLAY.FLEX, UtilityClasses.ALIGNMENT.ALIGN_ITEMS_CENTER]}>
-      <NativeBox styleClasses={[UtilityClasses.WIDTH.W_100]}>
-        <SCLinearProgress {...rest}>{children}</SCLinearProgress>
-      </NativeBox>
-      
-      {showPercentage && (
-        <NativeBox width={boxWidth} styleClasses={[UtilityClasses.MARGIN.ML1]}>
-          <NativeTypography variant="body1">
-            {`${Math.round(rest.value)}%`}
+  if (!showLabel) {
+    return <SCLinearProgress {...restProps} />;
+  } else {
+    return (
+      <NativeBox styleClasses={[UtilityClasses.DISPLAY.FLEX, UtilityClasses.ALIGNMENT.ALIGN_ITEMS_CENTER]}>
+        <NativeBox styleClasses={[UtilityClasses.WIDTH.W_100]}>
+          <SCLinearProgress {...restProps} />
+        </NativeBox>
+
+        <NativeBox width={restProps.labelWidth} styleClasses={[UtilityClasses.MARGIN.ML1]}>
+          <NativeTypography>
+            {`${Math.round(restProps.value)}%`}
           </NativeTypography>
         </NativeBox>
-      )}
-      
-    </NativeBox>
-
-  );
+      </NativeBox>
+    );
+  }
 }
