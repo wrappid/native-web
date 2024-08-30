@@ -9,18 +9,15 @@ import { getValidDateTime } from "../../helper/helper";
 import { SCDatePicker } from "../../styledComponents/inputs/SCDatePicker";
 
 export default function NativeDatePicker(props) {
+
+  const [inputText, setInputText] = React.useState(props?.value || "");
+  const onChange = (value) => {
+    props?.onChange && props.onChange(value);
+    setInputText(value);
+  };
   const {
-    id,
-    name,
-    label,
-    onChange,
-    value,
-    disablePast,
-    disableFuture,
-    formik,
     touched,
     error,
-    shouldDisableDate,
     minDate,
     maxDate,
   } = props;
@@ -28,26 +25,12 @@ export default function NativeDatePicker(props) {
   return (
     <LocalizationProvider dateAdapter={AdapterMoment}>
       <SCDatePicker
-        id={id}
-        name={name}
-        label={label}
-        inputFormat="DD/MM/YYYY"
-        value={value || ""}
+        value={props?.value ? String(props.value) : inputText}
         minDate={typeof minDate === "string" ? getValidDateTime(minDate) : minDate }
         maxDate={typeof maxDate === "string" ? getValidDateTime(maxDate) : maxDate }
-        onChange={(value) => {
-          onChange && !formik
-            ? onChange(value)
-            : formik?.setFieldValue(
-              id,
-              value ? value?.format("YYYY-MM-DD") : null
-            );
-        }}
+        onChange={onChange}
         error={touched && error && error?.length > 0 ? true : false}
         fullWidth={true}
-        disablePast={disablePast}
-        disableFuture={disableFuture}
-        shouldDisableDate={shouldDisableDate}
         renderInput={(params) => (
           <NativeTextField
             {...params}
@@ -55,6 +38,7 @@ export default function NativeDatePicker(props) {
             fullWidth={true}
           />
         )}
+        {...props}
       />
     </LocalizationProvider>
   );
