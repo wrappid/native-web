@@ -11,22 +11,18 @@ import NativeTextField from "./NativeTextField";
 import { SCDateTimePicker } from "../../styledComponents/inputs/SCDateTimePicker";
 
 export default function NativeDateTimePicker(props) {
-  const { label, value, formik } = props;
+  const [date, setDate] = React.useState(props?.value || "");
+
+  const onChange = (value) => {
+    props?.onChange && props.onChange(value);
+    setDate(value);
+  };
 
   return (
     <LocalizationProvider dateAdapter={AdapterMoment}>
       <SCDateTimePicker
-        id={props.id}
-        name={props.id}
-        label={label}
-        inputFormat="DD/MM/YYYY hh:mm"
-        value={value}
-        onChange={(val) => {
-          formik.setFieldValue(
-            props.id,
-            val ? val.format("YYYY-MM-DD hh:mm") : null
-          );
-        }}
+        value={props?.value ? String(props.value) : date}
+        onChange={onChange}
         fullWidth={true}
         error={
           props.touched && props.error && props.error.length > 0 ? true : false
@@ -43,9 +39,10 @@ export default function NativeDateTimePicker(props) {
             fullWidth={true}
           />
         )}
+        {...props}
       />
 
-      <NativeFormHelperText styleClasses={[UtilityClasses.LAYOUT.NO_MARGIN_P]}>
+      <NativeFormHelperText styleClasses={[UtilityClasses.MARGIN.M0]}>
         {props.helperText}
       </NativeFormHelperText>
     </LocalizationProvider>
