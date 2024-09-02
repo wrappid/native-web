@@ -43,7 +43,7 @@ export default function NativeDateTimePicker(props) {
       />
 
       <NativeFormHelperText styleClasses={[UtilityClasses.MARGIN.M0]}>
-        {props.helperText}
+        {props?.helperText}
       </NativeFormHelperText>
     </LocalizationProvider>
   );
