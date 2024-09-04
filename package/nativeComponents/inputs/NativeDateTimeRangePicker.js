@@ -14,15 +14,25 @@ import NativeBox from "../layouts/NativeBox";
 import NativeStack from "../layouts/NativeStack";
 
 export default function NativeDateTimeRangePicker(props) {
-  const { label, value } = props;
+  const { label, value, id, formik } = props;
   const [startDateTime, setStartDateTime] = React.useState(props?.value || "");
   const [endDateTime, setEndDateTime] = React.useState(props?.value || "");
   const onChangeStartDateTime = (value) => {
-    props?.onChange && props.onChange(value);
+    if(formik){
+      formik?.setFieldValue(id, value);
+    }
+    if(props?.onChange){
+      props?.onChange(value);
+    }
     setStartDateTime(value);
   };
   const onChangeEndDateTime = (value) => {
-    props?.onChange && props.onChange(value);
+    if(formik){
+      formik?.setFieldValue(id, value);
+    }
+    if(props?.onChange){
+      props?.onChange(value);
+    }
     setEndDateTime(value);
   };
   let spValue = {

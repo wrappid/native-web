@@ -15,15 +15,25 @@ import NativeBox from "../layouts/NativeBox";
 import NativeStack from "../layouts/NativeStack";
 
 export default function NativeTimeRangePicker(props) {
-  const { label, value } = props;
+  const { label, value, id, formik } = props;
   const [startTime, setStartTime] = React.useState(props?.value || "");
   const [endTime, setEndTime] = React.useState(props?.value || "");
   const onChangeStartTime = (value) => {
-    props?.onChange && props.onChange(value);
+    if(formik){
+      formik?.setFieldValue(id, value);
+    }
+    if(props?.onChange){
+      props?.onChange(value);
+    }
     setStartTime(value);
   };
   const onChangeEndTime = (value) => {
-    props?.onChange && props.onChange(value);
+    if(formik){
+      formik?.setFieldValue(id, value);
+    }
+    if(props?.onChange){
+      props?.onChange(value);
+    }
     setEndTime(value);
   };
 

@@ -14,17 +14,28 @@ import NativeBox from "../layouts/NativeBox";
 import NativeStack from "../layouts/NativeStack";
 
 export default function NativeDateRangepicker(props) {
+  const { /* onChange */ id, formik, label, value } = props;
+
   const [startDate, setStartDate] = React.useState(props?.value || "");
   const [endDate, setEndDate] = React.useState(props?.value || "");
   const onChangeStartDate = (value) => {
-    props?.onChange && props.onChange(value);
+    if(formik){
+      formik?.setFieldValue(id, value);
+    }
+    if(props?.onChange){
+      props?.onChange(value);
+    }
     setStartDate(value);
   };
   const onChangeEndDate = (value) => {
-    props?.onChange && props.onChange(value);
+    if(formik){
+      formik?.setFieldValue(id, value);
+    }
+    if(props?.onChange){
+      props?.onChange(value);
+    }
     setEndDate(value);
   };
-  const { /* id, onChange,  */label, value } = props;
   let spValue = {
     endDate:
       value && value.endDate
