@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.321](https://github.com/wrappid/native-web/compare/v0.0.320...v0.0.321) (2024-09-04)
+
+
+### Features
+
+* **global:** :sparkles: passing prop for label ([b116a9f](https://github.com/wrappid/native-web/commit/b116a9f0bddfe9b61456942ddf5a82168f7a31ec)), closes [#114](https://github.com/wrappid/native-web/issues/114)
+* **global:** :sparkles: updated code of NativeLinearProgress ([12529fd](https://github.com/wrappid/native-web/commit/12529fd51f1c37c3d1fd844faa5cacf38491b9fe)), closes [#114](https://github.com/wrappid/native-web/issues/114)
+
 ### [0.0.320](https://github.com/wrappid/native-web/compare/v0.0.319...v0.0.320) (2024-08-27)
 
 
