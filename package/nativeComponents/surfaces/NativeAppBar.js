@@ -8,8 +8,8 @@ export default function NativeAppBar(props) {
   const { auth } = props;
 
   return (
-    <SCAppBar {...props} position="fixed">
-      {props.children}
+    <SCAppBar {...props}>
+      {props?.children}
     </SCAppBar>
   );
 }
