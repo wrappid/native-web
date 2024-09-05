@@ -10,9 +10,32 @@ import moment from "moment";
 import NativeFormHelperText from "./NativeFormHelperText";
 import NativeTextField from "./NativeTextField";
 import { SCDatePicker } from "../../styledComponents/inputs/SCDatePicker";
+import NativeBox from "../layouts/NativeBox";
+import NativeStack from "../layouts/NativeStack";
 
 export default function NativeDateRangepicker(props) {
-  const { /* id, onChange,  */label, value, formik } = props;
+  const { /* onChange */ id, formik, label, value } = props;
+
+  const [startDate, setStartDate] = React.useState(props?.value || "");
+  const [endDate, setEndDate] = React.useState(props?.value || "");
+  const onChangeStartDate = (value) => {
+    if(formik){
+      formik?.setFieldValue(id, value);
+    }
+    if(props?.onChange){
+      props?.onChange(value);
+    }
+    setStartDate(value);
+  };
+  const onChangeEndDate = (value) => {
+    if(formik){
+      formik?.setFieldValue(id, value);
+    }
+    if(props?.onChange){
+      props?.onChange(value);
+    }
+    setEndDate(value);
+  };
   let spValue = {
     endDate:
       value && value.endDate
@@ -30,66 +53,74 @@ export default function NativeDateRangepicker(props) {
 
   return (
     <LocalizationProvider dateAdapter={AdapterMoment}>
-      <SCDatePicker
-        id={props.id}
-        name={props.id}
-        label={label}
-        inputFormat="DD/MM/YYYY"
-        value={spValue?.startDate}
-        onChange={(value) => {
-          formik.setFieldValue(props.id, {
-            ...value,
-            startDate: moment(value).format("YYYY-MM-DD"),
-          });
-        }}
-        fullWidth={true}
-        error={
-          props.touched && props.error && props.error.length > 0 ? true : false
-        }
-        renderInput={(params) => (
-          <NativeTextField
-            helperText={
-              props.touched && props.error && props.error.length > 0
-                ? props.error
-                : ""
-            }
-            {...params}
-            InputLabelProps={{ ...params.InputLabelProps, shrink: true }} 
+      <NativeStack direction="row" spacing={3} >
+        <NativeBox>
+          <SCDatePicker
+            id={props.id}
+            name={props.id}
+            label={label}
+            inputFormat="DD/MM/YYYY"
+            value={spValue?.startDate ? String(spValue.startDate) : startDate}
+            onChange={onChangeStartDate}
+            helperText={props?.helperText?.start ? String(props?.helperText.start) : startDate}
             fullWidth={true}
-          />
-        )}
-      />
-
-      <SCDatePicker
-        label={label}
-        inputFormat="DD/MM/YYYY"
-        value={spValue?.endDate}
-        onChange={(value) => {
-          formik.setFieldValue(props.id, {
-            ...value,
-            endDate: moment(value).format("YYYY-MM-DD"),
-          });
-        }}
-        error={
-          props.touched && props.error && props.error.length > 0 ? true : false
-        }
-        renderInput={(params) => (
-          <NativeTextField
-            helperText={
-              props.touched && props.error && props.error.length > 0
-                ? props.error
-                : ""
+            error={
+              props.touched && props.error && props.error.length > 0 ? true : false
             }
-            {...params}
-            InputLabelProps={{ shrink: true }} 
-            fullWidth={true}
+            renderInput={(params) => (
+              <NativeTextField
+                helperText={
+                  props.touched && props.error && props.error.length > 0
+                    ? props.error
+                    : ""
+                }
+                {...params}
+                InputLabelProps={{ ...params.InputLabelProps, shrink: true }} 
+                fullWidth={true}
+              />
+            )}
           />
-        )}
-      />
 
-      <NativeFormHelperText styleClasses={[UtilityClasses.LAYOUT.NO_MARGIN_P]}>
-        {props.helperText}
-      </NativeFormHelperText>
+          {props?.helperText?.start && (
+            <NativeFormHelperText styleClasses={[UtilityClasses.MARGIN.M0]}>
+              {props?.helperText?.start}
+            </NativeFormHelperText>
+          )}
+        </NativeBox>
+
+        <NativeBox styleClasses={[UtilityClasses.ALIGNMENT.ALIGN_ITEMS_CENTER]}>-</NativeBox>
+
+        <NativeBox>
+          <SCDatePicker
+            label={label}
+            inputFormat="DD/MM/YYYY"
+            value={spValue?.endDate ? String(spValue.endDate) : endDate}
+            onChange={onChangeEndDate}
+            helperText={props?.helperText?.end ? String(props?.helperText.end) : "endDate" }
+            error={
+              props.touched && props.error && props.error.length > 0 ? true : false
+            }
+            renderInput={(params) => (
+              <NativeTextField
+                helperText={
+                  props.touched && props.error && props.error.length > 0
+                    ? props.error
+                    : ""
+                }
+                {...params}
+                InputLabelProps={{ shrink: true }} 
+                fullWidth={true}
+              />
+            )}
+          />
+
+          {props?.helperText?.end && (
+            <NativeFormHelperText styleClasses={[UtilityClasses.MARGIN.M0]}>
+              {props?.helperText?.end}
+            </NativeFormHelperText>
+          )}
+        </NativeBox>
+      </NativeStack> 
     </LocalizationProvider>
   );
 }
