@@ -12,10 +12,31 @@ import NativeTextField from "./NativeTextField";
 import { SCTimePicker } from "../../styledComponents/inputs/SCTimePicker";
 import NativeLabel from "../dataDisplay/paragraph/NativeLabel";
 import NativeBox from "../layouts/NativeBox";
-import NativeGrid from "../layouts/NativeGrid";
+import NativeStack from "../layouts/NativeStack";
 
 export default function NativeTimeRangePicker(props) {
-  const { label, value, formik } = props;
+  const { label, value, id, formik } = props;
+  const [startTime, setStartTime] = React.useState(props?.value || "");
+  const [endTime, setEndTime] = React.useState(props?.value || "");
+  const onChangeStartTime = (value) => {
+    if(formik){
+      formik?.setFieldValue(id, value);
+    }
+    if(props?.onChange){
+      props?.onChange(value);
+    }
+    setStartTime(value);
+  };
+  const onChangeEndTime = (value) => {
+    if(formik){
+      formik?.setFieldValue(id, value);
+    }
+    if(props?.onChange){
+      props?.onChange(value);
+    }
+    setEndTime(value);
+  };
+
   let spValue = {
     endTime:
       value && value.endTime
@@ -42,84 +63,88 @@ export default function NativeTimeRangePicker(props) {
       <NativeLabel>{label}</NativeLabel>
 
       <LocalizationProvider dateAdapter={AdapterMoment}>
-        <NativeGrid>
-          <SCTimePicker
-            gridProps={{
-              gridSize: {
-                sm: 6,
-                xs: 12,
-              },
-            }}
-            label={props.startTimeLabel ? props.startTimeLabel : "Start Time"}
-            inputFormat="hh:mm"
-            value={spValue?.startTime}
-            onChange={(val) => {
-              formik.setFieldValue(props.id, {
-                ...value,
-                startTime: moment(val).format("hh:mm"),
-              });
-            }}
-            error={
-              props.touched && props.error && props.error.length > 0
-                ? true
-                : false
-            }
-            fullWidth={true}
-            renderInput={(params) => (
-              <NativeTextField
-                helperText={
-                  props.touched && props.error && props.error.length > 0
-                    ? props.error
-                    : ""
-                }
-                {...params}
-                InputLabelProps={{ ...params.InputLabelProps, shrink: true }} 
-                fullWidth={true}
-              />
-            )}
-          />
+        <NativeStack direction="row" spacing={3} >
+          <NativeBox>
+            <SCTimePicker
+              gridProps={{
+                gridSize: {
+                  sm: 6,
+                  xs: 12,
+                },
+              }}
+              label={props.startTimeLabel ? props.startTimeLabel : "Start Time"}
+              inputFormat="hh:mm"
+              value={ spValue?.startTime ? String(spValue?.startTime) : startTime}
+              onChange={onChangeStartTime}
+              error={
+                props.touched && props.error && props.error.length > 0
+                  ? true
+                  : false
+              }
+              fullWidth={true}
+              renderInput={(params) => (
+                <NativeTextField
+                  helperText={
+                    props.touched && props.error && props.error.length > 0
+                      ? props.error
+                      : ""
+                  }
+                  {...params}
+                  InputLabelProps={{ ...params.InputLabelProps, shrink: true }} 
+                  fullWidth={true}
+                />
+              )}
+            />
 
-          <SCTimePicker
-            gridProps={{
-              gridSize: {
-                sm: 6,
-                xs: 12,
-              },
-            }}
-            label={props.endTimeLabel ? props.endTimeLabel : "End Time"}
-            inputFormat="hh:mm"
-            value={spValue?.endTime}
-            onChange={(val) => {
-              formik.setFieldValue(props.id, {
-                ...value,
-                endTime: moment(val).format("hh:mm"),
-              });
-            }}
-            error={
-              props.touched && props.error && props.error.length > 0
-                ? true
-                : false
-            }
-            fullWidth={true}
-            renderInput={(params) => (
-              <NativeTextField
-                error={props.touched && props.error}
-                helperText={
-                  props.touched && props.error && props.error.length > 0
-                    ? props.error
-                    : ""
-                }
-                {...params}
-                InputLabelProps={{ shrink: true }} 
-                fullWidth={true}
-              />
+            {props?.helperText?.start && (
+              <NativeFormHelperText styleClasses={[UtilityClasses.MARGIN.M0]}>
+                {props?.helperText?.start}
+              </NativeFormHelperText>
             )}
-          />
-        </NativeGrid>
+          </NativeBox>
 
-        <NativeFormHelperText styleClasses={[UtilityClasses.LAYOUT.NO_MARGIN_P]}>
-          {props.helperText}
-        </NativeFormHelperText>
+          <NativeBox styleClasses={[UtilityClasses.ALIGNMENT.ALIGN_ITEMS_CENTER]}>-</NativeBox>
+
+          <NativeBox>
+            <SCTimePicker
+              gridProps={{
+                gridSize: {
+                  sm: 6,
+                  xs: 12,
+                },
+              }}
+              label={props.endTimeLabel ? props.endTimeLabel : "End Time"}
+              inputFormat="hh:mm"
+              value={ spValue?.endTime ? String(spValue?.endTime) : endTime}
+              onChange={onChangeEndTime}
+              error={
+                props.touched && props.error && props.error.length > 0
+                  ? true
+                  : false
+              }
+              fullWidth={true}
+              renderInput={(params) => (
+                <NativeTextField
+                  error={props.touched && props.error}
+                  helperText={
+                    props.touched && props.error && props.error.length > 0
+                      ? props.error
+                      : ""
+                  }
+                  {...params}
+                  InputLabelProps={{ shrink: true }} 
+                  fullWidth={true}
+                />
+              )}
+            />
+
+            {props?.helperText?.end && (
+              <NativeFormHelperText styleClasses={[UtilityClasses.MARGIN.M0]}>
+                {props?.helperText?.end}
+              </NativeFormHelperText>
+            )}
+          </NativeBox>
+        </NativeStack> 
       </LocalizationProvider>
     </NativeBox>
   );
