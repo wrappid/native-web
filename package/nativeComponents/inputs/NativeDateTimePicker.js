@@ -9,45 +9,50 @@ import { UtilityClasses } from "@wrappid/styles";
 import NativeFormHelperText from "./NativeFormHelperText";
 import NativeTextField from "./NativeTextField";
 import { SCDateTimePicker } from "../../styledComponents/inputs/SCDateTimePicker";
+import NativeBox from "../layouts/NativeBox";
 
 export default function NativeDateTimePicker(props) {
-  const { label, value, formik } = props;
+  const { formik, id } = props;
+  const [dateTime, setDateTime] = React.useState(props?.value || "");
+  const onChange = (value) => {
+    if(formik){
+      formik?.setFieldValue(id, value);
+    }
+    if(props?.onChange){
+      props?.onChange(value);
+    }
+    setDateTime(value);
+  };
 
   return (
     <LocalizationProvider dateAdapter={AdapterMoment}>
-      <SCDateTimePicker
-        id={props.id}
-        name={props.id}
-        label={label}
-        inputFormat="DD/MM/YYYY hh:mm"
-        value={value}
-        onChange={(val) => {
-          formik.setFieldValue(
-            props.id,
-            val ? val.format("YYYY-MM-DD hh:mm") : null
-          );
-        }}
-        fullWidth={true}
-        error={
-          props.touched && props.error && props.error.length > 0 ? true : false
-        }
-        renderInput={(params) => (
-          <NativeTextField
-            helperText={
-              props.touched && props.error && props.error.length > 0
-                ? props.error
-                : ""
-            }
-            {...params}
-            InputLabelProps={{ ...params.InputLabelProps, shrink: true }} 
-            fullWidth={true}
-          />
-        )}
-      />
+      <NativeBox>
+        <SCDateTimePicker
+          value={props?.value ? String(props.value) : dateTime}
+          onChange={onChange}
+          fullWidth={true}
+          error={
+            props.touched && props.error && props.error.length > 0 ? true : false
+          }
+          renderInput={(params) => (
+            <NativeTextField
+              helperText={
+                props.touched && props.error && props.error.length > 0
+                  ? props.error
+                  : ""
+              }
+              {...params}
+              InputLabelProps={{ ...params.InputLabelProps, shrink: true }} 
+              fullWidth={true}
+            />
+          )}
+          {...props}
+        />
 
-      <NativeFormHelperText styleClasses={[UtilityClasses.LAYOUT.NO_MARGIN_P]}>
-        {props.helperText}
-      </NativeFormHelperText>
+        <NativeFormHelperText styleClasses={[UtilityClasses.MARGIN.M0]}>
+          {props?.helperText}
+        </NativeFormHelperText>
+      </NativeBox>
     </LocalizationProvider>
   );
 }
