@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.325](https://github.com/wrappid/native-web/compare/v0.0.324...v0.0.325) (2024-09-05)
+
+
+### Bug Fixes
+
+* **global:** :ambulance: fix NativeSelect, NativeMenuItem not working ([6ae4fdc](https://github.com/wrappid/native-web/commit/6ae4fdc652111f79e58a57039aa94b19180add4d)), closes [#123](https://github.com/wrappid/native-web/issues/123)
+
 ### [0.0.324](https://github.com/wrappid/native-web/compare/v0.0.323...v0.0.324) (2024-09-05)
 
 
