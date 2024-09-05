@@ -15,8 +15,8 @@ export default function NativeInput(props) {
 
   const [inputText, setInputText] = React.useState(props?.value || null);
   const onChange = (event) => {
-    props?.onChange && props.onChange(event.target.value);
-    setInputText(event.target.value);
+    props?.onChange && props.onChange(event);
+    setInputText(event?.target?.value);
   };
 
   return (
