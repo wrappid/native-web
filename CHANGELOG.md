@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.327](https://github.com/wrappid/native-web/compare/v0.0.326...v0.0.327) (2024-09-09)
+
+
+### Bug Fixes
+
+* **global:** :bug: update NativeAppBar code ([0fa3746](https://github.com/wrappid/native-web/commit/0fa3746906577eddedaaf94ba2c02d37872f6110)), closes [#121](https://github.com/wrappid/native-web/issues/121)
+
 ### [0.0.326](https://github.com/wrappid/native-web/compare/v0.0.325...v0.0.326) (2024-09-05)
 
 
