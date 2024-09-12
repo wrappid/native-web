@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.330](https://github.com/wrappid/native-web/compare/v0.0.329...v0.0.330) (2024-09-12)
+
+
+### Features
+
+* **global:** :sparkles: enabled has been implemented in gridProps ([2417a07](https://github.com/wrappid/native-web/commit/2417a07ba6e6af14c883c8ede7f919c4b5b12e85)), closes [#130](https://github.com/wrappid/native-web/issues/130)
+
 ### [0.0.329](https://github.com/wrappid/native-web/compare/v0.0.328...v0.0.329) (2024-09-12)
 
 
