@@ -27,7 +27,7 @@ const closedMixin = (config, theme) => ({
     easing  : theme.transitions.easing.sharp,
   }),
   width                       : 0,
-  [theme.breakpoints.up("sm")]: { width: config?.miniDrawerWidth || DEFAULT_MINI_DRAWER_WIDTH },
+  [theme.breakpoints.up("sm")]: { width: `${config?.miniDrawerWidth || DEFAULT_MINI_DRAWER_WIDTH}px` },
 });
 
 export const SCDrawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== "open" })(({ config, open, theme }) => ({
