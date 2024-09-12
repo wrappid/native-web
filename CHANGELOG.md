@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.329](https://github.com/wrappid/native-web/compare/v0.0.328...v0.0.329) (2024-09-12)
+
+
+### Bug Fixes
+
+* **core:** :bug: navigation/NativeLink props handling ([bc0f5a8](https://github.com/wrappid/native-web/commit/bc0f5a8d32e12ce718de7fd7525a63c6d9adf120)), closes [#127](https://github.com/wrappid/native-web/issues/127)
+
 ### [0.0.328](https://github.com/wrappid/native-web/compare/v0.0.327...v0.0.328) (2024-09-12)
 
 
