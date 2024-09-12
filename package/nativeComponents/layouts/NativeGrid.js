@@ -34,7 +34,11 @@ export default function NativeGrid(props) {
               key={index}
               NativeId={itemId}
               item
-              {...getGridSizeProps(child?.props?.gridProps?.gridSize)}
+              // check if child?.props?.gridProps?.enable === false
+              {...(
+                (!child?.props?.gridProps?.enabled
+                  || (child?.props?.gridProps?.enabled && child?.props?.gridProps?.enabled === false)
+                ) && getGridSizeProps(child?.props?.gridProps?.gridSize))}
               styleClasses={child.props?.gridProps?.styleClasses || []}
             >
               {child}
