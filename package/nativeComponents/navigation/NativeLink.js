@@ -6,7 +6,7 @@ import NativeTooltip from "../dataDisplay/NativeTooltip";
 
 export default function NativeLink(props) {
   // eslint-disable-next-line no-unused-vars
-  const { title, titlePlacement = "top", size = "small", ...restProps } = props;
+  const { title, titlePlacement = "top", size = "small", underline, ...restProps } = props;
   const newTabFlag = restProps?.href?.includes("http") ? true : false;
 
   return (
@@ -14,21 +14,19 @@ export default function NativeLink(props) {
       {title ? (
         <NativeTooltip title={title} arrow placement={titlePlacement}>
           <SCLink
-            {...restProps}
-            underline="none"
+            underline={underline ? underline : "none"}
             target={newTabFlag ? "_blank" : ""}
-            rel={newTabFlag ? "noreferrer" : ""}>
-            {restProps.children}
-          </SCLink>
+            rel={newTabFlag ? "noreferrer" : ""}
+            {...restProps}
+          />
         </NativeTooltip>
       ) : (
         <SCLink
-          {...restProps}
-          underline="none"
+          underline={underline ? underline : "none"}
           target={newTabFlag ? "_blank" : ""}
-          rel={newTabFlag ? "noreferrer" : ""}>
-          {restProps.children}
-        </SCLink>
+          rel={newTabFlag ? "noreferrer" : ""}
+          {...restProps}
+        />
       )}
     </>
   );
