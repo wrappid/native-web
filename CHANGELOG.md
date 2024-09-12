@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.328](https://github.com/wrappid/native-web/compare/v0.0.327...v0.0.328) (2024-09-12)
+
+
+### Bug Fixes
+
+* **global:** :bug: fix miniDrawer as it not visible ([48e664d](https://github.com/wrappid/native-web/commit/48e664d16435bc682d28f43a4f59671a5c60dbf5)), closes [#132](https://github.com/wrappid/native-web/issues/132)
+
 ### [0.0.327](https://github.com/wrappid/native-web/compare/v0.0.326...v0.0.327) (2024-09-09)
 
 
