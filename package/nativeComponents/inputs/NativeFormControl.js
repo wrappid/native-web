@@ -4,7 +4,8 @@ import React from "react";
 import { SCFormControl } from "../../styledComponents/inputs/SCFormControl";
 /**
  * @todo
- * removed fullWidth=true and variant=standard,
+ * added default fullWidth, set it to true as default
+ * removed variant=standard.
  * need to handle impact.
  * @param {*} props 
  * @returns 
