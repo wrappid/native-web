@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.331](https://github.com/wrappid/native-web/compare/v0.0.330...v0.0.331) (2024-09-14)
+
+
+### Features
+
+* **core:** :zap: add default fullWidth ([46e62a8](https://github.com/wrappid/native-web/commit/46e62a8cd2ebfafde7fb569538b4f19435a0bec7)), closes [#124](https://github.com/wrappid/native-web/issues/124)
+
 ### [0.0.330](https://github.com/wrappid/native-web/compare/v0.0.329...v0.0.330) (2024-09-12)
 
 
