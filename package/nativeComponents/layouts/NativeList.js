@@ -9,7 +9,9 @@ import { SCList } from "../../styledComponents/layouts/SCList";
 export default function NativeList(props) {
 
   const { children, ...restProps } = props;
-  const [gridProps, setGridProps] = React.useState({ gridSize: { md: Number(props.gridItemComponent) } });
+  const [gridProps, setGridProps] = React.useState({});
+
+  React.useEffect(() => { setGridProps({ gridSize: { md: Number(props.gridItemComponent) } }); }, []);
   const listStyleClasses = () => {
     let styleClasses = [];
       
