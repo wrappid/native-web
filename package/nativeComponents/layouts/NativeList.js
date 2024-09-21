@@ -6,12 +6,16 @@ import { UtilityClasses } from "@wrappid/styles";
 import NativeGrid from "./NativeGrid";
 import { SCList } from "../../styledComponents/layouts/SCList";
 
+const gridItemComponentObj = {
+  default: 12, l: 4, m: 3, s: 2, xl: 6, xs: 1 
+};
+
 export default function NativeList(props) {
 
   const { children, ...restProps } = props;
   const [gridProps, setGridProps] = React.useState({});
 
-  React.useEffect(() => { setGridProps({ gridSize: { md: Number(props.gridItemComponent) } }); }, []);
+  React.useEffect(() => { setGridProps({ gridSize: { md: gridItemComponentObj[props.gridItemComponent] } }); }, []);
   const listStyleClasses = () => {
     let styleClasses = [];
       
@@ -27,7 +31,10 @@ export default function NativeList(props) {
     let styleClasses = [];
       
     if (props.listType) {
-      styleClasses.push(UtilityClasses.DISPLAY.LIST_ITEM, UtilityClasses.PADDING.P0, UtilityClasses.BORDER.BORDER);
+      styleClasses.push(UtilityClasses.DISPLAY.LIST_ITEM, UtilityClasses.PADDING.P0);
+    }
+    if (props.borderList === true ) {
+      styleClasses.push(UtilityClasses.BORDER.BORDER);
     }
     return [...styleClasses, ...(childProps?.styleClasses || [])];
   };
