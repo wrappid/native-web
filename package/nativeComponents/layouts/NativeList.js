@@ -3,15 +3,18 @@ import React from "react";
 // eslint-disable-next-line import/no-unresolved
 import { UtilityClasses } from "@wrappid/styles";
 
+import NativeGrid from "./NativeGrid";
 import { SCList } from "../../styledComponents/layouts/SCList";
 
 export default function NativeList(props) {
 
   const { children, ...restProps } = props;
+  const [gridProps, setGridProps] = React.useState({});
 
+  React.useEffect(() => { setGridProps({ gridSize: { md: Number(props.gridItemComponent) } }); }, []);
   const listStyleClasses = () => {
     let styleClasses = [];
-
+      
     if (props.variant == "HTML") {
       if (props.listType) {
         styleClasses.push(UtilityClasses.PADDING.PL5, UtilityClasses.LIST_STYLE[props.listType]);
@@ -19,29 +22,73 @@ export default function NativeList(props) {
     }
     return [...styleClasses, ...(props?.styleClasses || [])];
   };
+
   const listItemStyleClasses = (childProps) => {
     let styleClasses = [];
-
+      
     if (props.listType) {
-      styleClasses.push(UtilityClasses.DISPLAY.LIST_ITEM, UtilityClasses.PADDING.P0);
+      styleClasses.push(UtilityClasses.DISPLAY.LIST_ITEM, UtilityClasses.PADDING.P0, UtilityClasses.BORDER.BORDER);
     }
     return [...styleClasses, ...(childProps?.styleClasses || [])];
   };
 
-  return <SCList
-    styleClasses={listStyleClasses()}
-    {...restProps}>{
-      React.Children.map(children, child => {
-        if (React.isValidElement(child)) {
-          const updatedProps = {
-            ...child.props, // Spread existing props
-            styleClasses: listItemStyleClasses(child.props)
-          };
-
-          return React.cloneElement(child, updatedProps); // Pass both props
-        } else {
-          return child;
-        }
-      })}</SCList>;
+  if (props.variant == "GRID") {
+    if (props.gridItemComponent) {
+      return <SCList
+        styleClasses={listStyleClasses()}
+        {...restProps}>
+        <NativeGrid>{
+          React.Children.map(children, child => {
+            if (React.isValidElement(child)) {
+              const updatedProps = {
+                ...child.props,
+                gridProps   : gridProps,
+                styleClasses: listItemStyleClasses(child.props)
+              };
+        
+              return React.cloneElement(child, updatedProps); // Pass both props
+            } else {
+              return child;
+            }
+          })}</NativeGrid>
+      </SCList>;
+    } else {
+      return <SCList
+        styleClasses={listStyleClasses()}
+        {...restProps}>
+        <NativeGrid>{
+          React.Children.map(children, child => {
+            if (React.isValidElement(child)) {
+              const updatedProps = {
+                ...child.props,
+                styleClasses: listItemStyleClasses(child.props)
+              };
+        
+              return React.cloneElement(child, updatedProps); // Pass both props
+            } else {
+              return child;
+            }
+          })}</NativeGrid>
+      </SCList>;
+    }
+  }
+  else {
+  
+    return <SCList
+      styleClasses={listStyleClasses()}
+      {...restProps}>{
+        React.Children.map(children, child => {
+          if (React.isValidElement(child)) {
+            const updatedProps = {
+              ...child.props, // Spread existing props
+              styleClasses: listItemStyleClasses(child.props)
+            };
+        
+            return React.cloneElement(child, updatedProps); // Pass both props
+          } else {
+            return child;
+          }
+        })}</SCList>;
+  }
 }
-
+  
