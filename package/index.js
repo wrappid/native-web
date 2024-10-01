@@ -158,6 +158,7 @@ import NativeCssBaseline from "./theme/NativeCssBaseline.js";
 import NativeThemeProvider from "./theme/NativeThemeProvider";
 import { native_copyToClipboard } from "./utils/app.utils.js";
 import { useNetworkStatus } from "./utils/network.utils.js";
+import NativeFacebookAuthComponent from "./nativeComponents/inputs/custom/NativeFacebookAuthComponent.js";
 export {
   DevNativeDataTable,
   /**
@@ -176,6 +177,6 @@ export {
   NativeTabHead, NativeTable, NativeTableBody, NativeTableBodyCell, NativeTableCell, NativeTableContainer, NativeTableFooter, NativeTableHead, NativeTableHeadCell,
   NativeTableHeadRow, NativeTablePagination, NativeTableRow, NativeTableSortLabel, NativeTabPanel, NativeTabs, NativeTextarea, NativeTextButton, NativeTextField, NativeThemeProvider, NativeTimePicker, NativeTimeRangePicker, NativeToolbar, NativeTooltip, NativeTypography, NativeTypographyBody1, NativeTypographyBody2, NativeTypographyButton, NativeTypographyCaption, NativeTypographyOverline, NativeTypographySubtitle1, NativeTypographySubtitle2, nativeUseLocation, nativeUseNavigate, nativeUseParams, nativeUseScrollTrigger, nativeUseSearchParams, NativeClickAwayListner,
   // Network status custom hook
-  useNetworkStatus, NativeFormControlLabel, NativeFormGroup
+  useNetworkStatus, NativeFormControlLabel, NativeFormGroup, NativeFacebookAuthComponent
 };
 
