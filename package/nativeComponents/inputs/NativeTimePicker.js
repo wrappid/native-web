@@ -3,71 +3,78 @@ import React from "react";
 
 import { LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterMoment } from "@mui/x-date-pickers/AdapterMoment";
-// eslint-disable-next-line import/no-unresolved
-import { UtilityClasses } from "@wrappid/styles";
+import moment from "moment";
 
-import NativeFormErrorText from "./NativeFormErrorText";
-import NativeFormHelperText from "./NativeFormHelperText";
 import NativeTextField from "./NativeTextField";
 import { SCTimePicker } from "../../styledComponents/inputs/SCTimePicker";
-import NativeBox from "../layouts/NativeBox";
 
-export default function NativeTimePicker(props) { 
+export default function NativeTimePicker(props) {
   const {
+    id,
+    name,
+    label,
+    onChange,
+    value,
+    formik,
+    ampm,
+    disablePast,
+    disableFuture,
     touched,
     error,
+    shouldDisableTime,
     minTime,
     maxTime,
-    helperText,
-    formik,
-    id
   } = props;
-  
-  const [time, setTime] = React.useState(props?.value || "");
-  const onChangeTime = (value) => {
-    if(formik){
-      formik?.setFieldValue(id, value);
-    }
-    if(props?.onChange){
-      props?.onChange(value);
-    }
-    setTime(value);
-  };
 
   function getValidDateTime(){}
   return (
     <LocalizationProvider dateAdapter={AdapterMoment}>
-      <NativeBox>
-        <SCTimePicker
-          minTime={ typeof minTime === "string" ? getValidDateTime(minTime) : minTime}
-          maxTime={ typeof maxTime === "string" ? getValidDateTime(maxTime) : maxTime}
-          value={ props?.value ? String(props?.value) : time}
-          onChange={onChangeTime}
-          error={touched && error && error.length > 0 ? true : false}
-          fullWidth={true}
-          renderInput={(params) => (
-            <NativeTextField
-              helperText={
-                touched && error && error.length > 0
-                  ? error
-                  : ""
-              }
-              {...params}
-              InputLabelProps={{ ...params.InputLabelProps, shrink: true }}
-              fullWidth={true}
-            />
-          )}
-          {...props}
-        />
-
-        {error && <NativeFormErrorText>{error}</NativeFormErrorText>}
-
-        {helperText && (
-          <NativeFormHelperText styleClasses={[UtilityClasses.MARGIN.M0]}>
-            {helperText}
-          </NativeFormHelperText>
+      <SCTimePicker
+        id={id}
+        name={name}
+        label={label}
+        inputFormat={ampm ? "hh:mm " : "HH:mm"}
+        ampm={ampm}
+        minTime={ typeof minTime === "string" ? getValidDateTime(minTime) : minTime}
+        maxTime={ typeof maxTime === "string" ? getValidDateTime(maxTime) : maxTime}
+        disablePast={disablePast}
+        disableFuture={disableFuture}
+        shouldDisableTime={shouldDisableTime}
+        value={
+          value
+            ? typeof value === "string" && value.includes(":")
+              ? moment().set({
+                hour  : value.split(":")[0],
+                minute: value.split(":")[1],
+              })
+              : value
+            : null
+        }
+        onChange={(val) => {
+          // eslint-disable-next-line no-console
+          console.log("V", val);
+          if (formik) {
+            formik.setFieldValue(id, val.format(ampm ? "hh:mm" : "HH:mm"));
+          } else if (onChange) {
+            onChange(val);
+          }
+        }}
+        error={touched && error && error.length > 0 ? true : false}
+        fullWidth={true}
+        renderInput={(params) => (
+          <NativeTextField
+            helperText={
+              touched && error && error.length > 0
+                ? error
+                : ""
+            }
+            {...params}
+            InputLabelProps={{ ...params.InputLabelProps, shrink: true }}
+            fullWidth={true}
+          />
         )}
-      </NativeBox>
+      />
+      
     </LocalizationProvider>
   );
 }
