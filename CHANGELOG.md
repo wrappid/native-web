@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.333](https://github.com/wrappid/native-web/compare/v0.0.332...v0.0.333) (2024-10-03)
+
+
+### Features
+
+* **core:** :sparkles: facebook auth component for web ([ed586d9](https://github.com/wrappid/native-web/commit/ed586d99f00eb6115a61472c7c4fd6299bd3236c)), closes [#142](https://github.com/wrappid/native-web/issues/142)
+
+
+### Bug Fixes
+
+* **core:** :recycle: linting fix ([8f1bb57](https://github.com/wrappid/native-web/commit/8f1bb57945787b0e30c13b6a27bb98dfa4ba18ea)), closes [#142](https://github.com/wrappid/native-web/issues/142)
+
 ### [0.0.332](https://github.com/wrappid/native-web/compare/v0.0.331...v0.0.332) (2024-09-21)
 
 
