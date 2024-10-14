@@ -33,7 +33,7 @@ export default function NativeTimePicker(props) {
         id={id}
         name={name}
         label={label}
-        inputFormat={ampm ? "hh:mm " : "HH:mm"}
+        inputFormat={ampm ? "hh:mm" : "HH:mm"}
         ampm={ampm}
         minTime={ typeof minTime === "string" ? getValidDateTime(minTime) : minTime}
         maxTime={ typeof maxTime === "string" ? getValidDateTime(maxTime) : maxTime}
@@ -74,7 +74,6 @@ export default function NativeTimePicker(props) {
           />
         )}
       />
-      
     </LocalizationProvider>
   );
 }
