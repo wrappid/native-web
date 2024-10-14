@@ -14,39 +14,19 @@ import NativeBox from "../layouts/NativeBox";
 import NativeStack from "../layouts/NativeStack";
 
 export default function NativeDateTimeRangePicker(props) {
-  const { label, value, id, formik } = props;
-  const [startDateTime, setStartDateTime] = React.useState(props?.value || "");
-  const [endDateTime, setEndDateTime] = React.useState(props?.value || "");
-  const onChangeStartDateTime = (value) => {
-    if(formik){
-      formik?.setFieldValue(id, value);
-    }
-    if(props?.onChange){
-      props?.onChange(value);
-    }
-    setStartDateTime(value);
-  };
-  const onChangeEndDateTime = (value) => {
-    if(formik){
-      formik?.setFieldValue(id, value);
-    }
-    if(props?.onChange){
-      props?.onChange(value);
-    }
-    setEndDateTime(value);
-  };
+  const { value, formik } = props;
   let spValue = {
-    endDate:
-      value && value.endDate
-        ? typeof value.endDate === "string"
-          ? moment(value.endDate)
-          : value.endDate
+    endDateTime:
+      value && value.endDateTime
+        ? typeof value.endDateTime === "string"
+          ? moment(value.endDateTime)
+          : value.endDateTime
         : "",
-    startDate:
-      value && value.startDate
-        ? typeof value.startDate === "string"
-          ? moment(value.startDate)
-          : value.startDate
+    startDateTime:
+      value && value.startDateTime
+        ? typeof value.startDateTime === "string"
+          ? moment(value.startDateTime)
+          : value.startDateTime
         : "",
   };
 
@@ -57,10 +37,15 @@ export default function NativeDateTimeRangePicker(props) {
           <SCDateTimePicker
             id={props.id}
             name={props.id}
-            label={label}
-            inputFormat="DD/MM/YYYY hh:mm"
-            value={spValue?.startDate ? String(spValue.endDate) : startDateTime}
-            onChange={onChangeStartDateTime}
+            label={"Start DateTime"}
+            inputFormat="DD/MM/YYYY hh:mm a"
+            value={spValue?.startDateTime}
+            onChange={(val) => {
+              formik.setFieldValue(props.id, {
+                ...value,
+                startDateTime: moment(val).format("YYYY-MM-DD hh:mm a"),
+              });
+            }}
             error={
               props.touched && props.error && props.error.length > 0 ? true : false
             }
@@ -75,24 +60,24 @@ export default function NativeDateTimeRangePicker(props) {
               />
             )}
           />
-
-          {props?.helperText?.end && (
-            <NativeFormHelperText styleClasses={[UtilityClasses.MARGIN.M0]}>
-              {props?.helperText?.end}
-            </NativeFormHelperText>
-          )}
         </NativeBox>
 
         <NativeBox styleClasses={[UtilityClasses.ALIGNMENT.ALIGN_ITEMS_CENTER]}>-</NativeBox>
 
         <NativeBox>
+
           <SCDateTimePicker
             id={props.id}
             name={props.id}
-            label={label}
-            inputFormat="DD/MM/YYYY hh:mm"
-            value={spValue?.endDate ? String(spValue.endDate) : endDateTime}
-            onChange={onChangeEndDateTime}
+            label={"End DateTime"}
+            inputFormat="DD/MM/YYYY hh:mm a"
+            value={spValue?.endDateTime}
+            onChange={(val) => {
+              formik.setFieldValue(props.id, {
+                ...value,
+                endDateTime: moment(val).format("YYYY-MM-DD hh:mm a"),
+              });
+            }}
             error={
               props.touched && props.error && props.error.length > 0 ? true : false
             }
@@ -108,11 +93,10 @@ export default function NativeDateTimeRangePicker(props) {
             )}
           />
 
-          {props?.helperText?.end && (
-            <NativeFormHelperText styleClasses={[UtilityClasses.MARGIN.M0]}>
-              {props?.helperText?.end}
-            </NativeFormHelperText>
-          )}
+          <NativeFormHelperText styleClasses={[UtilityClasses.MARGIN.P0]}>
+            {props.helperText}
+          </NativeFormHelperText>
+
         </NativeBox>
       </NativeStack> 
     </LocalizationProvider>
