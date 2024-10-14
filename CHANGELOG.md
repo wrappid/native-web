@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.336](https://github.com/wrappid/native-web/compare/v0.0.335...v0.0.336) (2024-10-14)
+
+
+### Bug Fixes
+
+* **core:** :bug: fix NativeTimepicker ([b048202](https://github.com/wrappid/native-web/commit/b048202efe7f2eb542edb69d495173e61125d081)), closes [#146](https://github.com/wrappid/native-web/issues/146)
+* **global:** :bug: date and time piceker related compomnent fix  not working with formik ([b4152b9](https://github.com/wrappid/native-web/commit/b4152b944669146c5a45bc0ed933850441b2f576)), closes [#146](https://github.com/wrappid/native-web/issues/146)
+
 ### [0.0.335](https://github.com/wrappid/native-web/compare/v0.0.334...v0.0.335) (2024-10-14)
 
 
