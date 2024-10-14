@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.335](https://github.com/wrappid/native-web/compare/v0.0.334...v0.0.335) (2024-10-14)
+
+
+### Features
+
+* **global:** :fire: code structure has been improved in corelist ([81fe392](https://github.com/wrappid/native-web/commit/81fe3921e1f5fc5df862c7cf5544e741a99f6809)), closes [#136](https://github.com/wrappid/native-web/issues/136)
+* **global:** :sparkles: added a new constant and a new props to add styleclasses ([37e26e1](https://github.com/wrappid/native-web/commit/37e26e1faf8599ca06b6ad31d6218df714572e0c)), closes [#136](https://github.com/wrappid/native-web/issues/136)
+* **global:** :sparkles: borderList props has been added to corelist ([af349d1](https://github.com/wrappid/native-web/commit/af349d10dc95ce15f52b8fdb3a7324838b2bf7ad)), closes [#136](https://github.com/wrappid/native-web/issues/136)
+
+### [0.0.334](https://github.com/wrappid/native-web/compare/v0.0.333...v0.0.334) (2024-10-10)
+
+
+### Features
+
+* **core:** :sparkles: added login with linkedin component for web ([5d45b83](https://github.com/wrappid/native-web/commit/5d45b8329c5623ab8a7c984a0c4d4ec2b3ce04e7)), closes [#141](https://github.com/wrappid/native-web/issues/141)
+* **core:** :sparkles: adds the github auth component for the web ([38ce83f](https://github.com/wrappid/native-web/commit/38ce83f4435e21e251883d12bf6b74e5ebca7871)), closes [#140](https://github.com/wrappid/native-web/issues/140)
+* **core:** :sparkles: native component code for login with linkedin ([544ab7f](https://github.com/wrappid/native-web/commit/544ab7f310f7d2322decf5bcdd5c243b0b912536)), closes [#141](https://github.com/wrappid/native-web/issues/141)
+
 ### [0.0.333](https://github.com/wrappid/native-web/compare/v0.0.332...v0.0.333) (2024-10-03)
 
 
