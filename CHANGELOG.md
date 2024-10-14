@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.335](https://github.com/wrappid/native-web/compare/v0.0.334...v0.0.335) (2024-10-14)
+
+
+### Features
+
+* **global:** :fire: code structure has been improved in corelist ([81fe392](https://github.com/wrappid/native-web/commit/81fe3921e1f5fc5df862c7cf5544e741a99f6809)), closes [#136](https://github.com/wrappid/native-web/issues/136)
+* **global:** :sparkles: added a new constant and a new props to add styleclasses ([37e26e1](https://github.com/wrappid/native-web/commit/37e26e1faf8599ca06b6ad31d6218df714572e0c)), closes [#136](https://github.com/wrappid/native-web/issues/136)
+* **global:** :sparkles: borderList props has been added to corelist ([af349d1](https://github.com/wrappid/native-web/commit/af349d10dc95ce15f52b8fdb3a7324838b2bf7ad)), closes [#136](https://github.com/wrappid/native-web/issues/136)
+
 ### [0.0.334](https://github.com/wrappid/native-web/compare/v0.0.333...v0.0.334) (2024-10-10)
 
 
