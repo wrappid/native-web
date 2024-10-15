@@ -12,25 +12,31 @@ import { SCDateTimePicker } from "../../styledComponents/inputs/SCDateTimePicker
 import NativeBox from "../layouts/NativeBox";
 
 export default function NativeDateTimePicker(props) {
-  const { formik, id } = props;
-  const [dateTime, setDateTime] = React.useState(props?.value || "");
-  const onChange = (value) => {
-    if(formik){
-      formik?.setFieldValue(id, value);
+  const { id, label, formik, value: propsValue, onChange: propsOnChange } = props;
+
+  const handleChange = (newValue) => {
+    const formattedValue = newValue ? newValue.format("YYYY-MM-DD hh:mm a") : null;
+
+    if (formik) {
+      formik.setFieldValue(id, formattedValue);
     }
-    if(props?.onChange){
-      props?.onChange(value);
+    if (propsOnChange) {
+      propsOnChange(formattedValue);
     }
-    setDateTime(value);
   };
+
+  const value = formik ? formik.values[id] : propsValue;
 
   return (
     <LocalizationProvider dateAdapter={AdapterMoment}>
       <NativeBox>
         <SCDateTimePicker
-          value={props?.value ? String(props.value) : dateTime}
-          onChange={onChange}
-          fullWidth={true}
+          id={props.id}
+          name={props.id}
+          label={label}
+          inputFormat="DD/MM/YYYY hh:mm a"
+          value={value}
+          onChange={handleChange}
           error={
             props.touched && props.error && props.error.length > 0 ? true : false
           }
@@ -42,11 +48,8 @@ export default function NativeDateTimePicker(props) {
                   : ""
               }
               {...params}
-              InputLabelProps={{ ...params.InputLabelProps, shrink: true }} 
-              fullWidth={true}
             />
           )}
-          {...props}
         />
 
         <NativeFormHelperText styleClasses={[UtilityClasses.MARGIN.M0]}>
@@ -56,3 +59,4 @@ export default function NativeDateTimePicker(props) {
     </LocalizationProvider>
   );
 }
+
