@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.337](https://github.com/wrappid/native-web/compare/v0.0.336...v0.0.337) (2024-10-15)
+
+
+### Features
+
+* **global:** :sparkles: create toolbox component ([8a713ed](https://github.com/wrappid/native-web/commit/8a713ed3d2642f175f3e181f19147be0bb72fa48)), closes [#139](https://github.com/wrappid/native-web/issues/139)
+
 ### [0.0.336](https://github.com/wrappid/native-web/compare/v0.0.335...v0.0.336) (2024-10-14)
 
 
