@@ -154,6 +154,7 @@ import NativeFooter from "./nativeComponents/surfaces/NativeFooter";
 import NativePaper from "./nativeComponents/surfaces/NativePaper";
 import NativeRightDrawer from "./nativeComponents/surfaces/NativeRightDrawer";
 import NativeToolbar from "./nativeComponents/surfaces/NativeToolbar";
+import NativeToolBox from "./nativeComponents/surfaces/NativeToolBox.js";
 import NativeFade from "./nativeComponents/utils/NativeFade";
 import NativeModal from "./nativeComponents/utils/NativeModal";
 import NativePopover from "./nativeComponents/utils/NativePopover";
@@ -179,5 +180,5 @@ export {
   NativeTabHead, NativeTable, NativeTableBody, NativeTableBodyCell, NativeTableCell, NativeTableContainer, NativeTableFooter, NativeTableHead, NativeTableHeadCell,
   NativeTableHeadRow, NativeTablePagination, NativeTableRow, NativeTableSortLabel, NativeTabPanel, NativeTabs, NativeTextarea, NativeTextButton, NativeTextField, NativeThemeProvider, NativeTimePicker, NativeTimeRangePicker, NativeToolbar, NativeTooltip, NativeTypography, NativeTypographyBody1, NativeTypographyBody2, NativeTypographyButton, NativeTypographyCaption, NativeTypographyOverline, NativeTypographySubtitle1, NativeTypographySubtitle2, nativeUseLocation, nativeUseNavigate, nativeUseParams, nativeUseScrollTrigger, nativeUseSearchParams, NativeClickAwayListner,
   // Network status custom hook
-  useNetworkStatus, NativeFormControlLabel, NativeFormGroup, NativeFacebookAuthComponent, NativeGithubAuthComponent, NativeLinkedInAuthComponent
+  useNetworkStatus, NativeFormControlLabel, NativeFormGroup, NativeToolBox, NativeFacebookAuthComponent, NativeGithubAuthComponent, NativeLinkedInAuthComponent
 };
