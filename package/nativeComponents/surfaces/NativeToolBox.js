@@ -121,6 +121,7 @@ export default function NativeToolBox({
         width : expanded ? "auto" : dimensions.width || "auto",
       }}
       styleClasses={[  
+        // eslint-disable-next-line etc/no-commented-out-code
         // UtilityClasses.POSITION.POSITION_ABSOLUTE,
         UtilityClasses.OVERFLOW.OVERFLOW_HIDDEN, UtilityClasses.DISPLAY.FLEX, UtilityClasses.FLEX.DIRECTION_COLUMN
       ]}
