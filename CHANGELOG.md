@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.338](https://github.com/wrappid/native-web/compare/v0.0.337...v0.0.338) (2024-10-16)
+
+
+### Bug Fixes
+
+* **global:** :bug: fix NativeInput label allignment ([d2d1286](https://github.com/wrappid/native-web/commit/d2d1286c59a57854e12ddf2ce69df813f3c7883c)), closes [#109](https://github.com/wrappid/native-web/issues/109)
+
 ### [0.0.337](https://github.com/wrappid/native-web/compare/v0.0.336...v0.0.337) (2024-10-15)
 
 
