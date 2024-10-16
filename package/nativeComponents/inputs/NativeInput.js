@@ -20,7 +20,7 @@ export default function NativeInput(props) {
   };
 
   return (
-    <NativeFormControl NativeId={`Native-formControl-${NativeId}`}>
+    <NativeFormControl variant={props?.variant || "standard"} NativeId={`Native-formControl-${NativeId}`}>
       <NativeInputLabel
         shrink={true}
         error={
@@ -36,7 +36,7 @@ export default function NativeInput(props) {
         type={props.showPassword || !props.type ? "text" : props.type}
         label={props.label}
         styleClasses={[...(props.styleClasses || [])]}
-        variant="standard"
+        variant={props?.variant || "standard"}
         value={props?.value ? String(props.value) : inputText}
         onChange={onChange}
         required={props.formik ? false : props.required}
