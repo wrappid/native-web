@@ -1,3 +1,4 @@
+/* eslint-disable etc/no-commented-out-code */
 // eslint-disable-next-line no-unused-vars, unused-imports/no-unused-imports
 import React, { useRef, useState, useEffect } from "react";
 
@@ -26,6 +27,7 @@ export default function NativeToolBox({
   positionLeft, 
   positionTop, 
   toolTitle, 
+  toolboxActionButton,
   ...props 
 }) {
   const cardRef = useRef(null);
@@ -120,7 +122,8 @@ export default function NativeToolBox({
       }}
       styleClasses={[  
         // UtilityClasses.POSITION.POSITION_ABSOLUTE,
-        UtilityClasses.OVERFLOW.OVERFLOW_HIDDEN, UtilityClasses.DISPLAY.FLEX, UtilityClasses.FLEX.DIRECTION_COLUMN]}
+        UtilityClasses.OVERFLOW.OVERFLOW_HIDDEN, UtilityClasses.DISPLAY.FLEX, UtilityClasses.FLEX.DIRECTION_COLUMN
+      ]}
     >
       <NativeCardHeader
         avatar={
@@ -133,13 +136,14 @@ export default function NativeToolBox({
         }
         title={toolTitle}
         action={
-          <NativeIconButton
-            aria-label="restart"
-            onClick={() => {
-              setPosition({ left: positionLeft, top: positionTop });
-            }}>
-            <NativeIcon type="material-icons" name="restart_alt" childrenFlag={true} />
-          </NativeIconButton>
+          // <NativeIconButton
+          //   aria-label="restart"
+          //   onClick={() => {
+          //     setPosition({ left: positionLeft, top: positionTop });
+          //   }}>
+          //   <NativeIcon type="material-icons" name="restart_alt" childrenFlag={true} />
+          // </NativeIconButton>
+          toolboxActionButton
         }
         styleClasses={[UtilityClasses.CURSOR.CURSOR_MOVE, UtilityClasses.BORDER.BORDER_BOTTOM]}
         onMouseDown={onMouseDownHeader}
