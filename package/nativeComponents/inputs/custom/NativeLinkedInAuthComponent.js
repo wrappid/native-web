@@ -10,7 +10,7 @@ export default function NativeLinkedInAuthComponent(props){
   return (
     <>
       <NativeImage
-        styleClasses={[UtilityClasses.CURSOR.CURSOR_POINTER, UtilityClasses.BORDER.BORDER_ROUNDED_CIRCLE]}
+        styleClasses={[UtilityClasses.CURSOR.CURSOR_POINTER]}
         src="https://www.svgrepo.com/show/448234/linkedin.svg"
         width="38"
         height="38"
