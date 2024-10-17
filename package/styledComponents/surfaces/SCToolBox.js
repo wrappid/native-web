@@ -10,8 +10,8 @@ const defaultStyleClasses = [StyledComponentsClasses.SURFACES.CARD];
 
 export const SCToolBox = styled(Card, {})((props) => ({
   ...getEffectiveStyle([...defaultStyleClasses, ...(props?.styleClasses || [])]),
-  maxHeight: "40vh", // Hardcoded max height
-  maxWidth : "60vh", // Hardcoded max width
-  minWidth : "10%", // Hardcoded min width
+  maxHeight: "40vh", 
+  maxWidth : "100%", 
+  minWidth : "10%", 
   resize   : props.resize || "none",
 }));
