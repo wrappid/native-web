@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.341](https://github.com/wrappid/native-web/compare/v0.0.340...v0.0.341) (2024-10-17)
+
+
+### Features
+
+* **global:** :sparkles: add a props which can take component ([1451b09](https://github.com/wrappid/native-web/commit/1451b09a0c42b7658455c1caced15916c0076f32)), closes [#139](https://github.com/wrappid/native-web/issues/139)
+* **global:** :sparkles: more than 2 icon automatically hide with 3 dot icon ([0ddfed8](https://github.com/wrappid/native-web/commit/0ddfed8626b41595291730fbd5cb91ac3d58035d)), closes [#139](https://github.com/wrappid/native-web/issues/139)
+
 ### [0.0.340](https://github.com/wrappid/native-web/compare/v0.0.339...v0.0.340) (2024-10-17)
 
 
