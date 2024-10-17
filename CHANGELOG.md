@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.340](https://github.com/wrappid/native-web/compare/v0.0.339...v0.0.340) (2024-10-17)
+
+
+### Features
+
+* **core:** :lipstick: socila login icon change ([0acc1a2](https://github.com/wrappid/native-web/commit/0acc1a20c77ca01f2524353e7b72e0b6965d070c)), closes [#152](https://github.com/wrappid/native-web/issues/152)
+
 ### [0.0.339](https://github.com/wrappid/native-web/compare/v0.0.338...v0.0.339) (2024-10-16)
 
 ### [0.0.338](https://github.com/wrappid/native-web/compare/v0.0.337...v0.0.338) (2024-10-16)
