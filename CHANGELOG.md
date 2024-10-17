@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.343](https://github.com/wrappid/native-web/compare/v0.0.342...v0.0.343) (2024-10-17)
+
+
+### Bug Fixes
+
+* **core:** :lipstick: svg icon url change for linkdin login icon ([5b42a2e](https://github.com/wrappid/native-web/commit/5b42a2e93230ed93fe3ec83329e1d5fabeb04b0b)), closes [#152](https://github.com/wrappid/native-web/issues/152)
+
 ### [0.0.342](https://github.com/wrappid/native-web/compare/v0.0.341...v0.0.342) (2024-10-17)
 
 ### [0.0.341](https://github.com/wrappid/native-web/compare/v0.0.340...v0.0.341) (2024-10-17)
