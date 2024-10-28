@@ -43,6 +43,10 @@ export default function NativeToolBox({
   const [dimensions, setDimensions] = useState({ height: undefined, width: undefined });
   const [dropdownVisible, setDropdownVisible] = useState(false); // Add dropdown visibility state
 
+  useEffect(() => {
+    setExpanded(expandProp);
+  }, [expandProp]);
+
   // Set initial position based on the rendered position if the card is already placed
   useEffect(() => {
     if (cardRef.current) {
@@ -101,15 +105,16 @@ export default function NativeToolBox({
   };
 
   const handleExpandClick = () => {
-    setExpanded((prev) => {
-      // Force an update of dimensions when toggling expanded state
-      if (!prev) {
-        const { width, height } = cardRef.current.getBoundingClientRect();
+    const newExpanded = !expanded;
 
-        setDimensions({ height, width });
-      }
-      return !prev;
-    });
+    setExpanded(newExpanded);
+  
+    // Force an update of dimensions when toggling expanded state
+    if (newExpanded && cardRef.current) {
+      const { width, height } = cardRef.current.getBoundingClientRect();
+
+      setDimensions({ height, width });
+    }
   };
 
   // Logic to handle rendering of buttons and dropdown
