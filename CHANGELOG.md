@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.344](https://github.com/wrappid/native-web/compare/v0.0.343...v0.0.344) (2024-10-31)
+
+
+### Bug Fixes
+
+* **global:** :bug: fixed expand-collapse in toolbox ([20bebc0](https://github.com/wrappid/native-web/commit/20bebc09452a5f5eabb178171bff38e54f3577ca)), closes [#139](https://github.com/wrappid/native-web/issues/139)
+
 ### [0.0.343](https://github.com/wrappid/native-web/compare/v0.0.342...v0.0.343) (2024-10-17)
 
 
