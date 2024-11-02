@@ -17,7 +17,7 @@ const openedMixin = (config, theme) => ({
     duration: theme.transitions.duration.enteringScreen,
     easing  : theme.transitions.easing.sharp,
   }),
-  width: config?.drawerWidth || DEFAULT_DRAWER_WIDTH,
+  width: `${config?.drawerWidth || DEFAULT_DRAWER_WIDTH}px`,
 });
 
 const closedMixin = (config, theme) => ({
