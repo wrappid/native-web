@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.347](https://github.com/wrappid/native-web/compare/v0.0.346...v0.0.347) (2024-11-04)
+
+
+### Bug Fixes
+
+* **core:** :bug: otp input fix ([819d9e9](https://github.com/wrappid/native-web/commit/819d9e9b02aa93b6b43b460c415f59c1e0d27952))
+
 ### [0.0.346](https://github.com/wrappid/native-web/compare/v0.0.345...v0.0.346) (2024-11-04)
 
 
