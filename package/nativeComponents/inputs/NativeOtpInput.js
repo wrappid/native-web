@@ -1,6 +1,6 @@
 // eslint-disable-next-line import/order, no-unused-vars, unused-imports/no-unused-imports
-import React from "react";
 import { useTheme } from "@mui/material";
+import React from "react";
 import OtpInput from "react-otp-input";
 
 export default function NativeOtpInput(props) {
@@ -108,6 +108,7 @@ export default function NativeOtpInput(props) {
       renderInput={(props, index) => (
         <input
           {...props}
+          autoComplete={index == 0 ? "one-time-code" : "off"}
           ref={(element) => (inputRefs.current[index] = element)}
           onKeyDown={(event) => handleKeyDown(event, index)}
           onPaste={handlePaste} // paste event handler

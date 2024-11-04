@@ -3,10 +3,10 @@ import React from "react";
 
 import { useTheme } from "@mui/material";
 
-import NativeFormControl from "./NativeFormControl";
-import NativeInputLabel from "./NativeInputLabel";
 import { getUUID } from "../../helper/appUtils";
 import { SCInput } from "../../styledComponents/inputs/SCInput";
+import NativeFormControl from "./NativeFormControl";
+import NativeInputLabel from "./NativeInputLabel";
 
 export default function NativeInput(props) {
   const { NativeId = getUUID() } = props;
@@ -32,6 +32,7 @@ export default function NativeInput(props) {
       </NativeInputLabel>
 
       <SCInput
+        {...props}
         id={props.id}
         type={props.showPassword || !props.type ? "text" : props.type}
         label={props.label}
