@@ -4,10 +4,8 @@ import React from "react";
 import { LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterMoment } from "@mui/x-date-pickers/AdapterMoment";
 // eslint-disable-next-line import/no-unresolved
-import { UtilityClasses } from "@wrappid/styles";
 import moment from "moment";
 
-import NativeFormHelperText from "./NativeFormHelperText";
 import NativeTextField from "./NativeTextField";
 import { SCTimePicker } from "../../styledComponents/inputs/SCTimePicker";
 import NativeLabel from "../dataDisplay/paragraph/NativeLabel";
@@ -59,21 +57,11 @@ export default function NativeTimeRangePicker(props) {
                 startTime: moment(val).format("HH:MM a"),
               });
             }}
-            error={
-              props.touched && props.error && props.error.length > 0
-                ? true
-                : false
-            }
             fullWidth={true}
             renderInput={(params) => (
               <NativeTextField
-                helperText={
-                  props.touched && props.error && props.error.length > 0
-                    ? props.error
-                    : ""
-                }
                 {...params}
-                InputLabelProps={{ ...params.InputLabelProps, shrink: true }} 
+                error=""
                 fullWidth={true}
               />
             )}
@@ -95,31 +83,16 @@ export default function NativeTimeRangePicker(props) {
                 endTime: moment(val).format("HH:MM a"),
               });
             }}
-            error={
-              props.touched && props.error && props.error.length > 0
-                ? true
-                : false
-            }
             fullWidth={true}
             renderInput={(params) => (
               <NativeTextField
-                error={props.touched && props.error}
-                helperText={
-                  props.touched && props.error && props.error.length > 0
-                    ? props.error
-                    : ""
-                }
                 {...params}
-                InputLabelProps={{ shrink: true }} 
+                error=""
                 fullWidth={true}
               />
             )}
           />
         </NativeGrid>
-
-        <NativeFormHelperText styleClasses={[UtilityClasses.MARGIN.M0]}>
-          {props.helperText}
-        </NativeFormHelperText>
       </LocalizationProvider>
     </NativeBox>
   );

@@ -3,10 +3,10 @@ import React from "react";
 
 import { useTheme } from "@mui/material";
 
-import { getUUID } from "../../helper/appUtils";
-import { SCInput } from "../../styledComponents/inputs/SCInput";
 import NativeFormControl from "./NativeFormControl";
 import NativeInputLabel from "./NativeInputLabel";
+import { getUUID } from "../../helper/appUtils";
+import { SCInput } from "../../styledComponents/inputs/SCInput";
 
 export default function NativeInput(props) {
   const { NativeId = getUUID() } = props;
@@ -22,7 +22,7 @@ export default function NativeInput(props) {
   return (
     <NativeFormControl variant={props?.variant || "standard"} NativeId={`Native-formControl-${NativeId}`}>
       <NativeInputLabel
-        shrink={true}
+        // shrink={true}
         error={
           props.touched && props.error && props.error.length > 0 ? true : false
         }

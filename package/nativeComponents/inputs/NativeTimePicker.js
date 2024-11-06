@@ -63,13 +63,8 @@ export default function NativeTimePicker(props) {
         fullWidth={true}
         renderInput={(params) => (
           <NativeTextField
-            helperText={
-              touched && error && error.length > 0
-                ? error
-                : ""
-            }
             {...params}
-            InputLabelProps={{ ...params.InputLabelProps, shrink: true }}
+            error=""
             fullWidth={true}
           />
         )}
