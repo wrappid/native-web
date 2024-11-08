@@ -39,6 +39,7 @@ export default function NativeInput(props) {
         styleClasses={[...(props.styleClasses || [])]}
         variant={props?.variant || "standard"}
         value={props?.value ? String(props.value) : inputText}
+        shrink={props?.value && true}
         onChange={onChange}
         required={props.formik ? false : props.required}
         placeholder={props.placeholder}
@@ -48,9 +49,6 @@ export default function NativeInput(props) {
         readOnly={props.readOnly}
         onBlur={props?.formik?.handleBlur}
         inputProps={props.inputProps ? { ...props.inputProps, style: defStyle } : { style: defStyle }}
-        error={
-          props.touched && props.error && props.error.length > 0 ? true : false
-        }
         endAdornment={props.endAdornment ? props.endAdornment : null}
         multiline={props.multiline ? props.multiline : false}
         rows={props.rows}

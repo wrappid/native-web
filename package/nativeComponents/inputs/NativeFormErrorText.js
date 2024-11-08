@@ -11,8 +11,8 @@ export default function NativeFormErrorText(props) {
   return (
     <NativeFormHelperText
       {...props}
-      styleClasses={[...(props.styleClasses || []), UtilityClasses.ALIGNMENT.ALIGN_ITEMS_CENTER]}
       error={true}
+      disabledIcon={true}
     >
       <NativeIcon 
         childrenFlag={true} 
