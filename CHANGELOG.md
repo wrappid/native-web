@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.350](https://github.com/wrappid/native-web/compare/v0.0.349...v0.0.350) (2024-11-08)
+
+
+### Features
+
+* **core:** :sparkles: add dimension component ([76cd74c](https://github.com/wrappid/native-web/commit/76cd74c6b85d33a0c4f58d8602213aba0e95b64a)), closes [#158](https://github.com/wrappid/native-web/issues/158)
+
 ### [0.0.349](https://github.com/wrappid/native-web/compare/v0.0.348...v0.0.349) (2024-11-06)
 
 
