@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.349](https://github.com/wrappid/native-web/compare/v0.0.348...v0.0.349) (2024-11-06)
+
+
+### Bug Fixes
+
+* **core:** :art: native inputs consistency match and lint fix ([2e3c947](https://github.com/wrappid/native-web/commit/2e3c947a68a966adc84e3620cd8a21205c0d1e50))
+
 ### [0.0.348](https://github.com/wrappid/native-web/compare/v0.0.347...v0.0.348) (2024-11-05)
 
 ### [0.0.347](https://github.com/wrappid/native-web/compare/v0.0.346...v0.0.347) (2024-11-04)
