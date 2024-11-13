@@ -192,7 +192,7 @@ export default function NativeToolBox({
           UtilityClasses.ALIGNMENT.JUSTIFY_CONTENT_SPACE_BETWEEN,
           UtilityClasses.ALIGNMENT.ALIGN_ITEMS_CENTER,
           UtilityClasses.BORDER.BORDER_BOTTOM,
-          UtilityClasses.BORDER.BORDER_GREY_400,
+          UtilityClasses.BORDER.BORDER_COLOR_GREY_400,
           UtilityClasses.BG.BG_GREY_100
         ]}
         onMouseDown={onMouseDownHeader}
