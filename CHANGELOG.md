@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.352](https://github.com/wrappid/native-web/compare/v0.0.351...v0.0.352) (2024-11-14)
+
+
+### Bug Fixes
+
+* **global:** :bug: some border style property name changed, update this to resolve style changes ([50cabcf](https://github.com/wrappid/native-web/commit/50cabcfb4b2f5420378def6defa1f3e6c9ea1dd6))
+
 ### [0.0.351](https://github.com/wrappid/native-web/compare/v0.0.350...v0.0.351) (2024-11-08)
 
 
