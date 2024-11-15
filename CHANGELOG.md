@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.353](https://github.com/wrappid/native-web/compare/v0.0.352...v0.0.353) (2024-11-15)
+
+
+### Bug Fixes
+
+* **core:** :bug: remove classes from page container ([4bb4194](https://github.com/wrappid/native-web/commit/4bb41943f8ca16d78ac91cbde964dd64f11144f8))
+
 ### [0.0.352](https://github.com/wrappid/native-web/compare/v0.0.351...v0.0.352) (2024-11-14)
 
 
