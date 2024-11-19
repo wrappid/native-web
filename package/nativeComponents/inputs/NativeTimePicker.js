@@ -16,7 +16,7 @@ export default function NativeTimePicker(props) {
     onChange,
     value,
     formik,
-    ampm,
+    ampm = true,
     disablePast,
     disableFuture,
     touched,
@@ -26,7 +26,49 @@ export default function NativeTimePicker(props) {
     maxTime,
   } = props;
 
-  function getValidDateTime(){}
+  /**
+   * Convert UTC time from backend to local time for display
+   * 
+   * @param val - string format 2024-11-19T14:00:00.000Z
+   * @return local moment
+   */
+  function convertToLocale(val) {
+    try {
+      
+      // expecting format 2024-11-19T14:00:00.000Z
+      if (!val || !moment(val, moment.ISO_8601, true).isValid()) {
+        return null;
+      }
+    
+      const date = new Date(val);
+
+      return moment(date);
+  
+      /*  else if (typeof val === "string" && val.includes(":")) {
+        // Handle time strings like "14:00:00" or "14:00"
+        const timeParts = val.split(":");
+        const hours = parseInt(timeParts[0], 10);
+        const minutes = parseInt(timeParts[1], 10);
+      
+        // Create moment object in UTC with current date
+        const utcTime = moment.utc().hours(hours).minutes(minutes);
+      
+        // Convert to local time
+        return utcTime.local();
+      } */
+    } catch (error) {
+      return null;
+    }
+  }
+
+  // Convert local time to UTC for sending to backend
+  function convertToUTC(val) {
+    if(moment.isMoment(val)) {
+      return moment(val).utc().format("YYYY-MM-DDTHH:mm:ss.SSS[Z]");
+    }
+    return null;
+  }
+
   return (
     <LocalizationProvider dateAdapter={AdapterMoment}>
       <SCTimePicker
@@ -35,28 +77,19 @@ export default function NativeTimePicker(props) {
         label={label}
         inputFormat={ampm ? "hh:mm" : "HH:mm"}
         ampm={ampm}
-        minTime={ typeof minTime === "string" ? getValidDateTime(minTime) : minTime}
-        maxTime={ typeof maxTime === "string" ? getValidDateTime(maxTime) : maxTime}
+        minTime={ typeof minTime === "string" ? convertToLocale(minTime) : minTime}
+        maxTime={ typeof maxTime === "string" ? convertToLocale(maxTime) : maxTime}
         disablePast={disablePast}
         disableFuture={disableFuture}
         shouldDisableTime={shouldDisableTime}
-        value={
-          value
-            ? typeof value === "string" && value.includes(":")
-              ? moment().set({
-                hour  : value.split(":")[0],
-                minute: value.split(":")[1],
-              })
-              : value
-            : null
-        }
+        value={convertToLocale(value)}
         onChange={(val) => {
-          // eslint-disable-next-line no-console
-          console.log("V", val);
+          let utcValue = convertToUTC(val);
+          
           if (formik) {
-            formik.setFieldValue(id, val.format(ampm ? "hh:mm" : "HH:mm"));
+            formik.setFieldValue(id, utcValue);
           } else if (onChange) {
-            onChange(val);
+            onChange(utcValue);
           }
         }}
         error={touched && error && error.length > 0 ? true : false}
