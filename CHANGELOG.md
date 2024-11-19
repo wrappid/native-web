@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.355](https://github.com/wrappid/native-web/compare/v0.0.354...v0.0.355) (2024-11-19)
+
+
+### Bug Fixes
+
+* **core:** :bug: time formating issue resolved ([8abea22](https://github.com/wrappid/native-web/commit/8abea22616311c133b270a2763332c590672ca02))
+
 ### [0.0.354](https://github.com/wrappid/native-web/compare/v0.0.353...v0.0.354) (2024-11-18)
 
 
