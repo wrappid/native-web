@@ -3,7 +3,7 @@
 import React from "react";
 
 // eslint-disable-next-line import/no-unresolved
-import { StyledComponentsClasses } from "@wrappid/styles";
+import { StyledComponentsClasses, UtilityClasses } from "@wrappid/styles";
 
 import { queryBuilder } from "./helper";
 import NativeDivider from "../nativeComponents/dataDisplay/NativeDivider";
@@ -77,7 +77,9 @@ export default function getNativeMenuItem(
   return menuItem.type === allTypes?.MENU_SEPERATOR ? (
     <NativeDivider />
   ) : open ? (    
-    <NativeLink href={getLink(menuItem, allTypes, routeRegistry)}>
+    <NativeLink
+      styleClasses={[UtilityClasses.WIDTH.W_100]}
+      href={getLink(menuItem, allTypes, routeRegistry)}>
       <NativeMenuItem
         sx={{
           backgroundColor:
@@ -85,7 +87,7 @@ export default function getNativeMenuItem(
             locationPathname === menuItem?.link &&
             theme?.palette?.secondary?.light,
           height     : "34px",
-          paddingLeft: `calc(13px + ${level * 8}px)`,
+          paddingLeft: `calc(18px + ${level * 8}px)`,
         }}
         key={menuItem.id}
         disablePadding
