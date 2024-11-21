@@ -31,6 +31,12 @@ export default class NativeJSONEditor extends Component {
   }
 
   componentDidUpdate() {
+    if (this.props.readOnly) {
+      this.jsoneditor.setMode("view");
+    } else {
+      this.jsoneditor.setMode("code");
+    }
+    
     this.jsonEditorValueUpdate(this.props.value);
   }
 
