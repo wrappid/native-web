@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.356](https://github.com/wrappid/native-web/compare/v0.0.355...v0.0.356) (2024-11-22)
+
+
+### Bug Fixes
+
+* **core:** :art: menu design fix ([3e7b5ce](https://github.com/wrappid/native-web/commit/3e7b5ce286c3a61f652cdf237f095784d244fb93))
+* **core:** :bug: json component fix ([fb2a8a6](https://github.com/wrappid/native-web/commit/fb2a8a6b97efd46d1ad371ca5e5f3af0545c7d99))
+* **global:** :bug: fixes the issue of padding ([e3084e0](https://github.com/wrappid/native-web/commit/e3084e064c3845d7e69b5b60f8231842e5d264ea)), closes [#161](https://github.com/wrappid/native-web/issues/161)
+
 ### [0.0.355](https://github.com/wrappid/native-web/compare/v0.0.354...v0.0.355) (2024-11-19)
 
 
