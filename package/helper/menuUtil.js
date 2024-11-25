@@ -87,7 +87,7 @@ export default function getNativeMenuItem(
             locationPathname === menuItem?.link &&
             theme?.palette?.secondary?.light,
           height     : "34px",
-          paddingLeft: `calc(18px + ${level * 8}px)`,
+          paddingLeft: `calc(19px + ${level * 8}px)`,
         }}
         key={menuItem.id}
         disablePadding
