@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.357](https://github.com/wrappid/native-web/compare/v0.0.356...v0.0.357) (2024-11-26)
+
+
+### Bug Fixes
+
+* **core:** :bug: handle impact of style package ([7634f9e](https://github.com/wrappid/native-web/commit/7634f9e42626a929b51e0fa5a9dc1b741142e33b)), closes [#163](https://github.com/wrappid/native-web/issues/163)
+* **core:** :bug: menu util related issue resolve ([34e747d](https://github.com/wrappid/native-web/commit/34e747d90a4d052c765753d295499a16e1d59086))
+
 ### [0.0.356](https://github.com/wrappid/native-web/compare/v0.0.355...v0.0.356) (2024-11-22)
 
 
