@@ -40,8 +40,8 @@ export default function NativeModal(props) {
         <NativeBox
           styleClasses={
             props.headerStyle
-              ? [StyledComponentsClasses.MODAL.MODAL_HEADER, UtilityClasses.ALIGNMENT.JUSTIFY_CONTENT_SPACE_BETWEEN, ...(modalStyle?.headerStyle || [])]
-              : [StyledComponentsClasses.MODAL.MODAL_HEADER, UtilityClasses.ALIGNMENT.JUSTIFY_CONTENT_SPACE_BETWEEN]
+              ? [StyledComponentsClasses.MODAL.MODAL_HEADER, UtilityClasses.DISPLAY.FLEX, UtilityClasses.ALIGNMENT.JUSTIFY_CONTENT_SPACE_BETWEEN, ...(modalStyle?.headerStyle || [])]
+              : [StyledComponentsClasses.MODAL.MODAL_HEADER, UtilityClasses.DISPLAY.FLEX, UtilityClasses.ALIGNMENT.JUSTIFY_CONTENT_SPACE_BETWEEN]
           }
           id="modal-modal-title"
         >

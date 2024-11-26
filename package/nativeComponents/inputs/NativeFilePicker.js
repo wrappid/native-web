@@ -57,7 +57,7 @@ export default function NativeFilePicker(props) {
             </NativeTypographyBody1>
 
             <NativeBox
-              styleClasses={[UtilityClasses?.ALIGNMENT?.JUSTIFY_CONTENT_FLEX_END]}
+              styleClasses={[UtilityClasses.DISPLAY.FLEX, UtilityClasses?.ALIGNMENT?.JUSTIFY_CONTENT_FLEX_END]}
               gridProps={{ gridSize: 2 }}
             >{props?.value?.name ?
                 <NativeIconButton onClick={()=>{props?.formik?.setFieldValue(props.id, null);}}>

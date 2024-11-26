@@ -43,12 +43,12 @@ export default function NativeDialog(props) {
         { ...dialog?.dialogProps}
       >
         <SCDialogTitle
-          styleClasses={[UtilityClasses?.ALIGNMENT?.ALIGN_ITEMS_CENTER]}
+          styleClasses={[UtilityClasses?.DISPLAY?.FLEX, UtilityClasses?.ALIGNMENT?.ALIGN_ITEMS_CENTER]}
           id="dialog-title"
         >
           {dialog?.type === "info" ? (
             <NativeBox
-              styleClasses={[UtilityClasses?.PADDING?.P2, UtilityClasses?.ALIGNMENT?.JUSTIFY_CONTENT_CENTER, UtilityClasses.COLOR.TEXT_WARNING]}
+              styleClasses={[UtilityClasses?.PADDING?.P2, UtilityClasses?.DISPLAY?.FLEX, UtilityClasses?.ALIGNMENT?.JUSTIFY_CONTENT_CENTER, UtilityClasses.COLOR.TEXT_WARNING]}
             >
               <NativeIcon
                 type="material-icons"
@@ -58,7 +58,7 @@ export default function NativeDialog(props) {
             </NativeBox>
           ) : dialog?.type === "error" ? (
             <NativeBox
-              styleClasses={[UtilityClasses?.PADDING?.P2, UtilityClasses?.ALIGNMENT?.JUSTIFY_CONTENT_CENTER, UtilityClasses.COLOR.TEXT_ERROR]}
+              styleClasses={[UtilityClasses?.PADDING?.P2, UtilityClasses?.DISPLAY?.FLEX, UtilityClasses?.ALIGNMENT?.JUSTIFY_CONTENT_CENTER, UtilityClasses.COLOR.TEXT_ERROR]}
             >
               <NativeIcon
                 type="material-icons"
@@ -68,7 +68,7 @@ export default function NativeDialog(props) {
             </NativeBox>
           ) : (
             <NativeBox
-              styleClasses={[UtilityClasses?.PADDING?.P2, UtilityClasses?.ALIGNMENT?.JUSTIFY_CONTENT_CENTER, UtilityClasses?.COLOR?.TEXT_SUCCESS]}
+              styleClasses={[UtilityClasses?.PADDING?.P2, UtilityClasses?.DISPLAY?.FLEX, UtilityClasses?.ALIGNMENT?.JUSTIFY_CONTENT_CENTER, UtilityClasses?.COLOR?.TEXT_SUCCESS]}
             >
               <NativeIcon
                 type="material-icons"

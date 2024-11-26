@@ -90,7 +90,7 @@ export default function NativeMultiTimeRangePicker(props) {
             />
           </NativeGrid>
 
-          <NativeBox gridProps={{ gridSize: 1 }} styleClasses={[UtilityClasses.ALIGNMENT.ALIGN_ITEMS_END]}>
+          <NativeBox gridProps={{ gridSize: 1 }} styleClasses={[UtilityClasses.DISPLAY.FLEX, UtilityClasses.ALIGNMENT.ALIGN_ITEMS_END]}>
             {i < 1 ? (
               <NativeIconButton
                 onClick={addRange}

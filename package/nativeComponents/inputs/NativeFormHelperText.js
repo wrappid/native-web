@@ -16,7 +16,7 @@ export default function NativeFormHelperText(props) {
   return (
     <SCFormHelperText
       {...props}
-      styleClasses={[...(props?.styleClasses || []), UtilityClasses.ALIGNMENT.ALIGN_ITEMS_CENTER]}
+      styleClasses={[...(props?.styleClasses || []), UtilityClasses.DISPLAY.FLEX, UtilityClasses.ALIGNMENT.ALIGN_ITEMS_CENTER]}
     >
       {showHelperText && (
         <>
