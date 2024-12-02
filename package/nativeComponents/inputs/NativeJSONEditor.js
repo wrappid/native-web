@@ -51,8 +51,9 @@ export default class NativeJSONEditor extends Component {
         }
       } catch (err) {
         // eslint-disable-next-line no-console
-        console.warn("Not a valid json", err);
-        this.jsoneditor.update(JSON.parse(JSON.stringify({})));
+        console.warn("Not a valid json", finalValue, err);
+        // eslint-disable-next-line etc/no-commented-out-code
+        // this.jsoneditor.update({});
       }
     }
   };
