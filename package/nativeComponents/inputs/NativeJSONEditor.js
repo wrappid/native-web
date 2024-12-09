@@ -48,6 +48,8 @@ export default class NativeJSONEditor extends Component {
         if (typeof finalValue === "string") {
           finalValue = JSON.parse(finalValue);
           this.jsoneditor.update(finalValue);
+        } else {
+          this.jsoneditor.update(finalValue);
         }
       } catch (err) {
         // eslint-disable-next-line no-console
