@@ -31,17 +31,17 @@ function getLink(menuItem, allTypes, routeRegistry) {
     if (menuItem?.route && routeRegistry) {
       if (menuItem.params) {
         if (typeof menuItem.params === "string") {
-          menuLink = `${routeRegistry[menuItem.route] + menuItem.params}`;
+          menuLink = `${routeRegistry[menuItem.route]?.url + menuItem.params}`;
         } else {
           let url = queryBuilder(
-            routeRegistry[menuItem.route],
+            routeRegistry[menuItem.route]?.url,
             menuItem.params
           );
 
           menuLink = `${url}`;
         }
       } else {
-        menuLink = routeRegistry[menuItem.route];
+        menuLink = routeRegistry[menuItem.route]?.url;
       }
       menuLink = `/${menuLink}`;
     } else {
