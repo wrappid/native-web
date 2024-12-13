@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.360](https://github.com/wrappid/native-web/compare/v0.0.359...v0.0.360) (2024-12-13)
+
+
+### Bug Fixes
+
+* **core:** :ambulance: menu util link creation fix ([0bb8fdc](https://github.com/wrappid/native-web/commit/0bb8fdc0869afc6a18ad62d711516b50b28cd61c))
+
 ### [0.0.359](https://github.com/wrappid/native-web/compare/v0.0.358...v0.0.359) (2024-12-09)
 
 
