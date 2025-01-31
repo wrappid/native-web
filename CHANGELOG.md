@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.361](https://github.com/wrappid/native-web/compare/v0.0.360...v0.0.361) (2025-01-31)
+
+
+### Bug Fixes
+
+* **global:** :bug: fix full width of toolbox component ([8d54186](https://github.com/wrappid/native-web/commit/8d54186d24db1af467082610d252c8534d5d5bd0)), closes [#139](https://github.com/wrappid/native-web/issues/139)
+
 ### [0.0.360](https://github.com/wrappid/native-web/compare/v0.0.359...v0.0.360) (2024-12-13)
 
 
