@@ -179,7 +179,7 @@ export default function NativeToolBox({
         height: expanded ? "auto" : dimensions.height || "auto",
         left  : `${position.left}px`, 
         top   : `${position.top}px`,
-        width : expanded ? "auto" : dimensions.width || "auto",
+        width : expanded ? "100%" : dimensions.width || "100%",
       }}
       styleClasses={[  
         // UtilityClasses.POSITION.POSITION_ABSOLUTE,
@@ -193,7 +193,7 @@ export default function NativeToolBox({
           UtilityClasses.ALIGNMENT.ALIGN_ITEMS_CENTER,
           UtilityClasses.BORDER.BORDER_BOTTOM,
           UtilityClasses.BORDER.BORDER_COLOR_GREY_400,
-          UtilityClasses.BG.BG_GREY_100
+          UtilityClasses.BG.BG_GREY_100,
         ]}
         onMouseDown={onMouseDownHeader}
       >
@@ -220,7 +220,7 @@ export default function NativeToolBox({
         timeout="auto"
         unmountOnExit
         styleClasses={[UtilityClasses.FLEX.FLEX_GROW_1, UtilityClasses.OVERFLOW.OVERFLOW_AUTO]}>
-        <NativeCardContent>
+        <NativeCardContent styleClasses={[UtilityClasses.PADDING.P0]}>
           {props.children}
         </NativeCardContent>
       </NativeCollapse>
