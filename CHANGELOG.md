@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.362](https://github.com/wrappid/native-web/compare/v0.0.361...v0.0.362) (2025-02-11)
+
+
+### Bug Fixes
+
+* **global:** :bug: browser autofill suggestion background and text color change fixed ([6626658](https://github.com/wrappid/native-web/commit/662665884777c759ddbfe43e5447ffb9bad3fe5a)), closes [#165](https://github.com/wrappid/native-web/issues/165)
+
 ### [0.0.361](https://github.com/wrappid/native-web/compare/v0.0.360...v0.0.361) (2025-01-31)
 
 
