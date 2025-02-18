@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.363](https://github.com/wrappid/native-web/compare/v0.0.362...v0.0.363) (2025-02-18)
+
+
+### Features
+
+* **global:** :sparkles: fix minHeight & margin in AccordionSummary & full height in toolbox ([2461f08](https://github.com/wrappid/native-web/commit/2461f085481ee07c0fced8ae7b67e9e6b5864810)), closes [#167](https://github.com/wrappid/native-web/issues/167)
+
+
+### Bug Fixes
+
+* **global:** :rotating_light: fix component file name ([bac2801](https://github.com/wrappid/native-web/commit/bac2801a97cabe12d668d354a92aa0018e130b0d)), closes [#167](https://github.com/wrappid/native-web/issues/167)
+
 ### [0.0.362](https://github.com/wrappid/native-web/compare/v0.0.361...v0.0.362) (2025-02-11)
 
 
