@@ -1,17 +1,16 @@
 // eslint-disable-next-line no-unused-vars, unused-imports/no-unused-imports
 import React from "react";
 
-import { Card } from "@mui/material";
+import { Box } from "@mui/material";
 // eslint-disable-next-line import/no-unresolved
 import { getEffectiveStyle, StyledComponentsClasses } from "@wrappid/styles";
 import styled from "styled-components";
 
-const defaultStyleClasses = [StyledComponentsClasses.SURFACES.CARD];
+const defaultStyleClasses = [StyledComponentsClasses.SURFACES.TOOLBOX];
+const NONE = "none";
 
-export const SCToolBox = styled(Card, {})((props) => ({
+export const SCToolbox = styled(Box, {})((props) => ({
+  
   ...getEffectiveStyle([...defaultStyleClasses, ...(props?.styleClasses || [])]),
-  maxHeight: "40vh", 
-  maxWidth : "100%", 
-  minWidth : "10%", 
-  resize   : props.resize || "none",
+  resize: props.resize || NONE
 }));
