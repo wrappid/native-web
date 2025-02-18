@@ -6,12 +6,12 @@ import React, { useRef, useState, useEffect } from "react";
 import { UtilityClasses } from "@wrappid/styles";
 
 import NativeCardContent from "./NativeCardContent";
-import { SCToolBox } from "../../styledComponents/surfaces/SCToolBox";
+import NativeCollapse from "./NativeCollapse";
+import { SCToolbox } from "../../styledComponents/surfaces/SCToolbox";
 import NativeIcon from "../dataDisplay/NativeIcon";
 import NativeTypographyBody2 from "../dataDisplay/paragraph/NativeTypographyBody2";
 import NativeIconButton from "../inputs/NativeIconButton";
 import NativeBox from "../layouts/NativeBox";
-import NativeCollapse from "../surfaces/NativeCollapse";
 
 function ExpandMore({ expand, ...otherProps }) {
   return (
@@ -24,7 +24,7 @@ function ExpandMore({ expand, ...otherProps }) {
   );
 }
 
-export default function NativeToolBox({ 
+export default function NativeToolbox({ 
   positionLeft, 
   positionTop, 
   toolTitle, 
@@ -171,15 +171,17 @@ export default function NativeToolBox({
   };
 
   return (
-    <SCToolBox
+    <SCToolbox
       {...props}
       ref={cardRef}
       style={{
         //todo we have to fix styles package
-        height: expanded ? "auto" : dimensions.height || "auto",
-        left  : `${position.left}px`, 
-        top   : `${position.top}px`,
-        width : expanded ? "100%" : dimensions.width || "100%",
+        height   : expanded ? "100%" : dimensions.height || "auto",
+        left     : `${position.left}px`, 
+        maxHeight: "100%",
+        maxWidth : "100%",
+        top      : `${position.top}px`,
+        width    : expanded ? "100%" : dimensions.width || "100%",
       }}
       styleClasses={[  
         // UtilityClasses.POSITION.POSITION_ABSOLUTE,
@@ -224,6 +226,6 @@ export default function NativeToolBox({
           {props.children}
         </NativeCardContent>
       </NativeCollapse>
-    </SCToolBox>
+    </SCToolbox>
   );
 }

@@ -11,7 +11,4 @@ const defaultStyleClasses = [StyledComponentsClasses.SURFACES.ACCORDION];
 export const SCAccordion = styled(
   Accordion,
   {}
-)((props) => ({
-  ...getEffectiveStyle([...defaultStyleClasses, ...(props?.styleClasses || [])]),
-  minHeight: "36px !important",
-}));
+)((props) => ({ ...getEffectiveStyle([...defaultStyleClasses, ...(props?.styleClasses || [])]) }));
