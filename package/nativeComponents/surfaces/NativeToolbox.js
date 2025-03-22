@@ -6,12 +6,12 @@ import React, { useRef, useState, useEffect } from "react";
 import { UtilityClasses } from "@wrappid/styles";
 
 import NativeCardContent from "./NativeCardContent";
-import { SCToolBox } from "../../styledComponents/surfaces/SCToolBox";
+import NativeCollapse from "./NativeCollapse";
+import { SCToolbox } from "../../styledComponents/surfaces/SCToolbox";
 import NativeIcon from "../dataDisplay/NativeIcon";
 import NativeTypographyBody2 from "../dataDisplay/paragraph/NativeTypographyBody2";
 import NativeIconButton from "../inputs/NativeIconButton";
 import NativeBox from "../layouts/NativeBox";
-import NativeCollapse from "../surfaces/NativeCollapse";
 
 function ExpandMore({ expand, ...otherProps }) {
   return (
@@ -24,7 +24,7 @@ function ExpandMore({ expand, ...otherProps }) {
   );
 }
 
-export default function NativeToolBox({ 
+export default function NativeToolbox({ 
   positionLeft, 
   positionTop, 
   toolTitle, 
@@ -42,6 +42,10 @@ export default function NativeToolBox({
   const [expanded, setExpanded] = useState(expandProp);
   const [dimensions, setDimensions] = useState({ height: undefined, width: undefined });
   const [dropdownVisible, setDropdownVisible] = useState(false); // Add dropdown visibility state
+
+  useEffect(() => {
+    setExpanded(expandProp);
+  }, [expandProp]);
 
   // Set initial position based on the rendered position if the card is already placed
   useEffect(() => {
@@ -101,15 +105,16 @@ export default function NativeToolBox({
   };
 
   const handleExpandClick = () => {
-    setExpanded((prev) => {
-      // Force an update of dimensions when toggling expanded state
-      if (!prev) {
-        const { width, height } = cardRef.current.getBoundingClientRect();
+    const newExpanded = !expanded;
 
-        setDimensions({ height, width });
-      }
-      return !prev;
-    });
+    setExpanded(newExpanded);
+  
+    // Force an update of dimensions when toggling expanded state
+    if (newExpanded && cardRef.current) {
+      const { width, height } = cardRef.current.getBoundingClientRect();
+
+      setDimensions({ height, width });
+    }
   };
 
   // Logic to handle rendering of buttons and dropdown
@@ -166,15 +171,17 @@ export default function NativeToolBox({
   };
 
   return (
-    <SCToolBox
+    <SCToolbox
       {...props}
       ref={cardRef}
       style={{
         //todo we have to fix styles package
-        height: expanded ? "auto" : dimensions.height || "auto",
-        left  : `${position.left}px`, 
-        top   : `${position.top}px`,
-        width : expanded ? "auto" : dimensions.width || "auto",
+        height   : expanded ? "100%" : dimensions.height || "auto",
+        left     : `${position.left}px`, 
+        maxHeight: "100%",
+        maxWidth : "100%",
+        top      : `${position.top}px`,
+        width    : expanded ? "100%" : dimensions.width || "100%",
       }}
       styleClasses={[  
         // UtilityClasses.POSITION.POSITION_ABSOLUTE,
@@ -187,8 +194,8 @@ export default function NativeToolBox({
           UtilityClasses.ALIGNMENT.JUSTIFY_CONTENT_SPACE_BETWEEN,
           UtilityClasses.ALIGNMENT.ALIGN_ITEMS_CENTER,
           UtilityClasses.BORDER.BORDER_BOTTOM,
-          UtilityClasses.BORDER.BORDER_GREY_400,
-          UtilityClasses.BG.BG_GREY_100
+          UtilityClasses.BORDER.BORDER_COLOR_GREY_400,
+          UtilityClasses.BG.BG_GREY_100,
         ]}
         onMouseDown={onMouseDownHeader}
       >
@@ -215,10 +222,10 @@ export default function NativeToolBox({
         timeout="auto"
         unmountOnExit
         styleClasses={[UtilityClasses.FLEX.FLEX_GROW_1, UtilityClasses.OVERFLOW.OVERFLOW_AUTO]}>
-        <NativeCardContent>
+        <NativeCardContent styleClasses={[UtilityClasses.PADDING.P0]}>
           {props.children}
         </NativeCardContent>
       </NativeCollapse>
-    </SCToolBox>
+    </SCToolbox>
   );
 }

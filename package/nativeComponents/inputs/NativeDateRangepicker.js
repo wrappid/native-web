@@ -62,7 +62,7 @@ export default function NativeDateTimeRangePicker(props) {
           />
         </NativeBox>
 
-        <NativeBox styleClasses={[UtilityClasses.ALIGNMENT.ALIGN_ITEMS_CENTER]}>-</NativeBox>
+        <NativeBox styleClasses={[UtilityClasses.DISPLAY.FLEX, UtilityClasses.ALIGNMENT.ALIGN_ITEMS_CENTER]}>-</NativeBox>
 
         <NativeBox>
 

@@ -1,4 +1,3 @@
-// eslint-disable-next-line no-unused-vars, unused-imports/no-unused-imports
 import React from "react";
 
 import { useTheme } from "@mui/material";
@@ -11,9 +10,11 @@ import { SCInput } from "../../styledComponents/inputs/SCInput";
 export default function NativeInput(props) {
   const { NativeId = getUUID() } = props;
   const theme = useTheme();
-  const defStyle = {};
+  
+  const defStyle = { transition: "color 5000s ease-in-out 0s, background-color 5000s ease-in-out 0s" }; /* This stops browser autofill suggestions from changing the background and text color in input field. Also I think that's a bad fix which needs to improve in future. */
 
   const [inputText, setInputText] = React.useState(props?.value || null);
+
   const onChange = (event) => {
     props?.onChange && props.onChange(event);
     setInputText(event?.target?.value);
@@ -22,22 +23,21 @@ export default function NativeInput(props) {
   return (
     <NativeFormControl variant={props?.variant || "standard"} NativeId={`Native-formControl-${NativeId}`}>
       <NativeInputLabel
-        shrink={true}
-        error={
-          props.touched && props.error && props.error.length > 0 ? true : false
-        }
+        error={props.touched && props.error && props.error.length > 0}
         htmlFor={props.id}
       >
         {props.label}
       </NativeInputLabel>
 
       <SCInput
+        {...props}
         id={props.id}
         type={props.showPassword || !props.type ? "text" : props.type}
         label={props.label}
         styleClasses={[...(props.styleClasses || [])]}
         variant={props?.variant || "standard"}
         value={props?.value ? String(props.value) : inputText}
+        shrink={props?.value && true}
         onChange={onChange}
         required={props.formik ? false : props.required}
         placeholder={props.placeholder}
@@ -46,10 +46,10 @@ export default function NativeInput(props) {
         min={props.min}
         readOnly={props.readOnly}
         onBlur={props?.formik?.handleBlur}
-        inputProps={props.inputProps ? { ...props.inputProps, style: defStyle } : { style: defStyle }}
-        error={
-          props.touched && props.error && props.error.length > 0 ? true : false
-        }
+        inputProps={{
+          ...props.inputProps,
+          style: { ...defStyle },
+        }}
         endAdornment={props.endAdornment ? props.endAdornment : null}
         multiline={props.multiline ? props.multiline : false}
         rows={props.rows}

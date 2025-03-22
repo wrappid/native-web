@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React from "react";
 
 import AsyncSelect from "react-select/async";
 
@@ -17,9 +17,9 @@ export default function NativeMedicineSelector(props) {
     onInputChange,
   } = props;
 
-  const [defOptions, setDefaultOptions] = useState([]);
+  const [defOptions, setDefaultOptions] = React.useState([]);
 
-  useEffect(()=>{
+  React.useEffect(()=>{
     setMountOptions();
   }, [value]);
 

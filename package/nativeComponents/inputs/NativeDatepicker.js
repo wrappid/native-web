@@ -18,8 +18,6 @@ export default function NativeDatePicker(props) {
     disablePast,
     disableFuture,
     formik,
-    touched,
-    error,
     shouldDisableDate,
     minDate,
     maxDate,
@@ -43,7 +41,6 @@ export default function NativeDatePicker(props) {
               value ? value?.format("YYYY-MM-DD") : null
             );
         }}
-        error={touched && error && error?.length > 0 ? true : false}
         fullWidth={true}
         disablePast={disablePast}
         disableFuture={disableFuture}
@@ -51,7 +48,7 @@ export default function NativeDatePicker(props) {
         renderInput={(params) => (
           <NativeTextField
             {...params}
-            InputLabelProps={{ ...params.InputLabelProps, shrink: true }}
+            error=""
             fullWidth={true}
           />
         )}

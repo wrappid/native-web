@@ -42,42 +42,42 @@ export default function NativeDialog(props) {
         }}
         { ...dialog?.dialogProps}
       >
-        {dialog?.type === "info" ? (
-          <NativeBox
-            styleClasses={[UtilityClasses?.PADDING?.P2, UtilityClasses?.ALIGNMENT?.JUSTIFY_CONTENT_CENTER, UtilityClasses.COLOR.TEXT_WARNING]}
-          >
-            <NativeIcon
-              type="material-icons"
-              childrenFlag={true}
-              name="info"
-              size="large"/>
-          </NativeBox>
-        ) : dialog?.type === "error" ? (
-          <NativeBox
-            styleClasses={[UtilityClasses?.PADDING?.P2, UtilityClasses?.ALIGNMENT?.JUSTIFY_CONTENT_CENTER, UtilityClasses.COLOR.TEXT_ERROR]}
-          >
-            <NativeIcon
-              type="material-icons"
-              childrenFlag={true}
-              name="cancel"
-              size="large"/>
-          </NativeBox>
-        ) : (
-          <NativeBox
-            styleClasses={[UtilityClasses?.PADDING?.P2, UtilityClasses?.ALIGNMENT?.JUSTIFY_CONTENT_CENTER, UtilityClasses?.COLOR?.TEXT_SUCCESS]}
-          >
-            <NativeIcon
-              type="material-icons"
-              childrenFlag={true}
-              name="check_circle"
-              size="large"/>
-          </NativeBox>
-        )}
-
         <SCDialogTitle
-          styleClasses={[UtilityClasses?.ALIGNMENT?.JUSTIFY_CONTENT_CENTER]}
+          styleClasses={[UtilityClasses?.DISPLAY?.FLEX, UtilityClasses?.ALIGNMENT?.ALIGN_ITEMS_CENTER]}
           id="dialog-title"
         >
+          {dialog?.type === "info" ? (
+            <NativeBox
+              styleClasses={[UtilityClasses?.PADDING?.P2, UtilityClasses?.DISPLAY?.FLEX, UtilityClasses?.ALIGNMENT?.JUSTIFY_CONTENT_CENTER, UtilityClasses.COLOR.TEXT_WARNING]}
+            >
+              <NativeIcon
+                type="material-icons"
+                childrenFlag={true}
+                name="info"
+                size="large"/>
+            </NativeBox>
+          ) : dialog?.type === "error" ? (
+            <NativeBox
+              styleClasses={[UtilityClasses?.PADDING?.P2, UtilityClasses?.DISPLAY?.FLEX, UtilityClasses?.ALIGNMENT?.JUSTIFY_CONTENT_CENTER, UtilityClasses.COLOR.TEXT_ERROR]}
+            >
+              <NativeIcon
+                type="material-icons"
+                childrenFlag={true}
+                name="cancel"
+                size="large"/>
+            </NativeBox>
+          ) : (
+            <NativeBox
+              styleClasses={[UtilityClasses?.PADDING?.P2, UtilityClasses?.DISPLAY?.FLEX, UtilityClasses?.ALIGNMENT?.JUSTIFY_CONTENT_CENTER, UtilityClasses?.COLOR?.TEXT_SUCCESS]}
+            >
+              <NativeIcon
+                type="material-icons"
+                childrenFlag={true}
+                name="check_circle"
+                size="large"/>
+            </NativeBox>
+          )}
+
           {dialog?.title || ""}
         </SCDialogTitle>
 

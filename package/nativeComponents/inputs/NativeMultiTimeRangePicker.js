@@ -64,51 +64,49 @@ export default function NativeMultiTimeRangePicker(props) {
 
       {timeRanges.map((timeRange, i) => (
         <NativeGrid key={i}>
-          <NativeTimePicker
-            readOnly={props.readOnly}
-            gridProps={{ gridSize: 5 }}
-            label={props.startTimeLabel ? props.startTimeLabel : "Start Time"}
-            inputFormat={props.ampm ? "hh:mm" : "HH:MM"}
-            ampm={props.ampm ? true : false}
-            value={timeRange.startTime ? moment(timeRange.startTime) : null}
-            onChange={(v) => {
-              _handleChange(i, v, "startTime");
-            }}
-            touched={props.touched}
-            error={props.error}
-          />
-
-          <NativeTimePicker
-            readOnly={props.readOnly}
-            gridProps={{ gridSize: 5 }}
-            label={props.endTimeLabel ? props.endTimeLabel : "End Time"}
-            inputFormat={props.ampm ? "hh:mm" : "HH:MM"}
-            ampm={props.ampm ? true : false}
-            value={timeRange.endTime ? moment(timeRange.endTime) : null}
-            onChange={(v) => {
-              _handleChange(i, v, "endTime");
-            }}
-            touched={props.touched}
-            error={props.error}
-          />
-
-          {i < 1 ? (
-            <NativeIconButton
-              gridProps={{ gridSize: 2 }}
-              onClick={addRange}
-            >
-              <NativeIcon>add</NativeIcon>
-            </NativeIconButton>
-          ) : (
-            <NativeIconButton
-              gridProps={{ gridSize: 2 }}
-              onClick={() => {
-                deleteRange(i);
+          <NativeGrid gridProps={{ gridSize: 11 }}>
+            <NativeTimePicker
+              readOnly={props.readOnly}
+              gridProps={{ gridSize: 5 }}
+              label={props.startTimeLabel ? props.startTimeLabel : "Start Time"}
+              inputFormat={props.ampm ? "hh:mm" : "HH:MM"}
+              ampm={props.ampm ? true : false}
+              value={timeRange.startTime ? moment(timeRange.startTime) : null}
+              onChange={(v) => {
+                _handleChange(i, v, "startTime");
               }}
-            >
-              <NativeIcon>delete_outline</NativeIcon>
-            </NativeIconButton>
-          )}
+            />
+
+            <NativeTimePicker
+              readOnly={props.readOnly}
+              gridProps={{ gridSize: 5 }}
+              label={props.endTimeLabel ? props.endTimeLabel : "End Time"}
+              inputFormat={props.ampm ? "hh:mm" : "HH:MM"}
+              ampm={props.ampm ? true : false}
+              value={timeRange.endTime ? moment(timeRange.endTime) : null}
+              onChange={(v) => {
+                _handleChange(i, v, "endTime");
+              }}
+            />
+          </NativeGrid>
+
+          <NativeBox gridProps={{ gridSize: 1 }} styleClasses={[UtilityClasses.DISPLAY.FLEX, UtilityClasses.ALIGNMENT.ALIGN_ITEMS_END]}>
+            {i < 1 ? (
+              <NativeIconButton
+                onClick={addRange}
+              >
+                <NativeIcon>add</NativeIcon>
+              </NativeIconButton>
+            ) : (
+              <NativeIconButton
+                onClick={() => {
+                  deleteRange(i);
+                }}
+              >
+                <NativeIcon>delete_outline</NativeIcon>
+              </NativeIconButton>
+            )}
+          </NativeBox>
         </NativeGrid>
       ))}
 

@@ -2,6 +2,144 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.363](https://github.com/wrappid/native-web/compare/v0.0.362...v0.0.363) (2025-02-18)
+
+
+### Features
+
+* **global:** :sparkles: fix minHeight & margin in AccordionSummary & full height in toolbox ([2461f08](https://github.com/wrappid/native-web/commit/2461f085481ee07c0fced8ae7b67e9e6b5864810)), closes [#167](https://github.com/wrappid/native-web/issues/167)
+
+
+### Bug Fixes
+
+* **global:** :rotating_light: fix component file name ([bac2801](https://github.com/wrappid/native-web/commit/bac2801a97cabe12d668d354a92aa0018e130b0d)), closes [#167](https://github.com/wrappid/native-web/issues/167)
+
+### [0.0.362](https://github.com/wrappid/native-web/compare/v0.0.361...v0.0.362) (2025-02-11)
+
+
+### Bug Fixes
+
+* **global:** :bug: browser autofill suggestion background and text color change fixed ([6626658](https://github.com/wrappid/native-web/commit/662665884777c759ddbfe43e5447ffb9bad3fe5a)), closes [#165](https://github.com/wrappid/native-web/issues/165)
+
+### [0.0.361](https://github.com/wrappid/native-web/compare/v0.0.360...v0.0.361) (2025-01-31)
+
+
+### Bug Fixes
+
+* **global:** :bug: fix full width of toolbox component ([8d54186](https://github.com/wrappid/native-web/commit/8d54186d24db1af467082610d252c8534d5d5bd0)), closes [#139](https://github.com/wrappid/native-web/issues/139)
+
+### [0.0.360](https://github.com/wrappid/native-web/compare/v0.0.359...v0.0.360) (2024-12-13)
+
+
+### Bug Fixes
+
+* **core:** :ambulance: menu util link creation fix ([0bb8fdc](https://github.com/wrappid/native-web/commit/0bb8fdc0869afc6a18ad62d711516b50b28cd61c))
+
+### [0.0.359](https://github.com/wrappid/native-web/compare/v0.0.358...v0.0.359) (2024-12-09)
+
+
+### Bug Fixes
+
+* **core:** :fire: fix json editor for rerender ([6d48a24](https://github.com/wrappid/native-web/commit/6d48a2456f2c1e1bcef00ab6c7dad49466e311be))
+
+### [0.0.358](https://github.com/wrappid/native-web/compare/v0.0.357...v0.0.358) (2024-12-02)
+
+
+### Bug Fixes
+
+* **core:** :bug: fix native components ([0eb2887](https://github.com/wrappid/native-web/commit/0eb2887a553be1cd603bff1636df0cc7b618b665))
+
+### [0.0.357](https://github.com/wrappid/native-web/compare/v0.0.356...v0.0.357) (2024-11-26)
+
+
+### Bug Fixes
+
+* **core:** :bug: handle impact of style package ([7634f9e](https://github.com/wrappid/native-web/commit/7634f9e42626a929b51e0fa5a9dc1b741142e33b)), closes [#163](https://github.com/wrappid/native-web/issues/163)
+* **core:** :bug: menu util related issue resolve ([34e747d](https://github.com/wrappid/native-web/commit/34e747d90a4d052c765753d295499a16e1d59086))
+
+### [0.0.356](https://github.com/wrappid/native-web/compare/v0.0.355...v0.0.356) (2024-11-22)
+
+
+### Bug Fixes
+
+* **core:** :art: menu design fix ([3e7b5ce](https://github.com/wrappid/native-web/commit/3e7b5ce286c3a61f652cdf237f095784d244fb93))
+* **core:** :bug: json component fix ([fb2a8a6](https://github.com/wrappid/native-web/commit/fb2a8a6b97efd46d1ad371ca5e5f3af0545c7d99))
+* **global:** :bug: fixes the issue of padding ([e3084e0](https://github.com/wrappid/native-web/commit/e3084e064c3845d7e69b5b60f8231842e5d264ea)), closes [#161](https://github.com/wrappid/native-web/issues/161)
+
+### [0.0.355](https://github.com/wrappid/native-web/compare/v0.0.354...v0.0.355) (2024-11-19)
+
+
+### Bug Fixes
+
+* **core:** :bug: time formating issue resolved ([8abea22](https://github.com/wrappid/native-web/commit/8abea22616311c133b270a2763332c590672ca02))
+
+### [0.0.354](https://github.com/wrappid/native-web/compare/v0.0.353...v0.0.354) (2024-11-18)
+
+
+### Bug Fixes
+
+* **core:** :bug: json editor issue resoled ([db48cc1](https://github.com/wrappid/native-web/commit/db48cc14201d005c2675e7fc1f93c3d4740405a9))
+
+### [0.0.353](https://github.com/wrappid/native-web/compare/v0.0.352...v0.0.353) (2024-11-15)
+
+
+### Bug Fixes
+
+* **core:** :bug: remove classes from page container ([4bb4194](https://github.com/wrappid/native-web/commit/4bb41943f8ca16d78ac91cbde964dd64f11144f8))
+
+### [0.0.352](https://github.com/wrappid/native-web/compare/v0.0.351...v0.0.352) (2024-11-14)
+
+
+### Bug Fixes
+
+* **global:** :bug: some border style property name changed, update this to resolve style changes ([50cabcf](https://github.com/wrappid/native-web/commit/50cabcfb4b2f5420378def6defa1f3e6c9ea1dd6))
+
+### [0.0.351](https://github.com/wrappid/native-web/compare/v0.0.350...v0.0.351) (2024-11-08)
+
+
+### Bug Fixes
+
+* **core:** :fire: component specific issues ([5d83c9e](https://github.com/wrappid/native-web/commit/5d83c9ec2aeb7e1890dc01582a47d045eed8fb25))
+
+### [0.0.350](https://github.com/wrappid/native-web/compare/v0.0.349...v0.0.350) (2024-11-08)
+
+
+### Features
+
+* **core:** :sparkles: add dimension component ([76cd74c](https://github.com/wrappid/native-web/commit/76cd74c6b85d33a0c4f58d8602213aba0e95b64a)), closes [#158](https://github.com/wrappid/native-web/issues/158)
+
+### [0.0.349](https://github.com/wrappid/native-web/compare/v0.0.348...v0.0.349) (2024-11-06)
+
+
+### Bug Fixes
+
+* **core:** :art: native inputs consistency match and lint fix ([2e3c947](https://github.com/wrappid/native-web/commit/2e3c947a68a966adc84e3620cd8a21205c0d1e50))
+
+### [0.0.348](https://github.com/wrappid/native-web/compare/v0.0.347...v0.0.348) (2024-11-05)
+
+### [0.0.347](https://github.com/wrappid/native-web/compare/v0.0.346...v0.0.347) (2024-11-04)
+
+
+### Bug Fixes
+
+* **core:** :bug: otp input fix ([819d9e9](https://github.com/wrappid/native-web/commit/819d9e9b02aa93b6b43b460c415f59c1e0d27952))
+
+### [0.0.346](https://github.com/wrappid/native-web/compare/v0.0.345...v0.0.346) (2024-11-04)
+
+
+### Bug Fixes
+
+* **core:** :zap: stop allowing text while pasting ([824c1ee](https://github.com/wrappid/native-web/commit/824c1eeb6af31de05eb47945394b139a5e5c7f7b))
+
+### [0.0.345](https://github.com/wrappid/native-web/compare/v0.0.344...v0.0.345) (2024-11-02)
+
+### [0.0.344](https://github.com/wrappid/native-web/compare/v0.0.343...v0.0.344) (2024-10-31)
+
+
+### Bug Fixes
+
+* **global:** :bug: fixed expand-collapse in toolbox ([20bebc0](https://github.com/wrappid/native-web/commit/20bebc09452a5f5eabb178171bff38e54f3577ca)), closes [#139](https://github.com/wrappid/native-web/issues/139)
+
 ### [0.0.343](https://github.com/wrappid/native-web/compare/v0.0.342...v0.0.343) (2024-10-17)
 
 

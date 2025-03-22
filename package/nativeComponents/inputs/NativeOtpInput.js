@@ -1,12 +1,12 @@
 // eslint-disable-next-line import/order, no-unused-vars, unused-imports/no-unused-imports
-import React, { useState, useRef } from "react";
+import React from "react";
 import { useTheme } from "@mui/material";
 import OtpInput from "react-otp-input";
 
 export default function NativeOtpInput(props) {
   const theme = useTheme();
-  const [otp, setOtp] = useState("");
-  const inputRefs = useRef([]);
+  const [otp, setOtp] = React.useState("");
+  const inputRefs = React.useRef([]);
 
   // Handle OTP change
   const handleChange = (val) => {
@@ -45,6 +45,11 @@ export default function NativeOtpInput(props) {
   const handlePaste = (event) => {
     event.preventDefault();
     const paste = event.clipboardData.getData("text").slice(0, 6);
+
+    // checking if paste is includes any text or not
+    if (isNaN(paste)) {
+      return;
+    }
 
     setOtp(paste);
 
@@ -103,6 +108,7 @@ export default function NativeOtpInput(props) {
       renderInput={(props, index) => (
         <input
           {...props}
+          autoComplete={index == 0 ? "one-time-code" : "off"}
           ref={(element) => (inputRefs.current[index] = element)}
           onKeyDown={(event) => handleKeyDown(event, index)}
           onPaste={handlePaste} // paste event handler

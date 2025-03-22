@@ -11,4 +11,8 @@ const defaultStyleClasses = [StyledComponentsClasses.SURFACES.ACCORDION_SUMMERY]
 export const SCAccordionSummery = styled(
   AccordionSummary,
   {}
-)((props) => ({ ...getEffectiveStyle([...defaultStyleClasses, ...(props?.styleClasses || [])]) }));
+)((props) => ({
+  ...getEffectiveStyle([...defaultStyleClasses, ...(props?.styleClasses || [])]),
+  "& .MuiAccordionSummary-content": { margin: "8px 0 !important" }, // Removes default top and bottom 12px margin to 8px of summary content
+  minHeight                       : "unset !important", // Remove default min-height of 48px
+}));

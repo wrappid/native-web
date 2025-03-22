@@ -31,6 +31,12 @@ export default class NativeJSONEditor extends Component {
   }
 
   componentDidUpdate() {
+    if (this.props.readOnly) {
+      this.jsoneditor.setMode("view");
+    } else {
+      this.jsoneditor.setMode("code");
+    }
+    
     this.jsonEditorValueUpdate(this.props.value);
   }
 
@@ -42,11 +48,14 @@ export default class NativeJSONEditor extends Component {
         if (typeof finalValue === "string") {
           finalValue = JSON.parse(finalValue);
           this.jsoneditor.update(finalValue);
+        } else {
+          this.jsoneditor.update(finalValue);
         }
       } catch (err) {
         // eslint-disable-next-line no-console
-        console.warn("Not a valid json", err);
-        this.jsoneditor.update(finalValue);
+        console.warn("Not a valid json", finalValue, err);
+        // eslint-disable-next-line etc/no-commented-out-code
+        // this.jsoneditor.update({});
       }
     }
   };
